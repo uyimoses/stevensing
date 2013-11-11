@@ -12,8 +12,8 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/ie.css">
 	<![endif]-->
 	<link rel="stylesheet" href="./stylesheets/common.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="./js/common.js"></script>
-
 	<title>Welcome to Stevensing!</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ session_start();
 		<header>
 			<div class="container">
 				<div class="span-4" id="stevensing_logo"></div>
-				<nav class="span-14">
+				<nav class="span-14" id="main_menu">
 					<ul>
 						<a href="./homepage.php"><li>
 							Home
