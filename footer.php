@@ -1,5 +1,6 @@
-<section id="footer">
+</section><!--container-->
+<footer class="span-24">
 
-</section>
+</footer>
 </body>
 </html>

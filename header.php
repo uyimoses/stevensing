@@ -16,3 +16,8 @@ session_start();
 	<title>Welcome to Stevensing!</title>
 </head>
 <body>
+<secion class="container">
+	<header class="span-24">
+		<nav class="span-16" last>Navigation</nav>
+		<div class="span-24 last">mast</div>
+	</header>
