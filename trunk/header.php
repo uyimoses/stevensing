@@ -21,7 +21,20 @@ session_start();
 		<header>
 			<div class="container">
 				<div class="span-4" id="stevensing_logo"></div>
-				<nav class="span-14 last">Navigation</nav>
+				<nav class="span-14">
+					<ul>
+						<li>
+							Home
+						</li>
+						<li>
+							Friends
+						</li>
+						<li>
+							Courses
+						</li>
+					</ul>
+				</nav>
+				<div class="span-6 last">Search</div>
 			</div>
 		</header>
 		<section class="container">
