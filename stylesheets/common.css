@@ -3,6 +3,31 @@
 	background-color: #EEE;
 }
 
+.content header nav{
+	height: 60px;
+}
+
+.content header nav ul{
+	list-style-type: none;
+	height: 60px;
+	margin: 0px;
+}
+
+.content header nav ul li{
+	float: left;
+	width: 150px;
+	height: 60px;
+	text-align: center;
+	line-height: 80px;
+	vertical-align: bottom;
+	font-size: 20px;
+	font-family: verdana, serif;
+}
+
+.content header nav ul li:hover{
+	background-color: #fff;
+}
+
 #stevensing_logo{
 	background: url("../images/logo2.png") no-repeat;
 	margin-top: 10px;
