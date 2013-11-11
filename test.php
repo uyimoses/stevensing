@@ -1,3 +1,3 @@
-<?ohp
-
+<?php
+phpinfo();
 ?>
