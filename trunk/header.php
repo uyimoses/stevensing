@@ -11,13 +11,14 @@ session_start();
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" href="/stylesheets/ie.css">
 	<![endif]-->
+	<link rel="stylesheet" href="/stylesheets/common.css">
 	<script src="/js/common.js"></script>
 
 	<title>Welcome to Stevensing!</title>
 </head>
 <body>
 <secion class="container">
-	<header class="span-24">
-		<nav class="span-16" last>Navigation</nav>
-		<div class="span-24 last">mast</div>
+	<header class="span-24 header">
+		<div class="span-4" id="stevensing_logo"></div>
+		<nav class="span-14 last">Navigation</nav>
 	</header>

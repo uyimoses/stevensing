@@ -1,3 +1,9 @@
+.header{
+	height: 80px;
+}
+
 #stevensing_logo{
-	background: url("/images/stevensing_logo.png");
+	background: url("/images/logo.png") no-repeat;
+	margin-top: 10px;
+	height: 46px;
 }
