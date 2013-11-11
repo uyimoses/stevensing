@@ -23,15 +23,15 @@ session_start();
 				<div class="span-4" id="stevensing_logo"></div>
 				<nav class="span-14">
 					<ul>
-						<li>
+						<a href="./homepage.php"><li>
 							Home
-						</li>
-						<li>
+						</li></a>
+						<a href="./friends.php"><li>
 							Friends
-						</li>
-						<li>
+						</li></a>
+						<a href="./courses.php"><li>
 							Courses
-						</li>
+						</li></a>
 					</ul>
 				</nav>
 				<div class="span-6 last">Search</div>
