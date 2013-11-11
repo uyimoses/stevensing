@@ -3,7 +3,7 @@
 }
 
 #stevensing_logo{
-	background: url("/images/logo.png") no-repeat;
+	background: url("../images/logo.png") no-repeat;
 	margin-top: 10px;
 	height: 46px;
 }

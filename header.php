@@ -7,12 +7,12 @@ session_start();
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/stylesheets/screen.css">
+	<link rel="stylesheet" href="./stylesheets/screen.css">
 	<!--[if lt IE 8]>
-	<link rel="stylesheet" href="/stylesheets/ie.css">
+	<link rel="stylesheet" href="./stylesheets/ie.css">
 	<![endif]-->
-	<link rel="stylesheet" href="/stylesheets/common.css">
-	<script src="/js/common.js"></script>
+	<link rel="stylesheet" href="./stylesheets/common.css">
+	<script src="./js/common.js"></script>
 
 	<title>Welcome to Stevensing!</title>
 </head>
