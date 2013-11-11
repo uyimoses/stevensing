@@ -5,6 +5,9 @@ include "header.php";
 //include leftside bar
 include "leftside.php";
 ?>
+<script type="text/javascript">
+	$("#main_menu ul a:nth-child(3)").addClass('current');
+</script>
 <section class="span-14">
 	Content
 </section>

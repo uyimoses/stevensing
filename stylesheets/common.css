@@ -1,5 +1,5 @@
 body{
-
+	font-family: verdana, serif;
 }
 
 a, a:hover, a:visited, a:link{
@@ -11,17 +11,17 @@ a, a:hover, a:visited, a:link{
 	background-color: #EEE;
 }
 
-.content header nav{
+#main_menu{
 	height: 60px;
 }
 
-.content header nav ul{
+#main_menu ul{
 	list-style-type: none;
 	height: 60px;
 	margin: 0px;
 }
 
-.content header nav ul li{
+#main_menu ul li{
 	float: left;
 	width: 150px;
 	height: 60px;
@@ -32,8 +32,12 @@ a, a:hover, a:visited, a:link{
 	font-family: verdana, serif;
 }
 
-.content header nav ul li:hover{
+#main_menu ul a.current li{
 	background-color: #fff;
+}
+
+#main_menu ul a:hover, #main_menu ul a.current{
+	color: #a9002f;
 }
 
 #stevensing_logo{
