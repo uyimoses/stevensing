@@ -1,6 +1,7 @@
 </section><!--container-->
-<footer class="span-24">
+<footer>
 
 </footer>
+</section><!--content-->
 </body>
 </html>
