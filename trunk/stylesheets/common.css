@@ -11,9 +11,13 @@ a, a:hover, a:visited, a:link{
 	position: fixed;
 	width: 100%;
 	height: 60px;
-	background-color: #EEE;
+	background-color: #F4F4F4;
 	text-align: center;
 	z-index: 50;
+	-webkit-box-shadow: 0 1px 4px #CCC;
+	-moz-box-shadow: 0 1px 4px #CCC;
+	box-shadow: 0 1px 4px #CCC;
+	border-bottom: 1px solid #CDCDCD;
 }
 
 .content>.container{
@@ -29,7 +33,7 @@ a, a:hover, a:visited, a:link{
 	list-style-type: none;
 	height: 60px;
 	margin: 0px;
-	padding-left: 0px;
+	padding-left: 30px;
 }
 
 #main_menu ul li{
@@ -42,11 +46,15 @@ a, a:hover, a:visited, a:link{
 }
 
 #main_menu ul a.current li{
-	background-color: #fff;
+	background-color: #a9002f;
 }
 
-#main_menu ul a:hover, #main_menu ul a.current{
+#main_menu ul a:hover{
 	color: #a9002f;
+}
+
+#main_menu ul a.current{
+	color: #FFF;
 }
 
 #stevensing_logo{
@@ -56,11 +64,11 @@ a, a:hover, a:visited, a:link{
 }
 
 #search_box{
-	height: 60px;
-	margin: 0px;
+	height: 40px;
+	margin: 20px 0 0 0;
 	text-align: left;
-	line-height: 80px;
-	vertical-align: bottom;
+	/*line-height: 80px;
+	vertical-align: bottom;*/
 }
 
 #search_box input{
@@ -69,6 +77,7 @@ a, a:hover, a:visited, a:link{
 	padding: 2px 6px;
 	margin-left: 2px;
 	margin-right: 5px;
+	font-weight: bolder;
 }
 
 #search_box input:focus{
@@ -89,5 +98,5 @@ a, a:hover, a:visited, a:link{
 }
 
 #search_button:hover{
-	background-color: #B7375B;
+	background-color: #a9002f;
 }
