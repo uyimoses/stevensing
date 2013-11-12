@@ -36,7 +36,7 @@ session_start();
 				</nav>
 				<div class="span-6 last" id="search_box">
 					<form action="#" method="get">
-						<input type="text" name="search_text" placeholder="Text">
+						<input type="text" name="search_text" placeholder="Name, Course...">
 						<a href="javascript:;" id="search_button">Search</a>
 					</form>
 				</div>
