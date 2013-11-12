@@ -20,20 +20,37 @@ session_start();
 	<section class="content">
 		<header>
 			<div class="container">
-				<a href="/"><div class="span-4 border" id="stevensing_logo" title="Stevensing"></div></a>
-				<nav class="span-14" id="main_menu">
+				<a href="/">
+					<div class="span-4 border" id="stevensing_logo" title="Stevensing"></div>
+				</a>
+				<nav class="span-10" id="main_menu">
 					<ul>
-						<a href="./homepage.php"><li>
-							Home
-						</li></a>
-						<a href="./friends.php"><li>
-							Friends
-						</li></a>
-						<a href="./courses.php"><li>
-							Courses
-						</li></a>
+						<a href="./homepage.php">
+							<li>Home</li>
+						</a>
+						<a href="./friends.php">
+							<li>Friends</li>
+						</a>
+						<a href="./courses.php">
+							<li>Courses</li>
+						</a>
 					</ul>
 				</nav>
+				<div class="span-4" id="account_menu">
+					<span>Account</span>
+					<div id="account_menu_icon"></div>
+					<ul>
+						<a href="./settings.php">
+							<li>Settings</li>
+						</a>
+						<a href="./support.php">
+							<li>Support</li>
+						</a>
+						<a href="./logout.php">
+							<li>Log out</li>
+						</a>
+					</ul>
+				</div>
 				<div class="span-6 last" id="search_box">
 					<form action="#" method="get">
 						<input type="text" name="search_text" placeholder="Name, Course...">

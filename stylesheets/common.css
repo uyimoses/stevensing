@@ -25,6 +25,13 @@ a, a:hover, a:visited, a:link{
 	top: 60px;
 }
 
+#stevensing_logo{
+	background: url("../images/logo2.png") no-repeat;
+	margin-top: 10px;
+	height: 46px;
+	border: 0px;
+}
+
 #main_menu{
 	height: 60px;
 }
@@ -58,12 +65,63 @@ a, a:hover, a:visited, a:link{
 	color: #FFF;
 }
 
-#stevensing_logo{
-	background: url("../images/logo2.png") no-repeat;
-	margin-top: 10px;
-	height: 46px;
-	border: 0px;
+#account_menu{
+	float: left;
+	height: 60px;
+	position: relative;
+	top: 22px;
+	/*line-height: 80px;
+	vertical-align: bottom;*/
+	font-size: 18px;
 }
+
+#account_menu:hover span{
+	color: #a9002f;
+}
+
+#account_menu:hover>ul{
+	opacity: 1;
+}
+
+#account_menu_icon{
+	position: relative;
+	top: 5px;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	background: url("../images/icon_drop.png") no-repeat 0px 0px;
+}
+
+#account_menu ul{
+	width: 154px;
+	opacity: 0;
+	-webkit-transition: opacity .2s ease .1s;
+    -moz-transition: opacity .2s ease .1s;
+    -o-transition: opacity .2s ease .1s;
+    -ms-transition: opacity .2s ease .1s;
+    transition: opacity .2s ease .1s;
+	background: #FFF;
+	list-style-type: none;
+	border: 1px solid #D9DCE2;
+	padding: 0px;
+	margin-top: 7px;
+}
+
+#account_menu ul li{
+	padding: 10px 0px;
+	margin: 0px;
+	border-bottom: 1px solid #D9DCE2;
+	-webkit-transition: height .2s ease .1s;
+    -moz-transition: height .2s ease .1s;
+    -o-transition: height .2s ease .1s;
+    -ms-transition: height .2s ease .1s;
+    transition: height .2s ease .1s;
+}
+
+#account_menu ul li:hover{
+	color: #a9002f;
+}
+
 
 #search_box{
 	height: 40px;
@@ -136,9 +194,10 @@ a, a:hover, a:visited, a:link{
 	display: inline;
 	text-align: left;
 	height: 20px;
-	font-size: 14px;
 	padding: 2px 0px;
 	margin: 0px;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .main_view{

@@ -9,4 +9,27 @@
 		<p>FirstName</p>
 		<p>LastName</p>
 	</div>
+	<div>
+		Edit Profile
+	</div>
+	<div>
+		Edit Account
+	</div>
+	<ul>
+		<li>
+			Statuses
+		</li>
+		<li>
+			Blogs
+		</li>
+		<li>
+			Events
+		</li>
+	</ul>
+	<div>
+		Friends
+	</div>
+	<div>
+		Courses
+	</div>
 </section>
