@@ -1,3 +1,8 @@
 <section id="rightside" class="span-6 last">
-	Rightside bar
+	<div>
+		Friend Requests
+	</div>
+	<div>
+		Messages
+	</div>
 </section>
