@@ -14,7 +14,7 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/common.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="./js/common.js"></script>
-	<title>Welcome to Stevensing!</title>
+	<title>Stevensing</title>
 </head>
 <body>
 	<section class="content">
