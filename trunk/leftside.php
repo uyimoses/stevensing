@@ -1,35 +1,26 @@
 <section id="leftside" class="span-4 border">
-	<a href="#"><div id="profile_picture">
-		<img src="./images/profile_image.jpg" alt="Profile Picture" title="Profile Picture"/>
-		<div id="edit_profile_picture">
-			Edit
-		</div>
-	</div></a>
 	<div id="profile_info">
-		<p>FirstName</p>
-		<p>LastName</p>
+		<a href="#">
+			<div id="profile_picture">
+				<img src="./images/profile_image.jpg" alt="Profile Picture" title="Profile Picture"/>
+				<div id="edit_profile_picture">Edit</div>
+			</div>
+		</a>
+		<div id="profile_name">
+			<p>FirstName</p>
+			<p>LastName</p>
+		</div>
+
+		<div id="profile_edit">
+			<a href="#">Edit Profile</a>
+		</div>
 	</div>
-	<div>
-		Edit Profile
-	</div>
-	<div>
-		Edit Account
-	</div>
-	<ul>
-		<li>
-			Statuses
-		</li>
-		<li>
-			Blogs
-		</li>
-		<li>
-			Events
-		</li>
+	<ul id="entity_list">
+		<li>New Feeds</li>
+		<li>Statuses</li>
+		<li>Blogs</li>
+		<li>Events</li>
 	</ul>
-	<div>
-		Friends
-	</div>
-	<div>
-		Courses
-	</div>
+	<div>Friends</div>
+	<div>Courses</div>
 </section>

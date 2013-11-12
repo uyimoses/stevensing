@@ -40,13 +40,13 @@ session_start();
 					<span>Account</span>
 					<div id="account_menu_icon"></div>
 					<ul>
-						<a href="./settings.php">
+						<a href="#">
 							<li>Settings</li>
 						</a>
-						<a href="./support.php">
+						<a href="#">
 							<li>Support</li>
 						</a>
-						<a href="./logout.php">
+						<a href="#">
 							<li>Log out</li>
 						</a>
 					</ul>
