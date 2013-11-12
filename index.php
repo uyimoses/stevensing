@@ -51,19 +51,19 @@ session_start();
 				<h1>
 					We are Stevensing!
 				</h1>
-				<p>
+				<!-- <p>
 					Join us in 1 minutes.
-				</p>
+				</p> -->
 				<form action="#" method="post">
-					<label for="email">Stevens Email</label><span id="email_check"></span>
-					<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
+					<label for="email">Stevens Email</label>
+					<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required><span class="check_message">a</span>
 					<label for="firstname">First Name</label>
-					<input type="text" name="firstname" placeholder="First Name" required>
+					<input type="text" name="firstname" placeholder="First Name" required><span class="check_message">b</span>
 					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname" placeholder="Last Name" required>
+					<input type="text" name="lastname" placeholder="Last Name" required><span class="check_message">c</span>
 					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="At least 8 characters" required>
-					<input type="submit" value="Join">
+					<input type="password" name="password" placeholder="At least 8 characters" required><span class="check_message">d</span>
+					<input type="submit" value="Join Us">
 				</form>
 			</section>
 <?php
