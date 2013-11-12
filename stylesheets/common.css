@@ -33,16 +33,17 @@ a, a:hover, a:visited, a:link{
 	list-style-type: none;
 	height: 60px;
 	margin: 0px;
-	padding-left: 30px;
+	padding-left: 0px;
 }
 
 #main_menu ul li{
 	float: left;
-	width: 150px;
+	width: 120px;
 	height: 60px;
 	line-height: 80px;
 	vertical-align: bottom;
 	font-size: 20px;
+	/*font-weight: bold;*/
 }
 
 #main_menu ul a.current li{
@@ -61,6 +62,7 @@ a, a:hover, a:visited, a:link{
 	background: url("../images/logo2.png") no-repeat;
 	margin-top: 10px;
 	height: 46px;
+	border: 0px;
 }
 
 #search_box{
@@ -96,4 +98,8 @@ a, a:hover, a:visited, a:link{
 
 #search_button:hover{
 	background-color: #a9002f;
+}
+
+#leftside{
+	border-right: 1px solid #D9DCE2;
 }

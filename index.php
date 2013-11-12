@@ -5,7 +5,7 @@ include "header.php";
 //include leftside bar
 include "leftside.php";
 ?>
-<section class="span-13">
+<section class="span-14">
 	Content
 </section>
 <?php
