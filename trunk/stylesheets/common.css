@@ -106,14 +106,38 @@ a:hover{
 
 #quick_sign p{
 	font-size: 18px;
+	margin-bottom: 10px;
 }
 
 #quick_sign form label{
 	display: block;
+
+}
+
+#quick_sign form input{
+	display: inline-block;
+	font-size: 14px;
+	margin: 0px;
+	border-radius: 6px;
+	padding: 2px 6px;
+	margin: 2px 5px 16px 2px;
+}
+
+#quick_sign form input:focus{
+	border: 3px solid lightblue;
+	margin: 0px 3px 14px 0px;
 }
 
 #quick_sign form input[type="submit"]{
+	width: 100px;
+	height: 25px;
+	font-size: 15px;
+	font-weight: bold;
 	display: block;
+}
+
+#quick_sign form .check_message{
+	
 }
 
 #main_menu{
