@@ -7,6 +7,10 @@ a, a:hover, a:visited, a:link{
 	text-decoration: none;
 }
 
+a:hover{
+	color: #a9002f;
+}
+
 .content header{
 	position: fixed;
 	width: 100%;
@@ -163,13 +167,18 @@ a, a:hover, a:visited, a:link{
 	border-right: 1px solid #D9DCE2;
 }
 
+#profile_info{
+	border-bottom: 1px solid #D9DCE2;
+}
+
 #profile_picture{
 	width: 150px;
 	height: 150px;
+	color: #000;
 }
 
 #profile_picture img{
-	padding: 10px;
+	padding: 10px 20px 10px 0px;
 	width: 130px;
 }
 
@@ -186,11 +195,11 @@ a, a:hover, a:visited, a:link{
 	left: 50px;
 }
 
-#profile_info{
-	padding: 0px 10px;
-	height: 40px;
+#profile_name{
+	padding-right: 5px;
+	width: 150px;
 }
-#profile_info p{
+#profile_name p{
 	display: inline;
 	text-align: left;
 	height: 20px;
@@ -199,6 +208,16 @@ a, a:hover, a:visited, a:link{
 	font-size: 14px;
 	font-weight: bold;
 }
+
+#profile_edit{
+	padding: 10px 5px 10px 0px;
+	height: 30px;
+	font-size: 15px;
+	text-indent: 30px;
+	background: url("../images/icon_edit.png") no-repeat 5px 10px #FFF;
+}
+
+
 
 .main_view{
 
