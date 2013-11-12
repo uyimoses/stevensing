@@ -75,25 +75,22 @@ a, a:hover, a:visited, a:link{
 	height:20px;
 	border-radius: 6px;
 	padding: 2px 6px;
-	margin-left: 2px;
-	margin-right: 5px;
+	margin: 6px 5px 2px 2px;
 	font-weight: bolder;
 }
 
 #search_box input:focus{
 	border: 3px solid lightblue;
-	margin-left: 0px;
-	margin-right: 3px;
+	margin: 4px 3px 0px 0px;
 }
 
 #search_button{
 	background-color: #999999;/*#B7375B;*/
 	border: 1px solid #222;
 	border-radius: 6px;
-	width: 60px;
-	height: 25px;
 	padding: 3px;
 	color: #FFF;
+	font-size: 15px;
 	font-weight: bolder;
 }
 
