@@ -32,6 +32,9 @@ session_start();
 						<a href="./courses.php"><li>
 							Courses
 						</li></a>
+						<a href="./account.php"><li>
+							Account
+						</li></a>
 					</ul>
 				</nav>
 				<div class="span-6 last" id="search_box">
