@@ -36,6 +36,86 @@ a:hover{
 	border: 0px;
 }
 
+#login_bar{
+	height: 60px;
+	text-align: right;
+}
+
+#login_bar div{
+	display: inline-block;
+	text-align: left;
+	margin: 10px 10px 0px 0px;
+}
+
+#login_bar div label{
+	font-size: 14px;
+	padding-left: 2px;
+}
+
+#login_bar div a{
+	color: #666666;
+	font-size: 12px;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+
+#login_bar div a:hover{
+	color: #a9002f;
+}
+
+#login_bar div input{
+	display: block;
+	font-size: 14px;
+	margin: 0px;
+	border-radius: 6px;
+	padding: 2px 6px;
+	margin: 2px 5px 2px 2px;
+}
+
+#login_bar div input:focus{
+	border: 3px solid lightblue;
+	margin: 0px 3px 0px 0px;
+}
+
+#login_bar div input[type="submit"]{
+	font-weight: bold;
+	color: #000;
+	background-color: #DDD;
+}
+
+#login_bar div input[type="submit"]:hover{
+	color: #a9002f;
+}
+
+.big_title{
+	padding: 20px 0px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+}
+
+#big_logo{
+	width: 500px;
+}
+
+#quick_sign h1{
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#quick_sign p{
+	font-size: 18px;
+}
+
+#quick_sign form label{
+	display: block;
+}
+
+#quick_sign form input[type="submit"]{
+	display: block;
+}
+
 #main_menu{
 	height: 60px;
 }
