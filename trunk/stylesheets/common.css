@@ -33,7 +33,7 @@ a, a:hover, a:visited, a:link{
 	list-style-type: none;
 	height: 60px;
 	margin: 0px;
-	padding-left: 0px;
+	padding-left: 20px;
 }
 
 #main_menu ul li{
@@ -74,6 +74,7 @@ a, a:hover, a:visited, a:link{
 }
 
 #search_box input{
+	width: 145px;
 	height:20px;
 	border-radius: 6px;
 	padding: 2px 6px;
@@ -102,4 +103,44 @@ a, a:hover, a:visited, a:link{
 
 #leftside{
 	border-right: 1px solid #D9DCE2;
+}
+
+#profile_picture{
+	width: 150px;
+	height: 150px;
+}
+
+#profile_picture img{
+	padding: 10px;
+	width: 130px;
+}
+
+#edit_profile_picture{
+	font-size: 14px;
+	text-indent: 20px;
+	width: 50px;
+	height: 20px;
+	background: url("../images/icon_edit.png") no-repeat #FFF;
+	z-index: 2;
+	display: none;
+	position: relative;
+	top: -40px;
+	left: 50px;
+}
+
+#profile_info{
+	padding: 0px 10px;
+	height: 40px;
+}
+#profile_info p{
+	display: inline;
+	text-align: left;
+	height: 20px;
+	font-size: 14px;
+	padding: 2px 0px;
+	margin: 0px;
+}
+
+.main_view{
+
 }
