@@ -212,14 +212,14 @@ a:hover{
 #edit_profile_picture{
 	font-size: 14px;
 	text-indent: 20px;
-	width: 50px;
+	width: 80px;
 	height: 20px;
 	background: url("../images/icon_edit.png") no-repeat #FFF;
 	z-index: 2;
 	opacity: 0;
 	position: relative;
 	top: -40px;
-	left: 40px;
+	left: 25px;
 }
 
 #profile_picture:hover #edit_profile_picture{
