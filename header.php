@@ -34,7 +34,12 @@ session_start();
 						</li></a>
 					</ul>
 				</nav>
-				<div class="span-6 last">Search</div>
+				<div class="span-6 last" id="search_box">
+					<form action="#" method="get">
+						<input type="text" name="search_text" placeholder="Text">
+						<a href="javascript:;" id="search_button">Search</a>
+					</form>
+				</div>
 			</div>
 		</header>
 		<section class="container">
