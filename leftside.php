@@ -3,7 +3,7 @@
 		<a href="#">
 			<div id="profile_picture">
 				<img src="./images/profile_image.jpg" alt="Profile Picture" title="Profile Picture"/>
-				<div id="edit_profile_picture">Edit</div>
+				<div id="edit_profile_picture">Change</div>
 			</div>
 		</a>
 		<div id="profile_name">
