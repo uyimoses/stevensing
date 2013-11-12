@@ -1,4 +1,4 @@
-<section id="leftside" class="span-4 border">
+<section id="leftside" class="span-4">
 	<div id="profile_info">
 		<a href="#">
 			<div id="profile_picture">
