@@ -11,7 +11,7 @@ include "leftside.php";
 </script>
 <nav id="left_tags">
 		<ul>
-			<li>All News</li>
+			<li>Course News</li>
 			<li>Statuses</li>
 			<li>Reviews</li>
 			<li>Resources</li>
