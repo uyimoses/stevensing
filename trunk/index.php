@@ -51,9 +51,6 @@ session_start();
 				<h1>
 					We are Stevensing!
 				</h1>
-				<!-- <p>
-					Join us in 1 minutes.
-				</p> -->
 				<form action="#" method="post">
 					<label for="email">Stevens Email</label>
 					<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required><span class="check_message">a</span>
@@ -61,7 +58,7 @@ session_start();
 					<input type="text" name="firstname" placeholder="First Name" required><span class="check_message">b</span>
 					<label for="lastname">Last Name</label>
 					<input type="text" name="lastname" placeholder="Last Name" required><span class="check_message">c</span>
-					<label for="password">Password</label>
+					<label for="password">Create a Password</label>
 					<input type="password" name="password" placeholder="At least 8 characters" required><span class="check_message">d</span>
 					<input type="submit" value="Join Us">
 				</form>
