@@ -99,6 +99,12 @@ a:hover{
 	width: 500px;
 }
 
+#quick_sign{
+	 /*border-radius: 14px;*/
+	 border-left: 1px solid #a9002f;
+	 padding: 10px 0px 10px 83px;
+}
+
 #quick_sign h1{
 	font-weight: bold;
 	font-size: 22px;
@@ -129,10 +135,8 @@ a:hover{
 	font-size: 15px;
 	font-weight: bold;
 	display: block;
-}
-
-#quick_sign form .check_message{
-	
+	background: #DDD;
+	margin-left: 30px; 
 }
 
 #main_menu{
@@ -347,6 +351,33 @@ a:hover{
 	background: url("../images/icon_edit.png") no-repeat 5px 10px #FFF;
 }
 
+#left_tags ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 10px;
+	position: relative;
+	left: 5px;
+}
+
+#left_tags ul li{
+	height: 30px;
+	padding: 3px 0px;
+	margin: 5px 0px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+	z-index: 3;
+	-webkit-box-shadow: 0 1px 4px #CCC;
+	-moz-box-shadow: 0 1px 4px #CCC;
+	box-shadow: 0 1px 4px #CCC;
+	border: 1px solid #CDCDCD;
+	border-right: 0px;
+}
+
+#left_tags ul li:hover{
+	background-color: #F4F4F4;
+}
 
 .main_view{
 	border-left: 1px solid #D9DCE2;

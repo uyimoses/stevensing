@@ -20,7 +20,7 @@ session_start();
 	<section class="content">
 		<header>
 			<div class="container">
-				<a href="/">
+				<a href="./index.php">
 					<div class="span-4 border" id="stevensing_logo" title="Stevensing"></div>
 				</a>
 				<nav class="span-10" id="main_menu">
@@ -46,7 +46,7 @@ session_start();
 						<a href="#">
 							<li>Support</li>
 						</a>
-						<a href="#">
+						<a href="./index.php">
 							<li>Log out</li>
 						</a>
 					</ul>

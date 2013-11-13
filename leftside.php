@@ -15,12 +15,12 @@
 			<a href="#">Edit Profile</a>
 		</div>
 	</div>
-	<ul id="entity_list">
-		<li>New Feeds</li>
-		<li>Statuses</li>
-		<li>Blogs</li>
-		<li>Events</li>
-	</ul>
-	<div>Friends</div>
-	<div>Courses</div>
+	<nav id="left_tags">
+		<ul>
+			<li>New Feeds</li>
+			<li>Statuses</li>
+			<li>Blogs</li>
+			<li>Events</li>
+		</ul>
+	</nav>
 </section>
