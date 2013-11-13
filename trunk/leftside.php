@@ -15,12 +15,4 @@
 			<a href="#">Edit Profile</a>
 		</div>
 	</div>
-	<nav id="left_tags">
-		<ul>
-			<li>New Feeds</li>
-			<li>Statuses</li>
-			<li>Blogs</li>
-			<li>Events</li>
-		</ul>
-	</nav>
-</section>
+	<div id="left_tag_current"></div>
