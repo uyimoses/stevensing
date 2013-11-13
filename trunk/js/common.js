@@ -9,4 +9,10 @@ $(function(){
 	// }, function() {
 	// 	$("#account_menu_icon").css("background-position", "0px 0px");
 	// });
+	// $(document).scroll(function(){
+ //    	var top = $(document).scrollTop();
+ //    	if ($("#left_tags>ul").offset().top - 60- top <= 0){
+ //    		$("#left_tags>ul").css("position", "fixed");
+ //    	}
+ //    });
  }); 
