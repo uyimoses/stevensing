@@ -12,7 +12,7 @@ include "header_login.php"
 	<h1>
 		We are Stevensing!
 	</h1>
-	<form action="register.php" method="post">
+	<form action="./register.php" method="post">
 		<label for="email">Stevens Email</label>
 		<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
 		<label for="firstname">First Name</label>
