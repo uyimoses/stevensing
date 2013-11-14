@@ -2,16 +2,12 @@
 //include page header, which includes mysqli connection and login form
 include "header_login.php"
 ?>
-<div class="span-24 last big_title">
-	Enjoy your campus life at Stevens!
+<div class="span-24 big_title">
+	Joining Stevensing!
 </div>
-<section class="span-15">
-	<img src="./images/big_logo.png" alt="big_logo" title="Let's Stevensing!" id="big_logo">
+<section class="span-24" id="register_bar">
 </section>
-<section class="span-6 last" id="quick_sign">
-	<h1>
-		We are Stevensing!
-	</h1>
+<section class="span-24" id="register_steps">
 	<form action="register.php" method="post">
 		<label for="email">Stevens Email</label>
 		<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
