@@ -6,13 +6,19 @@ include "header_login.php"
 	Joining Stevensing!
 </div>
 <section class="span-24" id="register_steps">
-	<section class="span-24" id="register_bar">
-		<ol>
+	<section class="span-24">
+		<!-- <ol>
 			<a href="#"><li>Account Information</li></a>
 			<a href="#"><li>Profile Information</li></a>
 			<a href="#"><li>Friends</li></a>
 			<a href="#"><li>Courses</li></a>
-		</ol>
+		</ol> -->
+		<ul id="register_bar">
+		  <li><a href="#">Account Information</a></li>
+		  <li><a href="#">Profile Information</a></li>
+		  <li><a href="#">Adding Friends</a></li>
+		  <li><a href="#">Adding Courses</a></li>
+		</ul>
 	</section>
 	<form action="./register.php" method="post">
 		<!-- Creating an Account -->
