@@ -188,6 +188,7 @@ a:hover{
 
 #account_menu:hover>ul{
 	opacity: 1;
+	display: block;
 }
 
 #account_menu_icon{
@@ -206,6 +207,7 @@ a:hover{
 #account_menu ul{
 	width: 154px;
 	opacity: 0;
+	display: none;
 	-webkit-transition: opacity .2s ease .1s;
     -moz-transition: opacity .2s ease .1s;
     -o-transition: opacity .2s ease .1s;
