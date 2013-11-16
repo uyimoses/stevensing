@@ -1,0 +1,51 @@
+#friend_list{
+	padding: 20px 10px;
+}
+
+#friend_list h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+#friend_list select{
+	font-size: 16px;
+	
+	
+}
+#friend_list ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#friend_list ul li{
+	display: inline-block;
+	padding: 5px 0px;
+}
+
+#friend_list ul li img{
+	width: 60px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+#friend_list ul li div:nth-child(2){
+	float: left;
+	width: 350px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#friend_list ul li div:nth-child(3){
+	float: left;
+	text-align: right;
+
+}
+
+#friend_list ul li div:nth-child(3) button{
+
+	
+	margin: 0px 5px 0px 0px;
+	padding: 0px 5px;
+	font-size: 13px;
+	
+}
