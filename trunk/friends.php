@@ -20,7 +20,45 @@ include "leftside.php";
 	</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
-	Content
+	<section id="friend_list">
+		<h1>Friend List </h1>
+		<select name="select">
+			<option value="name" selected="selected">name</option>
+			<option value="time" >time</option>
+		</select>
+		<ul>
+			<li>
+				<img src="./images/profile_image.jpg" alt="" title="">
+				<div>
+					<span>FirstName</span>&nbsp;<span>LastName</span>
+				</div>
+				<div>
+					<button>delete</button>
+				</div>
+			</li>
+			<li>
+				<img src="./images/profile_image.jpg" alt="" title="">
+				<div>
+					<span>FirstName</span>&nbsp;<span>LastName</span>
+				</div>
+				<div>
+					<button>delete</button>
+				</div>
+			</li>
+			<li>
+				<img src="./images/profile_image.jpg" alt="" title="">
+				<div>
+					<span>FirstName</span>&nbsp;<span>LastName</span>
+				</div>
+				<div>
+					<button>delete</button>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	
+
 </section>
 <?php
 //include rightside bar
