@@ -12,6 +12,7 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/ie.css">
 	<![endif]-->
 	<link rel="stylesheet" href="./stylesheets/common.css">
+	<link rel="stylesheet" href="./stylesheets/register.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="./js/common.js"></script>
 	<title>Welcome to Stevensing!</title>
