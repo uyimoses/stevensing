@@ -1,0 +1,85 @@
+#register_bar {
+  list-style: none;
+  display: inline-block;
+  margin: 0px;
+  margin-left: 20px;
+  padding: 0px;
+}
+#register_bar li {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+#register_bar li a {
+  color: #FFF;
+  display: block;
+  background: #999;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  width: 190px;
+  line-height: 40px;
+  padding: 10px 10px 10px 5px;
+  text-align: center;
+  margin-right: 23px;
+}
+#register_bar li:first-child a {
+  padding-left: 15px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+#register_bar li:first-child a:before {
+  border: none;
+}
+#register_bar li:last-child a {
+  padding-right: 15px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+#register_bar li:last-child a:after {
+  border: none;
+}
+#register_bar li a:before, #register_bar li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #999;
+  border-width: 30px 20px;
+  width: 0;
+  height: 0;
+}
+#register_bar li a:before {
+  left: -20px;
+  border-left-color: transparent;
+}
+#register_bar li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #999;
+}
+#register_bar li a:hover {
+  background-color: #a9002f;
+}
+#register_bar li a:hover:before {
+  border-color: #a9002f;
+  border-left-color: transparent;
+}
+#register_bar li a:hover:after {
+  border-left-color: #a9002f;
+}
+#register_bar li a:active {
+  background-color: #a9002f;
+}
+#register_bar li a:active:before {
+  border-color: #a9002f;
+  border-left-color: transparent;
+}
+#register_bar li a:active:after {
+  border-left-color: #a9002f;
+}
