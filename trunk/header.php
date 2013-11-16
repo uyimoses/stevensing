@@ -37,8 +37,10 @@ session_start();
 					</ul>
 				</nav>
 				<div class="span-4" id="account_menu">
-					<span>Account</span>
-					<div id="account_menu_icon"></div>
+					<div>
+						<span>Account</span>
+						<div id="account_menu_icon"></div>
+					</div>
 					<ul>
 						<a href="#">
 							<li>Settings</li>
