@@ -23,7 +23,7 @@ include "header_login.php"
 	}
 	function init(){
 		registerStep(1);
-		$("#register_step_1>div:nth-of-type(3) input").focus();
+		<?php echo isset($_POST["email"])?'$("#register_step_1>div:nth-of-type(3) input").focus();':'$("#register_step_1>div:nth-of-type(1) input").focus();';?>
 	}
 </script>
 <div class="span-24 big_title">
@@ -44,13 +44,13 @@ include "header_login.php"
 		<section class="register_steps" id="register_step_1">
 			<div>
 				<label for="email">Stevens Email</label>
-				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required value="<?php echo $_POST["email"]?>">
+				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required value="<?php echo isset($_POST["email"])?$_POST["email"]:"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="password">Create a Password</label>
-				<input type="password" name="password" placeholder="At least 8 characters" required value="<?php echo $_POST["password"]?>">
+				<input type="password" name="password" placeholder="At least 8 characters" required value="<?php echo isset($_POST["password"])?$_POST["password"]:"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
@@ -78,7 +78,7 @@ include "header_login.php"
 		<section class="register_steps" id="register_step_2">
 			<div>
 				<label for="firstname">First Name</label>
-				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo $_POST["firstname"]?>">
+				<input type="text" name="firstname" placeholder="First Name" required value="<? echo isset($_POST["firstname"])?$_POST["firstname"]:"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
@@ -90,7 +90,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="lastname">Last Name</label>
-				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo $_POST["lastname"]?>">
+				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo isset($_POST["lastname"])?$_POST["lastname"]:"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
@@ -105,7 +105,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="dob">Date of Birth</label>
-				<input type="text" name="dob" placeholder="Select your dob" required id="dob">
+				<input type="text" name="dob" placeholder="Select your birthday" required id="dob">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
@@ -139,13 +139,15 @@ include "header_login.php"
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
-			<div class="next_register_step"><a href="javascript:" onclick="registerStep(3);">Next</a></div>
+			<div class="next_register_step"><a href="javascript:" onclick="registerStep(1);">Back</a><a href="javascript:" onclick="registerStep(3);">Next</a></div>
 		</section>
 		<!-- Adding friends -->
 		<section class="register_steps" id="register_step_3">
+			<div class="next_register_step"><a href="javascript:" onclick="registerStep(2);">Back</a><a href="javascript:" onclick="registerStep(4);">Next</a></div>
 		</section>
 		<!-- Adding courses -->
 		<section class="register_steps" id="register_step_4">
+			<div class="next_register_step"><a href="javascript:" onclick="registerStep(3);">Back</a><a href="javascript:" onclick="registerStep(5);">Done</a></div>
 		</section>
 		<!-- Get Start -->
 		<section class="register_steps" id="register_step_5">
