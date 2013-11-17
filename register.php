@@ -3,9 +3,9 @@
 include "header_login.php"
 ?>
 <script type="text/javascript">
-	$("#register_bar a:nth-child(1)").click(function(event) {
+	$("#register_bar>li>a").hover(function() {
 		/* Act on the event */
-		alert(0);
+		alert(this.Id);
 	});
 </script>
 <div class="span-24 big_title">
@@ -14,10 +14,10 @@ include "header_login.php"
 <section class="span-24" id="register_steps">
 	<section class="span-24">
 		<ul id="register_bar">
-		  <li><a href="#" class="completed">Account Information</a></li>
-		  <li><a href="#">Profile Information</a></li>
-		  <li><a href="#">Adding Friends</a></li>
-		  <li><a href="#">Adding Courses</a></li>
+		  <li><a href="javascript:" id="register_bar_1" class="completed">Account Information</a></li>
+		  <li><a href="#" id="register_bar_2">Profile Information</a></li>
+		  <li><a href="#" id="register_bar_3">Adding Friends</a></li>
+		  <li><a href="#" id="register_bar_4">Adding Courses</a></li>
 		</ul>
 	</section>
 	<form action="./register.php" method="post">
