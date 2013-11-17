@@ -14,7 +14,7 @@ include "header_login.php"
 			<a href="#"><li>Courses</li></a>
 		</ol> -->
 		<ul id="register_bar">
-		  <li><a href="#">Account Information</a></li>
+		  <li><a href="#" class="completed">Account Information</a></li>
 		  <li><a href="#">Profile Information</a></li>
 		  <li><a href="#">Adding Friends</a></li>
 		  <li><a href="#">Adding Courses</a></li>
@@ -23,15 +23,15 @@ include "header_login.php"
 	<form action="./register.php" method="post">
 		<!-- Creating an Account -->
 		<section id="register_step_1">
-				<label for="email">Stevens Email</label>
-				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
-				<label for="firstname">First Name</label>
-				<input type="text" name="firstname" placeholder="First Name" required>
-				<label for="lastname">Last Name</label>
-				<input type="text" name="lastname" placeholder="Last Name" required>
-				<label for="password">Create a Password</label>
-				<input type="password" name="password" placeholder="At least 8 characters" required>
-				<input type="button" value="Next">
+			<label for="email">Stevens Email</label>
+			<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
+			<label for="firstname">First Name</label>
+			<input type="text" name="firstname" placeholder="First Name" required>
+			<label for="lastname">Last Name</label>
+			<input type="text" name="lastname" placeholder="Last Name" required>
+			<label for="password">Create a Password</label>
+			<input type="password" name="password" placeholder="At least 8 characters" required>
+			<input type="button" value="Next">
 		</section>
 		<!-- Creating a Profile -->
 		<section id="register_step_2">
