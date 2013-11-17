@@ -2,7 +2,7 @@
   list-style: none;
   display: inline-block;
   margin: 0px;
-  margin-left: 20px;
+  margin-left: 23px;
   padding: 0px;
 }
 
@@ -92,6 +92,7 @@
 
 .register_steps{
   display: none;
+  margin: 80px 23px 20px 23px;
 }
 
 #register_step_1{
@@ -100,5 +101,6 @@
 
 .register_steps label{
   display: block;
-
+  font-size: 16px;
+  font-weight: bold;
 }
