@@ -1,0 +1,43 @@
+#courseinfo{
+	height: 216px;
+	font-size: 12px;
+	border-bottom:1px solid #D9DCE2;
+}
+#courseinfo h1{
+	margin: auto;
+	padding: 10px;
+	margin: 5px;
+	font-size: 28px;
+	padding-top: 22px;
+}
+#number, #department{
+	color: #800000;
+	font-family:Arial;
+}
+#courseinfo span{
+	padding: 2px;
+}
+#professor{
+	font-family:Arial;
+	padding: 0px;
+	margin:0px;
+	font-size: 18px;
+	font-weight:900;
+	color: #900000;
+	text-align: right;
+}
+#courseinfo p{
+	margin: 2px;
+}
+#lcourse{
+	float: left;
+	width: 365px;
+	padding: 5px;
+}
+#rcourse{
+	float: left;
+	vertical-align: bottom;
+}
+#description{
+	border-right:1px solid #D9DCE2;
+}
