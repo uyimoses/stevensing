@@ -2,6 +2,12 @@
 //include page header, which includes mysqli connection and login form
 include "header_login.php"
 ?>
+<script type="text/javascript">
+	$("#register_bar a:nth-child(1)").click(function(event) {
+		/* Act on the event */
+		alert(0);
+	});
+</script>
 <div class="span-24 big_title">
 	Welcome to join Stevensing!
 </div>
@@ -16,7 +22,7 @@ include "header_login.php"
 	</section>
 	<form action="./register.php" method="post">
 		<!-- Creating an Account -->
-		<section id="register_step_1">
+		<section class="register_steps" id="register_step_1">
 			<label for="email">Stevens Email</label>
 			<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required>
 			<label for="firstname">First Name</label>
@@ -28,13 +34,13 @@ include "header_login.php"
 			<input type="button" value="Next">
 		</section>
 		<!-- Creating a Profile -->
-		<section id="register_step_2">
+		<section class="register_steps" id="register_step_2">
 		</section>
 		<!-- Adding friends -->
-		<section id="register_step_3">
+		<section class="register_steps" id="register_step_3">
 		</section>
 		<!-- Adding courses -->
-		<section id="register_step_4">
+		<section class="register_steps" id="register_step_4">
 		</section>
 	</form>
 </section>
