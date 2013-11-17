@@ -22,37 +22,39 @@ include "leftside.php";
 <section class="span-14 main_view">
 	<section id="friend_list">
 		<h1>Friend List </h1>
-		<select name="select">
-			<option value="name" selected="selected">name</option>
-			<option value="time" >time</option>
-		</select>
+		<span>Sort By</span>
+			<select name="select">
+				<option value="name" selected="selected">name</option>
+				<option value="time" >time</option>
+			</select>
+		
 		<ul>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
 				</div>
-				<div>
-					<button>delete</button>
-				</div>
+				<a href="#" ><div>
+					Delete
+				</div></a>
 			</li>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
 				</div>
-				<div>
-					<button>delete</button>
-				</div>
+				<a href="#" ><div>
+					Delete
+				</div></a>
 			</li>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
 				</div>
-				<div>
-					<button>delete</button>
-				</div>
+				<a href="#" ><div>
+					Delete
+				</div></a>
 			</li>
 		</ul>
 	</section>
