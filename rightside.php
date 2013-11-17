@@ -32,7 +32,7 @@
 		</ul>
 	</section>
 	<section id="message">
-		<h1>Recent Messages</h1>
+		<h1>Recent Comments</h1>
 		<ul>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
