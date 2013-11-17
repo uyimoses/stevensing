@@ -15,4 +15,10 @@ $(function(){
  //    		$("#left_tags>ul").css("position", "fixed");
  //    	}
  //    });
+	$( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            yearRange: "1900:2014"
+	});
  }); 
