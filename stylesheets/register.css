@@ -65,6 +65,7 @@
 }
 #register_bar li a:hover {
   background-color: #a9002f;
+  color
 }
 #register_bar li a:hover:before {
   border-color: #a9002f;
