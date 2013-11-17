@@ -44,17 +44,14 @@
 }
 
 #register_bar li a.current:after {
-  border: none;
-}
-
-#register_bar li a.current:after {
   content: "";
   position: absolute;
   top: 0;
-  border: 0 solid #999;
+  /*border: 0 solid #999;*/
+  border-style: solid;
   border-width: 30px 20px;
-  width: 0;
-  height: 0;
+  /*width: 0;
+  height: 0;*/
   left: 100%;
   border-color: transparent;
   border-left-color: #a9002f;
