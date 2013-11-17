@@ -21,6 +21,10 @@ include "header_login.php"
 		}
 		$("#register_step_"+id).show();
 	}
+	function init(){
+		registerStep(1);
+		$("#register_step_1>div:nth-of-type(3) input").focus();
+	}
 </script>
 <div class="span-24 big_title">
 	Welcome to join Stevensing!
