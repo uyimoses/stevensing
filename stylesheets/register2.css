@@ -1,0 +1,87 @@
+#register_bar {
+  list-style: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  width: 190px;
+}
+
+#register_bar li {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#register_bar li a {
+  color: #FFF;
+  display: block;
+  background: #999;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  width: 190px;
+  line-height: 40px;
+  padding: 10px 10px 10px 5px;
+  text-align: center;
+  margin-right: 23px;
+  border-bottom: 2px solid #FFF;
+}
+
+#register_bar li:first-child a {
+  -webkit-border-radius: 4px 0 0 0px;
+  -moz-border-radius: 4px 0 0 0px;
+  -ms-border-radius: 4px 0 0 0px;
+  -o-border-radius: 4px 0 0 0px;
+  border-radius: 4px 0 0 0px;
+}
+
+#register_bar li:last-child a {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  -ms-border-radius: 0 0 0 4px;
+  -o-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+
+#register_bar li a.current:after {
+  border: none;
+}
+
+#register_bar li a.current:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #999;
+  border-width: 30px 20px;
+  width: 0;
+  height: 0;
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #a9002f;
+}
+
+#register_bar li a:hover {
+  color: #fff83b;
+}
+
+#register_bar li a.completed, #register_bar li a.current {
+  background-color: #a9002f;
+}
+
+#register_bar li a.completed:after{
+  border-left-color: #a9002f;
+}
+
+.register_steps{
+  display: none;
+}
+
+#register_step_1{
+  display: block;
+}
+
+.register_steps label{
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
