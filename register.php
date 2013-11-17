@@ -78,7 +78,7 @@ include "header_login.php"
 		<section class="register_steps" id="register_step_2">
 			<div>
 				<label for="firstname">First Name</label>
-				<input type="text" name="firstname" placeholder="First Name" required value="<? echo isset($_POST["firstname"])?$_POST["firstname"]:"";?>">
+				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo isset($_POST["firstname"])?$_POST["firstname"]:"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
