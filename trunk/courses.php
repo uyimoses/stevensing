@@ -7,18 +7,13 @@ include "leftside.php";
 ?>
 <script type="text/javascript">
 	$("#main_menu ul a:nth-child(3)").addClass('current');
-	//$("#left_tag_current").addClass("left_tag_5");
+	$("#left_tag_current").addClass("left_tag_1");
 </script>
-<!-- <nav id="left_tags">
+<nav id="left_tags">
 		<ul>
-			<li>Return Course List</li>
-			<li>Course News</li>
-			<li>Statuses</li>
-			<li>Reviews</li>
-			<li>Resources</li>
-			<li>Events</li>
+			<li>Course List</li>
 		</ul>
-	</nav> -->
+	</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
 <section id="course_list">

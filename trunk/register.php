@@ -4,7 +4,7 @@ include "header_login.php"
 ?>
 <script type="text/javascript">
 	function registerStep(id){
-		for(var i = 1; i<=4; i++){
+		for(var i = 1; i<=5; i++){
 			$("#register_step_"+i).hide();
 			if (i==id){
 				$("#register_bar li:nth-child("+i+")>a").addClass("current");
@@ -32,32 +32,15 @@ include "header_login.php"
 		  <li><a href="javascript:" onclick="registerStep(2);">Profile Information</a></li>
 		  <li><a href="javascript:" onclick="registerStep(3);">Adding Friends</a></li>
 		  <li><a href="javascript:" onclick="registerStep(4);">Adding Courses</a></li>
+		  <li><a href="javascript:" onclick="registerStep(5);">Get Start</a></li>
 		</ol>
 	</section>
 	<form action="./register.php" method="post">
 		<!-- Creating an Account -->
-		<section class="prepend-7 register_steps" id="register_step_1">
+		<section class="register_steps" id="register_step_1">
 			<div>
 				<label for="email">Stevens Email</label>
 				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required value="<?php echo $_POST["email"]?>">
-				<span class="check_icon"></span>
-				<div class="check_message">error message</div>
-			</div>
-			<div>
-				<label for="firstname">First Name</label>
-				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo $_POST["firstname"]?>">
-				<span class="check_icon"></span>
-				<div class="check_message">error message</div>
-			</div>
-			<div>
-				<label for="firstname">Middle Name</label>
-				<input type="text" name="middlename" placeholder="Middle Name" required>
-				<span class="check_icon"></span>
-				<div class="check_message">error message</div>
-			</div>
-			<div>
-				<label for="lastname">Last Name</label>
-				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo $_POST["lastname"]?>">
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
@@ -85,18 +68,80 @@ include "header_login.php"
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
-			<div>
-				<a href="javascript:" onclick="registerStep(2);"><div>Next</div></a>
-			</div>
+			<div class="next_register_step"><a href="javascript:" onclick="registerStep(2);">Next</a></div>
 		</section>
 		<!-- Creating a Profile -->
-		<section class="prepend-7 register_steps" id="register_step_2">
+		<section class="register_steps" id="register_step_2">
+			<div>
+				<label for="firstname">First Name</label>
+				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo $_POST["firstname"]?>">
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="middle">Middle Name</label>
+				<input type="text" name="middlename" placeholder="Middle Name" required>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="lastname">Last Name</label>
+				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo $_POST["lastname"]?>">
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label>Gender</label>
+				<div>
+					<input type="radio" name="gender" id="male" value="M" checked><label for="male">Male</label>
+					<input type="radio" name="gender" id="female" value="F"><label for="female">Female</label>
+				</div>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="dob">Date of Birth</label>
+				<input type="text" name="dob" placeholder="Select your dob" required id="dob">
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="major">Major</label>
+				<input type="text" name="major" placeholder="Major" required>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="degree">Degree</label>
+				<input type="text" name="degree" placeholder="Degree" required>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="year">Entry Year</label>
+				<input type="text" name="year" placeholder="Year" required>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="semester">Entry Semester</label>
+				<input type="text" name="semester" placeholder="Semester" required>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div>
+				<label for="picture">Profile Picture</label>
+				<div>File Upload</div>
+				<span class="check_icon"></span>
+				<div class="check_message">error message</div>
+			</div>
+			<div class="next_register_step"><a href="javascript:" onclick="registerStep(3);">Next</a></div>
 		</section>
 		<!-- Adding friends -->
-		<section class="prepend-7 register_steps" id="register_step_3">
+		<section class="register_steps" id="register_step_3">
 		</section>
 		<!-- Adding courses -->
-		<section class="prepend-7 register_steps" id="register_step_4">
+		<section class="register_steps" id="register_step_4">
 		</section>
 	</form>
 </section>
