@@ -3,10 +3,16 @@
 include "header_login.php"
 ?>
 <script type="text/javascript">
-	$("#register_bar>li>a").hover(function() {
-		/* Act on the event */
-		alert(this.Id);
-	});
+	function registerStep(id){
+		for(var i = 1; i<=4; i++){
+			$("#register_step_"+i).hide();
+			if (i<=id)
+				$("#register_bar li:nth-child("+i+")>a").addClass("completed");
+			else
+				$("#register_bar li:nth-child("+i+")>a").removeClass("completed");
+		}
+		$("#register_step_"+id).show();
+	}
 </script>
 <div class="span-24 big_title">
 	Welcome to join Stevensing!
@@ -14,10 +20,10 @@ include "header_login.php"
 <section class="span-24" id="register_steps">
 	<section class="span-24">
 		<ul id="register_bar">
-		  <li><a href="javascript:" id="register_bar_1" class="completed">Account Information</a></li>
-		  <li><a href="#" id="register_bar_2">Profile Information</a></li>
-		  <li><a href="#" id="register_bar_3">Adding Friends</a></li>
-		  <li><a href="#" id="register_bar_4">Adding Courses</a></li>
+		  <li><a href="javascript:" onclick="registerStep(1);" class="completed">Account Information</a></li>
+		  <li><a href="javascript:" onclick="registerStep(2);">Profile Information</a></li>
+		  <li><a href="javascript:" onclick="registerStep(3);">Adding Friends</a></li>
+		  <li><a href="javascript:" onclick="registerStep(4);">Adding Courses</a></li>
 		</ul>
 	</section>
 	<form action="./register.php" method="post">
@@ -31,7 +37,7 @@ include "header_login.php"
 			<input type="text" name="lastname" placeholder="Last Name" required>
 			<label for="password">Create a Password</label>
 			<input type="password" name="password" placeholder="At least 8 characters" required>
-			<input type="button" value="Next">
+			<a href="javascript:" onclick="registerStep(2);"><div>Next</div></a>
 		</section>
 		<!-- Creating a Profile -->
 		<section class="register_steps" id="register_step_2">
