@@ -19,15 +19,15 @@ include "leftside.php";
 	</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
-	<h1>Edit Profile</h1>
-	<form action="./profile.php" method="post">
-		<!-- Creating an Account -->
-		<section id="edit_profile">
+	<div id="editprofile">
+		<h1>Edit Profile</h1>
+		<form action="./profile.php" method="post">
+			<!-- Creating an Account -->
 			<div id="uploadpic">
 				<label for="firstname">Change Profile Picture</label>
 				<form action="upload_file.php" method="post" enctype="multipart/form-data">
-					<input type="file" name="file" id="file"><br>
-					<input type="submit" name="submit" value="Submit"><br>
+					<input type="file" name="file" id="file">
+					<input type="submit" name="submit" value="Submit">
 				</form><br>
 			</div>
 			<label for="firstname">First Name</label>
@@ -62,8 +62,9 @@ include "leftside.php";
 				<option value="Fall">Fall</option>
 				<option value="Spring">Spring</option>
 			</select><br>
-		</section>
-	</form>
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</div>
 </section>
 <?php
 //include rightside bar
