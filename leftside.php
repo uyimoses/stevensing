@@ -12,7 +12,7 @@
 		</div>
 
 		<div id="profile_edit">
-			<a href="#">Edit Profile</a>
+			<a href="editprofile.php">Edit Profile</a>
 		</div>
 	</div>
 	<div id="left_tag_current"></div>
