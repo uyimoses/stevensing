@@ -121,7 +121,7 @@
   margin-right: 20px;
 }
 
-.next_register_step a:hover{
+.next_register_step a:hover, .next_register_step a:focus{
   background-color: #a9002f;
 }
 
