@@ -14,6 +14,7 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/common.css">
 	<link rel="stylesheet" href="./stylesheets/friends.css">
 	<link rel="stylesheet" href="./stylesheets/courseinfo.css">
+	<link rel="stylesheet" href="./stylesheets/courselist.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="./js/common.js"></script>
 	<title>Stevensing</title>

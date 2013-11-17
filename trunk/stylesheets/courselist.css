@@ -1,0 +1,62 @@
+#course_list{
+	padding: 20px 10px;
+}
+
+#course_list h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+#course_list span{
+	font-size: 16px;
+	line-height: 60px;
+}
+
+#course_list select{
+	margin-left: 5px;
+	font-size: 16px;
+	padding:5px; 
+	background:transparent; 
+	width:100px; 
+	border:1px solid #999; 
+	height:30px;
+	
+}
+#course_list ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#course_list ul li{
+	display: inline-block;
+	padding: 5px 0px;
+}
+
+
+
+
+#course_list ul li>div{
+	float: left;
+	width: 350px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#course_list ul li>a{
+	font-size: 16px;
+	float: left;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+	width:60px;
+	height:40px;
+	margin: 10px 0px 10px 70px;
+	line-height: 40px;
+
+	
+	 
+}
+#course_list ul li>a:hover{
+color:#FFF;
+background-color: #a9002f;
+
+}
