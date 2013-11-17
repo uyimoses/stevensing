@@ -41,49 +41,49 @@ include "header_login.php"
 				<label for="email">Stevens Email</label>
 				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required value="<?php echo $_POST["email"]?>">
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="firstname">First Name</label>
 				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo $_POST["firstname"]?>">
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="firstname">Middle Name</label>
 				<input type="text" name="middlename" placeholder="Middle Name" required>
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="lastname">Last Name</label>
 				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo $_POST["lastname"]?>">
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="password">Create a Password</label>
 				<input type="password" name="password" placeholder="At least 8 characters" required value="<?php echo $_POST["password"]?>">
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="password2">Re-type the Password</label>
 				<input type="password" name="password2" placeholder="Type the password again" required>
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="question">Security Question</label>
 				<input type="text" name="question" placeholder="Enter or select your question" required>
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<label for="answer">Security Answer</label>
 				<input type="text" name="answer" placeholder="Enter the answer" required>
 				<span class="check_icon"></span>
-				<span class="check_message"></span>
+				<div class="check_message">error message</div>
 			</div>
 			<div>
 				<a href="javascript:" onclick="registerStep(2);"><div>Next</div></a>
