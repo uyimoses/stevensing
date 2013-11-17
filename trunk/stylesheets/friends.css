@@ -6,9 +6,18 @@
 	font-size: 20px;
 	font-weight: bold;
 }
+#friend_list span{
+	font-size: 16px
+}
+
 #friend_list select{
+	margin-left: 5px;
 	font-size: 16px;
-	
+	padding:5px; 
+	background:transparent; 
+	width:100px; 
+	border:1px solid #999; 
+	height:30px;
 	
 }
 #friend_list ul{
@@ -35,9 +44,22 @@
 	font-size: 13px;
 	font-weight: bold;
 }
-#friend_list ul li div:nth-child(3){
+#friend_list ul li a{
+	font-size: 16px;
 	float: left;
-	text-align: right;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+	width:60px;
+	height:40px;
+	margin: 10px 0px;
+	line-height: 40px;
+	
+	 
+}
+#friend_list ul li a:hover{
+color:#FFF;
+background-color: #a9002f;
 
 }
 

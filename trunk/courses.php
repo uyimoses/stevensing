@@ -9,7 +9,7 @@ include "leftside.php";
 	$("#main_menu ul a:nth-child(3)").addClass('current');
 	$("#left_tag_current").addClass("left_tag_5");
 </script>
-<nav id="left_tags">
+<!-- <nav id="left_tags">
 		<ul>
 			<li>Return Course List</li>
 			<li>Course News</li>
@@ -18,10 +18,11 @@ include "leftside.php";
 			<li>Resources</li>
 			<li>Events</li>
 		</ul>
-	</nav>
+	</nav> -->
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
-	Content
+
+	
 </section>
 <?php
 //include rightside bar
