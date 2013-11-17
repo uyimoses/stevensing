@@ -143,6 +143,10 @@ include "header_login.php"
 		<!-- Adding courses -->
 		<section class="register_steps" id="register_step_4">
 		</section>
+		<!-- Get Start -->
+		<section class="register_steps" id="register_step_5">
+			<div>Some Guide here, and jump to <a href="./homepage.php">homepage</a>.</div>
+		</section>
 	</form>
 </section>
 <?php
