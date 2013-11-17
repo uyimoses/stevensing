@@ -3,7 +3,7 @@
 include "header_login.php"
 ?>
 <div class="span-24 big_title">
-	Joining Stevensing!
+	Welcome to join Stevensing!
 </div>
 <section class="span-24" id="register_steps">
 	<section class="span-24">
