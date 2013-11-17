@@ -139,6 +139,10 @@ a:hover{
 	margin-left: 30px; 
 }
 
+#quick_sign form input[type="submit"]:hover{
+	color: #a9002f;
+}
+
 #main_menu{
 	height: 60px;
 }
