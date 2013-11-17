@@ -29,6 +29,7 @@ include "leftside.php";
 		</div>
 		<div id="rcourse">
 			<p>Evaluation:</p>
+			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
 </section>

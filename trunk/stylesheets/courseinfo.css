@@ -41,3 +41,53 @@
 #description{
 	border-right:1px solid #D9DCE2;
 }
+
+.star_rating{
+	width: 150px;
+	height: 30px;
+	background: url("../images/star_ratings.png") no-repeat 0px 0px;
+}
+
+.star_0{
+	background-position: -150px 0px;
+}
+
+.star_1{
+	background-position: -120px 0px;
+}
+
+.star_2{
+	background-position: -90px 0px;
+}
+
+.star_3{
+	background-position: -60px 0px;
+}
+
+.star_4{
+	background-position: -30px 0px;
+}
+
+.star_5{
+	background-position: 0px 0px;
+}
+
+.star_half{
+	background-position: -120px -30px;
+}
+
+.star_half_1{
+	background-position: -90px -30px;
+}
+
+.star_half_2{
+	background-position: -60px -30px;
+}
+
+.star_half_3{
+	background-position: -30px -30px;
+}
+
+.star_half_4{
+	background-position: 0px -30px;
+}
