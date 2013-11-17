@@ -6,17 +6,9 @@
 	font-size: 28px;
 	padding-top: 22px;
 }
-#editprofile label, #editprofile input{
-	font-size: 14px;
-	text-align: center;
-}
 #uploadpic{
 	height: 80px;
 	background-color: #eee;
 	line-height: 80px;
-}
-#uploadpic input{
-	margin: 0px;
-	padding: 0px;
 }
 
