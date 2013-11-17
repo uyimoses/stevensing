@@ -93,23 +93,28 @@
   margin: 0px;
   border-radius: 6px;
   padding: 2px 6px;
-  margin: 2px 5px 16px 2px;
+  margin: 2px 5px 4px 2px;
 }
 .register_steps input:focus{
   border: 3px solid lightblue;
-  margin: 0px 3px 14px 0px;
+  margin: 0px 3px 2px 0px;
 }
 
-.register_steps div{
+.register_steps>div{
   float: left;
   width: 600px;
   margin: 5px 20px;
 }
 
-.register_steps div:nth-of-type(2), .register_steps div:nth-of-type(3), .register_steps div:nth-of-type(5), .register_steps div:nth-of-type(6) {
+.register_steps>div:nth-of-type(2), .register_steps>div:nth-of-type(3), .register_steps>div:nth-of-type(5), .register_steps>div:nth-of-type(6) {
   width: 220px;
 }
 
-.register_steps div:nth-of-type(7) input, .register_steps div:nth-of-type(8) input {
+.register_steps>div:nth-of-type(7) input, .register_steps>div:nth-of-type(8) input {
   width: 460px;
+}
+
+.check_message{
+  margin: 0px;
+  padding: 0px;
 }
