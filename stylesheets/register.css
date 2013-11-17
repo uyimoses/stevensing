@@ -93,3 +93,12 @@
 .register_steps{
   display: none;
 }
+
+#register_step_1{
+  display: block;
+}
+
+.register_steps label{
+  display: block;
+
+}
