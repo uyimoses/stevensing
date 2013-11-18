@@ -16,6 +16,7 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/courseinfo.css">
 	<link rel="stylesheet" href="./stylesheets/editprofile.css">
 	<link rel="stylesheet" href="./stylesheets/courselist.css">
+	<link rel="stylesheet" href="./stylesheets/searchlist.css"
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -62,7 +63,7 @@ session_start();
 				<div class="span-6 last" id="search_box">
 					<form action="#" method="get">
 						<input type="text" name="search_text" placeholder="Name, Course...">
-						<a href="javascript:;" id="search_button">Search</a>
+						<a href="searchresult.php" id="search_button">Search</a>
 					</form>
 				</div>
 			</div>
