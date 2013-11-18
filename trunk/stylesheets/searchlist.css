@@ -1,0 +1,33 @@
+#advanced_search{
+padding: 20px 10px;
+margin: 10px 10px;
+}
+#advanced_search h1{
+	margin-bottom:10px;
+	 color:#900;
+}
+
+.form_search label {
+	padding-left: 10px;
+
+font-size: 16px;
+}
+.form_search input {
+	
+	font-size: 16px;
+	
+}
+
+.form_search input.button{
+padding-right: 10px;	
+background-color: #999999;
+border: 1px solid #222;
+border-radius: 6px;
+padding: 3px;
+color: #FFF;
+font-size: 15px;
+font-weight: bolder;
+}
+.form_search input.button:hover{
+	background-color: #a9002f;
+}
