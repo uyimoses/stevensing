@@ -16,6 +16,7 @@
 }
 #courseinfo span{
 	padding: 2px;
+	
 }
 #professor{
 	font-family:Arial;
@@ -37,6 +38,11 @@
 #rcourse{
 	float: left;
 	vertical-align: bottom;
+	padding-top: 30px;
+}
+#rcourse span{
+	font-size: 28px;
+	color: #a9002f;
 }
 #description{
 	border-right:1px solid #D9DCE2;
