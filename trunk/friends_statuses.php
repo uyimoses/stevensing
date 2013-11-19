@@ -20,29 +20,11 @@ include "leftside.php";
 	</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
-	<section class="block" id="contact">
-		
-	<div class="block-top"></div>
-	  <div id="contact-content">
-		<span id="contact-text">Status Input Here(600):</span>
-		
-		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
-		  <div id="form_box">
-			
-			  <textarea class="fieldclass"  name="message" contenteditable="true"></textarea>
-			  
-			<div id="button"><a href="#"> send</a></div>
-		  </div>
-		</form>
-	  </div>
 	
-	<div class="block-bottom"></div>
-  
-	</section>
 	<section id="status_list">
 		<h1>Recent statues</h1>
 		<ul>
-			<li>
+			<li id="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
@@ -56,7 +38,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li>
+			<li id="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>

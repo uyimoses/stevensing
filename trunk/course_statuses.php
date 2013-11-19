@@ -35,7 +35,7 @@ include "leftside.php";
 	<section id="status_list">
 		<h1>Recent statues</h1>
 		<ul>
-			<li>
+			<li id="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
@@ -49,7 +49,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li>
+			<li id="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
