@@ -7,7 +7,7 @@ include "leftside.php";
 ?>
 <script type="text/javascript">
 	$("#main_menu ul a:nth-child(3)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_2");
+	$("#left_tag_current").addClass("left_tag_3");
 </script>
 <nav id="left_tags">
 		<ul>
@@ -32,6 +32,53 @@ include "leftside.php";
 			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
+	<section id="status_list">
+		<h1>Recent statues</h1>
+		<ul>
+			<li>
+				
+				<div>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
+				</div>
+				<section>
+					<p>
+						I just want to say "hello" to the world, but it's already farewell.
+					</p>
+					<div>
+						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+					</div>
+				<section>
+			</li>
+			<li>
+				
+				<div>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
+				</div>
+				<section>
+					<p>
+						I heard that you're settled down
+						That you found a girl and you're married now
+						I heard that your dreams came true
+						Guess she gave you things I didn't give to you
+
+						Old friend, why are you so shy?
+						Ain't like you to hold back or hide from the light
+
+						I hate to turn up out of the blue, uninvited
+						But I couldn't stay away, I couldn't fight it
+						I had hoped you'd see my face and that you'd be reminded
+						That for me, it isn't over
+					</p>
+					<div>
+						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+					</div>
+	</section>
+</li>
+</ul>
+</section>
+	
+	
+
 </section>
 <?php
 //include rightside bar

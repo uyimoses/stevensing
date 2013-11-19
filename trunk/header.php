@@ -16,7 +16,9 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/courseinfo.css">
 	<link rel="stylesheet" href="./stylesheets/editprofile.css">
 	<link rel="stylesheet" href="./stylesheets/courselist.css">
-	<link rel="stylesheet" href="./stylesheets/searchlist.css"
+	<link rel="stylesheet" href="./stylesheets/searchlist.css">
+	<link rel="stylesheet" href="./stylesheets/friends_statuses.css">
+
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>

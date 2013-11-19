@@ -8,7 +8,7 @@
 }
 #course_list span{
 	font-size: 16px;
-	line-height: 60px;
+	line-height: 50px;
 }
 
 #course_list select{
@@ -34,28 +34,28 @@
 
 
 
-
 #course_list ul li>div{
 	float: left;
 	width: 350px;
 	font-size: 13px;
 	font-weight: bold;
 }
-#course_list ul li>a{
+#button a{
+
 	font-size: 16px;
-	float: left;
+	float: right;
 	text-align: center;
 	border: 1px solid #000;
 	border-radius: 5px;
-	width:60px;
-	height:30px;
-	margin: 10px 0px 10px 70px;
-	line-height: 30px;
+	width:50px;
+	height:25px;
+	margin: 10px 10px 10px 10px ;
+	line-height: 25px;
 
 	
 	 
 }
-#course_list ul li>a:hover{
+#button a:hover{
 color:#FFF;
 background-color: #a9002f;
 

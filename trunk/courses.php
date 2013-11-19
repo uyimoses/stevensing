@@ -27,30 +27,36 @@ include "leftside.php";
 		<ul>
 			<li>
 				
-				<div>
+				<div id="course_list_name">
 					<a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a>
 				</div>
-				<a href="#" ><div>
-					Drop
-				</div></a>
+				<li id="button">
+					
+					<a href="#" >Drop </a>
+					<a href="courseinfo.php" >visit </a>
+				</li>
 			</li>
 			<li>
 				
-				<div>
+				<div id="course_list_name">
 				<a href="courseinfo.php">	<span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a>
 				</div>
-				<a href="#" ><div>
-					Drop
-				</div></a>
+				<li id="button">
+					
+					<a href="#" >Drop </a>
+					<a href="courseinfo.php" >visit </a>
+			</li>
 			</li>
 			<li>
 				
-				<div>
+				<div id="course_list_name">
 				<a href="courseinfo.php">	<span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a>
 				</div>
-				<a href="#" ><div>
-					Drop
-				</div></a>
+				<li id="button">
+				
+				<a href="#" >Drop </a>
+				<a href="courseinfo.php" >visit </a>
+			</li>
 			</li>
 		</ul>
 	</section>
