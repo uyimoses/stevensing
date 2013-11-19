@@ -12,7 +12,7 @@ include "leftside.php";
 <nav id="left_tags">
 		<ul>
 			<li>All News</li>
-			<li>Statuses</li>
+			<a href=" home_status.php"><li>Statuses</li></a>
 			<li>Blogs</li>
 			<li>Events</li>
 		</ul>
