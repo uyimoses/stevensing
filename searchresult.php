@@ -11,10 +11,7 @@ include "leftside.php";
 </script>
 <nav id="left_tags">
 		<ul>
-			<li>All News</li>
-			<li>Statuses</li>
-			<li>Blogs</li>
-			<li>Events</li>
+			<li>Search</li>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
