@@ -6,7 +6,6 @@ include "header.php";
 include "leftside.php";
 ?>
 <script type="text/javascript">
-	$("#main_menu ul a:nth-child(1)").addClass('current');
 	$("#left_tag_current").addClass("left_tag_1");
 </script>
 <nav id="left_tags">
