@@ -11,9 +11,9 @@ include "leftside.php";
 </script>
 <nav id="left_tags">
 		<ul>
-			<li>Friend List</li>
+			<a href="friends.php"><li>Friend List</li></a>
 			<li>Friend News</li>
-			<li>Statuses</li>
+			<a href="friends_statuses.php"><li>Statuses</li></a>
 			<li>Blogs</li>
 			<li>Events</li>
 		</ul>
