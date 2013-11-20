@@ -7,8 +7,8 @@
 			</div>
 		</a>
 		<div id="profile_name">
-			<p>FirstName</p>
-			<p>LastName</p>
+			<p>Zhi</p>
+			<p>Qian</p>
 		</div>
 
 		<div id="profile_edit">

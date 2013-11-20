@@ -12,7 +12,7 @@ include "leftside.php";
 <nav id="left_tags">
 		<ul>
 			<a href="./courses.php"><li>Return Course List</li></a>
-			<a href="#news"><li>Course News</li></a>
+			<a href="./courseinfo.php"><li>Course News</li></a>
 			<a href="course_statuses.php"><li>Statuses</li></a>
 			<li>Reviews</li>
 			<li>Resources</li>
