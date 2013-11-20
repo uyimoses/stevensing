@@ -5,7 +5,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
@@ -14,7 +14,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>zhi</span>&nbsp;<span>Qian</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
@@ -23,7 +23,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Xiao</span>&nbsp;<span>Han</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
@@ -37,7 +37,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<section>
 					<p>
@@ -51,7 +51,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Steven</span>&nbsp;<span>Gabarro</span>
 				</div>
 				<section>
 					<p>
