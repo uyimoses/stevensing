@@ -32,7 +32,7 @@ include "leftside.php";
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<a href="#" ><div>
 					Delete
@@ -41,7 +41,7 @@ include "leftside.php";
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Xiao</span>&nbsp;<span>Han</span>
 				</div>
 				<a href="#" ><div>
 					Delete
@@ -50,7 +50,7 @@ include "leftside.php";
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Cheng</span>&nbsp;<span>Liu</span>
 				</div>
 				<a href="#" ><div>
 					Delete
