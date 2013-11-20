@@ -63,7 +63,7 @@ session_start();
 					</ul>
 				</div>
 				<div class="span-6 last" id="search_box">
-					<form action="#" method="get">
+					<form action="./searchresult.php" method="get">
 						<input type="text" name="search_text" placeholder="Name, Course...">
 						<a href="searchresult.php" id="search_button">Search</a>
 					</form>

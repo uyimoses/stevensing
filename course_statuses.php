@@ -28,6 +28,7 @@ include "leftside.php";
 			<p id="description">This course will provide students with a first strong approach of internet programming. It gives the basic knowledge on how the Internet works and how to create advanced web sites by the use of script languages, after learning the basics of HTML. The course will teach the students the skills required in any business such as proper team work and coordination between groups.</p>
 		</div>
 		<div id="rcourse">
+			<div><a href="./courses.php">Back to List</a></div>
 			<div>Course Rating: <span>4.0</span></div>
 			<div class="star_rating star_4"></div>
 		</div>		
@@ -35,7 +36,7 @@ include "leftside.php";
 	<section id="status_list">
 		<h1>Recent statues</h1>
 		<ul>
-			<li id="course_status_list">
+			<li class="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
@@ -49,7 +50,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li id="course_status_list">
+			<li class="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>

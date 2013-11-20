@@ -30,16 +30,41 @@
 #courseinfo p{
 	margin: 2px;
 }
+
 #lcourse{
 	float: left;
 	width: 365px;
+	height: 90px;
 	padding: 5px;
 }
+
 #rcourse{
 	float: left;
 	vertical-align: bottom;
-	padding-top: 30px;
+	height: 90px;
 }
+
+#rcourse div:nth-of-type(1){
+	text-align: right;
+	margin-bottom: 20px;
+	padding-left: 60px;
+}
+
+#rcourse div:nth-of-type(1) a{
+	display: block;
+	font-size: 14px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	text-align: center;
+	height: 20px;
+	width: 100px;
+}
+
+#rcourse div:nth-of-type(1) a:hover, #rcourse div:nth-of-type(1) a:focus{
+	background: #a9002f;
+	color: #FFF;
+}
+
 #rcourse span{
 	font-size: 28px;
 	color: #a9002f;

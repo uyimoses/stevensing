@@ -24,7 +24,7 @@ include "leftside.php";
 	<section id="status_list">
 		<h1>Recent statues</h1>
 		<ul>
-			<li id="friend_status_list">
+			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
@@ -38,7 +38,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li id="friend_status_list">
+			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
