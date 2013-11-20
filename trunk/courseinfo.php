@@ -7,12 +7,12 @@ include "leftside.php";
 ?>
 <script type="text/javascript">
 	$("#main_menu ul a:nth-child(3)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_3");
+	$("#left_tag_current").addClass("left_tag_2");
 </script>
 <nav id="left_tags">
 		<ul>
 			<a href="./courses.php"><li>Return Course List</li></a>
-			<a href="#news"><li>Course News</li></a>
+			<a href="./courseinfo.php"><li>Course News</li></a>
 			<a href="course_statuses.php"><li>Statuses</li></a>
 			<li>Reviews</li>
 			<li>Resources</li>
@@ -34,7 +34,7 @@ include "leftside.php";
 		</div>		
 	</div>
 	<section id="status_list">
-		<h1>Recent status</h1>
+		<h1>Recent News</h1>
 		<ul>
 			<li class="course_status_list">
 				
