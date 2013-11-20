@@ -27,7 +27,7 @@ include "leftside.php";
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<section>
 					<p>
@@ -41,7 +41,7 @@ include "leftside.php";
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>FirstName</span>&nbsp;<span>LastName</span>
+					<span>Xiao</span>&nbsp;<span>Han</span>
 				</div>
 				<section>
 					<p>
