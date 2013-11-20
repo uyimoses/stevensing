@@ -174,7 +174,7 @@ background-color: #a9002f;
 
 .course_status_list  div{
 	float: left;
-	width: 500px;
+	width: 480px;
 	font-size: 13px;
 	font-weight: bold;
 }
@@ -184,7 +184,7 @@ background-color: #a9002f;
 }
 .course_status_list section div{
 	float: left;
-	width: 500px;
+	width: 480px;
 	
 	font-weight: bold;
 }
@@ -196,7 +196,7 @@ background-color: #a9002f;
 
 .course_status_list section{
 	float: left;
-	width: 500px;
+	width: 480px;
 	font-size: 14px;
 }
 
@@ -210,7 +210,7 @@ background-color: #a9002f;
 
 .course_status_list section>div a{
 	color: #a9002f;
-	padding-left: 420px;
+	padding-left: 400px;
 }
 
 .course_status_list section>div a:hover{
