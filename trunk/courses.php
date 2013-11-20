@@ -28,7 +28,7 @@ include "leftside.php";
 				<div id="course_list_name">
 					<a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a>
 				</div>
-				<li id="button">
+				<li class="button">
 					<a href="#" >Drop </a>
 					<a href="courseinfo.php">Visit</a>
 				</li>
@@ -37,7 +37,7 @@ include "leftside.php";
 				<div id="course_list_name">
 				<a href="courseinfo.php"><span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a>
 				</div>
-				<li id="button">
+				<li class="button">
 					<a href="#" >Drop </a>
 					<a href="courseinfo.php">Visit</a>
 			</li>
@@ -46,7 +46,7 @@ include "leftside.php";
 				<div id="course_list_name">
 				<a href="courseinfo.php"><span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a>
 				</div>
-				<li id="button">
+				<li class="button">
 					<a href="#" >Drop </a>
 					<a href="courseinfo.php">Visit</a>
 				</li>

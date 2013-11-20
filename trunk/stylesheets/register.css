@@ -95,6 +95,17 @@
   margin: 0px 3px 2px 0px;
 }
 
+.register_steps select{
+  width: 200px;
+  font-size: 15px;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: 1px 5px 3px 2px;
+}
+
 .register_steps>div{
   float: left;
   width: 500px;

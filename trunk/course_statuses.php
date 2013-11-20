@@ -34,7 +34,7 @@ include "leftside.php";
 		</div>		
 	</div>
 	<section id="status_list">
-		<h1>Recent statues</h1>
+		<h1>Recent statuses</h1>
 		<ul>
 			<li class="course_status_list">
 				
