@@ -5,7 +5,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>Ruo</span>&nbsp;<span>Jia</span>
+					<span>Stevens</span>&nbsp;<span>Gabarro</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
@@ -14,7 +14,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>zhi</span>&nbsp;<span>Qian</span>
+					<span>David</span>&nbsp;<span>Jobs</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
@@ -23,7 +23,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>Xiao</span>&nbsp;<span>Han</span>
+					<span>Jane</span>&nbsp;<span>Smiths</span>
 				</div>
 				<div>
 					<button>Add</button><button>Ignore</button>
