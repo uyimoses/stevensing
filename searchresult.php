@@ -107,19 +107,19 @@ include "leftside.php";
 		<ul>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>FirstName</span>&nbsp;<span>LastName</span></div>
+				<div><span>Ruo</span>&nbsp;<span>Jia</span></div>
 				<a href="#" ><div>Add</div></a>
 			</li>
 			
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>FirstName</span>&nbsp;<span>LastName</span></div>
+				<div><span>Xiao</span>&nbsp;<span>Han</span></div>
 				<a href="#" ><div>Add</div></a>
 			</li>
 			
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>FirstName</span>&nbsp;<span>LastName</span></div>
+				<div><span>Cheng</span>&nbsp;<span>Liu</span></div>
 				<a href="#" ><div>Add</div></a>
 			</li>
 		
