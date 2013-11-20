@@ -22,7 +22,7 @@ include "leftside.php";
 <section class="span-14 main_view">
 	
 	<section id="status_list">
-		<h1>Recent statues</h1>
+		<h1>Recent statuses</h1>
 		<ul>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">

@@ -40,7 +40,7 @@ include "leftside.php";
   
 	</section>
 	<section id="status_list">
-		<h1>Recent statues</h1>
+		<h1>Recent statuses</h1>
 		<ul>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
@@ -50,6 +50,20 @@ include "leftside.php";
 				<section>
 					<p>
 						I just want to say "hello" to the world, but it's already farewell.
+					</p>
+					<div>
+						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+					</div>
+				<section>
+			</li>
+			<li class="course_status_list">
+				
+				<div>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
+				</div>
+				<section>
+					<p>
+						Welcome, everyone! Today is the CEO presentation!
 					</p>
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
@@ -79,23 +93,10 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-	</section>
-</li>
-
-<li class="course_status_list">
-				
-				<div>
-					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
-				</div>
-				<section>
-					<p>
-						I just want to say "hello" to the world, but it's already farewell.
-					</p>
-					<div>
-						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
-					</div>
-				<section>
+				</section>
 			</li>
+
+			
 			<li class="course_status_list">
 				
 				<div>

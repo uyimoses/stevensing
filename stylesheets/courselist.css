@@ -40,7 +40,7 @@
 	font-size: 13px;
 	font-weight: bold;
 }
-#button a{
+.button a{
 
 	font-size: 16px;
 	float: right;
@@ -55,7 +55,7 @@
 	
 	 
 }
-#button a:hover{
+.button a:hover{
 color:#FFF;
 background-color: #a9002f;
 
