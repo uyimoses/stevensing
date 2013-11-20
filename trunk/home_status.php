@@ -11,8 +11,8 @@ include "leftside.php";
 </script>
 <nav id="left_tags">
 		<ul>
-			<li>All News</li>
-			<li>Statuses</li>
+			<a href="./homepage.php"><li>All News</li></a>
+			<a href="./home_status.php"><li>Statuses</li></a>
 			<li>Blogs</li>
 			<li>Events</li>
 		</ul>
@@ -42,7 +42,7 @@ include "leftside.php";
 	<section id="status_list">
 		<h1>Recent statues</h1>
 		<ul>
-			<li id="friend_status_list">
+			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
@@ -56,7 +56,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li id="friend_status_list">
+			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>FirstName</span>&nbsp;<span>LastName</span>
@@ -82,7 +82,7 @@ include "leftside.php";
 	</section>
 </li>
 
-<li id="course_status_list">
+<li class="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
@@ -96,7 +96,7 @@ include "leftside.php";
 					</div>
 				<section>
 			</li>
-			<li id="course_status_list">
+			<li class="course_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>

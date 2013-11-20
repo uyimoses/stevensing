@@ -98,122 +98,122 @@ background-color: #a9002f;
 	margin: 0px;
 }
 
-#friend_status_list{
+.friend_status_list{
 	display: inline-block;
 	margin: 5px 0px;
 	padding: 2px;
 	background: #f5f5f5;
 }
 
-#friend_status_list img{
+.friend_status_list img{
 	width: 40px;
 	float: left;
 	margin-right: 5px;
 }
 
-#friend_status_list  div{
+.friend_status_list  div{
 	float: left;
 	width: 480px;
 	font-size: 13px;
 	font-weight: bold;
 }
-#friend_status_list div span{
+.friend_status_list div span{
 
 	font-size: 15px;
 }
-#friend_status_list section div{
+.friend_status_list section div{
 	float: left;
 	width: 480px;
 	
 	font-weight: bold;
 }
-#friend_status_list section div span{
+.friend_status_list section div span{
 	font-size: 11px;
 	
 	font-weight: normal;
 }
 
-#friend_status_list section{
+.friend_status_list section{
 	float: left;
 	width: 480px;
 	font-size: 14px;
 }
 
 
-#friend_status_list section p{
+.friend_status_list section p{
 	margin: 0px;
 	
 	
 }
 
 
-#friend_status_list  section>div a{
+.friend_status_list  section>div a{
 	color: #a9002f;
 	padding-left: 400px;
 }
 
-#friend_status_list  section>div a:hover{
+.friend_status_list  section>div a:hover{
 	text-decoration: underline;
 }
 
 
-
-
-#course_status_list{
+.course_status_list{
 	display: inline-block;
 	margin: 3px 0px;
-	padding: 2px 0px 2px 45px;
+	padding: 2px 0px 2px 25px;
 	background: #f5f5f5;
 }
 
-#course_status_list img{
+
+
+.course_status_list img{
 	width: 40px;
 	float: left;
 	margin-right: 5px;
 }
 
-#course_status_list  div{
+.course_status_list  div{
 	float: left;
 	width: 480px;
 	font-size: 13px;
 	font-weight: bold;
 }
-#course_status_list div span{
+.course_status_list div span{
 
 	font-size: 15px;
 }
-#course_status_list section div{
+.course_status_list section div{
 	float: left;
 	width: 480px;
 	
 	font-weight: bold;
 }
-#course_status_list section div span{
+.course_status_list section div span{
 	font-size: 11px;
 	
 	font-weight: normal;
 }
 
-#course_status_list section{
+.course_status_list section{
 	float: left;
 	width: 480px;
 	font-size: 14px;
 }
 
 
-#course_status_list section p{
+.course_status_list section p{
 	margin: 0px;
 	
 	
 }
 
 
-#course_status_list  section>div a{
+.course_status_list section>div a{
 	color: #a9002f;
 	padding-left: 400px;
 }
 
-#course_status_list section>div a:hover{
+.course_status_list section>div a:hover{
 	text-decoration: underline;
 }
 

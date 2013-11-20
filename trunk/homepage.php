@@ -11,8 +11,8 @@ include "leftside.php";
 </script>
 <nav id="left_tags">
 		<ul>
-			<li>All News</li>
-			<a href=" home_status.php"><li>Statuses</li></a>
+			<a href="./homepage.php"><li>All News</li></a>
+			<a href="./home_status.php"><li>Statuses</li></a>
 			<li>Blogs</li>
 			<li>Events</li>
 		</ul>
