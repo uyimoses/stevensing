@@ -29,7 +29,7 @@ include "leftside.php";
 				</div>
 				<section>
 					<p>
-						I just want to say "hello" to the world, but it's already farewell.
+						Have a great day!
 					</p>
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
