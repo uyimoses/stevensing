@@ -6,15 +6,15 @@ include "header.php";
 include "leftside.php";
 ?>
 <script type="text/javascript">
-	$("#main_menu ul a:nth-child(3)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_3");
+	$("#main_menu ul a:nth-child(4)").addClass('current');
+	$("#left_tag_current").addClass("left_tag_4");
 </script>
 <nav id="left_tags">
 		<ul>
 			<a href="./courses.php"><li>Return Course List</li></a>
 			<a href="./courseinfo.php"><li>Course News</li></a>
 			<a href="course_statuses.php"><li>Statuses</li></a>
-			<li>Reviews</li>
+			<a href="course_reviews.php"><li>Reviews</li></a>
 			<li>Resources</li>
 			<li>Events</li>
 		</ul>
