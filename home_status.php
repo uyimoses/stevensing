@@ -55,6 +55,12 @@ include "leftside.php";
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
 				</section>
+					<li class="replyBox" >
+				  			<img src="./images/profile_image.jpg" alt="" title="">
+				  			<!-- <span><a href="#">Ruo&nbsp;Jia</a></span> -->
+							<textarea name="reply" contenteditable="true"></textarea>
+							<div><a href="#"> send</a></div>
+						</li>
 			</li>
 			<li class="course_status_list">
 				
@@ -94,6 +100,8 @@ include "leftside.php";
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
 				</section>
+
+			</li>
 			</li>
 
 			
