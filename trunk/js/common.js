@@ -12,5 +12,10 @@ $(function(){
 	        yearRange: "1900:2014"
 	});
 
-	init();
+	try{
+		init();
+	}
+	catch(e){
+		// do nothing
+	}
 });
