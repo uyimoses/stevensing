@@ -29,7 +29,7 @@ include "leftside.php";
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
 			
-			  <textarea class="fieldclass"  name="message" contenteditable="true"></textarea>
+			  <textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Write something about yourself..."></textarea>
 			  
 			<div id="button"><a href="#"> send</a></div>
 		  </div>
