@@ -122,3 +122,15 @@
 .star_half_4{
 	background-position: 0px -30px;
 }
+#uploadres{
+	background-color: #eee;
+	margin-bottom: 0px;
+	height: 80px;
+}
+#uploadres label{
+	font-size: 15px;
+}
+#ressubmit {
+	float: right;
+	margin-right: 40px;
+}
