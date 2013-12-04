@@ -3,6 +3,11 @@
 include "mysqli_connection.php";
 //some datas
 include "datas.php";
+
+//set timezone
+date_default_timezone_set('UTC');
+
+//start session
 session_start();
 ?>
 <!DOCTYPE html>
