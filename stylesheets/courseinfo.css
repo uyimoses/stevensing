@@ -8,7 +8,7 @@
 	padding: 10px;
 	margin: 5px;
 	font-size: 28px;
-	padding-top: 22px;
+	padding-top: 12px;
 }
 #number, #department{
 	color: #800000;
@@ -143,6 +143,16 @@
 	font-size: 16px;
 	color: #333333;
 	line-height: 13px;
-	margin-bottom: 20px;
 	width: 460px;
+}
+.input-append{
+	height:30px;
+	line-height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+.add-on{
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
 }
