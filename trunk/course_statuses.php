@@ -36,10 +36,10 @@ include "leftside.php";
 
 	<div class="block-top"></div>
 	  <div id="contact-content">
-		<span id="contact-text">Create new events:</span>
+		<span id="contact-text">Create new Stutas:</span>
 		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
 			<div id="form_box">
-			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Create an event about the course..."></textarea>
+			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
 			<div id="button"><a href="#"> send</a></div>
 		  </div>
 		</form>
