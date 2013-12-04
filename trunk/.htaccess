@@ -5,3 +5,5 @@ RewriteRule		^home$						homepage.php
 RewriteRule		^([a-zA-Z0-9]+)$			$1.php
 #RewriteRule	^(/w+)/(/w+)/([^/]+)/$	$1?($2=$3)		[R]
 #RewriteRule		^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([^/]+)(/([a-zA-Z0-9]+)/([^/]+))*/?$	$1.php?$2=$3&$5=$6		[R]
+
+#RewriteRule		^search/([0-9]+)/([a-zA-Z0-9%]+)$	search.php?id=$1&name=$2
