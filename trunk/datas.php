@@ -59,3 +59,8 @@ $degrees = array(
 	"Master",
 	"PhD"
 );
+
+$semesters = array(
+	"Fall",
+	"Spring"
+);

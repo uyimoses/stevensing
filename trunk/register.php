@@ -51,20 +51,21 @@ include "header_login.php"
 					"semester": form.elements["semester"].value
 				},
 				success: function(data){
+					console.log(data);
 					var obj = eval('(' + data + ')');
-					// $("#email_error").text(obj.email);
-					// $("#password_error").text(obj.password);
-					// $("#question_error").text(obj.question);
-					// $("#answer_error").text(obj.answer);
-					// $("#firstname_error").text(obj.firstname);
-					// $("#middlename_error").text(obj.middlename);
-					// $("#lastname_error").text(obj.lastname);
-					// $("#gender_error").text(obj.gender);
-					// $("#dob_error").text(obj.dob);
-					// $("#major_error").text(obj.major);
-					// $("#degree_error").text(obj.degree);
-					// $("#year_error").text(obj.year);
-					// $("#semester_error").text(obj.semester);
+					$("#email_error").text(obj.email_error);
+					$("#password_error").text(obj.password_error);
+					$("#question_error").text(obj.question_error);
+					$("#answer_error").text(obj.answer_error);
+					$("#firstname_error").text(obj.firstname_error);
+					$("#middlename_error").text(obj.middlename_error);
+					$("#lastname_error").text(obj.lastname_error);
+					$("#gender_error").text(obj.gender_error);
+					$("#dob_error").text(obj.dob_error);
+					$("#major_error").text(obj.major_error);
+					$("#degree_error").text(obj.degree_error);
+					$("#year_error").text(obj.year_error);
+					$("#semester_error").text(obj.semester_error);
 				},
 				error: function(data){
 
@@ -226,7 +227,13 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="semester" class="required">Entry Semester</label>
-				<input type="text" name="semester" placeholder="Semester" required>
+				<select name="semester" id="semester" size="1">
+					<?php
+					foreach ($semesters as $value) {
+						echo "<option value='$value'>$value</option>";
+					}
+					?>
+				</select>
 				<span class="check_icon"></span>
 				<div class="check_message" id="semester_error">error message</div>
 			</div>
