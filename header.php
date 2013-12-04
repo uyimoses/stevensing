@@ -1,6 +1,7 @@
 <?php
 //create a mysqli connection
 include "mysqli_connection.php";
+//some datas
 include "datas.php";
 session_start();
 ?>
