@@ -112,32 +112,11 @@ include "header_login.php"
 			<div>
 				<label for="major">Major</label>
 				<select name="major" id="Major"size="1">
-					<option value="BME">Biomedical Engineering
-					</option><option value="CPE">Computer Engineering
-					</option><option value="CS">Computer Science
-					</option><option value="EE">Electrical Engineering
-					</option><option value="EM">Engineering Management
-					</option><option value="MIS">Information Systems
-					</option><option value="IPD">Integrated Product Development
-					</option><option value="E">Interdepartmental Engineering
-					</option><option value="MGT">Management
-					</option><option value="MT">Materials Engineering
-					</option><option value="MA">Mathematics
-					</option><option value="ME">Mechanical Engineering
-					</option><option value="NANO">Nanotechnology
-					</option><option value="NE">Naval Engineering
-					</option><option value="NIS">Networked Information Systems
-					</option><option value="OE">Ocean Engineering
-					</option><option value="PME">Pharmaceutical Manufacturing
-					</option><option value="PE">Physical Education
-					</option><option value="PEP">Physics &amp; Engineering Physics
-					</option><option value="PAE">Product Architecture and Engineering
-					</option><option value="PRV">Provost
-					</option><option value="QF">Quantitative Finance
-					</option><option value="SSW">Software Engineering
-					</option><option value="SYS">Systems Engineering
-					</option><option value="SES">Systems Engineering Security
-					</option>
+					<?php
+					foreach ($majors as $key => $value) {
+						echo "<option value='$key'>$value</option>";
+					}
+					?>
 				</select>
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
