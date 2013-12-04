@@ -39,12 +39,11 @@ include "leftside.php";
 		<span id="contact-text">Create new Stutas:</span>
 		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
 			<div id="form_box">
-			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
+			<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
 			<div id="button"><a href="#"> send</a></div>
 		  </div>
 		</form>
 	</div>
-
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
