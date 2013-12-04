@@ -39,12 +39,13 @@ include "leftside.php";
 		<div id="rcourse">
 			<span>Rate the course:</span>
 			<div class="star_rating star_4"></div>
-		</div><br>
+		</div>
+		<div class="block-bottom"></div>
 		<div>
 			<span id="contact-text">Input your comment:</span>
 			<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
 				<div id="form_box">
-				<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
+				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
 				<div id="button"><a href="#"> send</a></div>
 			  </div>
 			</form>

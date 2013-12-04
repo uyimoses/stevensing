@@ -33,7 +33,7 @@ include "leftside.php";
 			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
-
+	<div class="block-bottom"></div>
 	<div id="uploadres">
 		<label>Upload new resourse:</label>
 		<form action="upload_res.php" method="post" enctype="multipart/form-data">
@@ -41,7 +41,6 @@ include "leftside.php";
 			<input type="submit" name="submit" value="Submit" id="ressubmit">
 		</form><br>
 	</div>
-
 	<section id="resourse">
 		<h1>Resourse</h1>
 		<table>
