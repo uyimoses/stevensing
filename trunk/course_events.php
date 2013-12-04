@@ -6,15 +6,15 @@ include "header.php";
 include "leftside.php";
 ?>
 <script type="text/javascript">
-	$("#main_menu ul a:nth-child(2)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_2");
+	$("#main_menu ul a:nth-child(6)").addClass('current');
+	$("#left_tag_current").addClass("left_tag_6");
 </script>
 <nav id="left_tags">
 		<ul>
 			<a href="./courses.php"><li>Return Course List</li></a>
 			<a href="./courseinfo.php"><li>Course News</li></a>
 			<a href="course_statuses.php"><li>Statuses</li></a>
-			<a href="course_reviews.php"><li>Reviews</li>
+			<a href="course_reviews.php"><li>Reviews</li></a>
 			<li>Resources</li>
 			<a href="course_events.php"><li>Events</li></a>
 		</ul>
@@ -33,8 +33,20 @@ include "leftside.php";
 			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
+
+	<div class="block-top"></div>
+	  <div id="contact-content">
+		<span id="contact-text">Create new events:</span>
+		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+			<div id="form_box">
+			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Create an event about the course..."></textarea>
+			<div id="button"><a href="#"> send</a></div>
+		  </div>
+		</form>
+	</div>
+
 	<section id="status_list">
-		<h1>Recent News</h1>
+		<h1>Recent events</h1>
 		<ul>
 			<li class="course_status_list">
 				

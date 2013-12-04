@@ -16,7 +16,7 @@ include "leftside.php";
 			<a href="course_statuses.php"><li>Statuses</li></a>
 			<a href="course_reviews.php"><li>Reviews</li></a>
 			<li>Resources</li>
-			<li>Events</li>
+			<a href="course_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->

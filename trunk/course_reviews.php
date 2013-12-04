@@ -16,7 +16,7 @@ include "leftside.php";
 			<a href="course_statuses.php"><li>Statuses</li></a>
 			<a href="course_reviews.php"><li>Reviews</li></a>
 			<li>Resources</li>
-			<li>Events</li>
+			<a href="course_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
@@ -35,16 +35,21 @@ include "leftside.php";
 	</div>
 
 	<div class="block-top"></div>
-	  <div id="contact-content">
-		<span id="contact-text">Input your comment:</span>
-		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
-			<div id="form_box">
-			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
-			<div id="button"><a href="#"> send</a></div>
-		  </div>
-		</form>
+	<div id="contact-content">
+		<div id="rcourse">
+			<span>Rate the course:</span>
+			<div class="star_rating star_4"></div>
+		</div><br>
+		<div>
+			<span id="contact-text">Input your comment:</span>
+			<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+				<div id="form_box">
+				<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
+				<div id="button"><a href="#"> send</a></div>
+			  </div>
+			</form>
+		</div>
 	</div>
-
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
