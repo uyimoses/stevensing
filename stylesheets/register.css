@@ -12,7 +12,7 @@
   font-weight: bold;
 }
 
-#register_bar li a {
+#register_bar li span {
   color: #FFF;
   display: block;
   background: #999;
@@ -27,7 +27,7 @@
   border-bottom: 2px solid #FFF;
 }
 
-#register_bar li:first-child a {
+#register_bar li:first-child span {
   -webkit-border-radius: 6px 0 0 0px;
   -moz-border-radius: 6px 0 0 0px;
   -ms-border-radius: 6px 0 0 0px;
@@ -35,7 +35,7 @@
   border-radius: 6px 0 0 0px;
 }
 
-#register_bar li:last-child a {
+#register_bar li:last-child span {
   -webkit-border-radius: 0 0 0 6px;
   -moz-border-radius: 0 0 0 6px;
   -ms-border-radius: 0 0 0 6px;
@@ -43,7 +43,7 @@
   border-radius: 0 0 0 6px;
 }
 
-#register_bar li a.current:after {
+#register_bar li span.current:after {
   content: "";
   position: absolute;
   top: 0;
@@ -57,15 +57,15 @@
   border-left-color: #a9002f;
 }
 
-#register_bar li a:hover {
+/*#register_bar li a:hover {
   color: #fff83b;
-}
+}*/
 
-#register_bar li a.completed, #register_bar li a.current {
+#register_bar li span.completed, #register_bar li span.current {
   background-color: #a9002f;
 }
 
-#register_bar li a.completed:after{
+#register_bar li span.completed:after{
   border-left-color: #a9002f;
 }
 
@@ -77,6 +77,11 @@
 .register_steps label{
   font-size: 15px;
   display: block;
+}
+
+.register_steps label.required:after{
+  content: " *";
+  color:red;
 }
 
 .register_steps input[type="text"], .register_steps input[type="password"]{

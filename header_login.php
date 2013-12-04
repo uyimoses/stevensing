@@ -1,6 +1,7 @@
 <?php
 //include mysqli connection
 include "mysqli_connection.php";
+include "datas.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -23,11 +24,11 @@ session_start();
 	<section class="content">
 		<header>
 			<div class="container">
-				<a href="/">
+				<a href="welcome">
 					<div class="span-4 border" id="stevensing_logo" title="Stevensing"></div>
 				</a>
 				<div class="span-20 last" id="login_bar">
-					<form action="./homepage.php" method="post">
+					<form action="home" method="post">
 						<div>
 							<label for="username">Account</label>
 							<input type="text" name="username" placeholder="xxxxxx@stevens.edu" required>

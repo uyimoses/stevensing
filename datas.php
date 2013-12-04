@@ -1,6 +1,6 @@
 <?php
 $majors = array(
-	'BME' => 'Biomedical Engineering',
+	"BME" => "Biomedical Engineering",
 	"BIA" => "Business Intelligence and Analytics",
 	"BT" => "Business and Technology",
 	"CHE" => "Chemical Engineering",
@@ -53,4 +53,9 @@ $majors = array(
 	"TG" => "Technogenesis",
 	"TM" => "Telecommunications Management",
 	"ARD" => "US Army ARDEC"
+);
+
+$degrees = array(
+	"Master",
+	"PhD"
 );
