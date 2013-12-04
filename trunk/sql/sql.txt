@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   `lastname` varchar(40) NOT NULL,
   `gender` char(1) NOT NULL,
   `dob` date NOT NULL,
-  `major` varchar(60) NOT NULL,
+  `major` varchar(6) NOT NULL,
   `degree` varchar(40) NOT NULL,
   `entry_year` smallint(6) NOT NULL,
   `entry_semester` tinyint(4) NOT NULL,

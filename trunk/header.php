@@ -30,18 +30,18 @@ session_start();
 	<section class="content">
 		<header>
 			<div class="container">
-				<a href="./index.php">
+				<a href="welcome">
 					<div class="span-4 border" id="stevensing_logo" title="Stevensing"></div>
 				</a>
 				<nav class="span-10" id="main_menu">
 					<ul>
-						<a href="./homepage.php">
+						<a href="home">
 							<li>Home</li>
 						</a>
-						<a href="./friends.php">
+						<a href="friends">
 							<li>Friends</li>
 						</a>
-						<a href="./courses.php">
+						<a href="courses">
 							<li>Courses</li>
 						</a>
 					</ul>
@@ -58,15 +58,15 @@ session_start();
 						<a href="#">
 							<li>Support</li>
 						</a>
-						<a href="./index.php">
+						<a href="welcome">
 							<li>Log out</li>
 						</a>
 					</ul>
 				</div>
 				<div class="span-6 last" id="search_box">
-					<form action="./searchresult.php" method="get">
+					<form action="searchresult" method="get">
 						<input type="text" name="search_text" placeholder="Name, Course...">
-						<a href="searchresult.php" id="search_button">Search</a>
+						<a href="searchresult" id="search_button">Search</a>
 					</form>
 				</div>
 			</div>
