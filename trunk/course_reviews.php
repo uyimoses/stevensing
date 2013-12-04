@@ -65,7 +65,7 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+				</section>
 			</li>
 			<li class="course_status_list">
 				
@@ -90,10 +90,10 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+				</section>
+			</li>
+		</ul>
 	</section>
-</li>
-</ul>
-</section>
 	
 	
 

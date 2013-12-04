@@ -59,9 +59,6 @@ include "leftside.php";
 			</tr>
 		</table>
 	</section>
-	
-	
-
 </section>
 <?php
 //include rightside bar

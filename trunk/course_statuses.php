@@ -15,7 +15,7 @@ include "leftside.php";
 			<a href="./courseinfo.php"><li>Course News</li></a>
 			<a href="course_statuses.php"><li>Statuses</li></a>
 			<a href="course_reviews.php"><li>Reviews</li></a>
-			<li>Resources</li>
+			<a href="course_resourses.php"><li>Resources</li></a>
 			<a href="course_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
@@ -33,6 +33,18 @@ include "leftside.php";
 			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
+
+	<div class="block-top"></div>
+	  <div id="contact-content">
+		<span id="contact-text">Create new events:</span>
+		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+			<div id="form_box">
+			<textarea class="fieldclass"  name="message" contenteditable="true" placeholder="Create an event about the course..."></textarea>
+			<div id="button"><a href="#"> send</a></div>
+		  </div>
+		</form>
+	</div>
+
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
@@ -48,7 +60,7 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+				</section>
 			</li>
 			<li class="course_status_list">
 				
@@ -73,13 +85,10 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+				</section>
+			</li>
+		</ul>
 	</section>
-</li>
-</ul>
-</section>
-	
-	
-
 </section>
 <?php
 //include rightside bar
