@@ -4,6 +4,10 @@ include "header_login.php"
 ?>
 <script type="text/javascript">
 	function registerStep(id){
+		if (id>=4){
+			register();
+		}
+
 		for(var i = 1; i<=5; i++){
 			$("#register_step_"+i).hide();
 			if (i==id){
@@ -20,6 +24,9 @@ include "header_login.php"
 				
 		}
 		$("#register_step_"+id).show();
+	}
+	function register(){
+		
 	}
 	function addfriends(){
 
@@ -45,7 +52,7 @@ include "header_login.php"
 		  <li><span>Adding Courses</span></li>
 		</ol>
 	</section>
-	<form action="./register.php" method="post">
+	<form action="registerAction" method="post">
 		<!-- Creating an Account -->
 		<section class="register_steps" id="register_step_1">
 			<div>
@@ -157,19 +164,30 @@ include "header_login.php"
 				<span class="check_icon"></span>
 				<div class="check_message">error message</div>
 			</div>
-			<div class="next_register_step"><a href="javascript:" onclick="registerStep(1);">Back</a><a href="javascript:" onclick="registerStep(3);">Next</a></div>
+			<div class="next_register_step">
+				<a href="javascript:" onclick="registerStep(1);">Back</a>
+				<a href="javascript:" onclick="registerStep(3);">Next</a></div>
 		</section>
 		<!-- Policy Confirmation -->
 		<section class="register_steps" id="register_step_3">
-			<div class="next_register_step"><a href="javascript:" onclick="registerStep(2);">Back</a><a href="javascript:" onclick="window.location.href='welcome';">Deny</a><a href="javascript:" onclick="registerStep(4);">Register</a></div>
+			<div class="next_register_step">
+				<a href="javascript:" onclick="registerStep(2);">Back</a>
+				<a href="javascript:" onclick="window.location.href='welcome';">Deny</a>
+				<a href="javascript:" onclick="registerStep(4);">Register</a></div>
 		</section>
 		<!-- Adding friends -->
 		<section class="register_steps" id="register_step_4">
-			<div class="next_register_step"><a href="javascript:" onclick="registerStep(3);">Back</a><a href="javascript:" onclick="registerStep(5);">Skip</a><a href="javascript:" onclick="addfriends();registerStep(5);">Done</a></div>
+			<div class="next_register_step">
+				<a href="javascript:" onclick="registerStep(3);">Back</a>
+				<a href="javascript:" onclick="registerStep(5);">Skip</a>
+				<a href="javascript:" onclick="addfriends();registerStep(5);">Done</a></div>
 		</section>
 		<!-- Adding courses -->
 		<section class="register_steps" id="register_step_5">
-			<div class="next_register_step"><a href="javascript:" onclick="registerStep(4);">Back</a><a href="javascript:" onclick="window.location.href='home';">Skip</a><a href="javascript:" onclick="addcourses();window.location.href='home'">Done</a></div>
+			<div class="next_register_step">
+				<a href="javascript:" onclick="registerStep(4);">Back</a>
+				<a href="javascript:" onclick="window.location.href='home';">Skip</a>
+				<a href="javascript:" onclick="addcourses();window.location.href='home'">Done</a></div>
 		</section>
 		
 	</form>
