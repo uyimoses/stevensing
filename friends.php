@@ -14,7 +14,7 @@ include "leftside.php";
 			<a href="friends.php"><li>Friend List</li></a>
 			<li>Friend News</li>
 			<a href="friends_statuses.php"><li>Statuses</li></a>
-			<li>Blogs</li>
+			<a href="friends_blog.php"><li>Blog</li></a>
 			<li>Events</li>
 		</ul>
 	</nav>
