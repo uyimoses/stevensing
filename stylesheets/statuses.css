@@ -238,11 +238,4 @@ background-color: #a9002f;
 }
 
 
-.course_status_list section>div a{
-	color: #a9002f;
-	padding-left: 400px;
-}
 
-.course_status_list section>div a:hover{
-	text-decoration: underline;
-}
