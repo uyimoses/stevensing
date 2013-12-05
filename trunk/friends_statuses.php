@@ -14,7 +14,7 @@ include "leftside.php";
 			<a href="./friends.php"><li>Friend List</li></a>
 			<li>Friend News</li>
 			<a href="./friends_statuses.php"><li>Statuses</li></a>
-			<li>Blogs</li>
+			<a href="friends_blog.php"><li>Blog</li></a>
 			<a href="./friends_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
@@ -32,38 +32,62 @@ include "leftside.php";
 					<p>
 						Have a great day!
 					</p>
-					<div>
-						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+					<div class="replyline">
+						<span >2013-11-13 14:56</span>
+						<a  href="javascript:;">Reply</a>
 					</div>
+					<div class="OthersReply">
+						<a href="">Xiao Han</a>
+						<p>It's a nice day.</p>
+						<span> 2013-11-13 14:56 </span>
+						<div>
+						<a href="">reply</a>
+						<a href="">delete</a>
+						</div>
+					</div>
+					
+					<li class="replyBox" >
+				  		<img src="./images/profile_image.jpg" alt="" title="">
+						<textarea name="reply" contenteditable="true"></textarea>
+						<div><a href="#"> send</a></div>
+					</li>
 				</section>
+					
 			</li>
-			<li class="friend_status_list">
-				<img src="./images/profile_image.jpg" alt="" title="">
+			<li class="course_status_list">
+				
 				<div>
-					<span>Xiao</span>&nbsp;<span>Han</span>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
 				<section>
 					<p>
-						I heard that you're settled down
-						That you found a girl and you're married now
-						I heard that your dreams came true
-						Guess she gave you things I didn't give to you
-
-						Old friend, why are you so shy?
-						Ain't like you to hold back or hide from the light
-
-						I hate to turn up out of the blue, uninvited
-						But I couldn't stay away, I couldn't fight it
-						I had hoped you'd see my face and that you'd be reminded
-						That for me, it isn't over
+						Welcome, everyone! Today is the CEO presentation!
 					</p>
-					<div>
-						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+					<div class="replyline">
+						<span>2013-11-13 14:56</span>
+						<a href="javascript:;">Reply</a>
 					</div>
+					<div class="OthersReply">
+						<a href="">Xiao Han</a>
+						<p>It's a nice day.</p>
+						<span> 2013-11-13 14:56 </span>
+						<div>
+						<a href="">reply</a>
+						<a href="">delete</a>
+						</div>
+					</div>
+					
+					<li class="replyBox" >
+				  		<img src="./images/profile_image.jpg" alt="" title="">
+						<textarea name="reply" contenteditable="true"></textarea>
+						<div><a href="#"> send</a></div>
+					</li>
 				</section>
 			</li>
-		</ul>
-	</section>
+
+	
+</ul>
+</section>
 </section>
 <?php
 //include rightside bar
