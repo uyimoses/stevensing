@@ -6,8 +6,8 @@ include "header.php";
 include "leftside.php";
 ?>
 <script type="text/javascript">
-	$("#main_menu ul a:nth-child(4)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_4");
+	$("#main_menu ul a:nth-child(5)").addClass('current');
+	$("#left_tag_current").addClass("left_tag_5");
 </script>
 <nav id="left_tags">
 		<ul>
@@ -74,12 +74,12 @@ include "leftside.php";
 		</form>
 	</div>
 	<section id="status_list">
-		<h1>Recent statuses</h1>
+		<h1>Recent events</h1>
 		<ul>
-			<li class="friend_status_list">
-				<img src="./images/profile_image.jpg" alt="" title="">
+			<li class="course_status_list">
+				
 				<div>
-					<span>Ruo</span>&nbsp;<span>Jia</span>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
 				<section>
 					<p>
@@ -88,12 +88,27 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+					<div class="OthersReply">
+						<a href="">Xiao Han</a>
+						<p>It's a nice day.</p>
+						<span> 2013-11-13 14:56 </span>
+						<div>
+						<a href="">reply</a>
+						<a href="">delete</a>
+						</div>
+					</div>
+					
+					<li class="replyBox" >
+				  		<img src="./images/profile_image.jpg" alt="" title="">
+						<textarea name="reply" contenteditable="true"></textarea>
+						<div><a href="#"> send</a></div>
+					</li>
+				</section>
 			</li>
-			<li class="friend_status_list">
-				<img src="./images/profile_image.jpg" alt="" title="">
+			<li class="course_status_list">
+				
 				<div>
-					<span>Xiao</span>&nbsp;<span>Han</span>
+					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
 				<section>
 					<p>
@@ -113,13 +128,25 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+					<div class="OthersReply">
+						<a href="">Xiao Han</a>
+						<p>It's a nice day.</p>
+						<span> 2013-11-13 14:56 </span>
+						<div>
+						<a href="">reply</a>
+						<a href="">delete</a>
+						</div>
+					</div>
+					
+					<li class="replyBox" >
+				  		<img src="./images/profile_image.jpg" alt="" title="">
+						<textarea name="reply" contenteditable="true"></textarea>
+						<div><a href="#"> send</a></div>
+					</li>
+				</section>
+			</li>
+		</ul>
 	</section>
-</li>
-</ul>
-</section>
-	
-	
-
 </section>
 <?php
 //include rightside bar

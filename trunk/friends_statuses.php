@@ -20,7 +20,6 @@ include "leftside.php";
 	</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
-	
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
@@ -36,7 +35,7 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+				</section>
 			</li>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
@@ -61,13 +60,10 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+				</section>
+			</li>
+		</ul>
 	</section>
-</li>
-</ul>
-</section>
-	
-	
-
 </section>
 <?php
 //include rightside bar

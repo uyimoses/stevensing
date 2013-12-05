@@ -85,7 +85,7 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+				</section>
 			</li>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
