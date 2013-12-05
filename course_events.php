@@ -34,8 +34,7 @@ include "leftside.php";
 		</div>		
 	</div>
 
-	<div class="block-top"></div>
-	  <div id="contact-content">
+	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>
 		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
 			<div id="form_box">
@@ -86,9 +85,9 @@ include "leftside.php";
 				<label for="num">Number of attendance:</label>
 				<input type="int">
 			<div id="button"><a href="#"> Create</a></div>
-		  </div>
 		</form>
 	</div>
+	
 	<section id="status_list">
 		<h1>Recent events</h1>
 		<ul>
