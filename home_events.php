@@ -23,7 +23,7 @@ include "leftside.php";
 	<section class="block" id="contact">
 		<div id="contact-content">
 			<span id="contact-text">Create new events:</span>
-			<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+			<form id="statuseForm" action="home_statuses.php" method="post" name="statuseForm">
 				<div id="form_box">
 					<label for="title">Event title:</label>
 					<input type="text" name="title" id="eventtitle" >
@@ -75,12 +75,11 @@ include "leftside.php";
 			</form>
 		</div>
 		<div class="block-bottom"></div>
-  
 	</section>
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
-			<li class="friend_status_list">
+			<li class="home_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>Ruo</span>&nbsp;<span>Jia</span>
@@ -102,17 +101,14 @@ include "leftside.php";
 						<a href="">delete</a>
 						</div>
 					</div>
-					
 					<li class="replyBox" >
 				  		<img src="./images/profile_image.jpg" alt="" title="">
 						<textarea name="reply" contenteditable="true"></textarea>
 						<div><a href="#"> send</a></div>
 					</li>
-				</section>
-					
+				</section>	
 			</li>
-			<li class="course_status_list">
-				
+			<li class="home_status_list">
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
@@ -123,9 +119,9 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
-				<section>
+				</section>
 			</li>
-			<li class="friend_status_list">
+			<li class="home_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
 					<span>Xiao</span>&nbsp;<span>Han</span>
@@ -149,13 +145,8 @@ include "leftside.php";
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
 				</section>
-
 			</li>
-			</li>
-
-			
-			<li class="course_status_list">
-				
+			<li class="home_status_list">
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
@@ -177,14 +168,12 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+				</section>
+			</li>
+		</ul>
 	</section>
-</li>
-</ul>
 </section>
-	
-	
 
-</section>
 <?php
 //include rightside bar
 include "rightside.php";
