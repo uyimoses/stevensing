@@ -117,14 +117,10 @@ background-color: #a9002f;
 	font-size: 13px;
 	font-weight: bold;
 }
-.friend_status_list div span{
-
-	font-size: 15px;
-}
+ 
 .friend_status_list section div{
 	float: left;
 	width: 480px;
-	
 	font-weight: bold;
 }
 .friend_status_list section div span{
@@ -145,15 +141,49 @@ background-color: #a9002f;
 	
 	
 }
+.othersReply{
+	font-size: 13px;
 
-
-.friend_status_list  section>div a{
+}
+.OthersReply a{
+	float: left;
+	font-size: 13px;
 	color: #a9002f;
-	padding-left: 400px;
+	padding-right: 10px;
+}
+.OthersReply p{
+	font-weight: normal;
 }
 
-.friend_status_list  section>div a:hover{
+
+.OthersReply a:hover{
 	text-decoration: underline;
+}
+.OthersReply div>a{
+	color: #a9002f;
+	font-size: 10px;
+	float: right;
+	padding-right: 10px;
+}
+.OthersReply div>a:hover{
+	
+	text-decoration: underline;
+}
+
+
+
+.replyline a{
+	
+	color: #a9002f;
+	padding-left: 430px;
+}
+.replyline  a:hover{
+	text-decoration: underline;
+}
+
+.replyline span{
+
+	font-size: 15px;
 }
 
 
