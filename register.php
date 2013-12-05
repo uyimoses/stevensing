@@ -132,31 +132,31 @@ include "header_login.php"
 				<label for="email" class="required">Stevens Email</label>
 				<input type="text" name="email" placeholder="xxxxxx@stevens.edu" required value="<?php echo isset($_POST["email"])?$_POST["email"]:"";?>">
 				<span class="check_icon"></span>
-				<div class="check_message" id="email_error" id="email_error">error message</div>
+				<div class="check_message" id="email_error" id="email_error"></div>
 			</div>
 			<div>
 				<label for="password" class="required">Create a Password</label>
 				<input type="password" name="password" placeholder="At least 8 characters" required value="<?php echo isset($_POST["password"])?$_POST["password"]:"";?>">
 				<span class="check_icon"></span>
-				<div class="check_message" id="password_error">error message</div>
+				<div class="check_message" id="password_error"></div>
 			</div>
 			<div>
 				<label for="password2" class="required">Re-type the Password</label>
 				<input type="password" name="password2" placeholder="Type the password again" required>
 				<span class="check_icon"></span>
-				<div class="check_message" id="password2_error">error message</div>
+				<div class="check_message" id="password2_error"></div>
 			</div>
 			<div>
 				<label for="question" class="required">Security Question</label>
 				<input type="text" name="question" placeholder="Enter or select your question" required>
 				<span class="check_icon"></span>
-				<div class="check_message" id="question_error">error message</div>
+				<div class="check_message" id="question_error"></div>
 			</div>
 			<div>
 				<label for="answer" class="required">Security Answer</label>
 				<input type="text" name="answer" placeholder="Enter the answer" required>
 				<span class="check_icon"></span>
-				<div class="check_message" id="answer_error">error message</div>
+				<div class="check_message" id="answer_error"></div>
 			</div>
 			<div class="next_register_step"><a href="javascript:" onclick="registerStep(2);">Next</a></div>
 		</section>
@@ -166,19 +166,19 @@ include "header_login.php"
 				<label for="firstname" class="required">First Name</label>
 				<input type="text" name="firstname" placeholder="First Name" required value="<?php echo isset($_POST["firstname"])?$_POST["firstname"]:"";?>">
 				<span class="check_icon"></span>
-				<div class="check_message" id="firstname_error">error message</div>
+				<div class="check_message" id="firstname_error"></div>
 			</div>
 			<div>
 				<label for="middle">Middle Name</label>
 				<input type="text" name="middlename" placeholder="Middle Name" required>
 				<span class="check_icon"></span>
-				<div class="check_message" id="middlename_error">error message</div>
+				<div class="check_message" id="middlename_error"></div>
 			</div>
 			<div>
 				<label for="lastname" class="required">Last Name</label>
 				<input type="text" name="lastname" placeholder="Last Name" required value="<?php echo isset($_POST["lastname"])?$_POST["lastname"]:"";?>">
 				<span class="check_icon"></span>
-				<div class="check_message" id="lastname_error">error message</div>
+				<div class="check_message" id="lastname_error"></div>
 			</div>
 			<div>
 				<label class="required">Gender</label>
@@ -187,13 +187,13 @@ include "header_login.php"
 					<input type="radio" name="gender" id="female" value="F"><label for="female">Female</label>
 				</div>
 				<span class="check_icon"></span>
-				<div class="check_message" id="gender_error">error message</div>
+				<div class="check_message" id="gender_error"></div>
 			</div>
 			<div>
 				<label for="dob" class="required">Date of Birth</label>
 				<input type="text" name="dob" placeholder="Select your birthday" required id="dob">
 				<span class="check_icon"></span>
-				<div class="check_message" id="dob_error">error message</div>
+				<div class="check_message" id="dob_error"></div>
 			</div>
 			<div>
 				<label for="major" class="required">Major</label>
@@ -205,7 +205,7 @@ include "header_login.php"
 					?>
 				</select>
 				<span class="check_icon"></span>
-				<div class="check_message" id="major_error">error message</div>
+				<div class="check_message" id="major_error"></div>
 			</div>
 			<div>
 				<label for="degree" class="required">Degree</label>
@@ -217,13 +217,13 @@ include "header_login.php"
 					?>
 				</select>
 				<span class="check_icon"></span>
-				<div class="check_message" id="degree_error">error message</div>
+				<div class="check_message" id="degree_error"></div>
 			</div>
 			<div>
 				<label for="year" class="required">Entry Year</label>
 				<input type="text" name="year" placeholder="Year" required>
 				<span class="check_icon"></span>
-				<div class="check_message" id="year_error">error message</div>
+				<div class="check_message" id="year_error"></div>
 			</div>
 			<div>
 				<label for="semester" class="required">Entry Semester</label>
@@ -235,13 +235,13 @@ include "header_login.php"
 					?>
 				</select>
 				<span class="check_icon"></span>
-				<div class="check_message" id="semester_error">error message</div>
+				<div class="check_message" id="semester_error"></div>
 			</div>
 			<div>
 				<label for="picture">Profile Picture</label>
 				<div>File Upload</div>
 				<span class="check_icon"></span>
-				<div class="check_message" id="picture_error">error message</div>
+				<div class="check_message" id="picture_error"></div>
 			</div>
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(1);">Back</a>

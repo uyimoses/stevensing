@@ -141,6 +141,8 @@
 .check_message{
   margin: 0px;
   padding: 0px;
+  color: red;
+  height: 18px;
 }
 
 #register_step_1>div:nth-of-type(2), #register_step_1>div:nth-of-type(3) {
