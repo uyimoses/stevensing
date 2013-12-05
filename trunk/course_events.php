@@ -13,10 +13,10 @@ include "leftside.php";
 		<ul>
 			<a href="./courses.php"><li>Return Course List</li></a>
 			<a href="./courseinfo.php"><li>Course News</li></a>
-			<a href="course_statuses.php"><li>Statuses</li></a>
-			<a href="course_reviews.php"><li>Reviews</li></a>
-			<a href="course_resourses.php"><li>Resources</li></a>
-			<a href="course_events.php"><li>Events</li></a>
+			<a href="./course_statuses.php"><li>Statuses</li></a>
+			<a href="./course_reviews.php"><li>Reviews</li></a>
+			<a href="./course_resourses.php"><li>Resources</li></a>
+			<a href="./course_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
