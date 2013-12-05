@@ -14,7 +14,7 @@ include "leftside.php";
 			<a href="./homepage.php"><li>All News</li></a>
 			<a href="./home_status.php"><li>Statuses</li></a>
 			<li>Blogs</li>
-			<li>Events</li>
+			<a href="./home_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
