@@ -22,6 +22,36 @@ session_start();
 	<title>Welcome to Stevensing!</title>
 </head>
 <body>
+	<script>
+		function login(){
+			$.ajax({
+				url: 'loginAction',
+				type: 'POST',
+				dataType: 'text',
+				data: {
+					"username": $("#username").val(),
+					"password": $("#password").val()
+				},
+				success: function(data){
+					console.log(data);
+					var obj = eval('(' + data + ')');
+					if (obj.error == "data"){
+						alert("Invalid username or password.");
+					}
+					else if (obj.error == "server"){
+						alert("Sorry. The Web Server is not avaliable for now.");
+					}
+					else if (obj.error == "none"){
+						window.location.href = "home";
+					}
+					
+				},
+				error: function(data){
+
+				}
+			});
+		}
+	</script>
 	<section class="content">
 		<header>
 			<div class="container">
@@ -29,17 +59,17 @@ session_start();
 					<div class="span-4 border" id="stevensing_logo" title="Stevensing"></div>
 				</a>
 				<div class="span-20 last" id="login_bar">
-					<form action="home" method="post">
+					<form name="loginForm">
 						<div>
 							<label for="username">Account</label>
-							<input type="text" name="username" placeholder="xxxxxx@stevens.edu" required>
+							<input type="text" id="username" placeholder="xxxxxx@stevens.edu" required>
 						</div>
 						<div>
 							<label for="password">Password</label><a href=#>Forgot it?</a>
-							<input type="password" name="password" placeholder="********" required>
+							<input type="password" id="password" placeholder="********" required>
 						</div>
 						<div>
-							<input type="submit" value="Sign in">
+							<input type="button" value="Sign in" onclick="login();">
 						</div>
 					</form>
 				</div>

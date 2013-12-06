@@ -2,7 +2,8 @@
 //include page header, which includes mysqli connection and login form
 include "header_login.php"
 ?>
-<script type="text/javascript">
+<script>
+	var user_id = -1;
 	function registerStep(id){
 		if (id>5){
 			id = 5;
@@ -11,7 +12,7 @@ include "header_login.php"
 			id = 1;
 		}
 		//register
-		if (id>=4){
+		if (id>=4 && user_id < 0){
 			register();
 		}
 		//valication step 1 and step 2
@@ -120,7 +121,6 @@ include "header_login.php"
 					"semester": $("#semester").val()
 				},
 				success: function(data){
-					console.log(data);
 					var obj = eval('(' + data + ')');
 					if (obj.error == "data"){
 						registerStep(1);
@@ -140,6 +140,9 @@ include "header_login.php"
 					}
 					else if (obj.error == "server"){
 						alert("Sorry. The Web Server is not avaliable for now.");
+					}
+					else if (obj.error == "none"){
+						user_id = obj.id;
 					}
 					
 				},

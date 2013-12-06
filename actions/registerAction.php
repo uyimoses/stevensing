@@ -1,15 +1,13 @@
 <?php
-//include mysqli connection
-include "mysqli_connection.php";
+//include action header
+include "header_action.php";
 
 //include data
 include "datas.php";
 
-//set timezone
-date_default_timezone_set('UTC');
-
 //valication
 $error = "none";
+$id = -1;
 $email_error = "";
 $password_error = "";
 $question_error = "";
@@ -30,8 +28,8 @@ if (isset($_POST["email"]) && $_POST["email"] !== ""){
 		$email_error = "Your email address is invalid.";
 		$error = "data";
 	}
-	//check exist
-	$result = $mysqli->query("SELECT * FROM users where username = '" + addslashes($email) + "';");
+	//check if email used
+	$result = $mysqli->query("SELECT * FROM users AND username = '" . addslashes($email) . "';");
 	if ($result){
 		if ($row = $result->fetch_row()){
 			$email_error = "This email is already used.";
@@ -52,9 +50,6 @@ if (isset($_POST["password"]) && $_POST["password"] !== ""){
 	if (strlen($password) < 8){
 		$password_error = "Must be at least 8 characters.";
 		$error = "data";
-	}
-	else{
-		$password = sha1($password);
 	}
 }
 else{
@@ -190,12 +185,22 @@ else{
 	$error = "data";
 }
 
-
+if ($error == "none"){
+	$sql = "INSERT INTO users (username, password, security_question, security_answer) VALUES ('" . addslashes($email) . "', '" . sha1($password) . "', '" . sha1($question) . "', '" . sha1($answer) . "');";
+	$result = $mysqli->query($sql);
+	if ($result){
+		$id = $mysqli->insert_id;
+	}
+	else{
+		$error = "server";
+	}
+}
 
 
 //output json text
-echo "{";
+echo "{\n";
 echo "'error': '" . $error . "',\n";
+echo "'id': '" . $id . "',\n";
 echo "'email_error': '" . $email_error . "',\n";
 echo "'password_error': '" . $password_error . "',\n";
 echo "'question_error': '" . $question_error . "',\n";
