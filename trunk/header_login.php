@@ -12,9 +12,9 @@ session_start();
 <html>
 <head>
 <?php
-if (isset($_SESSION["user_id"])){
-	echo "<script>window.location.href='home'</script>";
-}
+// if (isset($_SESSION["user_id"])){
+// 	echo "<script>window.location.href='home'</script>";
+// }
 ?>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./stylesheets/screen.css">
