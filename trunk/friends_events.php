@@ -4,22 +4,13 @@ include "header.php";
 
 //include leftside bar
 include "leftside.php";
-?>
-<script type="text/javascript">
-	$("#main_menu ul a:nth-child(5)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_5");
-</script>
-<nav id="left_tags">
-		<ul>
-			<a href="./friends.php"><li>Friend List</li></a>
-			<a href="./friends_news.php"><li>Friend News</li></a>
-			<a href="./friends_statuses.php"><li>Statuses</li></a>
-			<a href="./friends_blog.php"><li>Blogs</li></a>
-			<a href="./friends_events.php"><li>Events</li></a>
-		</ul>
-	</nav>
-</section><!-- end of leftside -->
 
+//include leftside of friends
+include "leftside_friends.php";
+?>
+<script>
+	$("#left_tag_current").addClass("left_tag_4");
+</script>
 <section class="span-14 main_view">
 	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>

@@ -12,7 +12,6 @@ include "leftside_friends.php";
 	$("#left_tag_current").addClass("left_tag_4");
 </script>
 <section class="span-14 main_view">
-	
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
