@@ -12,9 +12,9 @@ include "leftside.php";
 <nav id="left_tags">
 		<ul>
 			<a href="./friends.php"><li>Friend List</li></a>
-			<li>Friend News</li>
+			<a href="./friends_news.php"><li>Friend News</li></a>
 			<a href="./friends_statuses.php"><li>Statuses</li></a>
-			<li>Blogs</li>
+			<a href="./friends_blog.php"><li>Blogs</li></a>
 			<a href="./friends_events.php"><li>Events</li></a>
 		</ul>
 	</nav>
