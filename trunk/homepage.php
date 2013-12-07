@@ -32,13 +32,14 @@ include "leftside.php";
 						Have a great day!
 					</p>
 					<div class="replyline">
-						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
+						<span>2013-11-13 14:56</span>
+						<a href="javascript:;">Reply</a>
 					</div>
 
 					<div class="OthersReply">
 						<a href="">Xiao Han</a>
 						<p>It's a nice day.</p>
-						<span> 2013-11-13 14:56 </span>
+						<span> 2013-11-13 14:56</span>
 						<div>
 						<a href="">reply</a>
 						<a href="">delete</a>
