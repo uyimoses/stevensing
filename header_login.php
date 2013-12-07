@@ -38,7 +38,7 @@ session_start();
 				dataType: 'text',
 				data: {
 					"username": $("#username").val(),
-					"password": $("#password").val()
+					"password": $("#pwd").val()
 				},
 				success: function(data){
 					console.log(data);
@@ -74,7 +74,7 @@ session_start();
 						</div>
 						<div>
 							<label for="password">Password</label><a href=#>Forgot it?</a>
-							<input type="password" id="password" placeholder="********" required>
+							<input type="password" id="pwd" placeholder="********" required>
 						</div>
 						<div>
 							<input type="button" value="Sign in" onclick="login();">

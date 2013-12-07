@@ -42,7 +42,7 @@ function check_password(){
 	if (str.length <= 0){
 		$("#password_error").text("You must set a password.");
 		return false;
-	}	
+	}
 	else if (str.length < 8){
 		$("#password_error").text("Must be at least 8 characters.");
 		return false;
