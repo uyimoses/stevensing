@@ -26,29 +26,29 @@ include "leftside.php";
 		<ul>
 			<li>
 				<div id="course_list_name">
-					<a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a>
+					<a href="course_info"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a>
 				</div>
 				<li class="button">
 					<a href="#" >Drop </a>
-					<a href="courseinfo.php">Visit</a>
+					<a href="course_info">Visit</a>
 				</li>
 			</li>
 			<li>
 				<div id="course_list_name">
-				<a href="courseinfo.php"><span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a>
+				<a href="course_info"><span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a>
 				</div>
 				<li class="button">
 					<a href="#" >Drop </a>
-					<a href="courseinfo.php">Visit</a>
+					<a href="course_info">Visit</a>
 			</li>
 			</li>
 			<li>
 				<div id="course_list_name">
-				<a href="courseinfo.php"><span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a>
+				<a href="course_info"><span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a>
 				</div>
 				<li class="button">
 					<a href="#" >Drop </a>
-					<a href="courseinfo.php">Visit</a>
+					<a href="course_info">Visit</a>
 				</li>
 			</li>
 		</ul>
