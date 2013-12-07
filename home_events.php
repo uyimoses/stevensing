@@ -22,7 +22,7 @@ include "leftside.php";
 <section class="span-14 main_view">
 	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>
-		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >

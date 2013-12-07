@@ -33,10 +33,10 @@ include "leftside.php";
 			<div class="star_rating star_4"></div>
 		</div>		
 	</div>
-
+	<div class="block-top"></div>
 	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>
-		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >
@@ -82,8 +82,7 @@ include "leftside.php";
 					</script>
 				<label for="title">Details:</label>
 				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the event..."></textarea>
-				<label for="num">Number of attendance:</label>
-				<input type="int">
+				<label for="num">Number of attendance:</label> <input type="text" name="num">
 			<div id="button"><a href="#"> Create</a></div>
 		</form>
 	</div>

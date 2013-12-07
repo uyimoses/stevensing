@@ -35,9 +35,9 @@ include "leftside.php";
 	</div>
 
 	<div class="block-top"></div>
-	  <div id="contact-content">
+	<div id="contact-content">
 		<span id="contact-text">Create new Stutas:</span>
-		<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
 			<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
 			<div id="button"><a href="#"> send</a></div>
@@ -108,8 +108,8 @@ include "leftside.php";
 					</li>
 				</section>
 			</li>
-</ul>
-</section>
+		</ul>
+	</section>
 </section>
 <?php
 //include rightside bar
