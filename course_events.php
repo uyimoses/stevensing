@@ -112,7 +112,6 @@ include "leftside.php";
 						<a href="">delete</a>
 						</div>
 					</div>
-					
 					<li class="replyBox" >
 				  		<img src="./images/profile_image.jpg" alt="" title="">
 						<textarea name="reply" contenteditable="true"></textarea>
@@ -120,10 +119,8 @@ include "leftside.php";
 					</li>
 				</section>
 			</li>
-
-	
-</ul>
-</section>
+		</ul>
+	</section>
 </section>
 <?php
 //include rightside bar

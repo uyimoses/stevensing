@@ -88,10 +88,24 @@ include "leftside.php";
 					<div>
 						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
 					</div>
+					<div class="OthersReply">
+						<a href="">Xiao Han</a>
+						<p>It's a nice day.</p>
+						<span> 2013-11-13 14:56 </span>
+						<div>
+						<a href="">reply</a>
+						<a href="">delete</a>
+						</div>
+					</div>
+					
+					<li class="replyBox" >
+				  		<img src="./images/profile_image.jpg" alt="" title="">
+						<textarea name="reply" contenteditable="true"></textarea>
+						<div><a href="#"> send</a></div>
+					</li>
 				</section>
 			</li>
 			<li class="friend_status_list">
-				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
 				</div>
