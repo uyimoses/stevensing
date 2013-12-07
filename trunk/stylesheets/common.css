@@ -281,16 +281,10 @@ textarea{
 
 #search_box input{
 	width: 145px;
-	height:20px;
+	height: 20px;
 	border-radius: 6px;
 	padding: 2px 6px;
-	margin: 6px 5px 2px 2px;
 	font-weight: bolder;
-}
-
-#search_box input:focus{
-	border: 3px solid lightblue;
-	margin: 4px 3px 0px 0px;
 }
 
 #search_button{
