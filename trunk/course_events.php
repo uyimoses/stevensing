@@ -20,6 +20,8 @@ include "leftside.php";
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 <section class="span-14 main_view">
 	<div id="courseinfo">
 		<h1><span id="department">CS</span><span id="number">546</span><span>Web Development</span></h1>
@@ -106,7 +108,7 @@ include "leftside.php";
 					<div class="OthersReply">
 						<a href="">Xiao Han</a>
 						<p>It's a nice day.</p>
-						<span> 2013-11-13 14:56 </span>
+						<span> 2013-11-13 14:56</span>
 						<div>
 						<a href="">reply</a>
 						<a href="">delete</a>
