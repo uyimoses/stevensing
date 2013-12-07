@@ -23,6 +23,9 @@ session_start();
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" href="./stylesheets/ie.css">
 	<![endif]-->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="./stylesheets/common.css">
 	<link rel="stylesheet" href="./stylesheets/friends.css">
 	<link rel="stylesheet" href="./stylesheets/courseinfo.css">
@@ -31,11 +34,6 @@ session_start();
 	<link rel="stylesheet" href="./stylesheets/searchlist.css">
 	<link rel="stylesheet" href="./stylesheets/statuses.css">
 	<link rel="stylesheet" href="./stylesheets/reply.css">
-
-	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="./js/common.js"></script>
