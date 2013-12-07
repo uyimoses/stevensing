@@ -4,21 +4,12 @@ include "header.php";
 
 //include leftside bar
 include "leftside.php";
+//include leftside of home
+include "leftside_home.php"
 ?>
-<script type="text/javascript">
-	$("#main_menu ul a:nth-child(1)").addClass('current');
+<script>
 	$("#left_tag_current").addClass("left_tag_2");
 </script>
-<nav id="left_tags">
-		<ul>
-			<a href="./homepage.php"><li>All News</li></a>
-			<a href="./home_status.php"><li>Statuses</li></a>
-			<a href="./home_blog.php"><li>Blog</li></a>
-			<a href="./home_events.php"><li>Events</li></a>
-		</ul>
-	</nav>
-	</nav>
-</section><!-- end of leftside -->
 <section class="span-14 main_view">
 	<section class="block" id="contact">
 		

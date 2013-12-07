@@ -1,15 +1,21 @@
 $(function(){
-	$( "#datepicker" ).datepicker({
+	$("#datepicker").datepicker({
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
         yearRange: "1900:2014"
 	});
-	$( "#dob" ).datepicker({
+	$("#dob").datepicker({
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
         yearRange: "1900:2014"
+	});
+	$("#datetimepicker2").datetimepicker({
+		format: 'dd/MM/yyyy hh:mm:ss'
+	});
+	$("#datetimepicker").datetimepicker({
+		format: 'dd/MM/yyyy hh:mm:ss'
 	});
 	try{
 		init();

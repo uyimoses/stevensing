@@ -4,22 +4,12 @@ include "header.php";
 
 //include leftside bar
 include "leftside.php";
+//include leftside of home
+include "leftside_home.php"
 ?>
-<script type="text/javascript">
-	$("#main_menu ul a:nth-child(4)").addClass('current');
+<script>
 	$("#left_tag_current").addClass("left_tag_4");
 </script>
-<nav id="left_tags">
-		<ul>
-			<a href="./homepage.php"><li>All News</li></a>
-			<a href="./home_status.php"><li>Statuses</li></a>
-			<a href="./home_blog.php"><li>Blog</li></a>
-			<a href="./home_events.php"><li>Events</li></a>
-		</ul>
-	</nav>
-	</nav>
-</section><!-- end of leftside -->
-
 <section class="span-14 main_view">
 	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>
@@ -28,45 +18,19 @@ include "leftside.php";
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >
 				<label for="starttime">Start datetime:</label>
-				    <div id="datetimepicker" class="input-append">
-						<input type="text"/>
-						<span class="add-on">
-						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-					</script> 
-					<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-					</script>
-					<script type="text/javascript">
-						$('#datetimepicker').datetimepicker({
-							format: 'dd/MM/yyyy hh:mm:ss'
-						});
-					</script>
+			    <div id="datetimepicker" class="input-append">
+					<input type="text"/>
+					<span class="add-on">
+					<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
 				<label for="endtime">End datetime:</label>
-				    <div id="datetimepicker2" class="input-append">
-						<input type="text"/>
-						<span class="add-on">
-						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-					</script> 
-					<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-					</script>
-					<script type="text/javascript">
-						$('#datetimepicker2').datetimepicker({
-							format: 'dd/MM/yyyy hh:mm:ss'
-						});
-					</script>
+			    <div id="datetimepicker2" class="input-append">
+					<input type="text"/>
+					<span class="add-on">
+					<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
 				<label for="title">Details:</label>
 				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the event..."></textarea>
 				<label for="num">Number of attendance:</label>
