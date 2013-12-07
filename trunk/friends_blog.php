@@ -4,21 +4,13 @@ include "header.php";
 
 //include leftside bar
 include "leftside.php";
+
+//include leftside of friends
+include "leftside_friends.php";
 ?>
-<script type="text/javascript">
-	$("#main_menu ul a:nth-child(2)").addClass('current');
+<script>
 	$("#left_tag_current").addClass("left_tag_4");
 </script>
-<nav id="left_tags">
-		<ul>
-			<a href="friends.php"><li>Friend List</li></a>
-			<li>Friend News</li>
-			<a href="friends_statuses.php"><li>Statuses</li></a>
-			<li>Blogs</li>
-			<li>Events</li>
-		</ul>
-	</nav>
-</section><!-- end of leftside -->
 <section class="span-14 main_view">
 	
 	<section id="status_list">

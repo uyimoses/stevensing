@@ -4,22 +4,10 @@ include "header.php";
 
 //include leftside bar
 include "leftside.php";
+
+//include leftside of courses
+include "leftside_courses.php";
 ?>
-<script type="text/javascript">
-	$("#main_menu ul a:nth-child(5)").addClass('current');
-	$("#left_tag_current").addClass("left_tag_5");
-</script>
-<nav id="left_tags">
-		<ul>
-			<a href="./courses.php"><li>Return Course List</li></a>
-			<a href="./courseinfo.php"><li>Course News</li></a>
-			<a href="course_statuses.php"><li>Statuses</li></a>
-			<a href="course_reviews.php"><li>Reviews</li></a>
-			<a href="course_resourses.php"><li>Resources</li></a>
-			<a href="course_events.php"><li>Events</li></a>
-		</ul>
-	</nav>
-</section><!-- end of leftside -->
 <section class="span-14 main_view">
 	<div id="courseinfo">
 		<h1><span id="department">CS</span><span id="number">546</span><span>Web Development</span></h1>
