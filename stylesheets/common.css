@@ -11,8 +11,8 @@ a:hover, a:focus{
 	color: #a9002f;
 }
 
-textarea{
-resize: none;
+textarea{	
+	resize: none;
 }
 
 .content header{
