@@ -11,6 +11,10 @@ a:hover, a:focus{
 	color: #a9002f;
 }
 
+textarea{
+resize: none;
+}
+
 .content header{
 	position: fixed;
 	width: 100%;
