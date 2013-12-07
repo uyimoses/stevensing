@@ -8,6 +8,9 @@ include "leftside.php";
 //include leftside of courses
 include "leftside_courses.php";
 ?>
+<script>
+	$("#left_tag_current").addClass("left_tag_2");
+</script>
 <section class="span-14 main_view">
 	<div id="courseinfo">
 		<h1><span id="department">CS</span><span id="number">546</span><span>Web Development</span></h1>

@@ -9,7 +9,7 @@ include "leftside.php";
 include "leftside_friends.php";
 ?>
 <script>
-	$("#left_tag_current").addClass("left_tag_4");
+	$("#left_tag_current").addClass("left_tag_5");
 </script>
 <section class="span-14 main_view">
 	<div id="contact-content">
