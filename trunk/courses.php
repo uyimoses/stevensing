@@ -10,10 +10,10 @@ include "leftside.php";
 	$("#left_tag_current").addClass("left_tag_1");
 </script>
 <nav id="left_tags">
-		<ul>
-			<li>Course List</li>
-		</ul>
-	</nav>
+	<ul>
+		<li>Course List</li>
+	</ul>
+</nav>
 </section><!-- end of leftside -->
 <section class="span-14 main_view">
 	<section id="course_list">
