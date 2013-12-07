@@ -76,7 +76,7 @@ include "leftside.php";
 	<section id="status_list">
 		<h1>Recent events</h1>
 		<ul>
-			<li class="course_status_list">
+			<li class="friend_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
@@ -90,7 +90,7 @@ include "leftside.php";
 					</div>
 				</section>
 			</li>
-			<li class="course_status_list">
+			<li class="friend_status_list">
 				
 				<div>
 					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
