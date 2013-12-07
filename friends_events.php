@@ -19,8 +19,7 @@ include "leftside.php";
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
-<link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
 <section class="span-14 main_view">
 	<div id="contact-content">
 		<span id="contact-text">Create new events:</span>
