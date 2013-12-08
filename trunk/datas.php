@@ -61,6 +61,6 @@ $degrees = array(
 );
 
 $semesters = array(
-	"Fall",
-	"Spring"
+	1 => "Fall",
+	2 => "Spring"
 );

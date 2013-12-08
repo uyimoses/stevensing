@@ -3,19 +3,21 @@ $(function(){
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
-        yearRange: "1900:2014"
+        yearRange: "1900:2014",
+        dateFormat: "yy-mm-dd"
 	});
 	$("#dob").datepicker({
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
-        yearRange: "1900:2014"
+        yearRange: "1900:2014",
+        dateFormat: "yy-mm-dd"
 	});
 	$("#datetimepicker2").datetimepicker({
-		format: 'dd/MM/yyyy hh:mm:ss'
+		format: 'yyyy-dd-MM hh:mm:ss'
 	});
 	$("#datetimepicker").datetimepicker({
-		format: 'dd/MM/yyyy hh:mm:ss'
+		format: 'yyyy-dd-MM hh:mm:ss'
 	});
 	try{
 		init();
@@ -156,7 +158,7 @@ function check_lastname(){
 
 function check_dob(){
 	var str = $("#dob").val();
-	var pattern = /^((0[1-9])|(1[012]))\/((0[1-9])|([12][0-9])|(3[01]))\/([1-9][0-9]{3})$/i;
+	var pattern = /^([1-9][0-9]{3})-((0[1-9])|(1[012]))-((0[1-9])|([12][0-9])|(3[01]))$/i;
 	if (str.length <= 0){
 		$("#dob_error").text("You must set a birthday.");
 		return false;
@@ -174,11 +176,13 @@ function check_dob(){
 function check_year(){
 	var str = $("#year").val();
 	var pattern = /^([1-9][0-9]{3})$/i;
+	var date = new Date().getYear() + 1900;
 	if (str.length <= 0){
 		$("#year_error").text("You must set a entry year.");
 		return false;
 	}	
-	else if (!str.match(pattern)){
+	else if (!str.match(pattern) || str > date){
+		alert(date);
 		$("#year_error").text("Your entry year is invalid.");
 		return false;
 	}

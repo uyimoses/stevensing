@@ -29,7 +29,9 @@ if (isset($_POST["email"]) && $_POST["email"] !== ""){
 		$error = "data";
 	}
 	//check if email used
-	$result = $mysqli->query("SELECT * FROM users AND username = '" . addslashes($email) . "';");
+	$sql = "SELECT * FROM users WHERE username = '" . addslashes($email) . "';";
+	//echo $sql;
+	$result = $mysqli->query($sql);
 	if ($result){
 		if ($row = $result->fetch_row()){
 			$email_error = "This email is already used.";
@@ -127,7 +129,7 @@ else{
 
 if (isset($_POST["dob"]) && $_POST["dob"] !== ""){
 	$dob = $_POST["dob"];
-	if (preg_match("/^((0[1-9])|(1[012]))\/((0[1-9])|([12][0-9])|(3[01]))\/([1-9][0-9]{3})$/i", $dob) == 0){
+	if (preg_match("/^([1-9][0-9]{3})-((0[1-9])|(1[012]))-((0[1-9])|([12][0-9])|(3[01]))$/i", $dob) == 0){
 		$lastname_error = "Your birthday is invalid.";
 		$error = "data";
 	}
@@ -175,7 +177,7 @@ else{
 
 if (isset($_POST["semester"]) && $_POST["semester"] !== ""){
 	$semester = $_POST["semester"];
-	if (!in_array($semester, $semesters)){
+	if (!array_key_exists($semester, $semesters)){
 		$semester_error = "Your entry semester is invalid.";
 		$error = "data";
 	}
@@ -186,10 +188,32 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO users (username, password, security_question, security_answer) VALUES ('" . addslashes($email) . "', '" . sha1($password) . "', '" . sha1($question) . "', '" . sha1($answer) . "');";
+	$sql = "INSERT INTO users (username, password, security_question, security_answer) VALUES ('" 
+		. addslashes($email) . "', '" 
+		. sha1($password) . "', '" 
+		. sha1($question) . "', '" 
+		. sha1($answer) . "');";
+	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
 		$id = $mysqli->insert_id;
+		$sql = "INSERT INTO profiles (user_id, firstname, middlename, lastname, gender, dob, major, degree, entry_year, entry_semester) VALUES (" 
+			. $id . ", '"
+			. addslashes($firstname) . "', '" 
+			. addslashes((isset($middlename))?$middlename:"") . "', '"
+			. addslashes($lastname) . "', '"
+			. addslashes($gender) . "', '"
+			. addslashes($dob) . "', '"
+			. addslashes($major) . "', '"
+			. addslashes($degree) . "', '"
+			. addslashes($year) . "', '"
+			. addslashes($semester)
+			. "');";
+		//echo $sql;
+		$result = $mysqli->query($sql);
+		if ($result ==  false){
+			$error = "server";
+		}
 	}
 	else{
 		$error = "server";

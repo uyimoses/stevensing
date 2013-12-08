@@ -121,6 +121,7 @@ include "header_login.php"
 					"semester": $("#semester").val()
 				},
 				success: function(data){
+					console.log(data);
 					var obj = eval('(' + data + ')');
 					if (obj.error == "data"){
 						registerStep(1);
@@ -285,8 +286,8 @@ include "header_login.php"
 				<label for="semester" class="required">Entry Semester</label>
 				<select id="semester" id="semester" size="1">
 					<?php
-					foreach ($semesters as $value) {
-						echo "<option value='$value'>$value</option>";
+					foreach ($semesters as $key => $value) {
+						echo "<option value='$key'>$value</option>";
 					}
 					?>
 				</select>
