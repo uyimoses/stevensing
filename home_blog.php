@@ -8,7 +8,7 @@ include "leftside.php";
 include "leftside_home.php"
 ?>
 <script>
-	$("#left_tag_current").addClass("left_tag_4");
+	$("#left_tag_current").addClass("left_tag_3");
 </script>
 <section class="span-14 main_view">
 	<section class="block" id="contact">
