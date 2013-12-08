@@ -32,45 +32,19 @@ include "leftside_courses.php";
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >
 				<label for="starttime">Start datetime:</label>
-				    <div id="datetimepicker" class="input-append">
-						<input type="text"/>
-						<span class="add-on">
-						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-					</script> 
-					<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-					</script>
-					<script type="text/javascript">
-						$('#datetimepicker').datetimepicker({
-							format: 'dd/MM/yyyy hh:mm:ss'
-						});
-					</script>
+			    <div id="datetimepicker" class="input-append">
+					<input type="text"/>
+					<span class="add-on">
+					<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
 				<label for="endtime">End datetime:</label>
-				    <div id="datetimepicker2" class="input-append">
-						<input type="text"/>
-						<span class="add-on">
-						<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-						</span>
-					</div>
-					<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-					</script> 
-					<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-					</script>
-					<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-					</script>
-					<script type="text/javascript">
-						$('#datetimepicker2').datetimepicker({
-							format: 'dd/MM/yyyy hh:mm:ss'
-						});
-					</script>
+			    <div id="datetimepicker2" class="input-append">
+					<input type="text"/>
+					<span class="add-on">
+					<i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
 				<label for="title">Details:</label>
 				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the event..."></textarea>
 				<label for="num">Number of attendance:</label> <input type="text" name="num">

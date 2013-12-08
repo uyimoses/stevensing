@@ -26,6 +26,7 @@
 			}
 		});
 	}
+	getProfile();
 </script>
 <section id="leftside" class="span-4">
 	<div id="profile_info">
