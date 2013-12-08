@@ -1,5 +1,5 @@
 	<script type="text/javascript">
-		$("#main_menu ul a:nth-child(2)").addClass('current');
+		$("#main_menu ul a:nth-child(3)").addClass('current');
 	</script>
 	<nav id="left_tags">
 		<ul>
