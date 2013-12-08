@@ -113,7 +113,7 @@ include "header_login.php"
 					"firstname": $("#firstname").val(),
 					"middlename": $("#middlename").val(),
 					"lastname": $("#lastname").val(),
-					"gender": document.forms["registerForm"].elements["gender"].value,
+					"gender": $("input[name='gender']:checked").val(),
 					"dob": $("#dob").val(),
 					"major": $("#major").val(),
 					"degree": $("#degree").val(),
@@ -240,7 +240,7 @@ include "header_login.php"
 			<div>
 				<label class="required">Gender</label>
 				<div>
-					<input type="radio" name="gender" id="male" value="M" checked><label for="male">Male</label>
+					<input type="radio" name="gender" id="male" value="M"><label for="male">Male</label>
 					<input type="radio" name="gender" id="female" value="F"><label for="female">Female</label>
 				</div>
 				<span class="check_icon"></span>
