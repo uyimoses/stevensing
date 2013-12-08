@@ -20,7 +20,7 @@ $year="";
 $semester="";
 $picture_id=-1;
 
-$_SESSION["user_id"] = 1;
+$_SESSION["user_id"] = 10;
 
 if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
 	$user_id = $_SESSION["user_id"];
@@ -29,8 +29,8 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
 	if($result){
 		if ($row = $result->fetch_array()){
 			$firstname=$row['firstname'];
-			$lastname=$row['lasttname'];
 			$middlename=$row['middlename'];
+			$lastname=$row['lastname'];
 			$gender=$row['gender'];
 			$dob=$row['dob'];
 			$major=$row['major'];
@@ -52,8 +52,8 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
 		echo "'error': '" . $error . "',\n";
 		echo "'user_id': '" . $user_id . "',\n";
 		echo "'firstname': '" . $firstname . "',\n";
-		echo "'lasttname': '" . $lastname . "',\n";
 		echo "'middlename': '" . $middlename . "',\n";
+		echo "'lastname': '" . $lastname . "',\n";
 		echo "'gender': '" . $gender . "',\n";
 		echo "'dob': '" . $dob . "',\n";
 		echo "'major': '" . $major . "',\n";
