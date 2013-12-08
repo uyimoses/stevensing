@@ -1,10 +1,10 @@
 </section><!-- end of container -->
 <footer>
 	<section class="container">
-		<p class="span-6 prepend-3 append-1">
+		<p class="span-7 prepend-3 append-1">
 			Stevensing © 2013 All Rights Reserved
 		</p>
-		<nav class="span-14 last">
+		<nav class="span-13 last">
 			<ul>
 				<a href="#">
 					<li>About</li>
