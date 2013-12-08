@@ -434,7 +434,7 @@ textarea{
 	border-right: 1px solid #D9DCE2;
 	margin-right: 5px;
 	padding-right: 4px;
-	height: 1000px;
+	min-height: 800px;
 	z-index: 2;
 }
 
