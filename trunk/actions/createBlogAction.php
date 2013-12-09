@@ -45,10 +45,8 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'status_id': '" . $id . "',\n";
-echo "'entity_id_error': '" . $entity_id_error . "',\n";
-echo "'entity_type_error': '" . $entity_type_error . "',\n";
+echo "'blog_id': '" . $blog_id . "',\n";
+echo "'title': '" . $title. "',\n";
 echo "'content_error': '" . $content_error . "',\n";
-echo "'picture_id_error': '" . $picture_id_error . "',\n";
 echo "'timestamp_error': '" . $timestamp_error . "',\n";
 echo "}";
