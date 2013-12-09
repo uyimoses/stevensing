@@ -1,31 +1,4 @@
 <script>
-	// function getProfile(handler){
-	// 	$.ajax({
-	// 		url: 'getProfileAction',
-	// 		type: 'POST',
-	// 		dataType: 'text',
-	// 		data: {
-	// 			"user_id": ""
-	// 		},
-	// 		success: function(data){
-	// 			console.log(data);
-	// 			var obj = eval('(' + data + ')');
-	// 			if (obj.error == "data"){
-	// 				alert("Invalid username or password.");
-	// 			}
-	// 			else if (obj.error == "server"){
-	// 				alert("Sorry. The Web Server is not avaliable for now.");
-	// 			}
-	// 			else if (obj.error == "none"){
-	// 				console.log(handler);
-	// 				handler(obj);
-	// 			}
-	// 		},
-	// 		error: function(data){
-	// 			alert("Sorry. The Web Server is not avaliable for now.");
-	// 		}
-	// 	});
-	// }
 	function setLeftside(profile){
 		console.log(profile);
 	}

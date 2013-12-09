@@ -34,7 +34,7 @@ function check_email(){
 	if (str.length <= 0){
 		$("#email_error").text("You must set an email.");
 		return false;
-	}	
+	}
 	else if (!str.match(pattern)){
 		$("#email_error").text("Your email address is invalid.");
 		return false;
