@@ -33,7 +33,7 @@ $_SESSION["user_id"] = 1;
 		}
 		$("#display").ready(function(){
 			action(
-				"getProfileAction", 
+				"createStatusAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
