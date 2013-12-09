@@ -172,7 +172,7 @@ include "header_login.php"
 		errorFocus(error);
 	}
 	function setId(obj){
-		user_id = obj.id;
+		user_id = obj.user_id;
 	}
 	function register(){
 		if (valication(3)==0){
