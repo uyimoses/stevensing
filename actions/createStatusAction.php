@@ -7,9 +7,32 @@ include "header_action.php";
 include "datas.php";
 
 //validation
-$user_id=-1;
-$error="none";
+$error = "none";
+$user_id = -1;
+$status_id="";
+$picture_id=""; 
+$timestamp="";
 
+if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
+	$user_id = $_POST["user_id"];
+}
+else{
+	$error = "data";
+}
+
+if (isset($_POST["entity_id"]) && $_POST["entity_id"] != ""){
+	$entity_id = $_POST["entity_id"];
+}
+else{
+	$error = "data";
+}
+
+if (isset($_POST["entity_type"]) && $_POST["entity_type"] != ""){
+	$entity_type = $_POST["entity_type"];
+}
+else{
+	$error = "data";
+}
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	$content = $_POST["content"];
@@ -20,25 +43,16 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 }
 
 if ($error == "none"){
-	//echo $sql;
+	$sql = "INSERT INTO statuses (user_id, entity_id, entity_type, content, picture_id, timestamp) VALUES ('"
+		. addslashes($user_id) . "', '" 
+		. addslashes($entity_id) . "', '" 
+		. addslashes($entity_type) . "', '"
+		. addslashes($content) . "', '"
+		. addslashes($picture_id) . "', '"
+		. date("Y-m-d H:i:s",time()). "' );";
+	echo $sql;
 	$result = $mysqli->query($sql);
-	if ($result){
-		$user_id = $_SESSION["user_id"];
-		$sql = "INSERT INTO statuses (status_id, entity_id, entity_type, content, picture_id, timestamp) VALUES (" 
-			. $status_id . ", 
-			1,
-			1, '"
-			. addslashes($content) . "', '"
-			. addslashes($picture_id) . "', '"
-			. $now()
-			. "' WHERE user_id=". $user_id . ");";
-		//echo $sql;
-		$result = $mysqli->query($sql);
-		if ($result ==  false){
-			$error = "server";
-		}
-	}
-	else{
+	if ($result ==  false){
 		$error = "server";
 	}
 }
@@ -46,10 +60,11 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'status_id': '" . $id . "',\n";
-echo "'entity_id_error': '" . $entity_id_error . "',\n";
-echo "'entity_type_error': '" . $entity_type_error . "',\n";
-echo "'content_error': '" . $content_error . "',\n";
-echo "'picture_id_error': '" . $picture_id_error . "',\n";
-echo "'timestamp_error': '" . $timestamp_error . "',\n";
+echo "'user_id': '" . $user_id . "',\n";
+echo "'status_id': '" . $status_id . "',\n";
+echo "'entity_id': '" . $entity_id . "',\n";
+echo "'entity_type': '" . $entity_type . "',\n";
+echo "'content': '" . $content . "',\n";
+echo "'picture_id': '" . $picture_id. "',\n";
+echo "'timestamp': '" . $timestamp. "',\n";
 echo "}";
