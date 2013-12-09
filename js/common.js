@@ -191,3 +191,28 @@ function check_year(){
 		return true;
 	}
 }
+
+function action(actionName, success, error, type, formData){
+	$.ajax({
+		url: actionName,
+		type: type,
+		dataType: 'text',
+		data: formData,
+		success: function(data){
+			console.log(data);
+			var obj = eval('(' + data + ')');
+			if (obj.error == "data"){
+				error(obj);
+			}
+			else if (obj.error == "server"){
+				alert("Sorry. The Web Server is not avaliable for now.");
+			}
+			else if (obj.error == "none"){
+				success(obj);
+			}
+		},
+		error: function(data){
+			alert("Sorry. The Web Server is not avaliable for now.");
+		}
+	});
+}

@@ -1,32 +1,46 @@
 <script>
-	function getProfile(){
-		$.ajax({
-			url: 'getProfileAction',
-			type: 'POST',
-			dataType: 'text',
-			data: {
-				"user_id": ""
-			},
-			success: function(data){
-				console.log(data);
-				// var obj = eval('(' + data + ')');
-				// if (obj.error == "data"){
-				// 	alert("Invalid username or password.");
-				// }
-				// else if (obj.error == "server"){
-				// 	alert("Sorry. The Web Server is not avaliable for now.");
-				// }
-				// else if (obj.error == "none"){
-				// 	window.location.href = "home";
-				// }
-				
-			},
-			error: function(data){
-
-			}
-		});
+	// function getProfile(handler){
+	// 	$.ajax({
+	// 		url: 'getProfileAction',
+	// 		type: 'POST',
+	// 		dataType: 'text',
+	// 		data: {
+	// 			"user_id": ""
+	// 		},
+	// 		success: function(data){
+	// 			console.log(data);
+	// 			var obj = eval('(' + data + ')');
+	// 			if (obj.error == "data"){
+	// 				alert("Invalid username or password.");
+	// 			}
+	// 			else if (obj.error == "server"){
+	// 				alert("Sorry. The Web Server is not avaliable for now.");
+	// 			}
+	// 			else if (obj.error == "none"){
+	// 				console.log(handler);
+	// 				handler(obj);
+	// 			}
+	// 		},
+	// 		error: function(data){
+	// 			alert("Sorry. The Web Server is not avaliable for now.");
+	// 		}
+	// 	});
+	// }
+	function setLeftside(profile){
+		console.log(profile);
 	}
-	getProfile();
+
+	$("#leftside").ready(
+		action(
+			"getProfileAction", 
+			setLeftside, 
+			setLeftside, 
+			"POST", 
+			{
+				"user_id": ""
+			}
+		)
+	);
 </script>
 <section id="leftside" class="span-4">
 	<div id="profile_info">

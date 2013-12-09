@@ -99,13 +99,33 @@ include "header_login.php"
 		}
 		return error;
 	}
+	function errorMessage(obj){
+		$("#email_error").text(obj.email_error);
+		$("#password_error").text(obj.password_error);
+		$("#question_error").text(obj.question_error);
+		$("#answer_error").text(obj.answer_error);
+		$("#firstname_error").text(obj.firstname_error);
+		$("#middlename_error").text(obj.middlename_error);
+		$("#lastname_error").text(obj.lastname_error);
+		$("#gender_error").text(obj.gender_error);
+		$("#dob_error").text(obj.dob_error);
+		$("#major_error").text(obj.major_error);
+		$("#degree_error").text(obj.degree_error);
+		$("#year_error").text(obj.year_error);
+		$("#semester_error").text(obj.semester_error);
+		registerStep(1);
+	}
+	function setId(obj){
+		user_id = obj.id;
+	}
 	function register(){
-		if (valication(3)){
-			$.ajax({
-				url: 'registerAction',
-				type: 'POST',
-				dataType: 'text',
-				data: {
+		if (valication(3))
+			action(
+				"registerAction", 
+				setId,
+				errorMessage, 
+				"POST", 
+				{
 					"email": $("#email").val(),
 					"password": $("#password").val(),
 					"question": $("#question").val(),
@@ -119,43 +139,8 @@ include "header_login.php"
 					"degree": $("#degree").val(),
 					"year": $("#year").val(),
 					"semester": $("#semester").val()
-				},
-				success: function(data){
-					console.log(data);
-					var obj = eval('(' + data + ')');
-					if (obj.error == "data"){
-						registerStep(1);
-						$("#email_error").text(obj.email_error);
-						$("#password_error").text(obj.password_error);
-						$("#question_error").text(obj.question_error);
-						$("#answer_error").text(obj.answer_error);
-						$("#firstname_error").text(obj.firstname_error);
-						$("#middlename_error").text(obj.middlename_error);
-						$("#lastname_error").text(obj.lastname_error);
-						$("#gender_error").text(obj.gender_error);
-						$("#dob_error").text(obj.dob_error);
-						$("#major_error").text(obj.major_error);
-						$("#degree_error").text(obj.degree_error);
-						$("#year_error").text(obj.year_error);
-						$("#semester_error").text(obj.semester_error);
-					}
-					else if (obj.error == "server"){
-						alert("Sorry. The Web Server is not avaliable for now.");
-					}
-					else if (obj.error == "none"){
-						user_id = obj.id;
-					}
-					
-				},
-				error: function(data){
-
 				}
-			});
-		}
-		else{
-
-		}
-		
+			);
 	}
 	function addfriends(){
 
