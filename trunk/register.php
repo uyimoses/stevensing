@@ -4,6 +4,23 @@ include "header_login.php"
 ?>
 <script>
 	var user_id = -1;
+	var error_messages = {
+		1: 'picture',
+		2: 'semester',
+		3: "year", 
+		4: 'degree',
+		5: 'major',
+		6: 'dob',
+		7: 'gender',
+		8: 'lastname',
+		9: "middlename",
+		10: 'firstname',
+		11: 'answer',
+		12: 'question',
+		13: 'password2',
+		14: 'password',
+		15: 'email'
+	};
 	function registerStep(id){
 		if (id>5){
 			id = 5;
@@ -13,11 +30,12 @@ include "header_login.php"
 		}
 		//register
 		if (id>=4 && user_id < 0){
-			register();
+			if (!register())
+				return false;
 		}
 		//valication step 1 and step 2
 		if (id==2 || id==3){
-			if (!valication(id-1))
+			if (valication(id-1)>0)
 				return false;
 		}
 		//display left navigation
@@ -38,88 +56,126 @@ include "header_login.php"
 		}
 		$("#register_step_"+id).show();
 	}
+	function errorFocus(i){
+		if (i>0){
+			if (i<=10){
+				registerStep(2);
+				$("#"+error_messages[i]).focus();
+			}
+			else{
+				registerStep(1);
+				$("#"+error_messages[i]).focus();
+			}
+		}
+	}
 	function valication(i){
-		var error = true;
+		var error = 0;
 		if (i==0){
-			if (!check_password()){
-				$("#password").focus();
-				error = false;
+			if (!check_password() && error < 14){
+				error = 14;
 			}
-			if (!check_email()){
-				$("#email").focus();
-				error = false;
+			if (!check_email() && error < 15){
+				error = 15;
 			}
 		}
-		else if (i==1){
-			if (!check_answer()){
-				$("#answer").focus();
-				error = false;
+		if (i>=1){
+			if (!check_answer() && error < 11){
+				error = 11;
 			}
-			if (!check_question()){
-				$("#question").focus();
-				error = false;
+			if (!check_question() && error < 12){
+				error = 12;
 			}
-			if (!check_password2()){
-				$("#password2").focus();
-				error = false;
+			if (!check_password2() && error < 13){
+				error = 13;
 			}
-			if (!check_password()){
-				$("#password").focus();
-				error = false;
+			if (!check_password() && error < 14){
+				error = 14;
 			}
-			if (!check_email()){
-				$("#email").focus();
-				error = false;
+			if (!check_email() && error < 15){
+				error = 15;
 			}
 		}
-		else if (i==2){
-			if (!check_year()){
-				$("#year").focus();
-				error = false;
+		if (i>=2){
+			if (!check_year() && error < 3){
+				error = 3;
 			}
-			if (!check_dob()){
-				$("#dob").focus();
-				error = false;
+			if (!check_dob() && error < 6){
+				error = 6;
 			}
-			if (!check_lastname()){
-				$("#lastname").focus();
-				error = false;
+			if (!check_lastname() && error < 8){
+				error = 8;
 			}
-			if (!check_middlename()){
-				$("#middlename").focus();
-				error = false;
+			if (!check_middlename() && error < 9){
+				error = 9;
 			}
-			if (!check_firstname()){
-				$("#firstname").focus();
-				error = false;
+			if (!check_firstname() && error < 10){
+				error = 10;
 			}
 		}
-		else{
-			return (valication(1) && valication(2));
-		}
+		errorFocus(error);
 		return error;
 	}
 	function errorMessage(obj){
+		var error = 0;
 		$("#email_error").text(obj.email_error);
+		if ($("#email_error").text() != "" && error < 15){
+			error = 15;
+		}
 		$("#password_error").text(obj.password_error);
+		if ($("#password_error").text() != "" && error < 14){
+			error = 14;
+		}
 		$("#question_error").text(obj.question_error);
+		if ($("#question_error").text() != "" && error < 12){
+			error = 12;
+		}
 		$("#answer_error").text(obj.answer_error);
+		if ($("#answer_error").text() != "" && error < 11){
+			error = 11;
+		}
 		$("#firstname_error").text(obj.firstname_error);
+		if ($("#firstname_error").text() != "" && error < 10){
+			error = 10;
+		}
 		$("#middlename_error").text(obj.middlename_error);
+		if ($("#middlename_error").text() != "" && error < 9){
+			error = 9;
+		}
 		$("#lastname_error").text(obj.lastname_error);
+		if ($("#lastname_error").text() != "" && error < 8){
+			error = 8;
+		}
 		$("#gender_error").text(obj.gender_error);
+		if ($("#gender_error").text() != "" && error < 7){
+			error = 7;
+		}
 		$("#dob_error").text(obj.dob_error);
+		if ($("#dob_error").text() != "" && error < 6){
+			error = 6;
+		}
 		$("#major_error").text(obj.major_error);
+		if ($("#major_error").text() != "" && error < 5){
+			error = 5;
+		}
 		$("#degree_error").text(obj.degree_error);
+		if ($("#degree_error").text() != "" && error < 4){
+			error = 4;
+		}
 		$("#year_error").text(obj.year_error);
+		if ($("#year_error").text() != "" && error < 3){
+			error = 3;
+		}
 		$("#semester_error").text(obj.semester_error);
-		registerStep(1);
+		if ($("#semester_error").text() != "" && error < 2){
+			error = 2;
+		}
+		errorFocus(error);
 	}
 	function setId(obj){
 		user_id = obj.id;
 	}
 	function register(){
-		if (valication(3))
+		if (valication(3)==0){
 			action(
 				"registerAction", 
 				setId,
@@ -141,6 +197,9 @@ include "header_login.php"
 					"semester": $("#semester").val()
 				}
 			);
+		}
+		else
+			return false;
 	}
 	function addfriends(){
 
@@ -225,7 +284,7 @@ include "header_login.php"
 			<div>
 				<label class="required">Gender</label>
 				<div>
-					<input type="radio" name="gender" id="male" value="M"><label for="male">Male</label>
+					<input type="radio" name="gender" id="male" value="M" checked><label for="male">Male</label>
 					<input type="radio" name="gender" id="female" value="F"><label for="female">Female</label>
 				</div>
 				<span class="check_icon"></span>
