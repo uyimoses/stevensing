@@ -1,15 +1,14 @@
 <?php
+//include action header
+include "header_action.php";
+
 //include data
 include "datas.php";
-
-//include profile data
-include "getProfileAction.php";
 
 //validation
 $user_id=-1;
 $error="none";
 
-$_SESSION["user_id"] = 10;
 
 if (isset($_POST["firstname"]) && $_POST["firstname"] !== ""){
 	$firstname = $_POST["firstname"];
@@ -115,6 +114,12 @@ else{
 	$error = "data";
 }
 
+if ($error == "none"){
+	$sql = "UPDATE pictures SET (
+		url='". addslashes($url) . "',
+		title='" . sha1($password) . "'
+		WHERE picture_id = ". $picture_id . "
+		);";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
@@ -129,7 +134,7 @@ else{
 			degree='". addslashes($degree) . "',
 			entry_year='". addslashes($year) . "',
 			entry_semester='". addslashes($semester). "'
-			WHERE user_id = ". $id . "
+			WHERE user_id = ". $user_id . "
 			;";
 		//echo $sql;
 		$result = $mysqli->query($sql);
@@ -144,7 +149,7 @@ else{
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . $id . "',\n";
+echo "'user_id': '" . $user_id . "',\n";
 echo "'firstname_error': '" . $firstname_error . "',\n";
 echo "'middlename_error': '" . $middlename_error . "',\n";
 echo "'lastname_error': '" . $lastname_error . "',\n";
