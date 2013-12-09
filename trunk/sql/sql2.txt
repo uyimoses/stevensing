@@ -1,0 +1,245 @@
+/*
+MySQL Data Transfer
+Source Host: localhost
+Source Database: stevensing
+Target Host: localhost
+Target Database: stevensing
+Date: 12/9/2013 18:55:16
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for blogs
+-- ----------------------------
+DROP TABLE IF EXISTS `blogs`;
+CREATE TABLE `blogs` (
+  `blog_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`blog_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for comments
+-- ----------------------------
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE `comments` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `feed_id` int(11) NOT NULL,
+  `feed_type` tinyint(4) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for course_list
+-- ----------------------------
+DROP TABLE IF EXISTS `course_list`;
+CREATE TABLE `course_list` (
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `state` tinyint(4) NOT NULL,
+  PRIMARY KEY (`course_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for courses
+-- ----------------------------
+DROP TABLE IF EXISTS `courses`;
+CREATE TABLE `courses` (
+  `course_id` int(11) NOT NULL AUTO_INCREMENT,
+  `department` varchar(3) NOT NULL,
+  `number` smallint(6) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(6000) DEFAULT NULL,
+  `professor` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for event_list
+-- ----------------------------
+DROP TABLE IF EXISTS `event_list`;
+CREATE TABLE `event_list` (
+  `event_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`event_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for events
+-- ----------------------------
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE `events` (
+  `event_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entity_id` int(11) NOT NULL,
+  `entity_type` tinyint(4) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `starttime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `endtime` timestamp NULL DEFAULT NULL,
+  `number` smallint(6) NOT NULL,
+  PRIMARY KEY (`event_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for friend_list
+-- ----------------------------
+DROP TABLE IF EXISTS `friend_list`;
+CREATE TABLE `friend_list` (
+  `user_id` int(11) NOT NULL,
+  `friend_id` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(4) NOT NULL,
+  PRIMARY KEY (`user_id`,`friend_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for friend_requests
+-- ----------------------------
+DROP TABLE IF EXISTS `friend_requests`;
+CREATE TABLE `friend_requests` (
+  `request_id` int(11) NOT NULL AUTO_INCREMENT,
+  `from_id` int(11) NOT NULL,
+  `to_id` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(4) NOT NULL,
+  PRIMARY KEY (`request_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for messages
+-- ----------------------------
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE `messages` (
+  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+  `from_id` int(11) NOT NULL,
+  `to_id` int(11) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`message_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for pictures
+-- ----------------------------
+DROP TABLE IF EXISTS `pictures`;
+CREATE TABLE `pictures` (
+  `picture_id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(2048) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`picture_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for profiles
+-- ----------------------------
+DROP TABLE IF EXISTS `profiles`;
+CREATE TABLE `profiles` (
+  `user_id` int(11) NOT NULL,
+  `firstname` varchar(40) NOT NULL,
+  `middlename` varchar(40) DEFAULT NULL,
+  `lastname` varchar(40) NOT NULL,
+  `gender` char(1) NOT NULL,
+  `dob` date NOT NULL,
+  `major` varchar(6) NOT NULL,
+  `degree` varchar(40) NOT NULL,
+  `entry_year` smallint(6) NOT NULL,
+  `entry_semester` tinyint(4) NOT NULL,
+  `picture_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for resources
+-- ----------------------------
+DROP TABLE IF EXISTS `resources`;
+CREATE TABLE `resources` (
+  `resource_id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `url` varchar(2048) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `catalog` varchar(20) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`resource_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for reviews
+-- ----------------------------
+DROP TABLE IF EXISTS `reviews`;
+CREATE TABLE `reviews` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `score` tinyint(4) NOT NULL,
+  `content` varchar(3000) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for statuses
+-- ----------------------------
+DROP TABLE IF EXISTS `statuses`;
+CREATE TABLE `statuses` (
+  `status_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entity_id` int(11) NOT NULL,
+  `entity_type` tinyint(4) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `picture_id` int(11) DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`status_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for users
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `security_question` varchar(200) NOT NULL,
+  `security_answer` varchar(200) NOT NULL,
+  `status` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records 
+-- ----------------------------
+INSERT INTO `blogs` VALUES ('1', '10', 'Title', 'abc', '2013-12-09 18:28:33');
+INSERT INTO `friend_list` VALUES ('10', '11', '2013-12-09 17:13:31', '2');
+INSERT INTO `friend_list` VALUES ('11', '10', '2013-12-09 17:13:31', '2');
+INSERT INTO `friend_list` VALUES ('11', '12', '2013-12-09 16:53:10', '1');
+INSERT INTO `friend_list` VALUES ('11', '13', '2013-12-09 17:28:13', '2');
+INSERT INTO `friend_list` VALUES ('12', '11', '2013-12-09 16:53:10', '1');
+INSERT INTO `friend_list` VALUES ('13', '11', '2013-12-09 17:28:13', '2');
+INSERT INTO `profiles` VALUES ('10', 'qwer', 'qwer', 'qwer', 'M', '2013-12-05', 'CS', 'Master', '2012', '1', null);
+INSERT INTO `profiles` VALUES ('11', 'we', '', 'qwe', 'M', '2013-12-03', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('12', 'Zhi', '', 'Qian', 'M', '2013-12-03', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('13', 'Zhi', '', 'Qian', 'M', '2013-12-02', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('14', 'Zhi', '', 'Qian', 'F', '2013-12-03', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('15', 'qian', '', 'zhi', 'F', '2013-12-01', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('16', 'qian', '', 'zhi', 'F', '2013-12-03', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `profiles` VALUES ('17', 'qwer', '', 'qwer', 'M', '2013-12-04', 'BME', 'Master', '1234', '1', null);
+INSERT INTO `resources` VALUES ('1', '1', '10', 'abc', 'abc', 'a', '2013-12-09 18:49:19');
+INSERT INTO `reviews` VALUES ('1', '1', '10', '5', 'contentabc', '2013-12-09 18:35:33');
+INSERT INTO `statuses` VALUES ('1', '10', '1', 'Hello', null, '2013-12-09 18:09:18');
+INSERT INTO `users` VALUES ('1', 'abs@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', '0');
+INSERT INTO `users` VALUES ('8', 'aboq@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('9', 'abc@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('10', 'abdc@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '55c48907c2901c767cea43d2042c4ecb8327d2b1', '55c48907c2901c767cea43d2042c4ecb8327d2b1', '0');
+INSERT INTO `users` VALUES ('11', 'qwe@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('12', 'abcr@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('13', 'abcd@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('14', 'abc1@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '0');
+INSERT INTO `users` VALUES ('15', 'abq@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', '0');
+INSERT INTO `users` VALUES ('16', 'abqq@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', 'a06f72cc6cfa28790ed111c6e2f61c0502d3736d', 'e04445df8accdbbbb35fb6cc3b5e17abfcff9268', '0');
+INSERT INTO `users` VALUES ('17', 'abs@stevens.edu', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', 'db25f2fc14cd2d2b1e7af307241f548fb03c312a', 'e268e4ae9a59cacf92025fdf16bd909459db8b8c', '0');
