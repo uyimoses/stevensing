@@ -16,7 +16,7 @@ if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
 	$user_id = $_POST["user_id"];
 }
 else{
-	$error = "user_id";
+	$error = "data";
 }
 
 if ($error == "none"){
@@ -30,7 +30,7 @@ if ($error == "none"){
 		degree='". addslashes($degree) . "',
 		entry_year='". addslashes($year) . "',
 		entry_semester='". addslashes($semester). "'
-		WHERE user_id = ". $user_id . "
+		WHERE user_id = ". addslashes($user_id) . "
 		;";
 	//echo $sql;
 	$result = $mysqli->query($sql);
