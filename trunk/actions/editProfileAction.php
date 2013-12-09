@@ -7,16 +7,16 @@ include "datas.php";
 
 //validation
 $error = "none";
-$id = -1;
+$user_id = -1;
 
 $action = "edit";
 require "checkProfile.php";
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
-	$id = $_POST["user_id"];
+	$user_id = $_POST["user_id"];
 }
 else{
-	$error = "id";
+	$error = "user_id";
 }
 
 if ($error == "none"){
@@ -30,7 +30,7 @@ if ($error == "none"){
 		degree='". addslashes($degree) . "',
 		entry_year='". addslashes($year) . "',
 		entry_semester='". addslashes($semester). "'
-		WHERE user_id = ". $id . "
+		WHERE user_id = ". $user_id . "
 		;";
 	//echo $sql;
 	$result = $mysqli->query($sql);
@@ -45,7 +45,7 @@ else{
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . $id . "',\n";
+echo "'id': '" . $user_id . "',\n";
 echo "'firstname_error': '" . $firstname_error . "',\n";
 echo "'middlename_error': '" . $middlename_error . "',\n";
 echo "'lastname_error': '" . $lastname_error . "',\n";

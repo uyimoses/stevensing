@@ -7,7 +7,7 @@ include "datas.php";
 
 //validation
 $error = "none";
-$id = -1;
+$user_id = -1;
 
 $action = "register";
 require "checkProfile.php";
@@ -21,9 +21,9 @@ if ($error == "none"){
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
-		$id = $mysqli->insert_id;
+		$user_id = $mysqli->insert_id;
 		$sql = "INSERT INTO profiles (user_id, firstname, middlename, lastname, gender, dob, major, degree, entry_year, entry_semester) VALUES (" 
-			. $id . ", '"
+			. $user_id . ", '"
 			. addslashes($firstname) . "', '" 
 			. addslashes((isset($middlename))?$middlename:"") . "', '"
 			. addslashes($lastname) . "', '"
@@ -49,7 +49,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . $id . "',\n";
+echo "'user_id': '" . $user_id . "',\n";
 echo "'email_error': '" . $email_error . "',\n";
 echo "'password_error': '" . $password_error . "',\n";
 echo "'question_error': '" . $question_error . "',\n";
