@@ -6,7 +6,7 @@ include "header_action.php";
 //validation
 $error = "none";
 $course_id = -1;
-$resource = array();
+$resources = array();
 
 if (isset($_POST["course_id"]) && $_POST["course_id"] != ""){
 	$course_id = $_POST["course_id"];
@@ -16,11 +16,11 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "SELECT * FROM resource WHERE course_id = ". addslashes($course_id) . ";";
+	$sql = "SELECT * FROM resources WHERE course_id = ". addslashes($course_id) . ";";
 	$result = $mysqli->query($sql);
 	if($result){
 		while($row = $result->fetch_array()){
-	 		array_push($resource, $row);
+	 		array_push($resources, $row);
 		}
 	}
 	else{
@@ -31,16 +31,17 @@ if ($error == "none"){
 echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'course_id': '" . $course_id . "',\n";
-echo "'review_list': [\n";
-foreach ($resource as $index => $review) {
+echo "'resource_list': [\n";
+foreach ($resources as $index => $resource) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'review_id': '" . $review["review_id"] . "',\n";
-	echo "'user_id': '" . $review["user_id"] . "',\n";
-	echo "'score': '" . $review["score"] . "',\n";
-	echo "'content': '" . $review["content"] . "',\n";
-	echo "'timestamp': '" . $review["timestamp"] . "',\n";
+	echo "'resource_id': '" . $resource["resource_id"] . "',\n";
+	echo "'user_id': '" . $resource["user_id"] . "',\n";
+	echo "'url': '" . $resource["url"] . "',\n";
+	echo "'title': '" . $resource["title"] . "',\n";
+	echo "'catalog': '" . $resource["catalog"] . "',\n";
+	echo "'timestamp': '" . $resource["timestamp"] . "',\n";
 	echo "}\n";
 }
 echo "]\n";
