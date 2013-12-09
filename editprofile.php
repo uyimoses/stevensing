@@ -12,6 +12,7 @@ include "leftside_home.php"
 		<h1>Edit Profile</h1>
 		<form action="./profile.php" method="post">
 			<!-- Creating an Account -->
+			<!--
 			<div id="uploadpic">
 				<label for="firstname">Change Profile Picture</label>
 				<form action="upload_file.php" method="post" enctype="multipart/form-data">
@@ -19,6 +20,7 @@ include "leftside_home.php"
 					<input type="submit" name="submit" value="Submit">
 				</form><br>
 			</div>
+			-->
 			<label for="firstname">First Name</label>
 			<input type="text" name="firstname" placeholder="First Name" ><br>
 			<label for="firstname">Middle Name</label>
