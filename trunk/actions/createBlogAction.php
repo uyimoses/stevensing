@@ -24,7 +24,7 @@ if ($error == "none"){
 	$result = $mysqli->query($sql);
 	if ($result){
 		$blog_id = $mysqli->insert_id;
-		$sql = "INSERT INTO profiles (blog_id, title, content, timestamp) VALUES (" 
+		$sql = "INSERT INTO blogs (blog_id, title, content, timestamp) VALUES (" 
 			. $blog_id. ", '"
 			. addslashes($title) . "', '" 
 			. addslashes($content) . "', '"
