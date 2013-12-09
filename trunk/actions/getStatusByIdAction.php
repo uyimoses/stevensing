@@ -14,17 +14,20 @@ $lastname = "";
 $middlename = "";
 $picture_id = -1;
 $status_content = "";
+$entity_type=0;
 $statuses = array();
 
-if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
+if (isset($_POST["user_id"]) && $_POST["user_id"] != ""&& isset($_POST["entity_type"])&& $_POST["entity_type"] != 0){
 	$user_id = $_POST["user_id"];
+	$entity_type = $_POST["entity_type"];
 }
 else{
 	$error = "data";
 }
 
 if ($error == "none"){
-	$sql = "SELECT * FROM statuses WHERE entity_id = ". addslashes($user_id) . " AND entity_type = 1;";
+	$sql = "SELECT * FROM statuses WHERE entity_id = ". addslashes($user_id) . " 
+				AND entity_type = ". addslashes($entity_type) . ";";
 	$result = $mysqli->query($sql);
 
 	if($result){ 	
