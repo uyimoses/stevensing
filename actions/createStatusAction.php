@@ -24,7 +24,7 @@ if ($error == "none"){
 	$result = $mysqli->query($sql);
 	if ($result){
 		$user_id = $_SESSION["user_id"];
-		$sql = "INSERT INTO profiles (status_id, entity_id, entity_type, content, picture_id, timestamp) VALUES (" 
+		$sql = "INSERT INTO statuses (status_id, entity_id, entity_type, content, picture_id, timestamp) VALUES (" 
 			. $status_id . ", 
 			1,
 			1, '"
