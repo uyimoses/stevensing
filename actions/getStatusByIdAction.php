@@ -35,9 +35,8 @@ if ($error == "none"){
 	$sql = "SELECT * FROM statuses WHERE entity_id = ". addslashes($entity_id) . " 
 				AND entity_type = ". addslashes($entity_type) . ";";
 	$result = $mysqli->query($sql);
-
 	if($result){ 	
-		while($row=$result->fetch_array()){
+		while($row = $result->fetch_array()){
 	 		array_push($statuses, $row);
 		}
 	}
@@ -49,7 +48,7 @@ if ($error == "none"){
 echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'entity_id': '" . $entity_id . "',\n";
-echo "'entity_type': " . $entity_type . "',\n";
+echo "'entity_type': '" . $entity_type . "',\n";
 echo "'status_list': [\n";
 foreach ($statuses as $index => $status) {
 	if($index != 0)
