@@ -38,9 +38,6 @@ if ($error == "none"){
 		$error = "server";
 	}
 }
-else{
-	$error = "server";
-}
 
 //output json text
 echo "{\n";
