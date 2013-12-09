@@ -20,7 +20,7 @@ $year="";
 $semester="";
 $picture_id=-1;
 
-$_SESSION["user_id"] = 10;
+
 
 if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
 	$user_id = $_SESSION["user_id"];
