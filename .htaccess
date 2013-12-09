@@ -1,3 +1,5 @@
+ErrorDocument 404 /missing.html
+
 RewriteEngine	on
 RewriteBase		/stevensing
 
@@ -11,3 +13,5 @@ RewriteRule		^home$						homepage.php
 RewriteRule		^welcome$					index.php
 RewriteRule		^([a-zA-Z0-9]+)Action$		actions/$1Action.php
 RewriteRule		^([a-zA-Z0-9_]+)$			$1.php
+
+
