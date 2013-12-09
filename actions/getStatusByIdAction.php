@@ -7,13 +7,13 @@ include "header_action.php";
 //include "datas.php";
 
 //validation
-$user_id=-1;
-$error="none";
-$firstname="";
-$lastname="";
-$middlename="";
-$picture_id=-1;
-$status_content="";
+$user_id = -1;
+$error = "none";
+$firstname = "";
+$lastname = "";
+$middlename = "";
+$picture_id = -1;
+$status_content = "";
 
 
 
