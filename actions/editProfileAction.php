@@ -115,15 +115,10 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "UPDATE pictures SET (
-		url='". addslashes($url) . "',
-		title='" . sha1($password) . "'
-		WHERE picture_id = ". $picture_id . "
-		);";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
-		$id = $mysqli->insert_id;
+		$user_id = $_SESSION["user_id"];
 		$sql = "UPDATE profiles SET
 			firstname='". addslashes($firstname) . "',
 			middlename='". addslashes((isset($middlename))?$middlename:"") . "',

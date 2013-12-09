@@ -23,15 +23,14 @@ if ($error == "none"){
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
-		$user_id = $_SESSION["user_id"];
-		$sql = "INSERT INTO profiles (status_id, entity_id, entity_type, content, picture_id, timestamp) VALUES (" 
-			. $status_id . ", 
-			1,
-			1, '"
+		$blog_id = $mysqli->insert_id;
+		$sql = "INSERT INTO profiles (blog_id, title, content, timestamp) VALUES (" 
+			. $blog_id. ", '"
+			. addslashes($title) . "', '" 
 			. addslashes($content) . "', '"
-			. addslashes($picture_id) . "', '"
 			. $now()
-			. "' WHERE user_id=". $user_id . ");";
+			. "'
+			WHERE user_id=". $user_id . ");";
 		//echo $sql;
 		$result = $mysqli->query($sql);
 		if ($result ==  false){
