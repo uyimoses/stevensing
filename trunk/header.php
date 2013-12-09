@@ -9,14 +9,19 @@ date_default_timezone_set('UTC');
 
 //start session
 session_start();
+
+//////////////////////////////////for testing
+$_SESSION["user_id"] = 1;
+/////////////////////////////////////////////
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <?php
-// if (!isset($_SESSION["user_id"])){
-// 	echo "<script>window.location.href='welcome'</script>";
-// }
+if (!isset($_SESSION["user_id"])){
+	echo "<script>window.location.href='welcome'</script>";
+}
 ?>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./stylesheets/screen.css">
