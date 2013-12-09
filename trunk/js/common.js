@@ -201,14 +201,14 @@ function action(actionName, success, error, type, formData){
 		success: function(data){
 			console.log(data);
 			var obj = eval('(' + data + ')');
-			if (obj.error == "data"){
-				error(obj);
+			if (obj.error == "none"){
+				success(obj);
 			}
 			else if (obj.error == "server"){
 				alert("Sorry. The Web Server is not avaliable for now.");
 			}
-			else if (obj.error == "none"){
-				success(obj);
+			else{
+				error(obj);
 			}
 		},
 		error: function(data){
