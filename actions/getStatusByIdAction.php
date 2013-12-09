@@ -7,26 +7,32 @@ include "header_action.php";
 //include "datas.php";
 
 //validation
-$user_id = -1;
 $error = "none";
 $firstname = "";
 $lastname = "";
 $middlename = "";
 $picture_id = -1;
 $status_content = "";
-$entity_type=0;
+$entity_type = -1;
+$entity_id = -1;
 $statuses = array();
 
-if (isset($_POST["user_id"]) && $_POST["user_id"] != ""&& isset($_POST["entity_type"])&& $_POST["entity_type"] != 0){
-	$user_id = $_POST["user_id"];
-	$entity_type = $_POST["entity_type"];
+if (isset($_POST["type"]) && $_POST["type"] != ""){
+	$entity_type = $_POST["type"];
+}
+else{
+	$error = "data";
+}
+
+if (isset($_POST["id"]) && $_POST["id"] != ""){
+	$entity_id = $_POST["id"];
 }
 else{
 	$error = "data";
 }
 
 if ($error == "none"){
-	$sql = "SELECT * FROM statuses WHERE entity_id = ". addslashes($user_id) . " 
+	$sql = "SELECT * FROM statuses WHERE entity_id = ". addslashes($entity_id) . " 
 				AND entity_type = ". addslashes($entity_type) . ";";
 	$result = $mysqli->query($sql);
 
@@ -42,16 +48,17 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
+echo "'entity_id': '" . $entity_id . "',\n";
+echo "'entity_type': " . $entity_type . "',\n";
 echo "'status_list': [\n";
 foreach ($statuses as $index => $status) {
-	if($index != 0){
+	if($index != 0)
 		echo ",\n";
-	}
 	echo "{\n";
+	echo "'status_id': '" . $status["status_id"] . "',\n";
 	echo "'content': '" . $status["content"] . "',\n";
-	echo "'content': '" . $status["picture_id"] . "',\n";
-	echo "'content': '" . $status["timestamp"] . "',\n";
+	echo "'picture_id': '" . $status["picture_id"] . "',\n";
+	echo "'timestamp': '" . $status["timestamp"] . "',\n";
 	echo "}\n";
 }
 echo "]\n";
