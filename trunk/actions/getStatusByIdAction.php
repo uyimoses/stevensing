@@ -8,11 +8,6 @@ include "header_action.php";
 
 //validation
 $error = "none";
-$firstname = "";
-$lastname = "";
-$middlename = "";
-$picture_id = -1;
-$status_content = "";
 $entity_type = -1;
 $entity_id = -1;
 $statuses = array();
