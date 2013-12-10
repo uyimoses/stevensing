@@ -10,14 +10,29 @@ include "leftside_friends.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_1");
+	function deleteFriend(friend_id){
+		action(
+			"deleteFriendAction", 
+			refreshFriendList, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"friend_id": friend_id
+			}
+		);
+	}
+
 	function setFriendList(obj){
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html =  "<li><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
-			 + friend.firstname
-			  + "</span>&nbsp;<span>"
-			   + friend.lastname
-			    + "</span></div><a href='#'><div>Delete</div></a></li>";
+			 	+ friend.firstname
+			 	+ "</span>&nbsp;<span>"
+			  	+ friend.lastname
+			  	+ "</span></div><a href='javascript:' onclick='deleteFriend("
+			    + friend.user_id
+			    +")'><div>Delete</div></a></li>";
 			$(html).appendTo('#friend_list>ul');
 		}
 	}
