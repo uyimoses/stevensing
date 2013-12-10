@@ -33,13 +33,14 @@ $_SESSION["user_id"] = 1;
 		}
 		$("#display").ready(function(){
 			action(
-				"deleteBlogAction", 
+				"acceptFriendAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
-					"blog_id": 3,
-					"timestamp": "2013-12-10 00:47:20"
+					"user_id": 15,
+					"friend_id": 11
+					// "status": 2
 				}
 			);
 				

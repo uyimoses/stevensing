@@ -10,17 +10,28 @@ include "leftside_friends.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_1");
-	$("#friend_list").ready(function(){
+	function setFriendList(obj){
+		for(var i = 0; i < obj.friend_list.length; i++){
+			var friend = obj.friend_list[i];
+			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
+			 + friend.firstname
+			  + "</span>&nbsp;<span>"
+			   + friend.lastname + "</span></div><div><button>Add</button><button>Ignore</button></div></li>";
+			$(html).prependTo('#friend_request>ul');
+		}
+	}
+	$("#friend_list").ready(
 		action(
 			"getFriendListAction", 
-			setLeftside, 
-			setLeftside, 
+			setFriendList, 
+			defaultErrorHandler, 
 			"POST", 
 			{
-				"user_id": 11
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"status": 2
 			}
 		)
-	});
+	);
 </script>
 <section class="span-14 main_view">
 	<section id="friend_list">

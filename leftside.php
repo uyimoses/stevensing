@@ -8,7 +8,7 @@
 		action(
 			"getProfileByUserAction", 
 			setLeftside, 
-			setLeftside, 
+			defaultErrorHandler, 
 			"POST", 
 			{
 				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>

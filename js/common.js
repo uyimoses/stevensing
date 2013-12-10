@@ -199,6 +199,7 @@ function action(actionName, success, error, type, formData){
 		dataType: 'text',
 		data: formData,
 		success: function(data){
+			console.log("### " + actionName + " ###");
 			console.log(data);
 			var obj = eval('(' + data + ')');
 			if (obj.error == "none"){
