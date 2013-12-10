@@ -22,6 +22,18 @@ include "leftside_home.php"
 			}
 		);
 	}
+	function deleteBlog(id, timestamp){
+	action(
+		"deleteBlogAction", 
+		refreshBlogs, 
+		defaultErrorHandler, 
+		"POST", 
+		{
+			"blog_id": id,
+			"timestamp": timestamp
+		}
+	);
+}
 	function refreshBlogList(obj){
 		$("#status_list>ul").html("");
 		for(var i = 0; i < obj.blog_list.length; i++){
@@ -36,7 +48,11 @@ include "leftside_home.php"
 				+ blog.content
 				+ "</p><div class='replyline'><span>"
 				+ blog.timestamp
-				+ "</span><a  href='javascript:;''>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
+				+ "</span><a href='javascript:' onclick='deleteBlog("
+				+ blog.blog_id
+				+ ", \""
+				+ blog.timestamp
+				+ "\")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
 				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='javascript:' onclick='addComment("
