@@ -29,7 +29,7 @@ else{
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
-	$content = strip_tags($_POST["content"]);
+	$content = $_POST["content"];
 	if (strlen($content) > 600){
 		$content_error = "Must be no more than 600 characters.";
 		$error = "data";
@@ -43,7 +43,7 @@ if ($error == "none"){
 	$sql = "INSERT INTO statuses (entity_id, entity_type, content, timestamp) VALUES ('"
 		. addslashes($id) . "', '" 
 		. addslashes($type) . "', '"
-		. addslashes($content) . "', '"
+		. addslashes(strip_tags($content)) . "', '"
 		. $timestamp. "' );";
 	//echo $sql;
 	$result = $mysqli->query($sql);
