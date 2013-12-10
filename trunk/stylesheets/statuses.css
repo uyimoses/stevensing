@@ -236,4 +236,21 @@ background-color: #a9002f;
 }
 
 
+#event_list{
+	padding: 20px 10px;
+	margin-top: 10px;
+	background-color: #eee;
+	height: 150px;
+}
+#event_list h1{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px;
+	margin-top: -20px;
+}
 
+#event_list ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
