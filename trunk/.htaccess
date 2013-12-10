@@ -9,5 +9,11 @@ RewriteBase		/stevensing
 
 RewriteRule		^home$						homepage.php
 RewriteRule		^welcome$					index.php
+RewriteRule		^course_info_([0-9]+)$		course_info.php?course_id=$1 [L]
+RewriteRule		^course_statuses_([0-9]+)$	course_statuses.php?course_id=$1 [L]
+RewriteRule		^course_reviews_([0-9]+)$	course_reviews.php?course_id=$1 [L]
+RewriteRule		^course_resources_([0-9]+)$	course_resources.php?course_id=$1 [L]
+RewriteRule		^course_events_([0-9]+)$	course_events.php?course_id=$1 [L]
+
 RewriteRule		^([a-zA-Z0-9]+)Action$		actions/$1Action.php
 RewriteRule		^([a-zA-Z0-9_]+)$			$1.php

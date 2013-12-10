@@ -4,11 +4,11 @@
 	<nav id="left_tags">
 		<ul>
 			<a href="courses"><li>Return Course List</li></a>
-			<a href="course_info"><li>Course News</li></a>
-			<a href="course_statuses"><li>Statuses</li></a>
-			<a href="course_reviews"><li>Reviews</li></a>
-			<a href="course_resourses"><li>Resources</li></a>
-			<a href="course_events"><li>Events</li></a>
+			<a href="course_info_<?php echo isset($_GET["course_id"])?$_GET["course_id"]:0; ?>"><li>Course News</li></a>
+			<a href="course_statuses_<?php echo isset($_GET["course_id"])?$_GET["course_id"]:0; ?>"><li>Statuses</li></a>
+			<a href="course_reviews_<?php echo isset($_GET["course_id"])?$_GET["course_id"]:0; ?>"><li>Reviews</li></a>
+			<a href="course_resourses_<?php echo isset($_GET["course_id"])?$_GET["course_id"]:0; ?>"><li>Resources</li></a>
+			<a href="course_events_<?php echo isset($_GET["course_id"])?$_GET["course_id"]:0; ?>"><li>Events</li></a>
 		</ul>
 	</nav>
 </section><!-- end of leftside -->
