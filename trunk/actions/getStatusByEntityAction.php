@@ -51,7 +51,6 @@ foreach ($statuses as $index => $status) {
 	echo "{\n";
 	echo "'status_id': '" . $status["status_id"] . "',\n";
 	echo "'content': '" . $status["content"] . "',\n";
-	echo "'picture_id': '" . $status["picture_id"] . "',\n";
 	echo "'timestamp': '" . $status["timestamp"] . "',\n";
 	echo "}\n";
 }

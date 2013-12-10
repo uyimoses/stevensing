@@ -33,7 +33,7 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	}
 }
 else{
-	$content_error = "You cannot post an empty status."
+	$content_error = "You cannot post an empty status.";
 	$error = "data";
 }
 
@@ -56,7 +56,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'content_error': '" . $content_error . "'\n";
+echo "'content_error': '" . $content_error . "',\n";
 echo "'status_id': '" . $status_id . "',\n";
 echo "'entity_id': '" . $id . "',\n";
 echo "'entity_type': '" . $type . "',\n";
