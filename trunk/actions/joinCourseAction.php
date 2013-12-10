@@ -23,8 +23,8 @@ else{
 
 if ($error == "none"){
 	$sql = "INSERT INTO course_list (course_id, user_id, role) VALUES (" 
-		. addslashes($course_id). ", "
-		. addslashes($user_id). ", "
+		. addslashes($course_id) . ", "
+		. addslashes($user_id) . ", "
 		. 1 . ");";
 	//echo $sql;
 	$result = $mysqli->query($sql);

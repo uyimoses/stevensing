@@ -33,8 +33,8 @@ if ($error == "none"){
 	}
 	else{
 		$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
-			. addslashes($friend_id). ", "
-			. addslashes($user_id). ", '"
+			. addslashes($friend_id) . ", "
+			. addslashes($user_id) . ", '"
 			. $timestamp . "', " 
 			. 2 . ");";
 		//echo $sql;
