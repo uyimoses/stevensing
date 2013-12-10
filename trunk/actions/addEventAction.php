@@ -75,6 +75,12 @@ if (isset($_POST["endtime"]) && $_POST["endtime"] !== ""){
 		$endtime_error = "Invalid time.";
 		$error = "data";
 	}
+	else if ($starttime != ""){
+		if (strtotime($endtime) < strtotime($starttime)){
+			$endtime_error = "End time should be later than start time.";
+			$error = "data";
+		}
+	}
 }
 
 if (isset($_POST["number"]) && $_POST["number"] !== ""){
