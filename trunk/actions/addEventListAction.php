@@ -30,10 +30,6 @@ if ($error == "none"){
 	if ($result ==  false){
 		$error = "server";
 	}
-	else{
-		$user_id = $mysqli->insert_id;
-		$event_id = $mysqli->insert_id;
-	}
 }
 
 //output json text
