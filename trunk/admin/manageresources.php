@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-include "mysqli_connection.php";
+include "../mysqli_connection.php";
 
 // if (!isset($_SESSION["username"])){
 //         echo "<script>window.location.href='index.php'</script>";
@@ -72,7 +72,7 @@ if ($result){
         while ($row = mysqli_fetch_array($result)){
 ?>
 <tr>
-<td><?php echo $row["resources_id"];?></td>
+<td><?php echo $row["resource_id"];?></td>
 <td><?php echo $row["title"];?></td>
 <td><?php echo $row["course_id"];?></td>
 <td><?php echo $row["user_id"];?></td>

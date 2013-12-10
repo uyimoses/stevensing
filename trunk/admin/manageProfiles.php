@@ -10,39 +10,51 @@ include "../mysqli_connection.php";
 ?>
 
 <div>
-<h1>Manage Users</h1>
+<h1>Manage Profile</h1>
 <a href = "adminhome.php">Back to Manage Home</a>
 </div>
 <div>
 <form action = "#" method = "GET">
-<label for = "username">User Name: </label>
-<input type = "text" name = "username" value = "<?php echo isset($_GET['username'])?$_GET['username']:"";?>" />
+<label for = "user_id">User id: </label>
+<input type = "text" name = "user_id" value = "<?php echo isset($_GET['user_id'])?$_GET['user_id']:"";?>" />
+<label for = "firstname">Firstname Name: </label>
+<input type = "text" name = "firstname" value = "<?php echo isset($_GET['firstname'])?$_GET['firstname']:"";?>" />
+<label for = "lastname">Middle Name: </label>
+<input type = "text" name = "middlename" value = "<?php echo isset($_GET['middlename'])?$_GET['middlename']:"";?>" />
+<label for = "firstname">Firstname Name: </label>
+<input type = "text" name = "lastname" value = "<?php echo isset($_GET['lastname'])?$_GET['lastname']:"";?>" />
 
 <input type = "submit" value = "Search" />
 </form>
 </div>
 <div>
-<a href="editcourses.php">Add a new user</a>
+<a href="editprofile.php">Add a new user</a>
 </div>
 <hr />
 <div>
 <table>
 <thead >
-<td>User ID</td><td>User Name</td><td>Password</td><td>security_question</td><td>security_answer</td><td>status</td><td>Operation</td>
+<td>User ID</td> <td>First Name</td> <td>Middle Name</td> <td>Last Name</td> <td>Gender</td> <td>Birthday</td>
+<td>Major</td> <td>Degree</td> <td>Entry Year</td> <td>Entry Semester</td>
+<td>Picture ID</td> <td>Operation</td>
 </thead>
 <tbody>
 <?php
 $filter = "true";
-// if (isset($_GET["user_id"]) && $_GET["user_id"] !== ""){
-//         $param = "(user_id = " . $mysqli->real_escape_string(trim($_GET["user_id"])) . ")";
-//         $filter .= " AND " . $param;
-// }
-// if (isset($_GET["password"]) && $_GET["password"] !== ""){
-//         $param = "(password = '" . $mysqli->real_escape_string(trim($_GET["password"])) . "')";
-//         $filter .= " AND " . $param;
-// }
- if (isset($_GET["username"]) && $_GET["username"] !== ""){
-         $param = "(username LIKE '%" . $mysqli->real_escape_string(trim($_GET["username"])) . "%')";
+if (isset($_GET["user_id"]) && $_GET["user_id"] !== ""){
+         $param = "(user_id = " . $mysqli->real_escape_string(trim($_GET["user_id"])) . ")";
+         $filter .= " AND " . $param;
+ }
+if (isset($_GET["firstname"]) && $_GET["firstname"] !== ""){
+        $param = "(firstname = '" . $mysqli->real_escape_string(trim($_GET["firstname"])) . "')";
+        $filter .= " AND " . $param;
+}
+if (isset($_GET["middlename"]) && $_GET["middlename"] !== ""){
+         $param = "(middlename LIKE '%" . $mysqli->real_escape_string(trim($_GET["middlename"])) . "%')";
+         $filter .= " AND " . $param;
+ }
+ if (isset($_GET["lastname"]) && $_GET["lastname"] !== ""){
+         $param = "(lastname LIKE '%" . $mysqli->real_escape_string(trim($_GET["lastname"])) . "%')";
          $filter .= " AND " . $param;
  }
 // if (isset($_GET["number"]) && $_GET["number"] !== ""){
@@ -52,7 +64,7 @@ $filter = "true";
 $perNumber = 25;
 if(isset($_GET['page']))$page = $_GET['page'];
 else $page=1;
-$count = $mysqli->query("select count(*) from users WHERE " . $filter . ";");
+$count = $mysqli->query("select count(*) from profiles WHERE " . $filter . ";");
 $rs = mysqli_fetch_array($count);
 $totalNumber = $rs[0];
 if ($totalNumber == 0){
@@ -69,18 +81,23 @@ else if ($page > $totalPage){
         $page = $totalPage;
 }
 $startCount = ($page - 1) * $perNumber;
-$result = $mysqli->query("select * from users WHERE (" . $filter .") LIMIT $startCount, $perNumber");
+$result = $mysqli->query("select * from profiles WHERE (" . $filter .") LIMIT $startCount, $perNumber");
 if ($result){
         while ($row = mysqli_fetch_array($result)){
 ?>
 <tr>
 <td><?php echo $row["user_id"];?></td>
-<td><?php echo $row["username"];?></td>
-<td><?php echo $row["password"];?></td>
-<td><?php echo $row["security_question"];?></td>
-<td><?php echo $row["security_answer"];?></td>
-<td><?php echo $row["status"];?></td>
-<td><a href="javascript:" onclick = "show_delete_yes(this,<?php echo $row['course_id'];?>);" >Delete</a>&nbsp&nbsp<a href="editcourse.php?id=<?php echo $row['course_id'];?>">Edit</a></td>
+<td><?php echo $row["firstname"];?></td>
+<td><?php echo $row["middlename"];?></td>
+<td><?php echo $row["lastname"];?></td>
+<td><?php echo $row["gender"];?></td>
+<td><?php echo $row["dob"];?></td>
+<td><?php echo $row["major"];?></td>
+<td><?php echo $row["degree"];?></td>
+<td><?php echo $row["entry_year"];?></td>
+<td><?php echo $row["entry_semester"];?></td>
+<td><?php echo $row["picture_id"];?></td>
+<td><a href="javascript:" onclick = "show_delete_yes(this,<?php echo $row['user_id'];?>);" >Delete</a>&nbsp&nbsp<a href="editprofile.php?id=<?php echo $row['user_id'];?>">Edit</a></td>
 </tr>
 </tbody>
 <?php

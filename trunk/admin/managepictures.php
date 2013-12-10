@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-include "mysqli_connection.php";
+include "../mysqli_connection.php";
 
 // if (!isset($_SESSION["username"])){
 //         echo "<script>window.location.href='index.php'</script>";

@@ -1,4 +1,3 @@
-
 <?php
 include "header.php";
 include "../mysqli_connection.php";
@@ -8,16 +7,18 @@ include "../mysqli_connection.php";
 // else{
 
 ?>
-
+<style>
+thead{border:2px solid #EEE;}
+</style>
 <div>
-<h1>Manage Courses</h1>
+<h1>Manage Reviews</h1>
 <a href = "adminhome.php">Back to Manage Home</a>
 </div>
 <div>
 <form action = "#" method = "GET">
-<label for = "department">Department: </label><input type = "text" name = "department" value = "<?php echo isset($_GET['department'])?$_GET['department']:"";?>" />
-<label for = "number">Number: </label><input type = "text" name = "number"  value = "<?php echo isset($_GET['number'])?$_GET['number']:"";?>" />
-<label for = "name">Name: </label><input type = "text" name = "name"  value = "<?php echo isset($_GET['name'])?$_GET['name']:"";?>" />
+<label for = "user_id">User ID: </label><input type = "text" name = "user_id" value = "<?php echo isset($_GET['user_id'])?$_GET['user_id']:"";?>" />
+<label for = "course_id">Course ID: </label><input type = "text" name = "course_id" value = "<?php echo isset($_GET['course_id'])?$_GET['course_id']:"";?>" />
+<label for = "review_id">Review ID: </label><input type = "text" name = "review_id" value = "<?php echo isset($_GET['review_id'])?$_GET['review_id']:"";?>" />
 <input type = "submit" value = "Search" />
 </form>
 </div>
@@ -28,7 +29,7 @@ include "../mysqli_connection.php";
 <div>
 <table>
 <thead >
-<td>Course ID</td><td>Department</td><td>Number</td><td>Name</td><td>Professor</td><td>Operation</td>
+<td>Review ID</td><td>Course ID</td><td>User ID</td><td>Score </td><td>Content</td><td>Time </td><td>Operation</td>
 </thead>
 <tbody>
 <?php
@@ -37,29 +38,31 @@ if (isset($_GET["course_id"]) && $_GET["course_id"] !== ""){
         $param = "(course_id = " . $mysqli->real_escape_string(trim($_GET["course_id"])) . ")";
         $filter .= " AND " . $param;
 }
-if (isset($_GET["department"]) && $_GET["department"] !== ""){
-        $param = "(department = '" . $mysqli->real_escape_string(trim($_GET["department"])) . "')";
+if (isset($_GET["user_id"]) && $_GET["user_id"] !== ""){
+        $param = "(user_id = " . $mysqli->real_escape_string(trim($_GET["user_id"])) . ")";
         $filter .= " AND " . $param;
 }
- if (isset($_GET["name"]) && $_GET["name"] !== ""){
-         $param = "(name LIKE '%" . $mysqli->real_escape_string(trim($_GET["name"])) . "%')";
-         $filter .= " AND " . $param;
- }
-if (isset($_GET["number"]) && $_GET["number"] !== ""){
-        $param = "(number = " . $mysqli->real_escape_string(trim($_GET["number"])) . ")";
+if (isset($_GET["review_id"]) && $_GET["review_id"] !== ""){
+        $param = "(review_id = " . $mysqli->real_escape_string(trim($_GET["review_id"])) . ")";
         $filter .= " AND " . $param;
 }
+
+//  if (isset($_GET["name"]) && $_GET["name"] !== ""){
+//          $param = "(name LIKE '%" . $mysqli->real_escape_string(trim($_GET["name"])) . "%')";
+//          $filter .= " AND " . $param;
+//  }
+
 $perNumber = 25;
 if(isset($_GET['page']))$page = $_GET['page'];
 else $page=1;
-$count = $mysqli->query("select count(*) from Courses WHERE " . $filter . ";");
+$count = $mysqli->query("select count(*) from reviews WHERE " . $filter . ";");
 $rs = mysqli_fetch_array($count);
 $totalNumber = $rs[0];
 if ($totalNumber == 0){
         echo "<div><font color='red'>No result!</font></div>";
 }
 else{
-        echo "<div>Found " . $totalNumber. " courses.</div>";
+        echo "<div>Found " . $totalNumber. " reviews.</div>";
 }
 $totalPage = ceil($totalNumber / $perNumber);
 if ($page < 1) {
@@ -69,16 +72,18 @@ else if ($page > $totalPage){
         $page = $totalPage;
 }
 $startCount = ($page - 1) * $perNumber;
-$result = $mysqli->query("select * from Courses WHERE (" . $filter .") LIMIT $startCount, $perNumber");
+$result = $mysqli->query("select * from reviews WHERE (" . $filter .") LIMIT $startCount, $perNumber");
 if ($result){
         while ($row = mysqli_fetch_array($result)){
 ?>
 <tr>
+<td><?php echo $row["review_id"];?></td>
 <td><?php echo $row["course_id"];?></td>
-<td><?php echo $row["department"];?></td>
-<td><?php echo $row["number"];?></td>
-<td><?php echo $row["name"];?></td>
-<td><?php echo $row["professor"];?></td>
+<td><?php echo $row["user_id"];?></td>
+<td><?php echo $row["score"];?></td>
+<td><?php echo $row["content"];?></td>
+<td><?php echo $row["timestamp"];?></td>
+
 <td><a href="javascript:" onclick = "show_delete_yes(this,<?php echo $row['course_id'];?>);" >Delete</a>&nbsp&nbsp<a href="editcourse.php?id=<?php echo $row['course_id'];?>">Edit</a></td>
 </tr>
 </tbody>
