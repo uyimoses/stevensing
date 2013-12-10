@@ -6,11 +6,19 @@ include "header_action.php";
 $error = "none";
 $title_error = "";
 $content_error = "";
+$course_id = -1;
 $user_id = -1;
-$blog_id = -1;
-$title = "";
+$review_id = -1;
+$score = -1;
 $content = "";
 $timestamp = date("Y-m-d H:i:s", time());
+
+if (isset($_POST["course_id"]) && $_POST["course_id"] !== ""){
+	$course_id = $_POST["course_id"];
+}
+else{
+	$error = "data";
+}
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
 	$user_id = $_POST["user_id"];
@@ -19,34 +27,35 @@ else{
 	$error = "data";
 }
 
-if (isset($_POST["title"]) && $_POST["title"] !== ""){
-	$title = $_POST["title"];
-	if (strlen($title) > 200){
-		$title_error = "Must be no more than 200 characters.";
+if (isset($_POST["score"]) && $_POST["score"] !== ""){
+	$score = $_POST["score"];
+	if (preg_match("/^[0-5]$/", $score) ==  0){
+		$score_error = "Must be 0-5.";
 		$error = "data";
 	}
 }
 else{
-	$title_error = "You should set a title."
+	$score_error = "You should set a score.";
 	$error = "data";
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	$content = $_POST["content"];
-	if (strlen($content) > 600){
-		$content_error = "Must be no more than 600 characters.";
+	if (strlen($content) > 3000){
+		$content_error = "Must be no more than 3000 characters.";
 		$error = "data";
 	}
 }
 else{
-	$content_error = "You shouldn't leave the content empty."
+	$content_error = "You cannot post an empty review.";
 	$error = "data";
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO blogs (user_id, title, content, timestamp) VALUES (" 
-		. addslashes($user_id). ", '"
-		. addslashes(strip_tags($title)) . "', '" 
+	$sql = "INSERT INTO reviews (course_id, user_id, score, content, timestamp) VALUES (" 
+		. addslashes($course_id). ", '"
+		. addslashes($user_id). ", "
+		. $score . ", '" 
 		. addslashes(strip_tags($content)) . "', '"
 		. $timestamp . "');";
 	//echo $sql;
@@ -55,18 +64,19 @@ if ($error == "none"){
 		$error = "server";
 	}
 	else{
-		$blog_id = $mysqli->insert_id;
+		$review_id = $mysqli->insert_id;
 	}
 }
 
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'title_error': '" . $title_error . "',\n";
+echo "'score_error': '" . $title_error . "',\n";
 echo "'content_error': '" . $content_error . "',\n";
-echo "'blog_id': '" . $blog_id . "',\n";
+echo "'review_id': '" . $review_id . "',\n";
+echo "'course_id': '" . $course_id . "',\n";
 echo "'user_id': '" . $user_id . "',\n";
-echo "'title': '" . $title. "',\n";
+echo "'score': '" . $score. "',\n";
 echo "'content': '" . $content. "',\n";
 echo "'timestamp': '" . $timestamp. "',\n";
 echo "}";
