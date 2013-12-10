@@ -53,7 +53,7 @@ else{
 
 if ($error == "none"){
 	$sql = "INSERT INTO reviews (course_id, user_id, score, content, timestamp) VALUES (" 
-		. addslashes($course_id). ", '"
+		. addslashes($course_id). ", "
 		. addslashes($user_id). ", "
 		. $score . ", '" 
 		. addslashes(strip_tags($content)) . "', '"
