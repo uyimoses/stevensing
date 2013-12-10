@@ -16,7 +16,7 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "SELECT * FROM blogs WHERE user_id = ". addslashes($user_id) . ";";
+	$sql = "SELECT * FROM blogs INNER JOIN profiles WHERE profiles.user_id = blogs.user_id AND blogs.user_id = ". addslashes($user_id) . ";";
 	$result = $mysqli->query($sql);
 	if($result){ 	
 		while($row = $result->fetch_array()){
@@ -40,6 +40,10 @@ foreach ($blogs as $index => $blog) {
 	echo "'title': '" . $blog["title"] . "',\n";
 	echo "'content': '" . $blog["content"] . "',\n";
 	echo "'timestamp': '" . $blog["timestamp"] . "',\n";
+	echo "'user_id': '" . $blog["user_id"] . "',\n";
+	echo "'firstname': '" . $blog["firstname"] . "',\n";
+	echo "'lastname': '" . $blog["lastname"] . "',\n";
+	echo "'picture_id': '" . $blog["picture_id"] . "',\n";
 	echo "}\n";
 }
 echo "]\n";
