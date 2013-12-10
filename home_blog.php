@@ -96,13 +96,8 @@ include "leftside_home.php"
 					</li>
 				</section>
 			</li>
-
-	
-</ul>
-</section>
-	
-	
-
+		</ul>
+	</section>
 </section>
 <?php
 //include rightside bar
