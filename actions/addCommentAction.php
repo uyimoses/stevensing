@@ -16,33 +16,33 @@ if (isset($_POST["type"]) && $_POST["type"] != ""){
 	$type = $_POST["type"];
 }
 else{
-	$error = "data1";
+	$error = "data";
 }
 
 if (isset($_POST["feed_id"]) && $_POST["feed_id"] !== ""){
 	$feed_id = $_POST["feed_id"];
 }
 else{
-	$error = "data2";
+	$error = "data";
 }
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
 	$user_id = $_POST["user_id"];
 }
 else{
-	$error = "data3";
+	$error = "data";
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	$content = $_POST["content"];
 	if (strlen($content) > 600){
 		$content_error = "Must be no more than 600 characters.";
-		$error = "data4";
+		$error = "data";
 	}
 }
 else{
 	$content_error = "You cannot post an empty comment.";
-	$error = "data5";
+	$error = "data";
 }
 
 if ($error == "none"){
