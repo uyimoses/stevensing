@@ -8,6 +8,57 @@ include "leftside.php";
 <script type="text/javascript">
 	$("#main_menu ul a:nth-child(3)").addClass('current');
 	$("#left_tag_current").addClass("left_tag_1");
+
+	function leaveCourse(friend_id){
+		action(
+			"leaveCourseAction", 
+			refreshCourseList, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"course_id": course_id,
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>
+			}
+		);
+	}
+
+	function setCourseList(obj){
+		for(var i = 0; i < obj.course_list.length; i++){
+			var course = obj.course_list[i];
+			var html =  "<li><div id='course_list_name'><a href='course_info_"
+				+ course.course_id
+				+ "'><span>"
+				+ course.department
+				+ "</span>&nbsp;<span>"
+				+ course.number
+				+ "</span>&nbsp;<span>"
+				+ course.name
+				+ "</span></a></div><li class='button'><a href='javascript:' onclick='leaveCourse("
+				+ course.course_id
+				+ ")'>Drop</a><a href='course_info_"
+				+ course.course_id
+				+ "'>Visit</a></li></li>";
+			$(html).appendTo('#course_list>ul');
+		}
+	}
+	function refreshCourseList(){
+		$("#course_list>ul").html("");
+		action(
+			"getCourseListAction", 
+			setCourseList, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"status": 2
+			}
+		);
+	}
+
+	$("#course_list").ready(function(){
+		refreshCourseList();
+	});
+
 </script>
 <nav id="left_tags">
 	<ul>

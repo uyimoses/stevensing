@@ -33,13 +33,13 @@ $_SESSION["user_id"] = 1;
 		}
 		$("#display").ready(function(){
 			action(
-				"acceptFriendAction", 
+				"getCourseListAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
 					"user_id": 15,
-					"friend_id": 11
+					// "friend_id": 11
 					// "status": 2
 				}
 			);
