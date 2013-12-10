@@ -11,10 +11,13 @@ include "leftside_friends.php";
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
 
-	function refreshStatusList(obj){
+	var status_list = new Array();
+	var count = 0;
+
+	function refreshStatusList(){
 		$("#status_list>ul").html("");
-		for(var i = 0; i < obj.status_list.length; i++){
-			var status = obj.status_list[i];
+		for(var time in status_list){
+			var status = status_list[time];
 			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
 				+ status.firstname
 				+ "</span>&nbsp;<span>"
@@ -37,26 +40,44 @@ include "leftside_friends.php";
 		}
 	}
 
-	function createStatusList(obj){
 
+	function createStatusList(obj){
+		for (var i = 0; i < obj.status_list.length; i++){
+			var date = new Date("yyyy-mm-dd hh:mm:ss");
+			var key = Date.parse(obj.status_list[i].timestamp);
+			//console.log(key);
+			var value = obj.status_list[i];
+			status_list[key] = value;
+		}
+		count ++;
+		if (count >= friend_list.length){
+			refreshStatusList();
+		}
 	}
 
 	function refreshStatuses(){
-		action(
-			"getFriendListAction", 
-			setFriendList, 
-			defaultErrorHandler, 
-			"POST", 
-			{
-				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
-				"status": 2
-			}
-		);
+		for (var i = 0; i < friend_list.length; i++){
+			action(
+				"getStatusByEntityAction", 
+				createStatusList, 
+				defaultErrorHandler, 
+				"POST", 
+				{
+					"id": friend_list[i].user_id,
+					"type": 1
+				}
+			);
+		}
 	}
 
-	$("#status_list").ready(
-		refreshStatuses()
-	);
+	$("#status_list").ready(function(){
+		if (friend_list != undefined){
+			refreshStatuses();
+		}
+		else{
+			getFriendList();
+		}
+	});
 </script>
 <section class="span-14 main_view">
 	<section id="status_list">

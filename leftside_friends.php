@@ -9,6 +9,12 @@
 			catch(e){
 				//do nothing
 			}
+			try{
+				refreshStatuses();
+			}
+			catch(e){
+				//do nothing
+			}
 		}
 		function getFriendList(){
 			action(
@@ -22,10 +28,6 @@
 				}
 			);
 		}
-
-		$("#left_tags").ready(function(){
-			getFriendList();
-		});
 	</script>
 	<nav id="left_tags">
 		<ul>
