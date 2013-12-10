@@ -26,7 +26,7 @@ include "leftside_courses.php";
 	</div>
 	<div class="block-bottom"></div>
 	<div id="uploadres">
-		<label>Upload new resourse:</label>
+		<label for="file">Upload new resourse:</label>
 		<form action="upload_res.php" method="post" enctype="multipart/form-data">
 			<input type="file" name="file" id="file"><br>
 			<input type="submit" name="submit" value="Submit" id="ressubmit">
