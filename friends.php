@@ -13,11 +13,12 @@ include "leftside_friends.php";
 	function setFriendList(obj){
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
-			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
+			var html =  "<li><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
 			 + friend.firstname
 			  + "</span>&nbsp;<span>"
-			   + friend.lastname + "</span></div><div><button>Add</button><button>Ignore</button></div></li>";
-			$(html).prependTo('#friend_request>ul');
+			   + friend.lastname
+			    + "</span></div><a href='#'><div>Delete</div></a></li>";
+			$(html).appendTo('#friend_list>ul');
 		}
 	}
 	$("#friend_list").ready(
@@ -43,38 +44,9 @@ include "leftside_friends.php";
 			</select>
 		
 		<ul>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Ruo</span>&nbsp;<span>Jia</span>
-				</div>
-				<a href="#" ><div>
-					Delete
-				</div></a>
-			</li>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Xiao</span>&nbsp;<span>Han</span>
-				</div>
-				<a href="#" ><div>
-					Delete
-				</div></a>
-			</li>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Cheng</span>&nbsp;<span>Liu</span>
-				</div>
-				<a href="#" ><div>
-					Delete
-				</div></a>
-			</li>
+			
 		</ul>
 	</section>
-	
-	
-
 </section>
 <?php
 //include rightside bar
