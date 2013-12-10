@@ -23,6 +23,7 @@ include "leftside.php";
 	}
 
 	function setCourseList(obj){
+		$("#course_list>ul").html("");
 		for(var i = 0; i < obj.course_list.length; i++){
 			var course = obj.course_list[i];
 			var html =  "<li><div id='course_list_name'><a href='course_info_"
@@ -42,7 +43,6 @@ include "leftside.php";
 		}
 	}
 	function refreshCourseList(){
-		$("#course_list>ul").html("");
 		action(
 			"getCourseListAction", 
 			setCourseList, 

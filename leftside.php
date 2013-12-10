@@ -1,7 +1,7 @@
 <script>
 	function setLeftside(profile){
 		$("#profile_name>p:nth-of-type(1)").text(profile.firstname);
-		$("#profile_name>p:nth-of-type(2)").text(profile.firstname);
+		$("#profile_name>p:nth-of-type(2)").text(profile.lastname);
 	}
 
 	$("#profile_name").ready(
@@ -25,8 +25,8 @@
 			</div>
 		</a>
 		<div id="profile_name">
-			<p></p>
-			<p></p>
+			<p><?php echo (isset($_SESSION["firstname"]))?$_SESSION["firstname"]:0; ?></p>
+			<p><?php echo (isset($_SESSION["lastname"]))?$_SESSION["lastname"]:0; ?></p>
 		</div>
 
 		<div id="profile_edit">

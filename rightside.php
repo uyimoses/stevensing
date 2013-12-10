@@ -18,6 +18,7 @@
 	}
 
 	function setFriendRequest(obj){
+		$("#friend_request>ul").html("");
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
@@ -33,7 +34,6 @@
 	}
 
 	function refreshFriendRequest(){
-		$("#friend_request>ul").html("");
 		action(
 			"getFriendListAction", 
 			setFriendRequest, 
