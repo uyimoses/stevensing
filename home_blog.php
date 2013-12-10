@@ -9,6 +9,45 @@ include "leftside_home.php"
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
+	function refreshBlogList(obj){
+		$("#status_list>ul").html("");
+		for(var i = 0; i < obj.blog_list.length; i++){
+			var blog = obj.blog_list[i];
+			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+				+ blog.firstname
+				+ "</span>&nbsp;<span>"
+				+ blog.lastname
+				+ "</span></div><section><span>Title:"
+				+ blog.title
+				+"</span><p>"
+				+ blog.content
+				+ "</p><div class='replyline'><span>"
+				+ blog.timestamp
+				+ "</span></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
+				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
+				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+				+ "<div><a href='javascript:' onclick='addComment("
+				+ blog.blog_id
+				+ ", 1)'>Send</a></div></li></section></li>";
+			$(html).prependTo('#status_list>ul');
+		}
+	}
+	function refreshBlogs(){
+		action(
+			"getBlogByUserAction", 
+			refreshBlogList, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				
+			}
+		);
+	}
+
+	$("#status_list").ready(
+		refreshBlogs()
+	);
 </script>
 <section class="span-14 main_view">
 	<section class="block" id="contact">
@@ -41,6 +80,7 @@ include "leftside_home.php"
 					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<section>
+					<span>Title:THis is title</span>
 					<p>
 						Have a great day!
 					</p>
@@ -66,36 +106,7 @@ include "leftside_home.php"
 				</section>
 					
 			</li>
-			<li class="course_status_list">
-				
-				<div>
-					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
-				</div>
-				<section>
-					<p>
-						Welcome, everyone! Today is the CEO presentation!
-					</p>
-					<div class="replyline">
-						<span>2013-11-13 14:56</span>
-						<a href="javascript:;">Reply</a>
-					</div>
-					<div class="OthersReply">
-						<a href="">Xiao Han</a>
-						<p>It's a nice day.</p>
-						<span> 2013-11-13 14:56 </span>
-						<div>
-						<a href="">reply</a>
-						<a href="">delete</a>
-						</div>
-					</div>
-					
-					<li class="replyBox" >
-				  		<img src="./images/profile_image.jpg" alt="" title="">
-						<textarea name="reply" contenteditable="true"></textarea>
-						<div><a href="#"> send</a></div>
-					</li>
-				</section>
-			</li>
+			
 		</ul>
 	</section>
 </section>

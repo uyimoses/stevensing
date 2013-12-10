@@ -10,9 +10,11 @@ date_default_timezone_set('UTC');
 //start session
 session_start();
 
-//////////////////////////////////for testing
-$_SESSION["user_id"] = 11;
-/////////////////////////////////////////////
+
+$_SESSION["user_id"] = 10;
+
+//$_SESSION["user_id"] = 11;
+
 
 ?>
 <!DOCTYPE html>
