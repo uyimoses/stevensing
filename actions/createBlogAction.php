@@ -3,12 +3,9 @@
 //include action header
 include "header_action.php";
 
-//include data
-include "datas.php";
-
 //validation
-$user_id=-1;
-$error="none";
+$user_id = -1;
+$error = "none";
 
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
