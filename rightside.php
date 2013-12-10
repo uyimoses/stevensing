@@ -1,16 +1,39 @@
 <script>
+	function refreshFriends(obj){
+		refreshFriendRequest();
+		refreshFriendList();
+	}
+
+	function acceptFriendRequest(friend_id){
+		action(
+			"acceptFriendAction", 
+			refreshFriends, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"friend_id": friend_id
+			}
+		);
+	}
+
 	function setFriendRequest(obj){
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
-			 + friend.firstname
-			  + "</span>&nbsp;<span>"
-			   + friend.lastname + "</span></div><div><button>Add</button><button>Ignore</button></div></li>";
+			 	+ friend.firstname
+			  	+ "</span>&nbsp;<span>"
+			   	+ friend.lastname + "</span></div><div><button onclick='acceptFriendRequest("
+			   	+ friend.user_id
+			   	+ ");'>Add</button><button onclick='denyFriendRequest("
+			   	+ friend.user_id
+			   	+ ")'>Ignore</button></div></li>";
 			$(html).prependTo('#friend_request>ul');
 		}
 	}
 
-	$("#friend_request").ready(
+	function refreshFriendRequest(){
+		$("#friend_request>ul").html("");
 		action(
 			"getFriendListAction", 
 			setFriendRequest, 
@@ -20,8 +43,12 @@
 				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
 				"status": 1
 			}
-		)
-	);
+		);
+	}
+
+	$("#friend_request").ready(function(){
+		refreshFriendRequest();
+	});
 </script>
 <section id="rightside" class="span-6 last">
 	<section id="friend_request">

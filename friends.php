@@ -21,7 +21,8 @@ include "leftside_friends.php";
 			$(html).appendTo('#friend_list>ul');
 		}
 	}
-	$("#friend_list").ready(
+	function refreshFriendList(){
+		$("#friend_list>ul").html("");
 		action(
 			"getFriendListAction", 
 			setFriendList, 
@@ -31,8 +32,12 @@ include "leftside_friends.php";
 				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
 				"status": 2
 			}
-		)
-	);
+		);
+	}
+
+	$("#friend_list").ready(function(){
+		refreshFriendList();
+	});
 </script>
 <section class="span-14 main_view">
 	<section id="friend_list">
