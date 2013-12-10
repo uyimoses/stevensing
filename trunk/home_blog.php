@@ -15,8 +15,10 @@ include "leftside_home.php"
 		
 	<div class="block-top"></div>
 	  <div id="contact-content">
-		<span id="contact-text">Status Input Here:</span>
-		
+		<span id="contact-text">Blog Input Here:</span><br>
+		<label>Title:</label>
+		<input type="text" name="title"><br>
+		<label>Content:</label>
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
 			
