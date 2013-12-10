@@ -55,6 +55,7 @@ foreach ($events as $index => $event) {
 	echo "'start_time': '" . $event["starttime"] . "',\n";
 	echo "'end_time': '" . $event["endtime"] . "',\n";
 	echo "'number': '" . $event["number"] . "',\n";
+	echo "'timestamp': '" . $event["timestamp"] . "',\n";
 	echo "}\n";
 }
 echo "]\n";
