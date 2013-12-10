@@ -236,6 +236,19 @@ function addStatus(id, type){
 	);
 }
 
+function deleteStatus(id, timestamp){
+	action(
+		"deleteStatusAction", 
+		refreshStatuses, 
+		defaultErrorHandler, 
+		"POST", 
+		{
+			"status_id": id,
+			"timestamp": timestamp
+		}
+	);
+}
+
 function addComment(){
 
 }
