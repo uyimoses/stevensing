@@ -1,7 +1,6 @@
 <script>
 	function setFriendRequest(obj){
-		console.log(obj.friend_list.length)
-		for(var i=0;i<obj.friend_list.length;i++){
+		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
 			 + friend.firstname
@@ -9,7 +8,6 @@
 			   + friend.lastname + "</span></div><div><button>Add</button><button>Ignore</button></div></li>";
 			$(html).prependTo('#friend_request>ul');
 		}
-		
 	}
 
 	$("#friend_request").ready(
