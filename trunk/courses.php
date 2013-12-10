@@ -9,7 +9,7 @@ include "leftside.php";
 	$("#main_menu ul a:nth-child(3)").addClass('current');
 	$("#left_tag_current").addClass("left_tag_1");
 
-	function leaveCourse(friend_id){
+	function leaveCourse(course_id){
 		action(
 			"leaveCourseAction", 
 			refreshCourseList, 
