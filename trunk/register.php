@@ -350,6 +350,7 @@ include "header_login.php"
 		</section>
 		<!-- Policy Confirmation -->
 		<section class="register_steps" id="register_step_3">
+
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(2);">Back</a>
 				<a href="javascript:" onclick="window.location.href='welcome';">Deny</a>
@@ -357,13 +358,67 @@ include "header_login.php"
 		</section>
 		<!-- Adding friends -->
 		<section class="register_steps" id="register_step_4">
+
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(3);">Back</a>
 				<a href="javascript:" onclick="registerStep(5);">Skip</a>
 				<a href="javascript:" onclick="addfriends();registerStep(5);">Done</a></div>
 		</section>
 		<!-- Adding courses -->
+<script type="text/javascript">
+
+	function setCourseList(obj){
+		$("#course_list>tbody").html("");
+		for(var i = 0; i < obj.course_list.length; i++){
+			var course = obj.course_list[i];
+			var html =  "<tr><td>"
+				+ course.department
+				+ "</td><td>"
+				+ course.number
+				+ "</td><td>"
+				+ course.name
+				+ "</td><td>"
+				+ course.professor
+				+ "</td><td><input type='button' value='Add'><input type='button' value='Delete'></td>";
+			$(html).appendTo('#course_list>tbody');
+		}
+	}
+	function refreshCourseList(){
+		action(
+			"getALLCourseAction", 
+			setCourseList, 
+			defaultErrorHandler, 
+			"POST", 
+				{
+
+				}
+		);
+	}
+
+	$("#course_list").ready(function(){
+		refreshCourseList();
+	});
+
+</script>
 		<section class="register_steps" id="register_step_5">
+			<table id="course_list">
+				<thead>
+					<td><b>Department</b></td>
+					<td><b>Course number</b></td>
+					<td><b>Course name</b></td>
+					<td><b>Professor</b></td>
+					<td><b>Actions</b></td>
+				</thead>
+				<tbody id="course_list">
+					<tr>
+						<td>Blah</td>
+						<td>Blah</td>
+						<td>Blah</td>
+						<td>Foo</td>
+						<td><input type="button" value="Add" ><input type="button" value="Delete"></td>
+					</tr>
+				</tbody>
+			</table>
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(4);">Back</a>
 				<a href="javascript:" onclick="window.location.href='home';">Skip</a>
