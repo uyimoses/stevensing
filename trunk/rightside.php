@@ -19,7 +19,7 @@
 			defaultErrorHandler, 
 			"POST", 
 			{
-				"user_id": 15,
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
 				"status": 1
 			}
 		)
