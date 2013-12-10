@@ -23,21 +23,25 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "UPDATE friend_list SET status = 2, timestamp = " . $timestamp .	" WHERE user_id = "
-	. addslashes($user_id). " AND friend_id = "
-	. addslashes($friend_id). ";";
+	$sql = "UPDATE friend_list SET status = 2, timestamp = '" . $timestamp 
+		.	"' WHERE user_id = "	. addslashes($user_id)
+		. " AND friend_id = " . addslashes($friend_id). ";";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
 		$error = "server";
 	}
 	else{
-		
-	$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
-		. addslashes($friend_id). ", "
-		. addslashes($user_id). ", '"
-		. $timestamp . "', " 
-		. 1 . ");";
+		$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
+			. addslashes($friend_id). ", "
+			. addslashes($user_id). ", '"
+			. $timestamp . "', " 
+			. 2 . ");";
+		//echo $sql;
+		$result = $mysqli->query($sql);
+		if ($result ==  false){
+			$error = "server";
+		}
 	}
 }
 
