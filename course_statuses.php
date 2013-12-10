@@ -7,24 +7,13 @@ include "leftside.php";
 
 //include leftside of courses
 include "leftside_courses.php";
+
+//include header of courses
+include "header_course.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
 </script>
-<section class="span-14 main_view">
-	<div id="courseinfo">
-		<h1><span id="department">CS</span><span id="number">546</span><span>Web Development</span></h1>
-		<div id="lcourse">
-			<p id="professor">Steven A Gabarro</p>
-			<p id="description">This course will provide students with a first strong approach of internet programming. It gives the basic knowledge on how the Internet works and how to create advanced web sites by the use of script languages, after learning the basics of HTML. The course will teach the students the skills required in any business such as proper team work and coordination between groups.</p>
-		</div>
-		<div id="rcourse">
-			<div><a href="./courses.php">Back to List</a></div>
-			<div>Course Rating: <span>4.0</span></div>
-			<div class="star_rating star_4"></div>
-		</div>		
-	</div>
-
 	<div class="block-top"></div>
 	<div id="contact-content">
 		<span id="contact-text">Create new Stutas:</span>
