@@ -32,16 +32,19 @@ if ($error == "none"){
 	$result = $mysqli->query($sql);
 	if($result){
 		if ($row = $result->fetch_array()){
-			$firstname=$row['firstname'];
-			$middlename=$row['middlename'];
-			$lastname=$row['lastname'];
-			$gender=$row['gender'];
-			$dob=$row['dob'];
-			$major=$row['major'];
-			$degree=$row['degree'];
-			$year=$row['entry_year'];
-			$semester=$row['entry_semester'];
-			$picture_id=$row['picture_id'];
+			$firstname = $row['firstname'];
+			$middlename = $row['middlename'];
+			$lastname = $row['lastname'];
+			$gender = $row['gender'];
+			$dob = $row['dob'];
+			$major = $row['major'];
+			$degree = $row['degree'];
+			$year = $row['entry_year'];
+			$semester = $row['entry_semester'];
+			$picture_id = $row['picture_id'];
+			$_SESSION["firstname"] = $row['firstname'];
+			$_SESSION["lastname"] = $row['lastname'];
+			$_SESSION["picture_id"] = $row['picture_id'];
 		}
 		else{
 			$error = "data";
