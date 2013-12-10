@@ -3,16 +3,13 @@
 //include action header
 include "header_action.php";
 
-//include data
-include "datas.php";
-
-//validation
 $error = "none";
+$content_error = "";
 $id = -1;
 $type = -1;
 $status_id = -1;
-$timestamp = date("Y-m-d H:i:s",time());
-$content_error = "";
+$content = "";
+$timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["id"]) && $_POST["id"] != ""){
 	$id = $_POST["id"];
@@ -36,6 +33,7 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	}
 }
 else{
+	$content_error = "You cannot post an empty status."
 	$error = "data";
 }
 
