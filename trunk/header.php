@@ -11,7 +11,7 @@ date_default_timezone_set('UTC');
 session_start();
 
 
-$_SESSION["user_id"] = 10;
+$_SESSION["user_id"] = 15;
 
 //$_SESSION["user_id"] = 11;
 
@@ -26,6 +26,7 @@ if (!isset($_SESSION["user_id"])){
 }
 ?>
 	<meta charset="utf-8">
+	<meta lang="en">
 	<link rel="stylesheet" href="./stylesheets/screen.css">
 	<!--[if lt IE 8]>
 	<link rel="stylesheet" href="./stylesheets/ie.css">
