@@ -1,34 +1,34 @@
+<script>
+	function setFriendRequest(obj){
+		console.log(obj.friend_list.length)
+		for(var i=0;i<obj.friend_list.length;i++){
+			var friend = obj.friend_list[i];
+			var html = "<li><img src='./images/profile_image.jpg' alt='profile_picture' title=''><div><span>"
+			 + friend.firstname
+			  + "</span>&nbsp;<span>"
+			   + friend.lastname + "</span></div><div><button>Add</button><button>Ignore</button></div></li>";
+			$(html).prependTo('#friend_request>ul');
+		}
+		
+	}
+
+	$("#friend_request").ready(
+		action(
+			"getFriendListAction", 
+			setFriendRequest, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"user_id": 11,
+				"status": 1
+			}
+		)
+	);
+</script>
 <section id="rightside" class="span-6 last">
 	<section id="friend_request">
 		<h1>Friend Requests</h1>
 		<ul>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Stevens</span>&nbsp;<span>Gabarro</span>
-				</div>
-				<div>
-					<button>Add</button><button>Ignore</button>
-				</div>
-			</li>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>David</span>&nbsp;<span>Jobs</span>
-				</div>
-				<div>
-					<button>Add</button><button>Ignore</button>
-				</div>
-			</li>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Jane</span>&nbsp;<span>Smiths</span>
-				</div>
-				<div>
-					<button>Add</button><button>Ignore</button>
-				</div>
-			</li>
 		</ul>
 	</section>
 	<section id="message">

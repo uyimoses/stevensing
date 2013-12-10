@@ -216,3 +216,7 @@ function action(actionName, success, error, type, formData){
 		}
 	});
 }
+
+function defaultErrorHandler(obj){
+
+}
