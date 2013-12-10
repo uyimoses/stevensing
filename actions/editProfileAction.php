@@ -25,7 +25,7 @@ if ($error == "none"){
 		middlename='". addslashes((isset($middlename))?$middlename:"") . "',
 		lastname='". addslashes($lastname) . "',
 		gender='". addslashes($gender) . "',
-		dob='". addslashes($dob) . "', 
+		dob='". addslashes($dob) . "',
 		major='". addslashes($major) . "', 
 		degree='". addslashes($degree) . "',
 		entry_year='". addslashes($year) . "',

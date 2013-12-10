@@ -44,8 +44,8 @@ else{
 if ($error == "none"){
 	$sql = "INSERT INTO blogs (user_id, title, content, timestamp) VALUES (" 
 		. addslashes($user_id). ", '"
-		. addslashes($title) . "', '" 
-		. addslashes($content) . "', '"
+		. addslashes(strip_tags($title)) . "', '" 
+		. addslashes(strip_tags($content)) . "', '"
 		. $timestamp . "');";
 	//echo $sql;
 	$result = $mysqli->query($sql);
