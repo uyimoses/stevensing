@@ -32,6 +32,9 @@ if ($error == "none"){
 			$name = $row['name'];
 			$description = $row['description'];
 			$professor = $row['professor'];
+			$_SESSION["department"] = $row['department'];
+			$_SESSION["number"] = $row['number'];
+			$_SESSION["name"] = $row['name'];
 		}
 		else{
 			$error = "data";
