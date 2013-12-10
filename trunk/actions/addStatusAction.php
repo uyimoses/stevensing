@@ -12,6 +12,7 @@ $id = -1;
 $type = -1;
 $status_id = -1;
 $timestamp = date("Y-m-d H:i:s",time());
+$content_error = "";
 
 if (isset($_POST["id"]) && $_POST["id"] != ""){
 	$id = $_POST["id"];
@@ -34,6 +35,9 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 		$error = "data";
 	}
 }
+else{
+	$error = "data";
+}
 
 if ($error == "none"){
 	$sql = "INSERT INTO statuses (entity_id, entity_type, content, timestamp) VALUES ('"
@@ -54,6 +58,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
+echo "'content_error': '" . $content_error . "'\n";
 echo "'status_id': '" . $status_id . "',\n";
 echo "'entity_id': '" . $id . "',\n";
 echo "'entity_type': '" . $type . "',\n";
