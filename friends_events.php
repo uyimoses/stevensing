@@ -39,41 +39,19 @@ include "leftside_friends.php";
 			<div id="button"><a href="#"> Create</a></div>
 		</form>
 	</div>
-	<section id="status_list">
-		<h1>Recent events</h1>
+	<div class="block-bottom"></div>
+	<div class="block-top"></div>
+	<div id="event_list">
+		<h1><span id="event_title">Pizza Night</span></h1>
 		<ul>
-			<li class="friend_status_list">
-				
-				<div>
-					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
-				</div>
-				<section>
-					<p>
-						Have a great day!
-					</p>
-					<div>
-						<span>2013-11-13 14:56</span><a href="javascript:;">Reply</a>
-					</div>
-					<div class="OthersReply">
-						<a href="">Xiao Han</a>
-						<p>It's a nice day.</p>
-						<span> 2013-11-13 14:56 </span>
-						<div>
-						<a href="">reply</a>
-						<a href="">delete</a>
-						</div>
-					</div>
-					
-					<li class="replyBox" >
-				  		<img src="./images/profile_image.jpg" alt="" title="">
-						<textarea name="reply" contenteditable="true"></textarea>
-						<div><a href="#"> send</a></div>
-					</li>
-				</section>
-			</li>
-			
+			<li>Event Start: </span><span id="event_start">2013/12/09 12:12</span></li>
+			<li>Event End: </span><span id="event_end">2013/12/09 20:12</span></li>
+			<li>Max attendance: </span><span id="num">20</span></li>
+			<li>Details:<span>Have fun!</span></li>
 		</ul>
-	</section>
+		<div id="button"><a href="#">Attend</a></div>
+	</div>
+	<div class="block-bottom"></div>
 </section>
 <?php
 //include rightside bar
