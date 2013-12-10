@@ -10,6 +10,17 @@ include "leftside_friends.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_1");
+	$("#friend_list").ready(function(){
+		action(
+			"getFriendListAction", 
+			setLeftside, 
+			setLeftside, 
+			"POST", 
+			{
+				"user_id": 11
+			}
+		)
+	});
 </script>
 <section class="span-14 main_view">
 	<section id="friend_list">

@@ -11,7 +11,7 @@
 			setLeftside, 
 			"POST", 
 			{
-				"user_id": 11
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>
 			}
 		)
 	);
