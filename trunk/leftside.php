@@ -1,16 +1,17 @@
 <script>
 	function setLeftside(profile){
-		console.log(profile);
+		$("#profile_name>p:nth-of-type(1)").text(profile.firstname);
+		$("#profile_name>p:nth-of-type(2)").text(profile.firstname);
 	}
 
-	$("#leftside").ready(
+	$("#profile_name").ready(
 		action(
 			"getProfileByUserAction", 
 			setLeftside, 
 			setLeftside, 
 			"POST", 
 			{
-				"user_id": ""
+				"user_id": 11
 			}
 		)
 	);
@@ -24,8 +25,8 @@
 			</div>
 		</a>
 		<div id="profile_name">
-			<p>Zhi</p>
-			<p>Qian</p>
+			<p></p>
+			<p></p>
 		</div>
 
 		<div id="profile_edit">
