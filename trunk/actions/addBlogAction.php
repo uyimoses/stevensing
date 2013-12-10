@@ -27,7 +27,7 @@ if (isset($_POST["title"]) && $_POST["title"] !== ""){
 	}
 }
 else{
-	$title_error = "You should set a title."
+	$title_error = "You should set a title.";
 	$error = "data";
 }
 
@@ -39,7 +39,7 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	}
 }
 else{
-	$content_error = "You shouldn't leave the content empty."
+	$content_error = "You shouldn't leave the content empty.";
 	$error = "data";
 }
 
