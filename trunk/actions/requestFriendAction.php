@@ -23,11 +23,11 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO blogs (user_id, title, content, timestamp) VALUES (" 
+	$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
+		. addslashes($friend_id). ", "
 		. addslashes($user_id). ", '"
-		. addslashes(strip_tags($title)) . "', '" 
-		. addslashes(strip_tags($content)) . "', '"
-		. $timestamp . "');";
+		. $timestamp . "', " 
+		. 1 . ");";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
@@ -41,11 +41,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'title_error': '" . $title_error . "',\n";
-echo "'content_error': '" . $content_error . "',\n";
-echo "'blog_id': '" . $blog_id . "',\n";
 echo "'user_id': '" . $user_id . "',\n";
-echo "'title': '" . $title. "',\n";
-echo "'content': '" . $content. "',\n";
+echo "'friend_id': '" . $friend_id . "',\n";
 echo "'timestamp': '" . $timestamp. "',\n";
 echo "}";
