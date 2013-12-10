@@ -24,6 +24,7 @@ include "leftside_friends.php";
 	}
 
 	function setFriendList(obj){
+		$("#friend_list>ul").html("");
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html =  "<li><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
@@ -37,7 +38,6 @@ include "leftside_friends.php";
 		}
 	}
 	function refreshFriendList(){
-		$("#friend_list>ul").html("");
 		action(
 			"getFriendListAction", 
 			setFriendList, 

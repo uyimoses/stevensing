@@ -13,10 +13,46 @@ include "header_course.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
+	function refreshStatusList(obj){
+		$("#status_list").html("");
+		for(var i = 0; i < obj.status_list.length; i++){
+			var status = obj.status_list[i];
+			var html =  "<li class='course_status_list'><div><a href='javascript:' onclick='course_info_"
+				+ obj.entity_id
+				+ "'><span><?php echo isset($_SESSION['department'])?$_SESSION['department']:'';?>></span>&nbsp;"
+				+ "<span><?php echo isset($_SESSION['number'])?$_SESSION['number']:'';?>></span>&nbsp;"
+				+ "<span><?php echo isset($_SESSION['name'])?$_SESSION['name']:'';?>></span></a></div><section><p>"
+				+ status.content
+				+ "</p><div class='replyline'><span>"
+				+ status.timestamp
+				+ "</span></div><div class='OthersReply'></div>"
+				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+				+ "<div><a href='javascript:' onclick='addComment("
+				+ status.status_id
+				+ ", 1)'>Send</a></div></li></section></li>";
+			$(html).prependTo('#status_list>ul');
+		}
+	}
+	function refreshCourseStatus(){
+		action(
+			"getStatusByEntityAction", 
+			refreshStatusList, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"id": <?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>,
+				"type": 2
+			}
+		);
+	}
+
+	$("#status_list").ready(
+		refreshCourseStatus()
+	);
 </script>
 	<div class="block-top"></div>
 	<div id="contact-content">
-		<span id="contact-text">Create new Stutas:</span>
+		<span id="contact-text">Create new Status:</span>
 		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
 			<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
