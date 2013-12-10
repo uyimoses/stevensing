@@ -22,10 +22,9 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO course_list (user_id, course_id, timestamp, status) VALUES (" 
-		. addslashes($course_id). ", "
+	$sql = "INSERT INTO course_list (user_id, course_id, role) VALUES (" 
 		. addslashes($user_id). ", '"
-		. $timestamp . "', " 
+		. addslashes($course_id). ", "
 		. 1 . ");";
 	//echo $sql;
 	$result = $mysqli->query($sql);
@@ -39,5 +38,5 @@ echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'user_id': '" . $user_id . "',\n";
 echo "'course_id': '" . $course_id . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'role': '1'\n";
 echo "}";
