@@ -56,12 +56,12 @@ else{
 if ($error == "none"){
 	$sql = "UPDATE comments 
 			SET
-			feed_id = '". addslashes($feed_id). "', 
-			user_id = '". addslashes($user_id). "', 
-			feed_type = '". addslashes($type) . "', 
+			feed_id = ". addslashes($feed_id). ", 
+			user_id = ". addslashes($user_id). ", 
+			feed_type = ". addslashes($type) . ", 
 			content = '". addslashes(strip_tags($content)) ."', 
 			timestamp = '". $timestamp . "'
-			WHERE comment_id = '". addslashes($comment_id). "'
+			WHERE comment_id = ". addslashes($comment_id). "
 			;";
 	//echo $sql;
 	$result = $mysqli->query($sql);
