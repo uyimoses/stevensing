@@ -19,7 +19,7 @@
 			defaultErrorHandler, 
 			"POST", 
 			{
-				"user_id": 11,
+				"user_id": 15,
 				"status": 1
 			}
 		)
