@@ -5,7 +5,7 @@ include "header_action.php";
 
 $error = "none";
 $status_id = -1;
-$timestamp = "";
+$entity_id = -1;
 
 if (isset($_POST["status_id"]) && $_POST["status_id"] !== ""){
 	$status_id = $_POST["status_id"];
@@ -14,17 +14,17 @@ else{
 	$error = "data";
 }
 
-if (isset($_POST["timestamp"]) && $_POST["timestamp"] !== ""){
-	$timestamp = $_POST["timestamp"];
+if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] !== ""){
+	$entity_id = $_SESSION["user_id"];
 }
 else{
-	$error = "data";
+	$error = "server";
 }
 
 if ($error == "none"){
 	$sql = "DELETE FROM statuses WHERE status_id = " 
-		. addslashes($status_id). " AND timestamp = '"
-		. $timestamp . "';";
+		. addslashes($status_id). " AND entity_id = "
+		. $entity_id . ";";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
@@ -36,5 +36,5 @@ if ($error == "none"){
 echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'status_id': '" . $status_id . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'entity_id': '" . $entity_id. "',\n";
 echo "}";
