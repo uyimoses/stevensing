@@ -38,7 +38,7 @@ foreach ($courses as $index => $course) {
 		echo ",\n";
 	echo "{\n";
 	echo "'course_id': '" . $course["course_id"] . "',\n";
-	echo "'state': '" . $course["state"] . "',\n";
+	echo "'role': '" . $course["role"] . "',\n";
 	echo "'department': '" . $course["department"] . "',\n";
 	echo "'number': '" . $course["number"] . "',\n";
 	echo "'name': '" . $course["name"] . "',\n";
