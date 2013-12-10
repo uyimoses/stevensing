@@ -12,7 +12,7 @@ date_default_timezone_set('UTC');
 session_start();
 
 //////////////////////////////////for testing
-$_SESSION["user_id"] = 1;
+$_SESSION["user_id"] = 6;
 /////////////////////////////////////////////
 ?>
 <!DOCTYPE html>
@@ -33,14 +33,25 @@ $_SESSION["user_id"] = 1;
 		}
 		$("#display").ready(function(){
 			action(
-				"getCourseListAction", 
+				"editStatusAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
-					"user_id": 15,
-					// "friend_id": 11
-					// "status": 2
+					//"comment_id":"2",
+					//"user_id":"10",
+					"type":"1",
+					//"feed_id":"1",
+					"content":"zhebushahzhuangtaizhuangtainttai",
+					"id":"10",
+					//"event_id":"1",
+					//"title":"xinde",
+					//"starttime":"2013-11-04 20:55:28",
+					//"endtime":"2013-12-18 09:23:23",
+					//"number":"22"
+
+					"status_id":"1",
+					//"friend_id": 11
 				}
 			);
 				
