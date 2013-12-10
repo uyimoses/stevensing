@@ -23,7 +23,7 @@ else{
 
 if ($error == "none"){
 	$sql = "DELETE FROM blogs WHERE blog_id = " 
-		. addslashes($blog_id). " AND timestamp = '"
+		. addslashes($blog_id) . " AND timestamp = '"
 		. $timestamp . "';";
 	//echo $sql;
 	$result = $mysqli->query($sql);

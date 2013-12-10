@@ -23,7 +23,7 @@ else{
 
 if ($error == "none"){
 	$sql = "DELETE FROM friend_list WHERE user_id = " . addslashes($user_id)
-		. " AND friend_id = " . addslashes($friend_id). ";";
+		. " AND friend_id = " . addslashes($friend_id) . ";";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
@@ -31,7 +31,7 @@ if ($error == "none"){
 	}
 	else{
 		$sql = "DELETE FROM friend_list WHERE user_id = " . addslashes($friend_id)
-		. " AND friend_id = " . addslashes($user_id). ";";
+		. " AND friend_id = " . addslashes($user_id) . ";";
 		//echo $sql;
 		$result = $mysqli->query($sql);
 		if ($result ==  false){

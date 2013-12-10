@@ -5,8 +5,7 @@ include "header_action.php";
 
 $error = "none";
 $user_id = -1;
-$friend_id = -1;
-$timestamp = date("Y-m-d H:i:s", time());
+$course_id = -1;
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
 	$user_id = $_POST["user_id"];
@@ -15,19 +14,15 @@ else{
 	$error = "data";
 }
 
-if (isset($_POST["friend_id"]) && $_POST["friend_id"] !== ""){
-	$friend_id = $_POST["friend_id"];
+if (isset($_POST["course_id"]) && $_POST["course_id"] !== ""){
+	$course_id = $_POST["course_id"];
 }
 else{
 	$error = "data";
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
-		. addslashes($friend_id) . ", "
-		. addslashes($user_id) . ", '"
-		. $timestamp . "', " 
-		. 1 . ");";
+	$sql = "DELETE FROM course_list WHERE course_id = ". addslashes($course_id) . " AND user_id = " . addslashes($user_id) . ";";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
@@ -38,7 +33,6 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
+echo "'course_id': '" . $course_id . "',\n";
 echo "'user_id': '" . $user_id . "',\n";
-echo "'friend_id': '" . $friend_id . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
 echo "}";
