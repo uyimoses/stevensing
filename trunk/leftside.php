@@ -5,7 +5,7 @@
 
 	$("#leftside").ready(
 		action(
-			"getProfileAction", 
+			"getProfileByUserAction", 
 			setLeftside, 
 			setLeftside, 
 			"POST", 
