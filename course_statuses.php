@@ -13,15 +13,33 @@ include "header_course.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
+	function addComment(){
+
+	}
+
+	function addStatus(id, type){
+		action(
+			"addStatusAction", 
+			refreshStatuses, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"id": id,
+				"type": type,
+				"content": $("#content").val()
+			}
+		);
+	}
+
 	function refreshStatusList(obj){
-		$("#status_list").html("");
+		$("#status_list>ul").html("");
 		for(var i = 0; i < obj.status_list.length; i++){
 			var status = obj.status_list[i];
-			var html =  "<li class='course_status_list'><div><a href='javascript:' onclick='course_info_"
+			var html =  "<li class='course_status_list'><div><a href='course_info_"
 				+ obj.entity_id
-				+ "'><span><?php echo isset($_SESSION['department'])?$_SESSION['department']:'';?>></span>&nbsp;"
-				+ "<span><?php echo isset($_SESSION['number'])?$_SESSION['number']:'';?>></span>&nbsp;"
-				+ "<span><?php echo isset($_SESSION['name'])?$_SESSION['name']:'';?>></span></a></div><section><p>"
+				+ "'><span><?php echo isset($_SESSION['department'])?$_SESSION['department']:'';?></span>&nbsp;"
+				+ "<span><?php echo isset($_SESSION['number'])?$_SESSION['number']:'';?></span>&nbsp;"
+				+ "<span><?php echo isset($_SESSION['name'])?$_SESSION['name']:'';?></span></a></div><section><p>"
 				+ status.content
 				+ "</p><div class='replyline'><span>"
 				+ status.timestamp
@@ -33,7 +51,7 @@ include "header_course.php";
 			$(html).prependTo('#status_list>ul');
 		}
 	}
-	function refreshCourseStatus(){
+	function refreshStatuses(){
 		action(
 			"getStatusByEntityAction", 
 			refreshStatusList, 
@@ -47,7 +65,7 @@ include "header_course.php";
 	}
 
 	$("#status_list").ready(
-		refreshCourseStatus()
+		refreshStatuses()
 	);
 </script>
 	<div class="block-top"></div>
@@ -55,8 +73,8 @@ include "header_course.php";
 		<span id="contact-text">Create new Status:</span>
 		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
-			<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Create status about the course..."></textarea>
-			<div id="button"><a href="#"> send</a></div>
+			<textarea class="fieldcourse"  id="content" contenteditable="true" placeholder="Create status about the course..."></textarea>
+			<div id="button"><a href="javascript:" onclick="addStatus(<?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>, 2)">Send</a></div>
 		  </div>
 		</form>
 	</div>
