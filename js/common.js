@@ -237,15 +237,14 @@ function addStatus(id, type){
 	);
 }
 
-function deleteStatus(id, timestamp){
+function deleteStatus(id){
 	action(
 		"deleteStatusAction", 
 		refreshStatuses, 
 		defaultErrorHandler, 
 		"POST", 
 		{
-			"status_id": id,
-			"timestamp": timestamp
+			"status_id": id
 		}
 	);
 }
