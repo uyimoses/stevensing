@@ -13,23 +13,6 @@ include "header_course.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_3");
-	function addComment(){
-
-	}
-
-	function addStatus(id, type){
-		action(
-			"addStatusAction", 
-			refreshStatuses, 
-			defaultErrorHandler, 
-			"POST", 
-			{
-				"id": id,
-				"type": type,
-				"content": $("#content").val()
-			}
-		);
-	}
 
 	function refreshStatusList(obj){
 		$("#status_list>ul").html("");
@@ -37,9 +20,15 @@ include "header_course.php";
 			var status = obj.status_list[i];
 			var html =  "<li class='course_status_list'><div><a href='course_info_"
 				+ obj.entity_id
-				+ "'><span><?php echo isset($_SESSION['department'])?$_SESSION['department']:'';?></span>&nbsp;"
-				+ "<span><?php echo isset($_SESSION['number'])?$_SESSION['number']:'';?></span>&nbsp;"
-				+ "<span><?php echo isset($_SESSION['name'])?$_SESSION['name']:'';?></span></a></div><section><p>"
+				+ "'><span>"
+				+ status.department
+				+ "</span>&nbsp;"
+				+ "<span>"
+				+ status.number
+				+ "</span>&nbsp;"
+				+ "<span>"
+				+ status.name
+				+ "</span></a></div><section><p>"
 				+ status.content
 				+ "</p><div class='replyline'><span>"
 				+ status.timestamp
@@ -73,7 +62,7 @@ include "header_course.php";
 		<span id="contact-text">Create new Status:</span>
 		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
-			<textarea class="fieldcourse"  id="content" contenteditable="true" placeholder="Create status about the course..."></textarea>
+			<textarea class="fieldcourse"  id="status_content" contenteditable="true" placeholder="Create status about the course..."></textarea>
 			<div id="button"><a href="javascript:" onclick="addStatus(<?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>, 2)">Send</a></div>
 		  </div>
 		</form>

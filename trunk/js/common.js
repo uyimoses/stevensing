@@ -221,3 +221,21 @@ function action(actionName, success, error, type, formData){
 function defaultErrorHandler(obj){
 
 }
+
+function addStatus(id, type){
+	action(
+		"addStatusAction", 
+		refreshStatuses, 
+		defaultErrorHandler, 
+		"POST", 
+		{
+			"id": id,
+			"type": type,
+			"content": $("#status_content").val()
+		}
+	);
+}
+
+function addComment(){
+
+}
