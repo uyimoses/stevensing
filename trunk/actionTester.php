@@ -33,12 +33,13 @@ $_SESSION["user_id"] = 1;
 		}
 		$("#display").ready(function(){
 			action(
-				"createStatusAction", 
+				"deleteBlogAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
-					"user_id": ""
+					"blog_id": 3,
+					"timestamp": "2013-12-10 00:47:20"
 				}
 			);
 				
