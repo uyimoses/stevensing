@@ -18,7 +18,8 @@ include "header_course.php";
 	<div id="contact-content">
 		<div>
 			<label>Select your rate:</label>
-			<select>
+			<div class="star_rating star_4"></div>
+			<select id="rating">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -27,14 +28,13 @@ include "header_course.php";
 			</select>
 		</div>
 		<div class="block-bottom"></div>
-		<div>
-			<span id="contact-text">Input your comment:</span>
-			<form id="statuseForm" action="course_statuses.php" method="post" name="statuseForm">
+			<div>
+				<span id="contact-text">Input your comment:</span>
 				<div id="form_box">
-				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
-				<div id="button"><a href="#"> send</a></div>
-			  </div>
-			</form>
+					<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
+					<div id="button"><a href="#"> send</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<section id="status_list">
