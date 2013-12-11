@@ -1,31 +1,33 @@
-#advanced_search{
+.advanced_search{
 padding: 20px 10px;
 margin: 10px 10px;
 font-family:Georgia,serif;
 font-size:16px;
- color:#660000;
+ /*color:#660000;*/
 }
 
-#form_search label {
+.form_search label {
 padding-left: 10px;
 font-family:Verdana,sans-serif;
 font-weight:bold;
+padding-bottom: 5px; 
+display: inline;
 }
-.form_search fieldset{
-      border:1px solid #cc;
+.form_search>fieldset{
+      border:1px solid ;
       padding:0 20px;
 }
-.form_search legend{
+.form_search>legend{
       font-family:arial,sans-serif;
       font-weight:bold;
       font-size:110%;
       color:#666;
-      background:#eee;
       border:1px solid #ccc;
       border-bottom-color:#999;
       border-right-color:#999;
       padding:4px 8px;
 }   
+
 
 .form_search input.button{
 margin-left: 400px;
@@ -43,19 +45,25 @@ font-weight: bolder;
 	background-color: #a9002f;
 }
 
-#search_list {
+.form_search select{
+	margin-top: 10px;
+
+}
+
+
+.search_list {
 padding: 20px 10px;
 margin: 10px 10px;
 font-family:Georgia,serif;
 font-size:16px;
 }
-#search_list h1{
+.search_list h1{
 	font-size: 20px;
 }
-#search_list span{
+.search_list span{
 	font-size: 16px
 }
-#search_list select{
+.search_list select{
 	margin-left: 5px;
 	font-size: 16px;
 	padding:5px; 
