@@ -35,7 +35,9 @@ include "leftside_home.php"
 				var html = "";
 				if (news.status_id != undefined){
 					var status = news;
-					var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+					var html =  "<li class='friend_status_list'><img class='mini_picture' src='"
+						+ status.picture_id
+						+ "' alt='' title=''><div><span>"
 						+ status.firstname
 						+ "</span>&nbsp;<span>"
 						+ status.lastname
@@ -51,7 +53,9 @@ include "leftside_home.php"
 				}
 				else if (news.blog_id != undefined){
 					var blog = news;
-					html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+					html =  "<li class='friend_status_list'><img class='mini_picture' src='"
+						+ status.picture_id
+						+ "' alt='' title=''><div><span>"
 						+ blog.firstname
 						+ "</span>&nbsp;<span>"
 						+ blog.lastname

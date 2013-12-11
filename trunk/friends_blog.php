@@ -17,7 +17,9 @@ include "leftside_friends.php";
 		$("#status_list>ul").html("");
 		for(var time in blog_list){
 			var blog = blog_list[time];
-			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+			var html =  "<li class='friend_status_list'><img class='mini_picture' src='"
+				+ status.picture_id
+				+ "' alt='' title=''><div><span>"
 				+ blog.firstname
 				+ "</span>&nbsp;<span>"
 				+ blog.lastname

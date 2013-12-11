@@ -33,7 +33,9 @@ include "header_course.php";
 				+ "</p><div class='replyline'><span>"
 				+ status.timestamp
 				+ "</span></div><div class='OthersReply'></div>"
-				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+				+ "<li class='replyBox'><img class='mini_picture' src='"
+				+ status.picture_id
+				+ "' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='javascript:' onclick='addComment("
 				+ status.status_id
 				+ ", 1)'>Send</a></div></li></section></li>";
