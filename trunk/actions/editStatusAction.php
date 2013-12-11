@@ -36,6 +36,10 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 		$content_error = "Must be no more than 600 characters.";
 		$error = "data";
 	}
+	else if (strlen($content) <= 0){
+		$content_error = "Don't use html tags";
+		$error = "data";
+	}
 }
 else{
 	$content_error = "You cannot post an empty status.";

@@ -72,7 +72,7 @@ include "leftside.php";
 		
 		<ul>
 		</ul>
-		<a id="course_add" href="course_add.php">Create a new course</a>
+		<!-- <a id="course_add" href="course_add.php">Create a new course</a> -->
 	</section>
 </section>
 <?php

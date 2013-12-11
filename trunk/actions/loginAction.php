@@ -9,6 +9,9 @@ $id = -1;
 
 if (isset($_POST["username"]) && $_POST["username"] != ""){
 	$username = strip_tags($_POST["username"]);
+	if (strlen($username) <= 0){
+		$error = "data";
+	}
 }
 if (isset($_POST["password"]) && $_POST["password"] != ""){
 	$password = $_POST["password"];

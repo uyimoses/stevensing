@@ -32,6 +32,10 @@ if (isset($_POST["title"]) && $_POST["title"] !== ""){
 		$title_error = "Must be no more than 200 characters.";
 		$error = "data";
 	}
+	else if (strlen($title) <= 0){
+		$title_error = "Don't use html tags";
+		$error = "data";
+	}
 }
 else{
 	$title_error = "You should set a title.";
@@ -42,6 +46,10 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	$content = strip_tags($_POST["content"]);
 	if (strlen($content) > 600){
 		$content_error = "Must be no more than 600 characters.";
+		$error = "data";
+	}
+	else if (strlen($content) <= 0){
+		$content_error = "Don't use html tags";
 		$error = "data";
 	}
 }

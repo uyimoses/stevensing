@@ -10,6 +10,10 @@ $courses = array();
 
 if (isset($_POST["keyword"]) && $_POST["keyword"] != ""){
 	$keyword = strip_tags($_POST["keyword"]);
+	if (strlen($keyword) <= 0){
+		$keyword_error = "Don't use html tags";
+		$error = "data";
+	}
 }
 else{
 	$keyword_error = "You should set a keyword";
