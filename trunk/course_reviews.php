@@ -44,20 +44,20 @@ include "header_course.php";
 	function refreshReviewList(obj){
 		$("#status_list>ul").html("");
 		for(var i = 0; i < obj.review_list.length; i++){
-			var status = obj.review_list[i];
+			var review = obj.review_list[i];
 			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
-				+ status.firstname
+				+ review.firstname
 				+ "</span>&nbsp;<span>"
-				+ status.lastname
-				+ "</span></div><section><p>"
-				+ status.content
-				+ "</p><div class='replyline'><span>"
-				+ status.timestamp
-				+ "</span><a href='javascript:' onclick='deleteStatus("
-				+ status.status_id
-				+ ")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
+				+ review.lastname
+				+ "</span></div><section><div class='star_rating_mini mini_star_"
+				+ review.score * 2
+				+ "'></div><p>"
+				+ review.content
+				+ "</p><div class='replyline'><span >2013-11-13 14:56</span></div><div class='OthersReply'>"
+				+ "<a href=''><span>First</span>&nbsp;<span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
-				+ "</section></li>";
+				+ "<div class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+				+ "<div><a href='#'>Reply</a></div></div></section></li>";
 			$(html).prependTo('#status_list>ul');
 		}
 	}
@@ -73,6 +73,10 @@ include "header_course.php";
 			}
 		);
 	}
+
+	$("#status_list").ready(
+		refreshReviews()
+	);
 
 </script>
 	<div class="block-top"></div>
@@ -113,7 +117,6 @@ include "header_course.php";
 					</p>
 					<div class="replyline">
 						<span >2013-11-13 14:56</span>
-						<a  href="javascript:;">Reply</a>
 					</div>
 					<div class="OthersReply">
 						<a href="">Xiao Han</a>
@@ -125,21 +128,15 @@ include "header_course.php";
 						</div>
 					</div>
 					
-					<li class="replyBox" >
+					<div class="replyBox">
 				  		<img src="./images/profile_image.jpg" alt="" title="">
 						<textarea name="reply" contenteditable="true"></textarea>
-						<div><a href="#"> send</a></div>
-					</li>
+						<div><a href="#">Reply</a></div>
+					</div>
 				</section>
-					
 			</li>
-
-	
-</ul>
-</section>
-	
-	
-
+		</ul>
+	</section>
 </section>
 <?php
 //include rightside bar

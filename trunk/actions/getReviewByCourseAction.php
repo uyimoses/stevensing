@@ -16,7 +16,7 @@ else{
 }
 
 if ($error == "none"){
-	$sql = "SELECT * FROM reviews WHERE course_id = ". addslashes($course_id) . ";";
+	$sql = "SELECT * FROM reviews INNER JOIN profiles WHERE profiles.user_id = reviews.user_id AND course_id = ". addslashes($course_id) . ";";
 	$result = $mysqli->query($sql);
 	if($result){ 	
 		while($row = $result->fetch_array()){
@@ -41,6 +41,8 @@ foreach ($reviews as $index => $review) {
 	echo "'score': '" . addslashes($review["score"]) . "',\n";
 	echo "'content': '" . addslashes($review["content"]) . "',\n";
 	echo "'timestamp': '" . addslashes($review["timestamp"]) . "',\n";
+	echo "'firstname': '" . addslashes($review["firstname"]) . "',\n";
+	echo "'lastname': '" . addslashes($review["lastname"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";
