@@ -20,16 +20,16 @@ include "leftside_friends.php";
 
 
 	function deleteBlog(id, timestamp){
-			action(
-				"deleteBlogAction", 
-				refreshNews, 
-				defaultErrorHandler, 
-				"POST", 
-				{
-					"blog_id": id,
-					"timestamp": timestamp
-				}
-			);
+		action(
+			"deleteBlogAction", 
+			refreshNews, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"blog_id": id,
+				"timestamp": timestamp
+			}
+		);
 	}
 
 	function refreshFriendNewsList(){

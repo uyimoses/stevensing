@@ -39,6 +39,9 @@ if ($error == "none"){
 		if ($result ==  false){
 			$error = "server";
 		}
+		else{
+			$_SESSION["user_id"] = $user_id;
+		}
 	}
 	else{
 		$error = "server";
