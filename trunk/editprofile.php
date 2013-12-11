@@ -23,7 +23,7 @@ include "leftside_home.php"
 			-->
 			<label for="firstname">First Name</label>
 			<input type="text" name="firstname" placeholder="First Name" ><br>
-			<label for="firstname">Middle Name</label>
+			<label for="middlename">Middle Name</label>
 			<input type="text" name="middlename" placeholder="Middle Name" ><br>
 			<label for="lastname">Last Name</label>
 			<input type="text" name="lastname" placeholder="Last Name" ><br>
