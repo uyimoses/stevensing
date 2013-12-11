@@ -21,6 +21,7 @@ include "header_course.php";
 			<div id="form_box">
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >
+				<div class="check_message" id="title_error"></div>
 				<label for="starttime">Start datetime:</label>
 			    <div id="datetimepicker" class="input-append">
 					<input type="text"/>

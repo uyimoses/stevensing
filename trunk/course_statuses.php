@@ -63,6 +63,7 @@ include "header_course.php";
 		<form id="statuseForm" method="post" name="statuseForm">
 			<div id="form_box">
 			<textarea class="fieldcourse"  id="status_content" contenteditable="true" placeholder="Create status about the course..."></textarea>
+			<div class="check_message" id="content_error"></div>
 			<div id="button"><a href="javascript:" onclick="addStatus(<?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>, 2)">Send</a></div>
 		  </div>
 		</form>
