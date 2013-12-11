@@ -253,6 +253,20 @@ function deleteStatus(id){
 	);
 }
 
+function deleteStatusInNews(id){
+	action(
+		"deleteStatusAction", 
+		refreshNews, 
+		defaultErrorHandler, 
+		"POST", 
+		{
+			"status_id": id
+		}
+	);
+}
+
+
 function addComment(){
 
 }
+
