@@ -3,6 +3,9 @@
 //include action header
 include "header_action.php";
 
+//include data
+include "datas.php";
+
 $error = "none";
 $name_error = "";
 $professor_error = "";
@@ -15,69 +18,66 @@ $department = "";
 $description = "";
 $number = 0;
 
-if (isset($_POST["id"]) && $_POST["id"] != ""){
-	$id = $_POST["id"];
-}
-else{
-	$error = "data";
-}
-
-if (isset($_POST["professor"]) && $_POST["professor"] !== ""){
-	$professor = $_POST["professor"];
-	if (strlen($professor) > 100){
-		$professor_error = "Must be no more than 100 characters.";
+if (isset($_POST["department"]) && $_POST["department"] !== ""){
+	$department = strip_tags($_POST["department"]);
+	if (!array_key_exists($major, $majors)){
+		$department_error = "Your department is invalid.";
 		$error = "data";
 	}
 }
 else{
-	$content_error = "You should set a professor.";
+	$department_error = "You should set a department.";
 	$error = "data";
 }
 
+if (isset($_POST["number"]) && $_POST["number"] !== ""){
+	$number = strip_tags($_POST["number"]);
+	if (preg_match("/^[1-9]([0-9]*)$/", $number) == 0){
+		$number_error = "Invalid number.";
+		$error = "data";
+	}
+	else if (strlen($number) > 4){
+		$number_error = "Too many members.";
+		$error = "data";
+	}
+}
+
 if (isset($_POST["name"]) && $_POST["name"] !== ""){
-	$name = $_POST["name"];
+	$name = strip_tags($_POST["name"]);
 	if (strlen($name) > 100){
 		$name_error = "Must be no more than 100 characters.";
 		$error = "data";
 	}
 }
 else{
-	$content_error = "You should set a name.";
+	$name_error = "You should set a name.";
 	$error = "data";
 }
 
 if (isset($_POST["description"]) && $_POST["description"] !== ""){
-	$description = $_POST["description"];
+	$description = strip_tags($_POST["description"]);
 	if (strlen($description) > 6000){
 		$description_error = "Must be no more than 6000 characters.";
 		$error = "data";
 	}
 }
-else{
-	$description_error = "You should set a description.";
-	$error = "data";
-}
 
-
-if (isset($_POST["number"]) && $_POST["number"] !== ""){
-	$number = $_POST["number"];
-	if (preg_match("/^[1-9]([0-9]*)$/", $number) == 0){
-		$number_error = "Invalid number.";
-		$error = "data";
-	}
-	else if (strlen($number)>4){
-		$number_error = "Too many members.";
+if (isset($_POST["professor"]) && $_POST["professor"] !== ""){
+	$professor = strip_tags($_POST["professor"]);
+	if (strlen($professor) > 100){
+		$professor_error = "Must be no more than 100 characters.";
 		$error = "data";
 	}
 }
+
 
 if ($error == "none"){
-	$sql = "INSERT INTO courses (professor, description, department, name, number) VALUES ('"
-		. addslashes(strip_tags($professor)) . "', '"
-		. addslashes(strip_tags($description)) . "', '"
-		. addslashes(strip_tags($name)) . "', '"
+	$sql = "INSERT INTO courses (department, name, number, description, professor) VALUES ('"
 		. addslashes($department) . "', '"
-		. addslashes((isset($number))?$number:"") . "');";
+		. addslashes($name) . "', "
+		. addslashes($number) . ", '"
+		. addslashes($description) . "', '"
+		. addslashes($professor) . "');";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
