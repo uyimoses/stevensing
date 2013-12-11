@@ -33,23 +33,43 @@ include "header_course.php";
 			defaultErrorHandler, 
 			"POST", 
 			{
-				"id": id,
-				"type": type,
-				"content": $("#status_content").val()
+				"course_id": <?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>,
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"score": $("#rating_select>option:selected").val(),
+				"content": $("#review_content").val()
 			}
 		);
+	}
+
+	function refreshReviewList(obj){
+		$("#status_list>ul").html("");
+		for(var i = 0; i < obj.review_list.length; i++){
+			var status = obj.review_list[i];
+			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+				+ status.firstname
+				+ "</span>&nbsp;<span>"
+				+ status.lastname
+				+ "</span></div><section><p>"
+				+ status.content
+				+ "</p><div class='replyline'><span>"
+				+ status.timestamp
+				+ "</span><a href='javascript:' onclick='deleteStatus("
+				+ status.status_id
+				+ ")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
+				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
+				+ "</section></li>";
+			$(html).prependTo('#status_list>ul');
+		}
 	}
 
 	function refreshReviews(){
 		action(
 			"getReviewByCourseAction", 
-			refreshReviews, 
+			refreshReviewList, 
 			defaultErrorHandler, 
 			"POST", 
 			{
-				"id": id,
-				"type": type,
-				"content": $("#status_content").val()
+				"course_id": <?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>
 			}
 		);
 	}
@@ -73,27 +93,27 @@ include "header_course.php";
 			<div>
 				<span id="contact-text">Input your comment:</span>
 				<div id="form_box">
-					<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
-					<div id="button"><a href="#">Send</a>
-				</div>
+					<textarea class="fieldcourse"  id="review_content" contenteditable="true" placeholder="Write something about the course..."></textarea>
+					<div id="button"><a href="javascript:" onclick="addReview();">Send</a></div>
 			</div>
 		</div>
 	</div>
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
-			<li class="course_status_list">
-				
+			<li class="friend_status_list">
+				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<a href="#" ><span>CS</span>&nbsp;<span>546</span></a>
+					<span>Ruo</span>&nbsp;<span>Jia</span>
 				</div>
 				<section>
+					<div class="star_rating_mini"></div>
 					<p>
-						Welcome, everyone! Today is the CEO presentation!
+						Have a great day!
 					</p>
 					<div class="replyline">
-						<span>2013-11-13 14:56</span>
-						<a href="javascript:;">Reply</a>
+						<span >2013-11-13 14:56</span>
+						<a  href="javascript:;">Reply</a>
 					</div>
 					<div class="OthersReply">
 						<a href="">Xiao Han</a>
@@ -111,6 +131,7 @@ include "header_course.php";
 						<div><a href="#"> send</a></div>
 					</li>
 				</section>
+					
 			</li>
 
 	
