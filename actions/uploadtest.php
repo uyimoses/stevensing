@@ -6,12 +6,13 @@
 <body>
 <script>
 	function upload(){
+		var popup = window.open()
 	    var form = $('#uploadForm');
 	    var formData = new FormData(document.getElementById("uploadForm"));
 	    console.log(formData);
 	    $.ajax({
 	        type: "POST",
-	        url: "uploadAction.php",
+	        url: "uploadPictureAction.php",
 	        data: formData,
 	        dataType: "text",
 	        processData: false,

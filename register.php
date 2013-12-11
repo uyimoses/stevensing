@@ -219,14 +219,14 @@ include "header_login.php"
 <section class="span-24">
 	<section class="span-6">
 		<ol id="register_bar">
-		  <li><span class="current">Account Information</span></li>
-		  <li><span>Profile Information</span></li>
-		  <li><span>Policy</span></li>
-		  <li><span>Adding Friends</span></li>
-		  <li><span>Adding Courses</span></li>
+			<li><span class="current">Account Information</span></li>
+			<li><span>Profile Information</span></li>
+			<li><span>Policy</span></li>
+			<li><span>Adding Courses</span></li>
+			<li><span>Adding Friends</span></li>
 		</ol>
 	</section>
-	<form name="registerForm">
+	<div name="registerForm">
 		<!-- Creating an Account -->
 		<section class="register_steps" id="register_step_1">
 			<div>
@@ -271,7 +271,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="middle">Middle Name</label>
-				<input type="text" id="middlename" placeholder="Middle Name" required onblur="check_middlename(this);">
+				<input type="text" id="middlename" placeholder="Middle Name" onblur="check_middlename(this);">
 				<span class="check_icon"></span>
 				<div class="check_message" id="middlename_error"></div>
 			</div>
@@ -338,15 +338,21 @@ include "header_login.php"
 				<span class="check_icon"></span>
 				<div class="check_message" id="semester_error"></div>
 			</div>
+			<!-- upload picture -->
 			<div>
-				<label for="picture">Profile Picture</label>
-				<div>File Upload</div>
+				<label for="file">Profile Picture</label>
+				<form id="uploadForm" enctype="multipart/form-data">
+					<input type="file" name="file" id="file">
+					<button onclick="upload();">Upload</button>
+				</form>
+				<div id="preview"></div>
 				<span class="check_icon"></span>
 				<div class="check_message" id="picture_error"></div>
 			</div>
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(1);">Back</a>
-				<a href="javascript:" onclick="registerStep(3);">Next</a></div>
+				<a href="javascript:" onclick="registerStep(3);">Next</a>
+			</div>
 		</section>
 		<!-- Policy Confirmation -->
 		<section class="register_steps" id="register_step_3">
@@ -356,51 +362,43 @@ include "header_login.php"
 				<a href="javascript:" onclick="window.location.href='welcome';">Deny</a>
 				<a href="javascript:" onclick="registerStep(4);">Register</a></div>
 		</section>
-		<!-- Adding friends -->
-		<section class="register_steps" id="register_step_4">
-
-			<div class="next_register_step">
-				<a href="javascript:" onclick="registerStep(3);">Back</a>
-				<a href="javascript:" onclick="registerStep(5);">Skip</a>
-				<a href="javascript:" onclick="addfriends();registerStep(5);">Done</a></div>
-		</section>
 		<!-- Adding courses -->
-<script type="text/javascript">
+		<script type="text/javascript">
 
-	function setCourseList(obj){
-		$("#course_list>tbody").html("");
-		for(var i = 0; i < obj.course_list.length; i++){
-			var course = obj.course_list[i];
-			var html =  "<tr><td>"
-				+ course.department
-				+ "</td><td>"
-				+ course.number
-				+ "</td><td>"
-				+ course.name
-				+ "</td><td>"
-				+ course.professor
-				+ "</td><td><input type='button' value='Add'><input type='button' value='Delete'></td>";
-			$(html).appendTo('#course_list>tbody');
-		}
-	}
-	function refreshCourseList(){
-		action(
-			"getALLCourseAction", 
-			setCourseList, 
-			defaultErrorHandler, 
-			"POST", 
-				{
-
+			function setCourseList(obj){
+				$("#course_list>tbody").html("");
+				for(var i = 0; i < obj.course_list.length; i++){
+					var course = obj.course_list[i];
+					var html =  "<tr><td>"
+						+ course.department
+						+ "</td><td>"
+						+ course.number
+						+ "</td><td>"
+						+ course.name
+						+ "</td><td>"
+						+ course.professor
+						+ "</td><td><input type='button' value='Add'><input type='button' value='Delete'></td>";
+					$(html).appendTo('#course_list>tbody');
 				}
-		);
-	}
+			}
+			function refreshCourseList(){
+				action(
+					"getALLCourseAction", 
+					setCourseList, 
+					defaultErrorHandler, 
+					"POST", 
+					{
 
-	$("#course_list").ready(function(){
-		refreshCourseList();
-	});
+					}
+				);
+			}
 
-</script>
-		<section class="register_steps" id="register_step_5">
+			$("#course_list").ready(function(){
+				refreshCourseList();
+			});
+
+		</script>
+		<section class="register_steps" id="register_step_4">
 			<table id="course_list">
 				<thead>
 					<td><b>Department</b></td>
@@ -420,12 +418,19 @@ include "header_login.php"
 				</tbody>
 			</table>
 			<div class="next_register_step">
+				<a href="javascript:" onclick="registerStep(5);">Skip</a>
+				<a href="javascript:" onclick="addfriends();registerStep(5);">Done</a>
+			</div>
+		</section>
+		<!-- Adding friends -->
+		<section class="register_steps" id="register_step_5">
+			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(4);">Back</a>
 				<a href="javascript:" onclick="window.location.href='home';">Skip</a>
-				<a href="javascript:" onclick="addcourses();window.location.href='home'">Done</a></div>
+				<a href="javascript:" onclick="addcourses();window.location.href='home'">Done</a>
+			</div>
 		</section>
-		
-	</form>
+	</div>
 </section>
 <?php
 

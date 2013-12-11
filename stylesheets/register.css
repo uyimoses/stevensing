@@ -157,7 +157,7 @@
   width: 220px;
 }
 
-#register_step_2>div:nth-of-type(3), #register_step_2>div:last-child{
+#register_step_2>div:nth-of-type(3), #register_step_2>div:nth-of-type(10), #register_step_2>div:last-child{
   width: 500px;
 }
 
@@ -173,4 +173,24 @@
 
 #forgot{
   margin-left:650px;
+}
+
+.uploadbtn {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #999;
+  color: #FFF !important;
+  margin-right: 20px;
+  float: left;
+}
+
+.uploadbtn:hover{
+  color: #FFF !important;
+  background-color: #a9002f;
 }
