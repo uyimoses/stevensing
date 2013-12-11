@@ -92,7 +92,6 @@ if ($error == "none"){
 	}
 }
 
-
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
