@@ -17,17 +17,42 @@ include "header_course.php";
 	$("#contact-content").ready(function(){
 		$("#rating_select").change(function() {
 			var rate = $("#rating_select>option:selected").val();
-			for (var i = 0; i <= 5; i++){
+			for (var i = 0; i <= 10; i++){
 				$("#raing_stars_display").removeClass('star_'+i);
 			}
-			$("#raing_stars_display").addClass('star_'+rate);
+			$("#raing_stars_display").addClass('star_'+rate*2);
 		});
 	});
 
-	function addReview(){
+	
 
+	function addReview(){
+		action(
+			"addReviewAction", 
+			refreshReviews, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"id": id,
+				"type": type,
+				"content": $("#status_content").val()
+			}
+		);
 	}
 
+	function refreshReviews(){
+		action(
+			"getReviewByCourseAction", 
+			refreshReviews, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"id": id,
+				"type": type,
+				"content": $("#status_content").val()
+			}
+		);
+	}
 
 </script>
 	<div class="block-top"></div>
