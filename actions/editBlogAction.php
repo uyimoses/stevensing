@@ -13,13 +13,13 @@ $content = "";
 $timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 if (isset($_POST["blog_id"]) && $_POST["blog_id"] !== ""){
-	$blog_id = $_POST["blog_id"];
+	$blog_id = strip_tags($_POST["blog_id"]);
 }
 else{
 	$error = "data";
@@ -27,7 +27,7 @@ else{
 
 
 if (isset($_POST["title"]) && $_POST["title"] !== ""){
-	$title = $_POST["title"];
+	$title = strip_tags($_POST["title"]);
 	if (strlen($title) > 200){
 		$title_error = "Must be no more than 200 characters.";
 		$error = "data";
@@ -39,7 +39,7 @@ else{
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
-	$content = $_POST["content"];
+	$content = strip_tags($_POST["content"]);
 	if (strlen($content) > 600){
 		$content_error = "Must be no more than 600 characters.";
 		$error = "data";

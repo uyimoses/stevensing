@@ -12,26 +12,26 @@ $content = "";
 $timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["id"]) && $_POST["id"] != ""){
-	$id = $_POST["id"];
+	$id = strip_tags($_POST["id"]);
 }
 else{
 	$error = "data";
 }
 if (isset($_POST["status_id"]) && $_POST["status_id"] != ""){
-	$status_id = $_POST["status_id"];
+	$status_id = strip_tags($_POST["status_id"]);
 }
 else{
 	$error = "data";
 }
 if (isset($_POST["type"]) && $_POST["type"] != ""){
-	$type = $_POST["type"];
+	$type = strip_tags($_POST["type"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
-	$content = $_POST["content"];
+	$content = strip_tags($_POST["content"]);
 	if (strlen($content) > 600){
 		$content_error = "Must be no more than 600 characters.";
 		$error = "data";

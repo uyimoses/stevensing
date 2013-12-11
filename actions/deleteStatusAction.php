@@ -8,7 +8,7 @@ $status_id = -1;
 $entity_id = -1;
 
 if (isset($_POST["status_id"]) && $_POST["status_id"] !== ""){
-	$status_id = $_POST["status_id"];
+	$status_id = strip_tags($_POST["status_id"]);
 }
 else{
 	$error = "data";

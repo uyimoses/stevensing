@@ -8,14 +8,14 @@ $user_id = -1;
 $course_id = -1;
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["course_id"]) && $_POST["course_id"] !== ""){
-	$course_id = $_POST["course_id"];
+	$course_id = strip_tags($_POST["course_id"]);
 }
 else{
 	$error = "data";

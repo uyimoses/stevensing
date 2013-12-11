@@ -8,14 +8,14 @@ $review_id = -1;
 $timestamp = "";
 
 if (isset($_POST["review_id"]) && $_POST["review_id"] !== ""){
-	$review_id = $_POST["review_id"];
+	$review_id = strip_tags($_POST["review_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["timestamp"]) && $_POST["timestamp"] !== ""){
-	$timestamp = $_POST["timestamp"];
+	$timestamp = strip_tags($_POST["timestamp"]);
 }
 else{
 	$error = "data";

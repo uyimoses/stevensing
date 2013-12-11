@@ -9,14 +9,14 @@ $friend_id = -1;
 $timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["friend_id"]) && $_POST["friend_id"] !== ""){
-	$friend_id = $_POST["friend_id"];
+	$friend_id = strip_tags($_POST["friend_id"]);
 }
 else{
 	$error = "data";

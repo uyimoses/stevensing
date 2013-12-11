@@ -17,7 +17,7 @@ $professor = "";
 $score = 0;
 
 if (isset($_POST["course_id"]) && $_POST["course_id"] != ""){
-	$course_id = $_POST["course_id"];
+	$course_id = strip_tags($_POST["course_id"]);
 }
 else{
 	$error = "data";
