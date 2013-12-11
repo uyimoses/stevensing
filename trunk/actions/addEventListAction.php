@@ -23,8 +23,8 @@ else{
 
 if ($error == "none"){
 	$sql = "INSERT INTO event_list (user_id, event_id) VALUES (" 
-		. addslashes($user_id). ", '"
-		. addslashes($event_id) . "');";
+		. addslashes($user_id). ", "
+		. addslashes($event_id) . ");";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result ==  false){
