@@ -85,10 +85,13 @@ if ($error == "none"){
 					WHERE course_id = ". addslashes($course_id) . "
 					;";
 		}
+		else{
+			$error = "Authority: Only Course Admin Can Edit Course.";
+		}
 	}
-	else{
-		$error = "server";
-	}
+else{
+	$error = "server";
+}
 
 //output json text
 echo "{\n";
