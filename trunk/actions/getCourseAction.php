@@ -37,7 +37,38 @@ if ($error == "none"){
 			$_SESSION["number"] = $row['number'];
 			$_SESSION["name"] = $row['name'];
 
-			$sql = "SELECT * FROM reviews WHERE course_id = " . addslashes($course_id) . ";";
+			$sql = "SELECT AVG(score) FROM reviews WHERE course_id = " . addslashes($course_id) . ";";
+			$result = $mysqli->query($sql);
+			if($result){
+				if ($row = $result->fetch_array()){
+					$score = round($row[0], 2);
+					if ($score >= 4.75)
+						$score = 10;
+					else if ($score >= 4.25 && $score < 4.75)
+						$score = 9;
+					else if ($score >= 3.75 && $score < 4.25)
+						$score = 8;
+					else if ($score >= 3.25 && $score < 3.75)
+						$score = 7;
+					else if ($score >= 2.75 && $score < 3.25)
+						$score = 6;
+					else if ($score >= 2.25 && $score < 2.75)
+						$score = 5;
+					else if ($score >= 1.75 && $score < 2.25)
+						$score = 4;
+					else if ($score >= 1.25 && $score < 1.75)
+						$score = 3;
+					else if ($score >= 0.75 && $score < 1.25)
+						$score = 2;
+					else if ($score >= 0.25 && $score < 0.75)
+						$score = 1;
+					else
+						$score = 0;
+				}
+			}
+			else{
+				$error = "server";
+			}
 		}
 		else{
 			$error = "data";
