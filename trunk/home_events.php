@@ -59,6 +59,7 @@ include "leftside_home.php"
 			<div id="form_box">
 				<label for="title">Event title:</label>
 				<input type="text" name="title" id="eventtitle" >
+				<div class="check_message" id="title_error"></div>
 				<label for="starttime">Start datetime:</label>
 			    <div id="datetimepicker" class="input-append">
 					<input type="text"/>
@@ -75,8 +76,10 @@ include "leftside_home.php"
 				</div>
 				<label for="title">Details:</label>
 				<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the event..."></textarea>
+				<div class="check_message" id="content_error"></div>
 				<label for="num">Number of attendance:</label>
 				<input type="int">
+				<div class="check_message" id="number_error"></div>
 			<div id="button"><a href='javascript:' onclick='addEvent'> Create</a></div>
 		</form>
 	</div>
