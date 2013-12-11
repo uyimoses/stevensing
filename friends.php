@@ -28,7 +28,7 @@ include "leftside_friends.php";
 		for(var i = 0; i < friend_list.length; i++){
 			var friend = friend_list[i];
 			var html =  "<li><img class='mini_picture' src='"
-				+ status.picture_id
+				+ friend.picture_id
 				+ "' alt='' title=''><div><span>"
 			 	+ friend.firstname
 			 	+ "</span>&nbsp;<span>"

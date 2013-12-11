@@ -57,7 +57,8 @@ foreach ($friends as $index => $friend) {
 	echo "'major': '" . addslashes($friend["major"]) . "',\n";
 	echo "'degree': '" . addslashes($friend["degree"]) . "',\n";
 	echo "'year': '" . addslashes($friend["entry_year"]) . "',\n";
-	echo "'semester': '" . addslashes($friend["entry_semester"]) . "'\n";
+	echo "'semester': '" . addslashes($friend["entry_semester"]) . "',\n";
+	echo "'picture_id': '" . addslashes($friend["picture_id"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";
