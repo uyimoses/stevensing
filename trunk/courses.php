@@ -26,7 +26,7 @@ include "leftside.php";
 		$("#course_list>ul").html("");
 		for(var i = 0; i < obj.course_list.length; i++){
 			var course = obj.course_list[i];
-			var html =  "<li><div id='course_list_name'><a href='course_info_"
+			var html =  "<li><div class='course_list_name'><a href='course_info_"
 				+ course.course_id
 				+ "'><span>"
 				+ course.department
