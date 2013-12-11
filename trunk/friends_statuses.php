@@ -43,7 +43,6 @@ include "leftside_friends.php";
 
 	function createStatusList(obj){
 		for (var i = 0; i < obj.status_list.length; i++){
-			var date = new Date("yyyy-mm-dd hh:mm:ss");
 			var key = Date.parse(obj.status_list[i].timestamp);
 			//console.log(key);
 			var value = obj.status_list[i];
