@@ -48,10 +48,7 @@ include "header_course.php";
 	<div id="event_list">
 		<h1><span id="event_title">Pizza Night</span></h1>
 		<ul>
-			<li>Event Start: </span><span id="event_start">2013/12/09 12:12</span></li>
-			<li>Event End: </span><span id="event_end">2013/12/09 20:12</span></li>
-			<li>Max attendance: </span><span id="num">20</span></li>
-			<li>Details:<span>Have fun!</span></li>
+			
 		</ul>
 		<div id="button"><a href="#">Attend</a></div>
 	</div>
