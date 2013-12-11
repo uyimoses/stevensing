@@ -14,6 +14,7 @@ $number = 0;
 $name = "";
 $description = "";
 $professor = "";
+$score = 0;
 
 if (isset($_POST["course_id"]) && $_POST["course_id"] != ""){
 	$course_id = $_POST["course_id"];
@@ -35,6 +36,8 @@ if ($error == "none"){
 			$_SESSION["department"] = $row['department'];
 			$_SESSION["number"] = $row['number'];
 			$_SESSION["name"] = $row['name'];
+
+			$sql = "SELECT * FROM reviews WHERE course_id = " . addslashes($course_id) . ";";
 		}
 		else{
 			$error = "data";
@@ -47,10 +50,11 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'course_id': '" . $course_id . "',\n";
-echo "'department': '" . $department . "',\n";
-echo "'number': '" . $number . "',\n";
-echo "'name': '" . $name . "',\n";
-echo "'description': '" . $description . "',\n";
-echo "'professor': '" . $professor . "',\n";
+echo "'course_id': '" . addslashes($course_id) . "',\n";
+echo "'department': '" . addslashes($department) . "',\n";
+echo "'number': '" . addslashes($number) . "',\n";
+echo "'name': '" . addslashes($name) . "',\n";
+echo "'description': '" . addslashes($description) . "',\n";
+echo "'professor': '" . addslashes($professor) . "',\n";
+echo "'score': '" . addslashes($score) . "',\n"; 
 echo "}";
