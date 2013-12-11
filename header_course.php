@@ -5,6 +5,11 @@
 		$("#coursename").text(obj.name);
 		$("#professor").text(obj.professor);
 		$("#description").text(obj.description);
+
+		for (var i = 0; i <= 5; i++){
+			$("#score").removeClass('star_'+i);
+		}
+		$("#score").addClass('star_'+obj.score);
 	}
 
 	$("#courseinfo").ready(function(){
@@ -29,6 +34,6 @@
 	<div id="rcourse">
 		<div><a href="./courses.php">Back to List</a></div>
 		<div>Course Rating: <span>4.0</span></div>
-		<div class="star_rating star_4"></div>
+		<div class="star_rating star_4" id="score"></div>
 	</div>		
 </div>
