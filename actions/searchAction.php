@@ -28,9 +28,6 @@ if ($error == "none"){
 			array_push($users, $row);
 		}
 	}
-	else{
-		$error = "server";
-	}
 	//search courses
 	$sql = "SELECT * FROM courses WHERE name = '"
 		. addslashes($keyword) . "' OR number = "
@@ -41,9 +38,6 @@ if ($error == "none"){
 		while ($row = $result->fetch_array()){
 			array_push($courses, $row);
 		}
-	}
-	else{
-		$error = "server";
 	}
 }
 
