@@ -571,3 +571,9 @@ footer nav ul a:last-child li{
 	border-right: 0px;
 }
 
+.check_message{
+  margin: 0px;
+  padding: 0px;
+  color: red;
+  height: 18px;
+}
