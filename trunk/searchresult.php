@@ -7,9 +7,53 @@ include "leftside.php";
 ?>
 <script type="text/javascript">
 	$("#left_tag_current").addClass("left_tag_1");
+	function requestFriend(user_id){
+		action(
+			"searchAction",
+			setSearchResult, 
+			errorStatus, 
+			"POST", 
+			{
+				"keyword": $("#keyword").val()
+			}
+		);
+	}
+	function addCourse(couser_id){
 
+	}
 	function setSearchResult(obj){
-
+		$("#friend_list>ul").html("");
+		$("#course_search_list>ul").html("");
+		for (var i = 0; i < obj.user_list.length; i++){
+			var user = obj.user_list[i];
+			var html = "<li><img src='"
+				+ user.picture_id
+				+ "' alt='profile_picture' title='"
+				+ user.firstname + " " + user.lastname
+				+ "'><div><span>"
+				+ user.firstname
+				+ "</span>&nbsp;<span>"
+				+ user.lastname
+				+ "</span></div><a href='javascript:' onclick='requestFriend("
+				+ user.user_id
+				+")'><div>Add</div></a></li>";
+			$(html).prependTo('#friend_list>ul');
+		}
+		for (var i = 0; i < obj.course_list.length; i++){
+			var course = obj.course_list[i];
+			var html = "<li><div><a href='course_info_"
+				+ course.course_id
+				+ "'><span>"
+				+ course.department
+				+ "</span>&nbsp;<span>"
+				+ course.number
+				+ "</span>&nbsp;<span>"
+				+ course.name
+				+ "</span></a></div><span class='buttonCourse'><a href='javascript:' onclick='addCourse("
+				+ course.course_id
+				+ ")'><div>Add</div></a></span></li>";
+			$(html).prependTo('#course_search_list>ul');
+		}
 	}
 	
 	function search(){
@@ -59,8 +103,7 @@ include "leftside.php";
 
 <section id="search_list">
 	<div id ="friend_list">
-	
-		<h1>Friends Result :</h1>
+		<h1>Users Result:</h1>
 		<ul>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
@@ -83,7 +126,7 @@ include "leftside.php";
 		</ul>
 	</div>
 	<div id="course_search_list">
-		<h1>Courses Result :</h1>
+		<h1>Courses Result:</h1>
 	<ul>
 		<li>
 			<div><a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a></div>
