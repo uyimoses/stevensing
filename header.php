@@ -90,7 +90,7 @@ if (!isset($_SESSION["user_id"])){
 				<div class="span-6 last" id="search_box">
 					<form action="searchresult" id="searchForm" method="get">
 						<input type="text" name="keyword" placeholder="Name, Course...">
-						<a href="javascript:" onclick="searchForm.submit();" id="search_button">Search</a>
+						<a href="javascript:" onclick="$('#searchForm').submit();" id="search_button">Search</a>
 					</form>
 				</div>
 			</div>
