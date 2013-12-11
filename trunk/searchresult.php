@@ -121,44 +121,14 @@ include "leftside.php";
 	<div id ="friend_list">
 		<h1>Users Result:</h1>
 		<ul>
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>Ruo</span>&nbsp;<span>Jia</span></div>
-				<a href="#" ><div>Add</div></a>
-			</li>
 			
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>Xiao</span>&nbsp;<span>Han</span></div>
-				<a href="#" ><div>Add</div></a>
-			</li>
-			
-			<li>
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div><span>Cheng</span>&nbsp;<span>Liu</span></div>
-				<a href="#" ><div>Add</div></a>
-			</li>
-		
 		</ul>
 	</div>
 	<div id="course_search_list">
 		<h1>Courses Result:</h1>
-	<ul>
-		<li>
-			<div><a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a></div>
-			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
-		</li>
+		<ul>
 			
-		<li>
-			<div><a href="courseinfo.php">	<span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a></div>
-			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
-		</li>
-			
-		<li>
-			<div><a href="courseinfo.php">	<span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a></div>
-			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
-		</li>
-	</ul>
+		</ul>
 	</div>
 	
 	</section>
