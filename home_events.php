@@ -18,15 +18,15 @@ include "leftside_home.php"
 				+ events.event_id
 				+ "<span id='event_title'>"
 				+ events.title
-				+ "</span></li><li>Event Start: </span><span id='event_start'>"
+				+ "</span><br>Event Start: <span id='event_start'>"
 				+ events.starttime
-				+ "</span></li><li>Event End: </span><span id='event_end'>"
+				+ "</span><br>Event End: <span id='event_end'>"
 				+ events.endtime
-				+ "</span></li><li>Max attendance: </span><span id='num'>"
+				+ "</span><br>Max attendance: <span id='num'>"
 				+ events.number
-				+ "</span></li><li>Details:<span>"
+				+ "</span><br>Details:<span>"
 				+ events.content
-				+ "</span></li><li><div id='button'><a href='javascript:;' onclick='addEventList("
+				+ "</span><br><div id='button'><a href='javascript:;' onclick='("
 				+ events.events_id
 //				+ user.id
 				+ ")'>Attend</a></div></li>"
@@ -85,12 +85,12 @@ include "leftside_home.php"
 	<div class="block-top"></div>
 	<div id="event_list">
 		<ul>
-			<li><span>Id</span><span id="event_title">Pizza Night</span></li>
-			<li>Event Start: </span><span id="event_start">2013/12/09 12:12</span></li>
-			<li>Event End: </span><span id="event_end">2013/12/09 20:12</span></li>
-			<li>Max attendance: </span><span id="num">20</span></li>
-			<li>Details:<span>Have fun!</span></li>
-			<li><div id="button"><a href="javascript:;" onclick="addEventList">Attend</a></div></li>
+			<li><span>Id</span><span id="event_title">Pizza Night</span><br>
+			Event Start: <span id="event_start">2013/12/09 12:12</span><br>
+			Event End: <span id="event_end">2013/12/09 20:12</span><br>
+			Max attendance: <span id="num">20</span><br>
+			Details:<span>Have fun!</span><br>
+			<div id="button"><a href="javascript:;" onclick="addEventList">Attend</a></div></li>
 		</ul>
 	</div>
 	<div class="block-bottom"></div>
