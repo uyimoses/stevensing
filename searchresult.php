@@ -16,10 +16,10 @@ include "leftside.php";
 </section><!-- end of leftside -->
 
 <section class="span-14 main_view">
-<section id="advanced_search">	
-	<form name ="searchAD"action="searchresult.php" method="POST" class="form_search">
+<section class ="advanced_search">	
+	<form class = "form_search" name ="searchAD"action="searchresult.php" method="POST" class="form_search">
 		<fieldset>
-	<legend> Advanced Search </legend>
+			<legend> Advanced Search </legend>
 			<label for="KeyWordinput">Key Word:</label>
 			<input type="text" id="KeyWordinput" name="textarea" placeholder="Name,Course Name,Course Number..." /> <br />
 			
@@ -36,12 +36,12 @@ include "leftside.php";
 					 <option value="friends">Friends</option>
 					 <option value="courses">Courses</option>
 			</select><br/>
-			
 			<label>Gender:</label>
-			<input type="radio" name="radioSet" id="male" value="Male" checked="checked" /><label for="option1">Male</label>
-			<input type="radio" name="radioSet" id="female" value="Female" /><label for="option2">Female</label><br />
 			
-
+			<label for="male">Male</label><input type="radio" name="radioSet" id="male" value="Male" checked="checked" />
+			<label for="female">Female</label><input type="radio" name="radioSet" id="female" value="Female" /><br>
+			
+			
 			<label for="Degree">Choose Degree:</label>
 			<select  name="degree" id="Degree" size="1">
 			        <option value="ALL">All 
@@ -51,6 +51,7 @@ include "leftside.php";
 					</option>
 			</select><br/>
 			
+			
 			<label for="Major">Choose Major for friends or Departmental for courses:</label>
 			<select name="major" id="Major"size="1">
 					<?php
@@ -58,8 +59,8 @@ include "leftside.php";
 						echo "<option value='$key'>$value</option>";
 					}
 					?>
-				</select><br />
-
+				</select>
+			
 				<input type="submit" value="Search" class="button"/>
 	
 </fieldset>
@@ -74,15 +75,9 @@ include "leftside.php";
 
 
 <section id="search_list">
-	<div id="friend_list">
+	<div id ="friend_list">
 	
-		<h1>Result :</h1>
-		<span>Sort By</span>
-		<select name="select">
-			<option value="name" selected="selected">name</option>
-			<option value="time" >time</option>
-		</select>
-		
+		<h1>Friends Result :</h1>
 		<ul>
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
@@ -104,7 +99,8 @@ include "leftside.php";
 		
 		</ul>
 	</div>
-	<div id="course_list">
+	<div id="course_search_list">
+		<h1>Courses Result :</h1>
 	<ul>
 		<li>
 			<div><a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a></div>
