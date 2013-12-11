@@ -16,7 +16,7 @@ if ($error == "none"){
 	$sql = "INSERT INTO users (username, password, security_question, security_answer) VALUES ('" 
 		. addslashes($email) . "', '" 
 		. sha1($password) . "', '" 
-		. sha1($question) . "', '" 
+		. addslashes($question) . "', '" 
 		. sha1($answer) . "');";
 	//echo $sql;
 	$result = $mysqli->query($sql);

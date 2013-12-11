@@ -65,7 +65,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["answer"]) && $_POST["answer"] !== ""){
-			$answer = strip_tags($_POST["answer"]);
+			$answer = $_POST["answer"];
 			if (strlen($answer) < 8){
 				$answer_error = "Must be at least 8 characters.";
 				$error = "data";
