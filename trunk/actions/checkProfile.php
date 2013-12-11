@@ -16,7 +16,7 @@ $semester_error = "";
 if (isset($action)){
 	if ($action == "register"){
 		if (isset($_POST["email"]) && $_POST["email"] !== ""){
-			$email = $_POST["email"];
+			$email = strip_tags($_POST["email"]);
 			if (preg_match("/^([a-zA-Z0-9]+)@stevens.edu$/i", $email) == 0){
 				$email_error = "Your email address is invalid.";
 				$error = "data";
@@ -53,7 +53,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["question"]) && $_POST["question"] !== ""){
-			$question = $_POST["question"];
+			$question = strip_tags($_POST["question"]);
 			if (strlen($question) < 8){
 				$question_error = "Must be at least 8 characters.";
 				$error = "data";
@@ -65,7 +65,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["answer"]) && $_POST["answer"] !== ""){
-			$answer = $_POST["answer"];
+			$answer = strip_tags($_POST["answer"]);
 			if (strlen($answer) < 8){
 				$answer_error = "Must be at least 8 characters.";
 				$error = "data";
@@ -78,7 +78,7 @@ if (isset($action)){
 	}
 	if ($action == "register" || $action == "edit"){
 		if (isset($_POST["firstname"]) && $_POST["firstname"] !== ""){
-			$firstname = $_POST["firstname"];
+			$firstname = strip_tags($_POST["firstname"]);
 			if (preg_match("/^([a-zA-Z-']+)$/", $firstname) == 0){
 				$firstname_error = "Your first name is invalid.";
 				$error = "data";
@@ -90,7 +90,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["middlename"]) && $_POST["middlename"] !== ""){
-			$middlename = $_POST["middlename"];
+			$middlename = strip_tags($_POST["middlename"]);
 			if (preg_match("/^([a-zA-Z-']+)$/", $middlename) == 0){
 				$middlename_error = "Your middle name is invalid.";
 				$error = "data";
@@ -98,7 +98,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["lastname"]) && $_POST["lastname"] !== ""){
-			$lastname = $_POST["lastname"];
+			$lastname = strip_tags($_POST["lastname"]);
 			if (preg_match("/^([a-zA-Z-']+)$/", $lastname) == 0){
 				$lastname_error = "Your last name is invalid.";
 				$error = "data";
@@ -110,7 +110,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["gender"]) && $_POST["gender"] !== ""){
-			$gender = $_POST["gender"];
+			$gender = strip_tags($_POST["gender"]);
 			if ($gender !== "M" && $gender !== "F"){
 				$gender_error = "Your gender is invalid.";
 				$error = "data";
@@ -122,7 +122,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["dob"]) && $_POST["dob"] !== ""){
-			$dob = $_POST["dob"];
+			$dob = strip_tags($_POST["dob"]);
 			if (preg_match("/^([1-9][0-9]{3})-((0[1-9])|(1[012]))-((0[1-9])|([12][0-9])|(3[01]))$/i", $dob) == 0){
 				$lastname_error = "Your birthday is invalid.";
 				$error = "data";
@@ -134,7 +134,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["major"]) && $_POST["major"] !== ""){
-			$major = $_POST["major"];
+			$major = strip_tags($_POST["major"]);
 			if (!array_key_exists($major, $majors)){
 				$major_error = "Your major is invalid.";
 				$error = "data";
@@ -146,7 +146,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["degree"]) && $_POST["degree"] !== ""){
-			$degree = $_POST["degree"];
+			$degree = strip_tags($_POST["degree"]);
 			if (!in_array($degree, $degrees)){
 				$degree_error = "Your degree is invalid.";
 				$error = "data";
@@ -158,7 +158,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["year"]) && $_POST["year"] !== ""){
-			$year = $_POST["year"];
+			$year = strip_tags($_POST["year"]);
 			if (preg_match("/^([1-9][0-9]{3})$/i", $year) == 0 || $year > getdate()["year"]){
 				$year_error = "Your entry year is invalid.";
 				$error = "data";
@@ -170,7 +170,7 @@ if (isset($action)){
 		}
 
 		if (isset($_POST["semester"]) && $_POST["semester"] !== ""){
-			$semester = $_POST["semester"];
+			$semester = strip_tags($_POST["semester"]);
 			if (!array_key_exists($semester, $semesters)){
 				$semester_error = "Your entry semester is invalid.";
 				$error = "data";

@@ -14,21 +14,21 @@ $content = "";
 $timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["course_id"]) && $_POST["course_id"] !== ""){
-	$course_id = $_POST["course_id"];
+	$course_id = strip_tags($_POST["course_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["score"]) && $_POST["score"] !== ""){
-	$score = $_POST["score"];
+	$score = strip_tags($_POST["score"]);
 	if (preg_match("/^[0-5]$/", $score) ==  0){
 		$score_error = "Must be 0-5.";
 		$error = "data";
@@ -40,7 +40,7 @@ else{
 }
 
 if (isset($_POST["content"]) && $_POST["content"] !== ""){
-	$content = $_POST["content"];
+	$content = strip_tags($_POST["content"]);
 	if (strlen($content) > 3000){
 		$content_error = "Must be no more than 3000 characters.";
 		$error = "data";

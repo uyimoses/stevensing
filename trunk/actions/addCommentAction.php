@@ -13,14 +13,14 @@ $content = "";
 $timestamp = date("Y-m-d H:i:s", time());
 
 if (isset($_POST["type"]) && $_POST["type"] != ""){
-	$type = $_POST["type"];
+	$type = strip_tags($_POST["type"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["feed_id"]) && $_POST["feed_id"] !== ""){
-	$feed_id = $_POST["feed_id"];
+	$feed_id = strip_tags($_POST["feed_id"]);
 }
 else{
 	$error = "data";
