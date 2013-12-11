@@ -6,48 +6,25 @@ include "header.php";
 include "leftside.php";
 //include leftside of home
 include "leftside_home.php"
+
 ?>
 <script >
+
 	function setProfileDisplay(){
-		$("#editprofile>form").html("");
-		var html ="<form action="./profile.php" method="post">
-					<label for="firstname">First Name</label>
-					<input type="text" name="firstname" placeholder="First Name" ><br>
-					<label for="firstname">Middle Name</label>
-					<input type="text" name="middlename" placeholder="Middle Name" ><br>
-					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname" placeholder="Last Name" ><br>
-					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname" placeholder="Last Name" ><br>
-					<label for="dob">Date of Birth</label>
-					<input type="text" id="datepicker" /><br>
-					<label for="major">Major</label>
-					<input type="text" name="major" placeholder="Major" ><br>
-					<label for="degree">Degree</label>
-					<input type="text" name="degree" placeholder="Degree" ><br>
-					<label for="entry_year">Entry Year</label>
-					<select>
-						<option value="2014">2014</option>
-						<option value="2013">2013</option>
-						<option value="2012" selected="selected">2012</option>
-						<option value="2011">2011</option>
-						<option value="2010">2010</option>
-						<option value="2009">2009</option>
-						<option value="2008">2008</option>
-						<option value="2007">2007</option>
-						<option value="2006">2006</option>
-						<option value="2005">2005</option>
-					</select><br>
-					<label for="entry_semester">Entry Semester</label>
-					<select>
-						<option value="Fall">Fall</option>
-						<option value="Spring">Spring</option>
-					</select><br>
-					<input type="submit" name="submit" value="Submit">
-				</form>
-";
-		user_profile.
+
+		 $("firstname").val(user_profile.firstname);
+		 $("lasttname").val(user_profile.lasttname);
+		 $("middlename").val(user_profile.middlename);
+		 $("lasttname").val(user_profile.laststname);
+		 $("datepicker").val(user_profile.dob);
+		 $("year").val(user_profile.entry_year);
+		 var $major_set  =user_profile.major;
+		 var $degree_set  =user_profile.dgree;
+		 var $semester_set =user_profile.semester;
+		 
 	}
+
+	
 </script>
 <section class="span-14 main_view">
 	<div id="editprofile">
@@ -63,38 +40,43 @@ include "leftside_home.php"
 				</form><br>
 			</div>
 			-->
-			<label for="firstname">First Name</label>
-			<input type="text" name="firstname" placeholder="First Name" ><br>
+			<label for="firstname" required>First Name</label>
+			<input type="text" id="firstname" placeholder="First Name" ><br>
 			<label for="middlename">Middle Name</label>
-			<input type="text" name="middlename" placeholder="Middle Name" ><br>
+			<input type="text" id="middlename" placeholder="Middle Name" ><br>
 			<label for="lastname">Last Name</label>
-			<input type="text" name="lastname" placeholder="Last Name" ><br>
-			<label for="lastname">Last Name</label>
-			<input type="text" name="lastname" placeholder="Last Name" ><br>
+			<input type="text" id="lastname" placeholder="Last Name" ><br>
 			<label for="dob">Date of Birth</label>
 			<input type="text" id="datepicker" /><br>
 			<label for="major">Major</label>
-			<input type="text" name="major" placeholder="Major" ><br>
+			<select id="major"  size="1">
+			<?php
+					foreach ($majors as $key => $value) {
+						if($value==$major_set)
+							echo "<option value='$key'>$value</option>";
+					}
+			?>
+			</select>
 			<label for="degree">Degree</label>
-			<input type="text" name="degree" placeholder="Degree" ><br>
-			<label for="entry_year">Entry Year</label>
-			<select>
-				<option value="2014">2014</option>
-				<option value="2013">2013</option>
-				<option value="2012" selected="selected">2012</option>
-				<option value="2011">2011</option>
-				<option value="2010">2010</option>
-				<option value="2009">2009</option>
-				<option value="2008">2008</option>
-				<option value="2007">2007</option>
-				<option value="2006">2006</option>
-				<option value="2005">2005</option>
-			</select><br>
+			<select id="degree"  size="1">
+			<?php
+					foreach ($degrees as $value) {
+						if($value==$degree_set)
+						echo "<option value='$value'>$value</option>";
+					}
+			?>
+			</select>
+			<label for="year">Entry Year</label>
+			<input type="text" id="year" placeholder="Year"  >
 			<label for="entry_semester">Entry Semester</label>
-			<select>
-				<option value="Fall">Fall</option>
-				<option value="Spring">Spring</option>
-			</select><br>
+			<select id="semester"  size="1">
+			<?php
+			foreach ($semesters as $key => $value) {
+				if($value==$sememster_set)
+				echo "<option value='$key'>$value</option>";
+			}
+			?>
+			</select>
 			<input type="submit" name="submit" value="Submit">
 		</form>
 	</div>
