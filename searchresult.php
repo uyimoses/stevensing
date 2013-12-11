@@ -40,18 +40,20 @@ include "leftside.php";
 		$("#course_search_list>ul").html("");
 		for (var i = 0; i < obj.user_list.length; i++){
 			var user = obj.user_list[i];
-			var html = "<li><img src='"
-				+ user.picture_id
-				+ "' alt='profile_picture' title='"
-				+ user.firstname + " " + user.lastname
-				+ "'><div><span>"
-				+ user.firstname
-				+ "</span>&nbsp;<span>"
-				+ user.lastname
-				+ "</span></div><a href='javascript:' onclick='requestFriend("
-				+ user.user_id
-				+")'><div>Add</div></a></li>";
-			$(html).prependTo('#friend_list>ul');
+			if (user.user_id != <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>){
+				var html = "<li><img src='"
+					+ user.picture_id
+					+ "' alt='profile_picture' title='"
+					+ user.firstname + " " + user.lastname
+					+ "'><div><span>"
+					+ user.firstname
+					+ "</span>&nbsp;<span>"
+					+ user.lastname
+					+ "</span></div><a href='javascript:' onclick='requestFriend("
+					+ user.user_id
+					+")'><div>Add</div></a></li>";
+				$(html).prependTo('#friend_list>ul');
+			}
 		}
 		for (var i = 0; i < obj.course_list.length; i++){
 			var course = obj.course_list[i];

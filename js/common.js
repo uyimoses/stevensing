@@ -219,7 +219,8 @@ function action(actionName, success, error, type, formData){
 }
 
 function stopHacking(obj){
-	
+	alert("Please stop hacking!");
+	window.location.href="home";
 }
 
 function defaultErrorHandler(obj){
