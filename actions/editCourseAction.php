@@ -72,26 +72,23 @@ if (isset($_POST["number"]) && $_POST["number"] !== ""){
 }
 
 if ($error == "none"){
-	$sql = "INSERT INTO courses (professor, description, department, name, number) VALUES ('"
-		. addslashes(strip_tags($professor)) . "', '"
-		. addslashes(strip_tags($description)) . "', '"
-		. addslashes(strip_tags($name)) . "', '"
-		. addslashes($department) . "', '"
-		. addslashes((isset($number))?$number:"") . "');";
-	//echo $sql;
+	$sql = "SELECT role FROM course_list WHERE user_id = ". addslashes($id) . ";";
 	$result = $mysqli->query($sql);
-	if ($result ==  false){
-		$error = "server";
+	if($result==2){ 	
+		$id = $mysqli->insert_id;
+		$sql = " UPDATE courses 
+				SET name = '". addslashes(strip_tags($name)) . "', 
+					description = '". addslashes(strip_tags($description)) . "', 
+					professor = '". addslashes(strip_tags($professor)) . "', 
+					department = '". addslashes($department) . "', 
+					number = ". addslashes((isset($number))?$number:"") . "
+					WHERE course_id = ". addslashes($course_id) . "
+					;";
+		}
 	}
 	else{
-		$course_id = $mysqli->insert_id;
-		$sql = "INSERT INTO course_list (course_id, user_id, role) VALUES ('"
-		. addslashes($course_id) . "', '" 
-		. addslashes($id) . "', '" 
-		. addslashes(2) . "');";
+		$error = "server";
 	}
-}
-
 
 //output json text
 echo "{\n";
