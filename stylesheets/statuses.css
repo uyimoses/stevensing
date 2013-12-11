@@ -116,12 +116,12 @@ background-color: #a9002f;
 	font-weight: bold;
 }
  
-.friend_status_list section div{
+.friend_status_list section>div{
 	float: left;
 	width: 480px;
 	font-weight: bold;
 }
-.friend_status_list section div span{
+.friend_status_list section>div span{
 	font-size: 11px;
 	
 	font-weight: normal;
