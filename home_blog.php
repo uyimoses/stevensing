@@ -85,12 +85,12 @@ include "leftside_home.php"
 		<span id="contact-text">Create a blog:</span><br>
 		<label>Title:</label>
 		<input type="text" id= "title_content"name="title"><br>
+		<div class="check_message" id="title_error"></div>
 		<label>Content:</label>
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
-			
 			  <textarea class="fieldclass" id="blog_content" name="message" contenteditable="true" placeholder="Write something about yourself..."></textarea>
-			  
+			  <div class="check_message" id="content_error"></div>
 			<div id="button"><a href="javascript:" onclick="addBlog()"> send</a></div>
 		  </div>
 		</form>

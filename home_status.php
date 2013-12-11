@@ -57,8 +57,8 @@ include "leftside_home.php"
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
 			
-			  <textarea class="fieldclass"  id="status_content" contenteditable="true" placeholder="Write something about yourself..."></textarea>
-			  
+			<textarea class="fieldclass"  id="status_content" contenteditable="true" placeholder="Write something about yourself..."></textarea>
+			<div class="check_message" id="content_error"></div> 
 			<div id="button"><a href="javascript:" onclick="addStatus(<?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>, 1)">Send</a></div>
 		  </div>
 		</form>
