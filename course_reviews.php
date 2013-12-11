@@ -93,12 +93,14 @@ include "header_course.php";
 				<option value="4">4</option>
 				<option value="5">5</option>
 			</select>
+			<div class="check_message" id="score_error"></div>
 		</div>
 		<div class="block-bottom"></div>
 			<div>
 				<span id="contact-text">Input your comment:</span>
 				<div id="form_box">
 					<textarea class="fieldcourse"  id="review_content" contenteditable="true" placeholder="Write something about the course..."></textarea>
+					<div class="check_message" id="content_error"></div>
 					<div id="button"><a href="javascript:" onclick="addReview();">Send</a></div>
 			</div>
 		</div>
