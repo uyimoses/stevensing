@@ -104,17 +104,17 @@ include "leftside.php";
 	<ul>
 		<li>
 			<div><a href="courseinfo.php"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a></div>
-			<span class="button"><a href="#" ><div>Add</div></a></span>
+			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
 		</li>
 			
 		<li>
 			<div><a href="courseinfo.php">	<span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a></div>
-			<span class="button"><a href="#" ><div>Add</div></a></span>
+			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
 		</li>
 			
 		<li>
 			<div><a href="courseinfo.php">	<span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a></div>
-			<span class="button"><a href="#" ><div>Add</div></a></span>
+			<span class="buttonCourse"><a href="#" ><div>Add</div></a></span>
 		</li>
 	</ul>
 	</div>
