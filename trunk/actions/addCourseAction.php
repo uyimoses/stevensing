@@ -70,6 +70,13 @@ if (isset($_POST["professor"]) && $_POST["professor"] !== ""){
 	}
 }
 
+if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
+	$user_id = $_SESSION["user_id"];
+}
+else{
+	$error = "server";
+}
+
 
 if ($error == "none"){
 	$sql = "INSERT INTO courses (department, name, number, description, professor) VALUES ('"
@@ -87,7 +94,7 @@ if ($error == "none"){
 		$course_id = $mysqli->insert_id;
 		$sql = "INSERT INTO course_list (course_id, user_id, role) VALUES ('"
 		. addslashes($course_id) . "', '" 
-		. addslashes($id) . "', '"
+		. addslashes($user_id) . "', '"
 		. addslashes(2) . "');";
 	}
 }
@@ -100,10 +107,11 @@ echo "'description_error': '" . $description_error . "',\n";
 echo "'professor_error': '" . $professor_error . "',\n";
 echo "'number_error': '" . $number_error . "',\n";
 echo "'course_id': '" . addslashes($course_id) . "',\n";
-echo "'user_id': '" . addslashes($id) . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+echo "'department': '" . addslashes($department) . "',\n";
+echo "'number': '" . addslashes($number) . "',\n";
 echo "'name': '" . addslashes($name) . "',\n";
 echo "'description': '" . addslashes($description) . "',\n";
 echo "'professor': '" . addslashes($professor) . "',\n";
-echo "'department': '" . addslashes($department) . "',\n";
-echo "'number': '" . addslashes($number) . "',\n";
+
 echo "}";
