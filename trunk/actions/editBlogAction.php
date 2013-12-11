@@ -81,8 +81,8 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'title_error': '" . $title_error . "',\n";
-echo "'content_error': '" . $content_error . "',\n";
+echo "'title_error': '" . addslashes($title_error) . "',\n";
+echo "'content_error': '" . addslashes($content_error) . "',\n";
 echo "'blog_id': '" . addslashes($blog_id) . "',\n";
 echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'title': '" . addslashes($title) . "',\n";

@@ -68,7 +68,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'content_error': '" . $content_error . "',\n";
+echo "'content_error': '" . addslashes($content_error) . "',\n";
 echo "'status_id': '" . addslashes($status_id) . "',\n";
 echo "'entity_id': '" . addslashes($id) . "',\n";
 echo "'entity_type': '" . addslashes($type) . "',\n";

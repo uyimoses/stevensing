@@ -84,8 +84,8 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'score_error': '" . $score_error . "',\n";
-echo "'content_error': '" . $content_error . "',\n";
+echo "'score_error': '" . addslashes($score_error) . "',\n";
+echo "'content_error': '" . addslashes($content_error) . "',\n";
 echo "'review_id': '" . addslashes($review_id) . "',\n";
 echo "'course_id': '" . addslashes($course_id) . "',\n";
 echo "'user_id': '" . addslashes($user_id) . "',\n";
