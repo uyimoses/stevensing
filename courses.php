@@ -69,11 +69,7 @@ include "leftside.php";
 <section class="span-14 main_view">
 	<section id="course_list">
 		<h1>Course List </h1>
-		<span>Sort By</span>
-		<select name="select">
-			<option value="name" selected="selected">name</option>
-			<option value="number" >time</option>
-		</select>
+		
 		<ul>
 		</ul>
 		<a id="course_add" href="course_add.php">Create a new course</a>
