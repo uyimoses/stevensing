@@ -19,6 +19,8 @@ else{
 	$error = "data";
 }
 
+
+
 if ($error == "none"){
 	$sql = "UPDATE profiles SET
 		firstname='". addslashes($firstname) . "',
@@ -46,15 +48,14 @@ echo "'user_id': '" . addslashes($user_id) . "',\n";
 
 
 echo "'firstname': '" . addslashes($firstname) . "',\n";
-echo "'middlename': '" . addslashes($middlename) . "',\n";
+echo "'middlename': '" . addslashes((isset($middlename))?$middlename:"") . "',\n";
 echo "'lastname': '" . addslashes($lastname) . "',\n";
 echo "'gender': '" . addslashes($gender) . "',\n";
 echo "'dob': '" . addslashes($dob) . "',\n";
 echo "'major': '" . addslashes($major) . "',\n";
-echo "'degreee': '" . addslashes($degree) . "',\n";
+echo "'degree': '" . addslashes($degree) . "',\n";
 echo "'year': '" . addslashes($year) . "',\n";
 echo "'semester': '" . addslashes($semester) . "',\n";
-echo "'picture_id': '" . addslashes($picture_id) . "',\n";
 
 
 echo "'firstname_error': '" . $firstname_error . "',\n";

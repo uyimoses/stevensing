@@ -11,11 +11,10 @@ include "leftside_home.php"
 <script >
 
 	function setProfileDisplay(){
-
 		 $("#firstname").val(user_profile.firstname);
 		 $("#lastname").val(user_profile.lastname);
 		 $("#middlename").val(user_profile.middlename);
-		 $("#datepicker").val(user_profile.dob);
+		 $("#dob").val(user_profile.dob);
 		 $("#year").val(user_profile.year);
 		 $("#major>option[value="+user_profile.major+"]").attr("selected", "selected");
 		 $("#degree>option[value="+user_profile.degree+"]").attr("selected", "selected");
@@ -46,7 +45,7 @@ include "leftside_home.php"
 					"middlename":$("#middlename").val(),
 					"lastname":$("#lastname").val(),
 					"gender":user_profile.gender,
-					"dob": $("#datepicker").val(),
+					"dob": $("#dob").val(),
 					"major": $("#major>option:selected").val(),
 					"degree":$("#degree>option:selected").val(),
 					"year":$("#year").val(),
@@ -75,31 +74,31 @@ include "leftside_home.php"
 			-->
 			<div>
 			<label for="firstname" required>First Name</label>
-			<input type="text" id="firstname" placeholder="First Name" ><br>
+			<input type="text" id="firstname" placeholder="First Name" onfocus="clearError(this);"><br>
 			<span class="check_icon"></span>
 			<div class="check_message" id="firstname_error"></div>
 			</div>
 			<div>
 			<label for="middlename">Middle Name</label>
-			<input type="text" id="middlename" placeholder="Middle Name" ><br>
+			<input type="text" id="middlename" placeholder="Middle Name"  onfocus="clearError(this);"><br>
 			<span class="check_icon"></span>
 			<div class="check_message" id="middle_error"></div>
 			</div>
 			<div>
 			<label for="lastname">Last Name</label>
-			<input type="text" id="lastname" placeholder="Last Name" ><br>
+			<input type="text" id="lastname" placeholder="Last Name"  onfocus="clearError(this);"><br>
 			<span class="check_icon"></span>
 			<div class="check_message" id="lastname_error"></div>
 			</div>
 			<div>
 			<label for="dob">Date of Birth</label>
-			<input type="text" id="datepicker" /><br>
+			<input type="text" id="dob" onfocus="clearError(this);"><br>
 			<span class="check_icon"></span>
 			<div class="check_message" id="dob_error"></div>
 			</div>
 			<div>
 			<label for="major">Major</label>
-			<select id="major"  size="1">
+			<select id="major" size="1"  onfocus="clearError(this);">
 			<?php
 					foreach ($majors as $key => $value) {
 							echo "<option value='$key'>$value</option>";
@@ -111,7 +110,7 @@ include "leftside_home.php"
 			</div>
 			<div>
 			<label for="degree">Degree</label>
-			<select id="degree"  size="1">
+			<select id="degree"  size="1"  onfocus="clearError(this);">
 			<?php
 					foreach ($degrees as $value) {
 						echo "<option value='$value'>$value</option>";
@@ -123,13 +122,13 @@ include "leftside_home.php"
 			</div>
 			<div>
 			<label for="year">Entry Year</label>
-			<input type="text" id="year" placeholder="Year"  >
+			<input type="text" id="year" placeholder="Year"  onfocus="clearError(this);" >
 			<span class="check_icon"></span>
 				<div class="check_message" id="year_error"></div>
 			</div>
 			<div>
 			<label for="entry_semester">Entry Semester</label>
-			<select id="semester"  size="1">
+			<select id="semester"  size="1"  onfocus="clearError(this);">
 			<?php
 			foreach ($semesters as $key => $value) {
 				echo "<option value='$key'>$value</option>";
@@ -139,7 +138,7 @@ include "leftside_home.php"
 			<span class="check_icon"></span>
 			<div class="check_message" id="semester_error"></div>
 			</div>
-			<input type="submit" name="submit" value="Submit" onclick=updateProfile()>
+			<input type="button" name="submit" value="Submit" onclick='updateProfile()'>
 		</form>
 	</div>
 </section>
