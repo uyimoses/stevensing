@@ -63,6 +63,7 @@ include "header_course.php";
 	}
 
 	function refreshReviews(){
+		refreshCourseInfo();
 		action(
 			"getReviewByCourseAction", 
 			refreshReviewList, 

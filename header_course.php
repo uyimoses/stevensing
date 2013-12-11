@@ -12,7 +12,7 @@
 		$("#score_display").addClass('star_'+obj.score);
 	}
 
-	$("#courseinfo").ready(function(){
+	function refreshCourseInfo(){
 		action(
 			"getCourseAction", 
 			setCourseInfo, 
@@ -22,6 +22,10 @@
 				"course_id": <?php echo (isset($_GET["course_id"]))?$_GET["course_id"]:0; ?>
 			}
 		);
+	}
+
+	$("#courseinfo").ready(function(){
+		refreshCourseInfo();
 	});
 </script>
 <section class="span-14 main_view">
