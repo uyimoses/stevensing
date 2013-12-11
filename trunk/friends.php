@@ -52,11 +52,6 @@ include "leftside_friends.php";
 <section class="span-14 main_view">
 	<section id="friend_list">
 		<h1>Friend List </h1>
-		<span>Sort By</span>
-			<select name="select">
-				<option value="name" selected="selected">name</option>
-				<option value="time" >time</option>
-			</select>
 		
 		<ul>
 			
