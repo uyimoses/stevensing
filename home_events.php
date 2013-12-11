@@ -28,9 +28,7 @@ include "leftside_home.php"
 				+ events.content
 				+ "</span><br><div id='button'><a href='javascript:;' onclick='("
 				+ events.events_id
-//				+ user.id
-				+ ")'>Attend</a></div></li>"
-				
+				+ ")'>Attend</a></div></li>";
 			$(html).prependTo('#event_list>ul');
 		}
 	}

@@ -23,17 +23,17 @@ include "leftside_home.php"
 		);
 	}
 	function deleteBlog(id, timestamp){
-	action(
-		"deleteBlogAction", 
-		refreshBlogs, 
-		defaultErrorHandler, 
-		"POST", 
-		{
-			"blog_id": id,
-			"timestamp": timestamp
-		}
-	);
-}
+		action(
+			"deleteBlogAction", 
+			refreshBlogs, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"blog_id": id,
+				"timestamp": timestamp
+			}
+		);
+	}
 	function refreshBlogList(obj){
 		$("#status_list>ul").html("");
 		for(var i = 0; i < obj.blog_list.length; i++){
