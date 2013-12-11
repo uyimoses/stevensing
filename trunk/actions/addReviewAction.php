@@ -49,6 +49,9 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 		$content_error = "Don't use html tags";
 		$error = "data";
 	}
+	else{
+		$title = str_replace("\n", "", $title)
+	}
 }
 else{
 	$content_error = "You cannot post an empty review.";
