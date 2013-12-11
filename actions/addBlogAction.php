@@ -29,6 +29,9 @@ if (isset($_POST["title"]) && $_POST["title"] !== ""){
 		$title_error = "Don't use html tags";
 		$error = "data";
 	}
+	else{
+		$title = str_replace("\n", "", $title)
+	}
 }
 else{
 	$title_error = "You should set a title.";
@@ -44,6 +47,9 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 	else if (strlen($content) <= 0){
 		$content_error = "Don't use html tags";
 		$error = "data";
+	}
+	else{
+		$title = str_replace("\n", "", $title)
 	}
 }
 else{
