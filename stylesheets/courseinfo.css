@@ -83,43 +83,43 @@
 	background-position: -150px 0px;
 }
 
-.star_1{
+.star_2{
 	background-position: -120px 0px;
 }
 
-.star_2{
+.star_4{
 	background-position: -90px 0px;
 }
 
-.star_3{
+.star_6{
 	background-position: -60px 0px;
 }
 
-.star_4{
+.star_8{
 	background-position: -30px 0px;
 }
 
-.star_5{
+.star_10{
 	background-position: 0px 0px;
 }
 
-.star_half{
+.star_1{
 	background-position: -120px -30px;
 }
 
-.star_half_1{
+.star_3{
 	background-position: -90px -30px;
 }
 
-.star_half_2{
+.star_5{
 	background-position: -60px -30px;
 }
 
-.star_half_3{
+.star_7{
 	background-position: -30px -30px;
 }
 
-.star_half_4{
+.star_9{
 	background-position: 0px -30px;
 }
 #uploadres{
