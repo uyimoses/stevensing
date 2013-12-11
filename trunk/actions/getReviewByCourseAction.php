@@ -43,6 +43,7 @@ foreach ($reviews as $index => $review) {
 	echo "'timestamp': '" . addslashes($review["timestamp"]) . "',\n";
 	echo "'firstname': '" . addslashes($review["firstname"]) . "',\n";
 	echo "'lastname': '" . addslashes($review["lastname"]) . "',\n";
+	echo "'picture_id': '" . addslashes($review["picture_id"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";
