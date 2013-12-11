@@ -1,7 +1,19 @@
 <script>
+	var user_profile;
 	function setLeftside(profile){
+
 		$("#profile_name>p:nth-of-type(1)").text(profile.firstname);
 		$("#profile_name>p:nth-of-type(2)").text(profile.lastname);
+		
+		try{
+			user_profile = profile;
+			setProfileDisplay();
+		}
+		catch(e){
+			//do nothing
+		}
+		
+		
 	}
 
 	$("#profile_name").ready(
