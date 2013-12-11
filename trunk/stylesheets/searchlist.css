@@ -74,5 +74,69 @@ font-size:16px;
 	
 }
 
+#course_search_list{
+	padding: 20px 10px;
+}
+
+#course_search_list h1{
+	font-size: 20px;
+	font-weight: bold;
+}
+#course_search_list span{
+	font-size: 16px;
+	line-height: 50px;
+}
+
+#course_search_list select{
+	margin-left: 5px;
+	font-size: 16px;
+	padding:5px; 
+	background:transparent; 
+	width:100px; 
+	border:1px solid #999; 
+	height:30px;
+	
+}
+#course_search_list ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#course_search_list ul li{
+	display: inline-block;
+	padding: 5px 0px;
+}
+
+
+
+#course_search_list ul li>div{
+	float: left;
+	width: 350px;
+	font-size: 13px;
+	font-weight: bold;
+}
+.button a{
+
+	font-size: 16px;
+	float: right;
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+	width:60px;
+	height:30px;
+	margin: 10px 10px 10px 10px ;
+	line-height: 30px;
+	margin-left: 65px;
+
+	
+	 
+}
+.button a:hover{
+color:#FFF;
+background-color: #a9002f;
+
+}
+
 
 
