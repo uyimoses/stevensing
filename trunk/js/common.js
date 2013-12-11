@@ -235,6 +235,7 @@ function clearError(e){
 function errorStatus(obj){
 	$("#title_error").text(obj.title_error);
 	$("#content_error").text(obj.content_error);
+	$("#keyword_error").text(obj.keyword_error);
 }
 
 function addStatus(id, type){
