@@ -87,7 +87,7 @@ if ($error == "none"){
 		$course_id = $mysqli->insert_id;
 		$sql = "INSERT INTO course_list (course_id, user_id, role) VALUES ('"
 		. addslashes($course_id) . "', '" 
-		. addslashes($id) . "', '" 
+		. addslashes($id) . "', '"
 		. addslashes(2) . "');";
 	}
 }
