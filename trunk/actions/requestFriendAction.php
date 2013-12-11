@@ -38,7 +38,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
-echo "'friend_id': '" . $friend_id . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+echo "'friend_id': '" . addslashes($friend_id) . "',\n";
+echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";

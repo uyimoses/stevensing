@@ -49,7 +49,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'email_error': '" . $email_error . "',\n";
 echo "'password_error': '" . $password_error . "',\n";
 echo "'question_error': '" . $question_error . "',\n";

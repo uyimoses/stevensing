@@ -57,15 +57,15 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
-echo "'firstname': '" . $firstname . "',\n";
-echo "'middlename': '" . $middlename . "',\n";
-echo "'lastname': '" . $lastname . "',\n";
-echo "'gender': '" . $gender . "',\n";
-echo "'dob': '" . $dob . "',\n";
-echo "'major': '" . $major . "',\n";
-echo "'degreee': '" . $degree . "',\n";
-echo "'year': '" . $year . "',\n";
-echo "'semester': '" . $semester . "',\n";
-echo "'picture_id': '" . $picture_id . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+echo "'firstname': '" . addslashes($firstname) . "',\n";
+echo "'middlename': '" . addslashes($middlename) . "',\n";
+echo "'lastname': '" . addslashes($lastname) . "',\n";
+echo "'gender': '" . addslashes($gender) . "',\n";
+echo "'dob': '" . addslashes($dob) . "',\n";
+echo "'major': '" . addslashes($major) . "',\n";
+echo "'degreee': '" . addslashes($degree) . "',\n";
+echo "'year': '" . addslashes($year) . "',\n";
+echo "'semester': '" . addslashes($semester) . "',\n";
+echo "'picture_id': '" . addslashes($picture_id) . "',\n";
 echo "}";

@@ -40,24 +40,24 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
-echo "'status': '" . $status . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+echo "'status': '" . addslashes($status) . "',\n";
 echo "'friend_list': [\n";
 foreach ($friends as $index => $friend) {
 	if ($index!=0)
 		echo ",\n";
 	echo "{\n";
-	echo "'user_id': '" . $friend["friend_id"] . "',\n";
-	echo "'timestamp': '" . $friend["timestamp"] . "',\n";
-	echo "'firstname': '" . $friend["firstname"] . "',\n";
-	echo "'middlename': '" . $friend["middlename"] . "',\n";
-	echo "'lastname': '" . $friend["lastname"] . "',\n";
-	echo "'gender': '" . $friend["gender"] . "',\n";
-	echo "'dob': '" . $friend["dob"] . "',\n";
-	echo "'major': '" . $friend["major"] . "',\n";
-	echo "'degree': '" . $friend["degree"] . "',\n";
-	echo "'year': '" . $friend["entry_year"] . "',\n";
-	echo "'semester': '" . $friend["entry_semester"] . "'\n";
+	echo "'user_id': '" . addslashes($friend["friend_id"]) . "',\n";
+	echo "'timestamp': '" . addslashes($friend["timestamp"]) . "',\n";
+	echo "'firstname': '" . addslashes($friend["firstname"]) . "',\n";
+	echo "'middlename': '" . addslashes($friend["middlename"]) . "',\n";
+	echo "'lastname': '" . addslashes($friend["lastname"]) . "',\n";
+	echo "'gender': '" . addslashes($friend["gender"]) . "',\n";
+	echo "'dob': '" . addslashes($friend["dob"]) . "',\n";
+	echo "'major': '" . addslashes($friend["major"]) . "',\n";
+	echo "'degree': '" . addslashes($friend["degree"]) . "',\n";
+	echo "'year': '" . addslashes($friend["entry_year"]) . "',\n";
+	echo "'semester': '" . addslashes($friend["entry_semester"]) . "'\n";
 	echo "}\n";
 }
 echo "]\n";

@@ -35,6 +35,6 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'status_id': '" . $status_id . "',\n";
-echo "'entity_id': '" . $entity_id. "',\n";
+echo "'status_id': '" . addslashes($status_id) . "',\n";
+echo "'entity_id': '" . addslashes($entity_id) . "',\n";
 echo "}";

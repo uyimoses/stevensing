@@ -31,19 +31,19 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'course_list': [\n";
 foreach ($courses as $index => $course) {
 	if ($index!=0)
 		echo ",\n";
 	echo "{\n";
-	echo "'course_id': '" . $course["course_id"] . "',\n";
-	echo "'role': '" . $course["role"] . "',\n";
-	echo "'department': '" . $course["department"] . "',\n";
-	echo "'number': '" . $course["number"] . "',\n";
-	echo "'name': '" . $course["name"] . "',\n";
-	echo "'description': '" . $course["description"] . "',\n";
-	echo "'professor': '" . $course["professor"] . "',\n";
+	echo "'course_id': '" . addslashes($course["course_id"]) . "',\n";
+	echo "'role': '" . addslashes($course["role"]) . "',\n";
+	echo "'department': '" . addslashes($course["department"]) . "',\n";
+	echo "'number': '" . addslashes($course["number"]) . "',\n";
+	echo "'name': '" . addslashes($course["name"]) . "',\n";
+	echo "'description': '" . addslashes($course["description"]) . "',\n";
+	echo "'professor': '" . addslashes($course["professor"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";

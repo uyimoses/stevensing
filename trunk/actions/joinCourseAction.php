@@ -36,7 +36,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'course_id': '" . $course_id . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
+echo "'course_id': '" . addslashes($course_id) . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'role': '1'\n";
 echo "}";

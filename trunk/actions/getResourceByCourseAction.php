@@ -30,18 +30,18 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'course_id': '" . $course_id . "',\n";
+echo "'course_id': '" . addslashes($course_id) . "',\n";
 echo "'resource_list': [\n";
 foreach ($resources as $index => $resource) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'resource_id': '" . $resource["resource_id"] . "',\n";
-	echo "'user_id': '" . $resource["user_id"] . "',\n";
-	echo "'url': '" . $resource["url"] . "',\n";
-	echo "'title': '" . $resource["title"] . "',\n";
-	echo "'catalog': '" . $resource["catalog"] . "',\n";
-	echo "'timestamp': '" . $resource["timestamp"] . "',\n";
+	echo "'resource_id': '" . addslashes($resource["resource_id"]) . "',\n";
+	echo "'user_id': '" . addslashes($resource["user_id"]) . "',\n";
+	echo "'url': '" . addslashes($resource["url"]) . "',\n";
+	echo "'title': '" . addslashes($resource["title"]) . "',\n";
+	echo "'catalog': '" . addslashes($resource["catalog"]) . "',\n";
+	echo "'timestamp': '" . addslashes($resource["timestamp"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";

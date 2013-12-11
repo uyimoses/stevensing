@@ -42,7 +42,7 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . $user_id . "',\n";
+echo "'id': '" . addslashes($user_id) . "',\n";
 echo "'firstname_error': '" . $firstname_error . "',\n";
 echo "'middlename_error': '" . $middlename_error . "',\n";
 echo "'lastname_error': '" . $lastname_error . "',\n";

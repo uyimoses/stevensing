@@ -74,10 +74,10 @@ if ($error == "none"){
 echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'content_error': '" . $content_error . "',\n";
-echo "'comment_id': '" . $comment_id . "',\n";
-echo "'feed_id': '" . $feed_id . "',\n";
-echo "'feed_type': '". $type ."',\n";
-echo "'user_id': '" . $user_id . "',\n";
-echo "'content': '" . $content. "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'comment_id': '" . addslashes($comment_id) . "',\n";
+echo "'feed_id': '" . addslashes($feed_id) . "',\n";
+echo "'feed_type': '" . addslashes($type) . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+echo "'content': '" . addslashes($content) . "',\n";
+echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";

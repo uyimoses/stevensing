@@ -54,27 +54,27 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'entity_id': '" . $entity_id . "',\n";
-echo "'entity_type': '" . $entity_type . "',\n";
+echo "'entity_id': '" . addslashes($entity_id) . "',\n";
+echo "'entity_type': '" . addslashes($entity_type) . "',\n";
 echo "'status_list': [\n";
 foreach ($statuses as $index => $status) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'status_id': '" . $status["status_id"] . "',\n";
-	echo "'content': '" . $status["content"] . "',\n";
-	echo "'timestamp': '" . $status["timestamp"] . "',\n";
+	echo "'status_id': '" . addslashes($status["status_id"]) . "',\n";
+	echo "'content': '" . addslashes($status["content"]) . "',\n";
+	echo "'timestamp': '" . addslashes($status["timestamp"]) . "',\n";
 	if ($entity_type == 1){
-		echo "'user_id': '" . $status["user_id"] . "',\n";
-		echo "'firstname': '" . $status["firstname"] . "',\n";
-		echo "'lastname': '" . $status["lastname"] . "',\n";
-		echo "'picture_id': '" . $status["picture_id"] . "',\n";
+		echo "'user_id': '" . addslashes($status["user_id"]) . "',\n";
+		echo "'firstname': '" . addslashes($status["firstname"]) . "',\n";
+		echo "'lastname': '" . addslashes($status["lastname"]) . "',\n";
+		echo "'picture_id': '" . addslashes($status["picture_id"]) . "',\n";
 	}
 	else{
-		echo "'course_id': '" . $status["course_id"] . "',\n";
-		echo "'department': '" . $status["department"] . "',\n";
-		echo "'number': '" . $status["number"] . "',\n";
-		echo "'name': '" . $status["name"] . "',\n";
+		echo "'course_id': '" . addslashes($status["course_id"]) . "',\n";
+		echo "'department': '" . addslashes($status["department"]) . "',\n";
+		echo "'number': '" . addslashes($status["number"]) . "',\n";
+		echo "'name': '" . addslashes($status["name"]) . "',\n";
 	}
 	echo "}\n";
 }

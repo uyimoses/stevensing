@@ -30,20 +30,20 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'user_id': '" . $user_id . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'blog_list': [\n";
 foreach ($blogs as $index => $blog) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'blog_id': '" . $blog["blog_id"] . "',\n";
-	echo "'title': '" . $blog["title"] . "',\n";
-	echo "'content': '" . $blog["content"] . "',\n";
-	echo "'timestamp': '" . $blog["timestamp"] . "',\n";
-	echo "'user_id': '" . $blog["user_id"] . "',\n";
-	echo "'firstname': '" . $blog["firstname"] . "',\n";
-	echo "'lastname': '" . $blog["lastname"] . "',\n";
-	echo "'picture_id': '" . $blog["picture_id"] . "',\n";
+	echo "'blog_id': '" . addslashes($blog["blog_id"]) . "',\n";
+	echo "'title': '" . addslashes($blog["title"]) . "',\n";
+	echo "'content': '" . addslashes($blog["content"]) . "',\n";
+	echo "'timestamp': '" . addslashes($blog["timestamp"]) . "',\n";
+	echo "'user_id': '" . addslashes($blog["user_id"]) . "',\n";
+	echo "'firstname': '" . addslashes($blog["firstname"]) . "',\n";
+	echo "'lastname': '" . addslashes($blog["lastname"]) . "',\n";
+	echo "'picture_id': '" . addslashes($blog["picture_id"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";
