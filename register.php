@@ -231,13 +231,13 @@ include "header_login.php"
 		<section class="register_steps" id="register_step_1">
 			<div>
 				<label for="email" class="required">Stevens Email</label>
-				<input type="text" id="email" placeholder="xxxxxx@stevens.edu" required onblur="check_email(this);" value="<?php echo isset($_POST["email"])?$_POST["email"]:"";?>">
+				<input type="text" id="email" placeholder="xxxxxx@stevens.edu" required onblur="check_email(this);" value="<?php echo isset($_POST["email"])?strip_tags($_POST["email"]):"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message" id="email_error" id="email_error"></div>
 			</div>
 			<div>
 				<label for="password" class="required">Create a Password</label>
-				<input type="password" id="password" placeholder="At least 8 characters" required onblur="check_password(this);" value="<?php echo isset($_POST["password"])?$_POST["password"]:"";?>">
+				<input type="password" id="password" placeholder="At least 8 characters" required onblur="check_password(this);" value="<?php echo isset($_POST["password"])?strip_tags($_POST["password"]):"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message" id="password_error"></div>
 			</div>
@@ -265,7 +265,7 @@ include "header_login.php"
 		<section class="register_steps" id="register_step_2">
 			<div>
 				<label for="firstname" class="required">First Name</label>
-				<input type="text" id="firstname" placeholder="First Name" required onblur="check_firstname(this);" value="<?php echo isset($_POST["firstname"])?$_POST["firstname"]:"";?>">
+				<input type="text" id="firstname" placeholder="First Name" required onblur="check_firstname(this);" value="<?php echo isset($_POST["firstname"])?strip_tags($_POST["firstname"]):"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message" id="firstname_error"></div>
 			</div>
@@ -277,7 +277,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="lastname" class="required">Last Name</label>
-				<input type="text" id="lastname" placeholder="Last Name" required onblur="check_lastname(this);" value="<?php echo isset($_POST["lastname"])?$_POST["lastname"]:"";?>">
+				<input type="text" id="lastname" placeholder="Last Name" required onblur="check_lastname(this);" value="<?php echo isset($_POST["lastname"])?strip_tags($_POST["lastname"]):"";?>">
 				<span class="check_icon"></span>
 				<div class="check_message" id="lastname_error"></div>
 			</div>
