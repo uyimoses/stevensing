@@ -42,17 +42,17 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'feed_id': '" . $feed_id . "',\n";
-echo "'feed_type': '" . $feed_type . "',\n";
+echo "'feed_id': '" . addslashes($feed_id) . "',\n";
+echo "'feed_type': '" . addslashes($feed_type) . "',\n";
 echo "'comment_list': [\n";
 foreach ($comments as $index => $comment) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'comment_id': '" . $comment["comment_id"] . "',\n";
-	echo "'user_id': '" . $comment["user_id"] . "',\n";
-	echo "'content': '" . $comment["content"] . "',\n";
-	echo "'timestamp': '" . $comment["timestamp"] . "',\n";
+	echo "'comment_id': '" . addslashes($comment["comment_id"]) . "',\n";
+	echo "'user_id': '" . addslashes($comment["user_id"]) . "',\n";
+	echo "'content': '" . addslashes($comment["content"]) . "',\n";
+	echo "'timestamp': '" . addslashes($comment["timestamp"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";

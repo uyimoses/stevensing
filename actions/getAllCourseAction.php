@@ -27,10 +27,10 @@ foreach ($courses as $index => $course) {
 	if ($index!=0)
 		echo ",\n";
 	echo "{\n";
-	echo "'department': '" . $course["department"] . "',\n";
-	echo "'number': '" . $course["number"] . "',\n";
-	echo "'name': '" . $course["name"] . "',\n";
-	echo "'professor': '" . $course["professor"] . "',\n";
+	echo "'department': '" . addslashes($course["department"]) . "',\n";
+	echo "'number': '" . addslashes($course["number"]) . "',\n";
+	echo "'name': '" . addslashes($course["name"]) . "',\n";
+	echo "'professor': '" . addslashes($course["professor"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";

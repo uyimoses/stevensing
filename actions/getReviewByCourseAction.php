@@ -30,17 +30,17 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'course_id': '" . $course_id . "',\n";
+echo "'course_id': '" . addslashes($course_id) . "',\n";
 echo "'review_list': [\n";
 foreach ($reviews as $index => $review) {
 	if($index != 0)
 		echo ",\n";
 	echo "{\n";
-	echo "'review_id': '" . $review["review_id"] . "',\n";
-	echo "'user_id': '" . $review["user_id"] . "',\n";
-	echo "'score': '" . $review["score"] . "',\n";
-	echo "'content': '" . $review["content"] . "',\n";
-	echo "'timestamp': '" . $review["timestamp"] . "',\n";
+	echo "'review_id': '" . addslashes($review["review_id"]) . "',\n";
+	echo "'user_id': '" . addslashes($review["user_id"]) . "',\n";
+	echo "'score': '" . addslashes($review["score"]) . "',\n";
+	echo "'content': '" . addslashes($review["content"]) . "',\n";
+	echo "'timestamp': '" . addslashes($review["timestamp"]) . "',\n";
 	echo "}\n";
 }
 echo "]\n";

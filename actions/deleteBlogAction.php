@@ -35,6 +35,6 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'blog_id': '" . $blog_id . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'blog_id': '" . addslashes($blog_id) . "',\n";
+echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";

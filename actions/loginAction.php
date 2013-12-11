@@ -32,5 +32,5 @@ else{
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . $id . "',\n";
+echo "'id': '" . addslashes($id) . "',\n";
 echo "}";

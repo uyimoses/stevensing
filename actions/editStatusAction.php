@@ -65,9 +65,9 @@ if ($error == "none"){
 echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'content_error': '" . $content_error . "',\n";
-echo "'status_id': '" . $status_id . "',\n";
-echo "'entity_id': '" . $id . "',\n";
-echo "'entity_type': '" . $type . "',\n";
-echo "'content': '" . $content . "',\n";
-echo "'timestamp': '" . $timestamp. "',\n";
+echo "'status_id': '" . addslashes($status_id) . "',\n";
+echo "'entity_id': '" . addslashes($id) . "',\n";
+echo "'entity_type': '" . addslashes($type) . "',\n";
+echo "'content': '" . addslashes($content) . "',\n";
+echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
