@@ -21,6 +21,12 @@
 			catch(e){
 				//do nothing
 			}
+			try{
+				refreshNews();
+			}
+			catch(e){
+				//do nothing
+			}
 		}
 		function getFriendList(){
 			action(
