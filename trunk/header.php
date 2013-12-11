@@ -48,7 +48,6 @@ if (!isset($_SESSION["user_id"])){
 	<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"></script>
 	<script src="./js/common.js"></script>
-	<script src="./js/upload.js"></script>
 	<title>Stevensing</title>
 </head>
 <body>

@@ -30,9 +30,9 @@
 </script>
 <section id="leftside" class="span-4">
 	<div id="profile_info">
-		<a href="#">
+		<a href="changeprofilepicture">
 			<div id="profile_picture">
-				<img src="./images/profile_image.jpg" alt="Profile Picture" title="Profile Picture"/>
+				<img src="./upload/picture/0.jpg" alt="Profile Picture" title="Profile Picture"/>
 				<div id="edit_profile_picture">Change</div>
 			</div>
 		</a>

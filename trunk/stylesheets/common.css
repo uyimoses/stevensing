@@ -315,9 +315,10 @@ textarea{
 	color: #000;
 }
 
-#profile_picture img{
+#profile_picture>img{
 	padding: 10px 20px 10px 0px;
 	width: 130px;
+	height: 130px;
 }
 
 #edit_profile_picture{
@@ -576,4 +577,14 @@ footer nav ul a:last-child li{
   padding: 0px;
   color: red;
   height: 18px;
+}
+
+.preview{
+	width: 150px !important;
+	height: 150px !important;
+}
+
+.mini_picture{
+	width: 40px !important;
+	height: 40px !important;
 }
