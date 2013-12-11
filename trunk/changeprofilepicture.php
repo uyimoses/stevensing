@@ -11,7 +11,7 @@ include "leftside_home.php"
 ?>
 <script>
 	function changedPicture(obj){
-		indow.location.href = "home";
+		window.location.href = "home";
 	}
 
 
