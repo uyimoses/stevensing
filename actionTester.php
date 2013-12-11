@@ -33,25 +33,13 @@ $_SESSION["user_id"] = 6;
 		}
 		$("#display").ready(function(){
 			action(
-				"editStatusAction", 
+				"addEventListAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
-					//"comment_id":"2",
-					//"user_id":"10",
-					"type":"1",
-					//"feed_id":"1",
-					"content":"zhebushahzhuangtaizhuangtainttai",
-					"id":"10",
-					//"event_id":"1",
-					//"title":"xinde",
-					//"starttime":"2013-11-04 20:55:28",
-					//"endtime":"2013-12-18 09:23:23",
-					//"number":"22"
-
-					"status_id":"1",
-					//"friend_id": 11
+					"user_id": 1,
+					"event_id": 1
 				}
 			);
 				

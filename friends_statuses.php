@@ -26,11 +26,7 @@ include "leftside_friends.php";
 				+ status.content
 				+ "</p><div class='replyline'><span>"
 				+ status.timestamp
-				+ "</span><a href='javascript:' onclick='deleteStatus("
-				+ status.status_id
-				+ ", \""
-				+ status.timestamp
-				+ "\")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
+				+ "</span></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
 				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='javascript:' onclick='addComment("
