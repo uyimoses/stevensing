@@ -7,19 +7,33 @@ include "leftside.php";
 ?>
 <script type="text/javascript">
 	$("#left_tag_current").addClass("left_tag_1");
-	function requestFriend(user_id){
+	function added(){
+		alert("Added!");
+	}
+
+	function requestFriend(friend_id){
 		action(
-			"searchAction",
-			setSearchResult, 
+			"requestFriendAction",
+			added, 
 			errorStatus, 
 			"POST", 
 			{
-				"keyword": $("#keyword").val()
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"friend_id": friend_id
 			}
 		);
 	}
-	function addCourse(couser_id){
-
+	function joinCourse(course_id){
+		action(
+			"joinCourseAction",
+			added, 
+			errorStatus, 
+			"POST", 
+			{
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"course_id": course_id
+			}
+		);
 	}
 	function setSearchResult(obj){
 		$("#friend_list>ul").html("");
@@ -49,7 +63,7 @@ include "leftside.php";
 				+ course.number
 				+ "</span>&nbsp;<span>"
 				+ course.name
-				+ "</span></a></div><span class='buttonCourse'><a href='javascript:' onclick='addCourse("
+				+ "</span></a></div><span class='buttonCourse'><a href='javascript:' onclick='joinCourse("
 				+ course.course_id
 				+ ")'><div>Add</div></a></span></li>";
 			$(html).prependTo('#course_search_list>ul');
