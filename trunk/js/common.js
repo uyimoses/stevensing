@@ -182,7 +182,6 @@ function check_year(){
 		return false;
 	}	
 	else if (!str.match(pattern) || str > date){
-		alert(date);
 		$("#year_error").text("Your entry year is invalid.");
 		return false;
 	}
