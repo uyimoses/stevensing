@@ -22,7 +22,7 @@
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
 			var html = "<li><img status.picture_id src='"
-				+ status.picture_id
+				+ friend.picture_id
 				+ "' alt='profile_picture' title=''><div><span>"
 			 	+ friend.firstname
 			  	+ "</span>&nbsp;<span>"

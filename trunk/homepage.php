@@ -54,7 +54,7 @@ include "leftside_home.php"
 				else if (news.blog_id != undefined){
 					var blog = news;
 					html =  "<li class='friend_status_list'><img class='mini_picture' src='"
-						+ status.picture_id
+						+ blog.picture_id
 						+ "' alt='' title=''><div><span>"
 						+ blog.firstname
 						+ "</span>&nbsp;<span>"

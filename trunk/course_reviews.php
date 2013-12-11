@@ -57,7 +57,7 @@ include "header_course.php";
 				+ "<a href=''><span>First</span>&nbsp;<span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
 				+ "<div class='replyBox'><img class='mini_picture' src='"
-				+ status.picture_id
+				+ review.picture_id
 				+ "' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='#'>Reply</a></div></div></section></li>";
 			$(html).prependTo('#status_list>ul');
