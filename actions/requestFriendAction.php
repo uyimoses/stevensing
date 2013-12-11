@@ -22,7 +22,7 @@ else{
 	$error = "data";
 }
 
-if ($error == "none"){
+if ($error == "none" && $friend_id!=$user_id){
 	$sql = "INSERT INTO friend_list (user_id, friend_id, timestamp, status) VALUES (" 
 		. addslashes($friend_id) . ", "
 		. addslashes($user_id) . ", '"
