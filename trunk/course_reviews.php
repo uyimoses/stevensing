@@ -13,13 +13,30 @@ include "header_course.php";
 ?>
 <script>
 	$("#left_tag_current").addClass("left_tag_4");
+
+	$("#contact-content").ready(function(){
+		$("#rating_select").change(function() {
+			var rate = $("#rating_select>option:selected").val();
+			for (var i = 0; i <= 5; i++){
+				$("#raing_stars_display").removeClass('star_'+i);
+			}
+			$("#raing_stars_display").addClass('star_'+rate);
+		});
+	});
+
+	function addReview(){
+
+	}
+
+
 </script>
 	<div class="block-top"></div>
 	<div id="contact-content">
 		<div>
 			<label>Select your rate:</label>
-			<div class="star_rating star_4"></div>
-			<select id="rating">
+			<div class="star_rating star_0" id="raing_stars_display"></div>
+			<select id="rating_select">
+				<option value="0">0</option>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -32,7 +49,7 @@ include "header_course.php";
 				<span id="contact-text">Input your comment:</span>
 				<div id="form_box">
 					<textarea class="fieldcourse"  name="message" contenteditable="true" placeholder="Write something about the course..."></textarea>
-					<div id="button"><a href="#"> send</a>
+					<div id="button"><a href="#">Send</a>
 				</div>
 			</div>
 		</div>

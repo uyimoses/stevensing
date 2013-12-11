@@ -53,7 +53,7 @@ include "leftside_home.php"
 				+ ", \""
 				+ blog.timestamp
 				+ "\")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
-				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
+				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
 				+ "</section></li>";
 			$(html).prependTo('#status_list>ul');
 		}
