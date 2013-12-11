@@ -68,3 +68,5 @@ echo "'degree_error': '" . $degree_error . "',\n";
 echo "'year_error': '" . $year_error . "',\n";
 echo "'semester_error': '" . $semester_error . "'\n";
 echo "}";
+
+include "footer_action.php";

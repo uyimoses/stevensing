@@ -55,3 +55,4 @@ echo "'error': '" . $error . "',\n";
 echo "'picture_error': '" . $picture_error . "',\n";
 echo "'url': '" . addslashes($url) . "',\n";
 echo "}";
+include "footer_action.php";

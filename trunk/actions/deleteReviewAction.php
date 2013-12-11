@@ -38,3 +38,5 @@ echo "'error': '" . $error . "',\n";
 echo "'review_id': '" . addslashes($review_id) . "',\n";
 echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
+
+include "footer_action.php";

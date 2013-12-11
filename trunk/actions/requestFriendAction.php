@@ -39,3 +39,4 @@ echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'friend_id': '" . addslashes($friend_id) . "',\n";
 echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
+include "footer_action.php";

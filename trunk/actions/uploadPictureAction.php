@@ -58,3 +58,5 @@ echo "'picture_error': '" . $picture_error . "',\n";
 echo "'url': '" . addslashes($url) . "',\n";
 echo "'picture_name': '" . addslashes($picture_name) . "',\n";
 echo "}";
+
+include "footer_action.php";

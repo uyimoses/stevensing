@@ -48,3 +48,4 @@ foreach ($courses as $index => $course) {
 }
 echo "]\n";
 echo "}";
+include "footer_action.php";

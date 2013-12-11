@@ -115,3 +115,5 @@ echo "'description': '" . addslashes($description) . "',\n";
 echo "'professor': '" . addslashes($professor) . "',\n";
 
 echo "}";
+
+include "footer_action.php";

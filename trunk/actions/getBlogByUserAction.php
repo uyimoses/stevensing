@@ -48,3 +48,5 @@ foreach ($blogs as $index => $blog) {
 }
 echo "]\n";
 echo "}";
+
+include "footer_action.php";

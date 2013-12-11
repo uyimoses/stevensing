@@ -63,3 +63,5 @@ foreach ($friends as $index => $friend) {
 }
 echo "]\n";
 echo "}";
+
+include "footer_action.php";

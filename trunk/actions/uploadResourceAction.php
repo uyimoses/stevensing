@@ -55,3 +55,5 @@ else
   {
   echo "Invalid file";
   }
+
+  include "footer_action.php";

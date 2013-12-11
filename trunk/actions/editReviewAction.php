@@ -89,3 +89,5 @@ echo "'score': '" . addslashes($score) . "',\n";
 echo "'content': '" . addslashes($content) . "',\n";
 echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
+
+include "footer_action.php";

@@ -48,3 +48,5 @@ foreach ($reviews as $index => $review) {
 }
 echo "]\n";
 echo "}";
+
+include "footer_action.php";

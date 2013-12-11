@@ -36,3 +36,5 @@ echo "'error': '" . $error . "',\n";
 echo "'course_id': '" . addslashes($course_id) . "',\n";
 echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "}";
+
+include "footer_action.php";

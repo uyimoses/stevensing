@@ -34,3 +34,4 @@ echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'id': '" . addslashes($id) . "',\n";
 echo "}";
+include "footer_action.php";

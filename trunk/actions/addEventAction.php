@@ -133,3 +133,4 @@ echo "'endtime': '" . addslashes($endtime) . "',\n";
 echo "'number': '" . addslashes($number) . "',\n";
 echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
+include "footer_action.php";
