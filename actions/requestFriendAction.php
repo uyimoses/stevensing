@@ -30,9 +30,6 @@ if ($error == "none"){
 		. 1 . ");";
 	//echo $sql;
 	$result = $mysqli->query($sql);
-	if ($result ==  false){
-		$error = "server";
-	}
 }
 
 //output json text
