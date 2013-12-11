@@ -54,10 +54,7 @@ include "leftside_home.php"
 				+ blog.timestamp
 				+ "\")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
-				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
-				+ "<div><a href='javascript:' onclick='addComment("
-				+ blog.blog_id
-				+ ", 1)'>Send</a></div></li></section></li>";
+				+ "</section></li>";
 			$(html).prependTo('#status_list>ul');
 		}
 	}
@@ -85,7 +82,7 @@ include "leftside_home.php"
 		
 	<div class="block-top"></div>
 	  <div id="contact-content">
-		<span id="contact-text">Blog Input Here:</span><br>
+		<span id="contact-text">Create a blog:</span><br>
 		<label>Title:</label>
 		<input type="text" id= "title_content"name="title"><br>
 		<label>Content:</label>
@@ -103,7 +100,7 @@ include "leftside_home.php"
   
 	</section>
 	<section id="status_list">
-		<h1>Recent statuses</h1>
+		<h1>Recent blogs</h1>
 		<ul>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">

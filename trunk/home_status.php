@@ -25,11 +25,8 @@ include "leftside_home.php"
 				+ "</span><a href='javascript:' onclick='deleteStatus("
 				+ status.status_id
 				+ ")'>Delete</a></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
-				+ "<span> 2013-11-13 14:56 </span><div><a href=''>reply</a><a href=''>delete</a></div></div>"
-				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
-				+ "<div><a href='javascript:' onclick='addComment("
-				+ status.status_id
-				+ ", 1)'>Send</a></div></li></section></li>";
+				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
+				+ "</section></li>";
 			$(html).prependTo('#status_list>ul');
 		}
 	}
@@ -55,7 +52,7 @@ include "leftside_home.php"
 		
 	<div class="block-top"></div>
 	  <div id="contact-content">
-		<span id="contact-text">Status Input Here(600):</span>
+		<span id="contact-text">Create a status(600):</span>
 		
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
