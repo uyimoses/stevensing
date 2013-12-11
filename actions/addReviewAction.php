@@ -4,7 +4,7 @@
 include "header_action.php";
 
 $error = "none";
-$title_error = "";
+$score_error = "";
 $content_error = "";
 $course_id = -1;
 $user_id = -1;
