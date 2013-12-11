@@ -4,6 +4,7 @@
 
 		$("#profile_name>p:nth-of-type(1)").text(profile.firstname);
 		$("#profile_name>p:nth-of-type(2)").text(profile.lastname);
+		$("#profile_picture>img").attr("src", profile.picture_id);
 		
 		try{
 			user_profile = profile;
