@@ -5,11 +5,11 @@
 		$("#coursename").text(obj.name);
 		$("#professor").text(obj.professor);
 		$("#description").text(obj.description);
-
-		for (var i = 0; i <= 5; i++){
-			$("#score").removeClass('star_'+i);
+		$("#score").text(obj.score/2);
+		for (var i = 0; i <= 10; i++){
+			$("#score_display").removeClass('star_'+i);
 		}
-		$("#score").addClass('star_'+obj.score);
+		$("#score_display").addClass('star_'+obj.score);
 	}
 
 	$("#courseinfo").ready(function(){
@@ -33,7 +33,7 @@
 	</div>
 	<div id="rcourse">
 		<div><a href="./courses.php">Back to List</a></div>
-		<div>Course Rating: <span>4.0</span></div>
-		<div class="star_rating star_4" id="score"></div>
+		<div>Course Rating: <span id="score"></span></div>
+		<div class="star_rating" id="score_display"></div>
 	</div>		
 </div>
