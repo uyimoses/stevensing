@@ -147,3 +147,13 @@
 .add-on{
 	height: 30px;
 }
+
+#raing_stars_display{
+	float: left;
+	margin-right: 20px;
+}
+
+#rating_select{
+	display: block;
+	width: 80px;
+}
