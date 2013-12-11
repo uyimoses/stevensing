@@ -8,14 +8,14 @@ $blog_id = -1;
 $timestamp = "";
 
 if (isset($_POST["blog_id"]) && $_POST["blog_id"] !== ""){
-	$blog_id = $_POST["blog_id"];
+	$blog_id = strip_tags($_POST["blog_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["timestamp"]) && $_POST["timestamp"] !== ""){
-	$timestamp = $_POST["timestamp"];
+	$timestamp = strip_tags($_POST["timestamp"]);
 }
 else{
 	$error = "data";

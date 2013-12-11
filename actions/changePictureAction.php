@@ -17,7 +17,7 @@ else{
 }
 
 if (isset($_POST["picture_name"]) && $_POST["picture_name"] != ""){
-	$picture_name = $_POST["picture_name"];
+	$picture_name = strip_tags($_POST["picture_name"]);
 }
 else{
 	$error = "server";

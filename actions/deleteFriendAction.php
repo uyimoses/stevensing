@@ -8,14 +8,14 @@ $user_id = -1;
 $friend_id = -1;
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] !== ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["friend_id"]) && $_POST["friend_id"] !== ""){
-	$friend_id = $_POST["friend_id"];
+	$friend_id = strip_tags($_POST["friend_id"]);
 }
 else{
 	$error = "data";
