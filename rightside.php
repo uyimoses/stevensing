@@ -1,7 +1,12 @@
 <script>
 	function refreshFriends(obj){
 		refreshFriendRequest();
-		refreshFriendList();
+		try{
+			refreshFriendList();
+		}
+		catch(e){
+			
+		}
 	}
 
 	function acceptFriendRequest(friend_id){
