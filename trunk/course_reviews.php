@@ -16,9 +16,15 @@ include "header_course.php";
 </script>
 	<div class="block-top"></div>
 	<div id="contact-content">
-		<div id="rcourse">
-			<span>Rate the course:</span>
-			<div class="star_rating star_4"></div>
+		<div>
+			<label>Select your rate:</label>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
 		</div>
 		<div class="block-bottom"></div>
 		<div>
