@@ -15,6 +15,12 @@ $department = "";
 $description = "";
 $number = 0;
 
+if (isset($_POST["id"]) && $_POST["id"] != ""){
+	$id = $_POST["id"];
+}
+else{
+	$error = "data";
+}
 
 if (isset($_POST["professor"]) && $_POST["professor"] !== ""){
 	$professor = $_POST["professor"];
@@ -79,8 +85,13 @@ if ($error == "none"){
 	}
 	else{
 		$event_id = $mysqli->insert_id;
+		$sql = "INSERT INTO course_list (course_id, user_id, role) VALUES ('"
+		. addslashes($course_id) . "', '" 
+		. addslashes($id) . "', '" 
+		. addslashes(2) . "');";
 	}
 }
+
 
 //output json text
 echo "{\n";
@@ -90,6 +101,7 @@ echo "'description_error': '" . $description_error . "',\n";
 echo "'professor_error': '" . $professor_error . "',\n";
 echo "'number_error': '" . $number_error . "',\n";
 echo "'course_id': '" . addslashes($course_id) . "',\n";
+echo "'user_id': '" . addslashes($id) . "',\n";
 echo "'name': '" . addslashes($name) . "',\n";
 echo "'description': '" . addslashes($description) . "',\n";
 echo "'professor': '" . addslashes($professor) . "',\n";
