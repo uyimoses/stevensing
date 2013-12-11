@@ -1,0 +1,386 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.8
+-- http://www.phpmyadmin.net
+--
+-- 主机: localhost
+-- 生成日期: 2013-12-11 11:00:20
+-- 服务器版本: 5.5.34
+-- PHP 版本: 5.4.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- 数据库: `stevensing`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `blogs`
+--
+
+DROP TABLE IF EXISTS `blogs`;
+CREATE TABLE IF NOT EXISTS `blogs` (
+  `blog_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`blog_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- 转存表中的数据 `blogs`
+--
+
+INSERT INTO `blogs` (`blog_id`, `user_id`, `title`, `content`, `timestamp`) VALUES
+(4, 21, 'Hi!', 'Hi Guys,I recommend a great course, CS546! ', '2013-12-11 14:33:12'),
+(5, 22, 'Great day!', 'Have a great day!', '2013-12-11 15:17:14');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `feed_id` int(11) NOT NULL,
+  `feed_type` tinyint(4) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `courses`
+--
+
+DROP TABLE IF EXISTS `courses`;
+CREATE TABLE IF NOT EXISTS `courses` (
+  `course_id` int(11) NOT NULL AUTO_INCREMENT,
+  `department` varchar(3) NOT NULL,
+  `number` smallint(6) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(6000) DEFAULT NULL,
+  `professor` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`course_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- 转存表中的数据 `courses`
+--
+
+INSERT INTO `courses` (`course_id`, `department`, `number`, `name`, `description`, `professor`) VALUES
+(1, 'CS', 546, 'Web Programming', 'This course will provide students with a first strong approach of internet programming. It will give the basic knowledge on how the Internet works and how to create advanced web sites by the use of script languages, after learning the basics of HTML. ', 'Steven Gabarro'),
+(2, 'CS', 570, 'Introduction to Programming in C++ ', 'Introduction to programming using standard data types and programming constructs of C++. Students will be given regular programming assignments. Prerequisites: Undergraduates require permission of advisor. ', 'David Pfeffer'),
+(5, 'CS', 573, 'Fundamentals of CyberSecurity ', 'This course studies the mathematical models for computer security (Bell- LaPadula, Clark-Wilson, Biba, and Gligor models). It analyzes and compares, with respect to formal and pragmatic criteria, the properties of various models for hardware, software, and database security. ', 'Antonio Nicolosi'),
+(6, 'SSW', 540, 'Fundamentals of Software Engineering', 'Introduces software engineering from a quantitative—analytic and metrics-based—point of view. Become acquainted with software life-cycle process models, from those demanded by very large projects, to the lightest in extreme programming. ', 'Robbie Cohen');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `course_list`
+--
+
+DROP TABLE IF EXISTS `course_list`;
+CREATE TABLE IF NOT EXISTS `course_list` (
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `role` tinyint(4) NOT NULL,
+  PRIMARY KEY (`course_id`,`user_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `course_list`
+--
+
+INSERT INTO `course_list` (`course_id`, `user_id`, `role`) VALUES
+(1, 20, 1),
+(1, 21, 1),
+(1, 22, 1),
+(1, 23, 1),
+(2, 23, 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+CREATE TABLE IF NOT EXISTS `events` (
+  `event_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entity_id` int(11) NOT NULL,
+  `entity_type` tinyint(4) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `starttime` timestamp NULL DEFAULT NULL,
+  `endtime` timestamp NULL DEFAULT NULL,
+  `number` smallint(6) DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`event_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- 转存表中的数据 `events`
+--
+
+INSERT INTO `events` (`event_id`, `entity_id`, `entity_type`, `title`, `content`, `starttime`, `endtime`, `number`, `timestamp`) VALUES
+(1, 10, 1, 'hello', 'h', '2013-12-10 02:01:53', NULL, 2, '2013-12-10 02:20:25'),
+(2, 10, 1, 'bye', 'b', '2013-12-10 02:02:11', NULL, 3, '2013-12-10 02:20:25'),
+(3, 10, 1, 'Discuss', 'cs546 project', '2013-02-13 02:24:10', '2013-02-13 02:24:10', 2, '2013-12-10 07:45:37'),
+(4, 10, 1, 'Discuss', 'cs546 project', '2013-02-13 02:24:10', '2013-02-13 02:24:10', 2, '2013-12-10 07:54:18'),
+(5, 10, 1, 'Discuss', 'cs546 project', '2013-02-13 02:24:10', '2013-02-13 02:24:10', 2, '2013-12-10 07:54:29'),
+(6, 10, 1, 'Discuss', 'cs546 project', '2013-02-13 02:24:10', '2013-02-13 02:24:10', 2, '2013-12-10 07:54:49');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `event_list`
+--
+
+DROP TABLE IF EXISTS `event_list`;
+CREATE TABLE IF NOT EXISTS `event_list` (
+  `event_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`event_id`,`user_id`),
+  KEY `user_id5` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `friend_list`
+--
+
+DROP TABLE IF EXISTS `friend_list`;
+CREATE TABLE IF NOT EXISTS `friend_list` (
+  `user_id` int(11) NOT NULL,
+  `friend_id` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` tinyint(4) NOT NULL,
+  PRIMARY KEY (`user_id`,`friend_id`),
+  KEY `friend_id` (`friend_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `friend_list`
+--
+
+INSERT INTO `friend_list` (`user_id`, `friend_id`, `timestamp`, `status`) VALUES
+(20, 21, '2013-12-11 15:05:28', 2),
+(20, 23, '2013-12-11 15:39:43', 1),
+(21, 20, '2013-12-11 15:05:28', 2),
+(21, 22, '2013-12-11 15:31:58', 2),
+(22, 20, '2013-12-11 15:29:57', 1),
+(22, 21, '2013-12-11 15:31:58', 2),
+(22, 23, '2013-12-11 15:39:43', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `pictures`
+--
+
+DROP TABLE IF EXISTS `pictures`;
+CREATE TABLE IF NOT EXISTS `pictures` (
+  `picture_id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(2048) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`picture_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `profiles`
+--
+
+DROP TABLE IF EXISTS `profiles`;
+CREATE TABLE IF NOT EXISTS `profiles` (
+  `user_id` int(11) NOT NULL,
+  `firstname` varchar(40) NOT NULL,
+  `middlename` varchar(40) DEFAULT NULL,
+  `lastname` varchar(40) NOT NULL,
+  `gender` char(1) NOT NULL,
+  `dob` date NOT NULL,
+  `major` varchar(6) NOT NULL,
+  `degree` varchar(40) NOT NULL,
+  `entry_year` smallint(6) NOT NULL,
+  `entry_semester` tinyint(4) NOT NULL,
+  `picture_id` varchar(2000) DEFAULT './upload/picture/0.jpg',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `profiles`
+--
+
+INSERT INTO `profiles` (`user_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `major`, `degree`, `entry_year`, `entry_semester`, `picture_id`) VALUES
+(20, 'qian', 'qian', 'Jia', 'F', '2012-09-02', 'BME', 'Master', 2012, 1, './upload/picture/20.jpg'),
+(21, 'Eve', '', 'Jia', 'F', '1989-12-19', 'BME', 'Master', 2012, 1, './upload/picture/21.jpg'),
+(22, 'qian', '', 'qian', 'M', '2013-12-01', 'BME', 'Master', 1234, 1, './upload/picture/22.jpg'),
+(23, 'zhi', 'zhi', 'zhi', 'M', '2013-12-01', 'BME', 'Master', 1235, 1, './upload/picture/0.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `resources`
+--
+
+DROP TABLE IF EXISTS `resources`;
+CREATE TABLE IF NOT EXISTS `resources` (
+  `resource_id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `url` varchar(2048) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `catalog` varchar(20) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`resource_id`),
+  KEY `course_id` (`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `reviews`
+--
+
+DROP TABLE IF EXISTS `reviews`;
+CREATE TABLE IF NOT EXISTS `reviews` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `score` tinyint(4) NOT NULL,
+  `content` varchar(3000) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`review_id`),
+  KEY `course_id` (`course_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- 转存表中的数据 `reviews`
+--
+
+INSERT INTO `reviews` (`review_id`, `course_id`, `user_id`, `score`, `content`, `timestamp`) VALUES
+(2, 1, 21, 5, 'I love this course so much!', '2013-12-11 14:29:54'),
+(3, 1, 22, 5, '546 is one of the best courses I have ever had.', '2013-12-11 15:25:05'),
+(4, 1, 20, 5, '546 is one of the best courses I have ever had.', '2013-12-11 15:28:47'),
+(5, 1, 20, 5, '546 is one of the best courses I have ever had.', '2013-12-11 15:28:57'),
+(6, 1, 23, 5, 'Best ever!', '2013-12-11 15:42:28'),
+(7, 2, 23, 3, 'Good!', '2013-12-11 15:43:15');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `statuses`
+--
+
+DROP TABLE IF EXISTS `statuses`;
+CREATE TABLE IF NOT EXISTS `statuses` (
+  `status_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entity_id` int(11) NOT NULL,
+  `entity_type` tinyint(4) NOT NULL,
+  `content` varchar(600) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`status_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- 转存表中的数据 `statuses`
+--
+
+INSERT INTO `statuses` (`status_id`, `entity_id`, `entity_type`, `content`, `timestamp`) VALUES
+(1, 21, 1, 'Today is Wednesday!', '2013-12-11 14:28:47'),
+(2, 1, 2, 'New status', '2013-12-11 14:30:47'),
+(3, 1, 2, 'It''s presentation Day!', '2013-12-11 14:44:32'),
+(4, 1, 2, 'It''s presentation Day!', '2013-12-11 14:45:04'),
+(5, 22, 1, 'Great day!', '2013-12-11 15:16:51'),
+(6, 1, 2, '546 is one of the best courses I have ever had.', '2013-12-11 15:22:15'),
+(7, 1, 2, '546 is one of the best courses I have ever had.', '2013-12-11 15:28:35'),
+(8, 1, 2, 'zhi', '2013-12-11 15:42:11');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `security_question` varchar(200) NOT NULL,
+  `security_answer` varchar(200) NOT NULL,
+  `status` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+
+--
+-- 转存表中的数据 `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `security_question`, `security_answer`, `status`) VALUES
+(20, 'rjia@stevens.edu', '46bcb27274c3b40541d104afd608c2e54add79b0', '374977aee950b9e86a391213c47f38bb6b90cfa0', '6008c667543f66951fd5b20281ad77ede0f99c8c', 0),
+(21, 'rjia1@stevens.edu', '46bcb27274c3b40541d104afd608c2e54add79b0', 'e8b7ac7668dba39f13186bef837d722cc77de802', '6008c667543f66951fd5b20281ad77ede0f99c8c', 0),
+(22, 'zhi@stevens.edu', '7c222fb2927d828af22f592134e8932480637c0d', '75a196a61b96ec978eb98d19f959fed4b65a4836', 'c3a045db58f036f017503285898d26d1bb21135c', 0),
+(23, 'zhi1@stevens.edu', '7c222fb2927d828af22f592134e8932480637c0d', 'zhizhizhizhi', '465171765770dd55ae9ba3469e395f16830d2ad3', 0);
+
+--
+-- 限制导出的表
+--
+
+--
+-- 限制表 `blogs`
+--
+ALTER TABLE `blogs`
+  ADD CONSTRAINT `blogs_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `course_list`
+--
+ALTER TABLE `course_list`
+  ADD CONSTRAINT `course_list_ibfk_7` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `course_list_ibfk_8` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `event_list`
+--
+ALTER TABLE `event_list`
+  ADD CONSTRAINT `event_id` FOREIGN KEY (`event_id`) REFERENCES `events` (`event_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `user_id5` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `friend_list`
+--
+ALTER TABLE `friend_list`
+  ADD CONSTRAINT `user_id2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `friend_id` FOREIGN KEY (`friend_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `profiles`
+--
+ALTER TABLE `profiles`
+  ADD CONSTRAINT `user_id4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `resources`
+--
+ALTER TABLE `resources`
+  ADD CONSTRAINT `resources_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE;
+
+--
+-- 限制表 `reviews`
+--
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `course_id` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE;
