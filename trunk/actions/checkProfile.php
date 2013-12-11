@@ -58,6 +58,10 @@ if (isset($action)){
 				$question_error = "Must be at least 8 characters.";
 				$error = "data";
 			}
+			else if (strlen($question) <= 0){
+				$question_error = "Don't use html tags";
+				$error = "data";
+			}
 		}
 		else{
 			$question_error = "You must set a question.";
