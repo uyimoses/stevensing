@@ -25,18 +25,21 @@ include "header_course.php";
 	<section id="resourse">
 		<h1>Resourse</h1>
 		<table>
-			<tr>
+			<thead>
 				<td><b>Resourse Name</b></td>
 				<td><b>Uploaded time</b></td>
 				<td><b>Resourse Catalog</b></td>
 				<td><b>Actions</b></td>
-			</tr>
-			<tr>
-				<td>Blah</td>
-				<td>Blah</td>
-				<td>Foo</td>
-				<td><form><input type="button" value="Download" download="filename.xxx" ><input type="button" value="Delete"></form></td>
-			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Blah</td>
+					<td>Blah</td>
+					<td>Foo</td>
+					<td><form><input type="button" value="Download" download="filename.xxx" ><input type="button" value="Delete"></form></td>
+				</tr>
+			</tbody>
+
 		</table>
 	</section>
 </section>
