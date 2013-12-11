@@ -44,7 +44,7 @@ echo "{\n";
 echo "'error': '" . $error . "',\n";
 echo "'entity_id': '" . $entity_id . "',\n";
 echo "'entity_type': '" . $entity_type . "',\n";
-echo "'status_list': [\n";
+echo "'event_list': [\n";
 foreach ($events as $index => $event) {
 	if($index != 0)
 		echo ",\n";
