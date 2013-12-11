@@ -47,6 +47,8 @@ include "leftside_friends.php";
 			var key = Date.parse(obj.status_list[i].timestamp);
 			//console.log(key);
 			var value = obj.status_list[i];
+			while(status_list[key]!=undefined)
+				key++;
 			status_list[key] = value;
 		}
 		count ++;
