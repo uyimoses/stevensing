@@ -280,4 +280,3 @@ function deleteStatusInNews(id){
 function addComment(){
 
 }
-

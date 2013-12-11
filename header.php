@@ -82,7 +82,7 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] == ""){
 						<a href="#">
 							<li>Support</li>
 						</a>
-						<a href="welcome">
+						<a href="logoutAction">
 							<li>Log out</li>
 						</a>
 					</ul>
