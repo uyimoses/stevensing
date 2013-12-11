@@ -254,3 +254,7 @@ background-color: #a9002f;
 	padding: 0px;
 	margin: 0px;
 }
+#event_title{
+	font-weight: bolder;
+	font-size: 16px;
+}
