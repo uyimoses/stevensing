@@ -45,7 +45,9 @@ include "header_course.php";
 		$("#status_list>ul").html("");
 		for(var i = 0; i < obj.review_list.length; i++){
 			var review = obj.review_list[i];
-			var html =  "<li class='friend_status_list'><img src='./images/profile_image.jpg' alt='' title=''><div><span>"
+			var html =  "<li class='friend_status_list'><img class='mini_picture' src='"
+				+ review.picture_id
+				+ "' alt='' title=''><div><span>"
 				+ review.firstname
 				+ "</span>&nbsp;<span>"
 				+ review.lastname
