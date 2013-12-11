@@ -23,7 +23,7 @@ if (isset($action)){
 			}
 			//check if email used
 			$sql = "SELECT * FROM users WHERE username = '" . addslashes($email) . "';";
-			echo $sql;
+			//echo $sql;
 			$result = $mysqli->query($sql);
 			if ($result){
 				if ($row = $result->fetch_row()){

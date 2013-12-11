@@ -11,9 +11,9 @@ date_default_timezone_set('UTC');
 session_start();
 
 
-$_SESSION["user_id"] = 11;
+// $_SESSION["user_id"] = 11;
 
-//$_SESSION["user_id"] = 11;
+// //$_SESSION["user_id"] = 11;
 
 
 ?>
@@ -21,7 +21,7 @@ $_SESSION["user_id"] = 11;
 <html>
 <head>
 <?php
-if (!isset($_SESSION["user_id"])){
+if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] == ""){
 	echo "<script>window.location.href='welcome'</script>";
 }
 ?>
