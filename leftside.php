@@ -33,7 +33,7 @@
 	<div id="profile_info">
 		<a href="changeprofilepicture">
 			<div id="profile_picture">
-				<img src="<?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:"./upload/picture/0.jpg"; ?>" alt="Profile Picture" title="Profile Picture"/>
+				<img src="<?php echo (isset($_SESSION["picture_id"]))?$_SESSION["picture_id"]:"./upload/picture/0.jpg"; ?>" alt="Profile Picture" title="Profile Picture"/>
 				<div id="edit_profile_picture">Change</div>
 			</div>
 		</a>
