@@ -75,33 +75,6 @@ include "leftside.php";
 			<option value="number" >time</option>
 		</select>
 		<ul>
-			<li>
-				<div id="course_list_name">
-					<a href="course_info"><span>CS</span>&nbsp;<span>546</span>&nbsp;<span>Web Programming</span></a>
-				</div>
-				<li class="button">
-					<a href="#" >Drop </a>
-					<a href="course_info">Visit</a>
-				</li>
-			</li>
-			<li>
-				<div id="course_list_name">
-				<a href="course_info"><span>CS</span>&nbsp;<span>570</span>&nbsp;<span>Intro To Programming In C++</span></a>
-				</div>
-				<li class="button">
-					<a href="#" >Drop </a>
-					<a href="course_info">Visit</a>
-			</li>
-			</li>
-			<li>
-				<div id="course_list_name">
-				<a href="course_info"><span>CS</span>&nbsp;<span>590</span>&nbsp;<span>Algorithms</span></a>
-				</div>
-				<li class="button">
-					<a href="#" >Drop </a>
-					<a href="course_info">Visit</a>
-				</li>
-			</li>
 		</ul>
 		<a id="course_add" href="course_add.php">Create a new course</a>
 	</section>
