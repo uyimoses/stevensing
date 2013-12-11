@@ -9,7 +9,7 @@ $users = array();
 $courses = array();
 
 if (isset($_POST["keyword"]) && $_POST["keyword"] != ""){
-	$keyword = $_POST["keyword"];
+	$keyword = strip_tags($_POST["keyword"]);
 }
 else{
 	$keyword_error = "You should set a keyword";

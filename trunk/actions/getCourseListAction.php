@@ -7,7 +7,7 @@ $user_id = -1;
 $courses = array();
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";

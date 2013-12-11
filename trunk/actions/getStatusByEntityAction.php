@@ -14,14 +14,14 @@ $statuses = array();
 $text = "";
 
 if (isset($_POST["type"]) && $_POST["type"] != ""){
-	$entity_type = $_POST["type"];
+	$entity_type = strip_tags($_POST["type"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["id"]) && $_POST["id"] != ""){
-	$entity_id = $_POST["id"];
+	$entity_id = strip_tags($_POST["id"]);
 }
 else{
 	$error = "data";

@@ -16,14 +16,14 @@ $description = "";
 $number = 0;
 
 if (isset($_POST["id"]) && $_POST["id"] != ""){
-	$id = $_POST["id"];
+	$id = strip_tags($_POST["id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["professor"]) && $_POST["professor"] !== ""){
-	$professor = $_POST["professor"];
+	$professor = strip_tags($_POST["professor"]);
 	if (strlen($professor) > 100){
 		$professor_error = "Must be no more than 100 characters.";
 		$error = "data";
@@ -35,7 +35,7 @@ else{
 }
 
 if (isset($_POST["name"]) && $_POST["name"] !== ""){
-	$name = $_POST["name"];
+	$name = strip_tags($_POST["name"]);
 	if (strlen($name) > 100){
 		$name_error = "Must be no more than 100 characters.";
 		$error = "data";
@@ -47,7 +47,7 @@ else{
 }
 
 if (isset($_POST["description"]) && $_POST["description"] !== ""){
-	$description = $_POST["description"];
+	$description = strip_tags($_POST["description"]);
 	if (strlen($description) > 6000){
 		$description_error = "Must be no more than 6000 characters.";
 		$error = "data";
@@ -60,7 +60,7 @@ else{
 
 
 if (isset($_POST["number"]) && $_POST["number"] !== ""){
-	$number = $_POST["number"];
+	$number = strip_tags($_POST["number"]);
 	if (preg_match("/^[1-9]([0-9]*)$/", $number) == 0){
 		$number_error = "Invalid number.";
 		$error = "data";

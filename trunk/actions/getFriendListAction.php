@@ -8,14 +8,14 @@ $status = -1;
 $friends = array();
 
 if (isset($_POST["user_id"]) && $_POST["user_id"] != ""){
-	$user_id = $_POST["user_id"];
+	$user_id = strip_tags($_POST["user_id"]);
 }
 else{
 	$error = "data";
 }
 
 if (isset($_POST["status"]) && $_POST["status"] != ""){
-	$status = $_POST["status"];
+	$status = strip_tags($_POST["status"]);
 }
 else{
 	$error = "data";
