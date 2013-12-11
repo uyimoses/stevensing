@@ -298,7 +298,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="major" class="required">Major</label>
-				<select id="major" id="major" size="1">
+				<select id="major" size="1">
 					<?php
 					foreach ($majors as $key => $value) {
 						echo "<option value='$key'>$value</option>";
@@ -310,7 +310,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="degree" class="required">Degree</label>
-				<select id="degree" id="degree" size="1">
+				<select id="degree" size="1">
 					<?php
 					foreach ($degrees as $value) {
 						echo "<option value='$value'>$value</option>";
@@ -328,7 +328,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="semester" class="required">Entry Semester</label>
-				<select id="semester" id="semester" size="1">
+				<select id="semester" size="1">
 					<?php
 					foreach ($semesters as $key => $value) {
 						echo "<option value='$key'>$value</option>";
