@@ -227,11 +227,21 @@ function defaultErrorHandler(obj){
 
 }
 
+function clearError(e){
+	var id = e.id;
+	var name = e.id.split("_").pop();
+	$("#" + name + "_error").text("");
+}
+
+function errorStatus(obj){
+	$("#content_error").text(obj.content_error);
+}
+
 function addStatus(id, type){
 	action(
 		"addStatusAction", 
 		refreshStatuses, 
-		defaultErrorHandler, 
+		errorStatus, 
 		"POST", 
 		{
 			"id": id,
