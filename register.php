@@ -249,7 +249,7 @@ include "header_login.php"
 			</div>
 			<div>
 				<label for="question" class="required">Security Question</label>
-				<input type="text" id="question" placeholder="Enter or select your question" required onblur="check_question(this);">
+				<input type="text" id="question" placeholder="Enter a question" required onblur="check_question(this);">
 				<span class="check_icon"></span>
 				<div class="check_message" id="question_error"></div>
 			</div>
