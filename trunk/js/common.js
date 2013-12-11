@@ -207,7 +207,7 @@ function action(actionName, success, error, type, formData){
 				success(obj);
 			}
 			else if (obj.error == "server"){
-				alert("Sorry. The Web Server is not avaliable for now.");
+				stopHacking(obj);
 			}
 			else{
 				error(obj);
@@ -217,6 +217,10 @@ function action(actionName, success, error, type, formData){
 			alert("Sorry. The Web Server is not avaliable for now.");
 		}
 	});
+}
+
+function stopHacking(obj){
+	
 }
 
 function defaultErrorHandler(obj){

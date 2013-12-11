@@ -2,14 +2,14 @@
 $error = "none";
 $picture_error = "";
 $url = "";
-$user_id = -1;
+$user_id = 1;
 
-if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
-	$user_id = $_SESSION["user_id"];
-}
-else{
-	$error = "server";
-}
+// if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
+// 	$user_id = $_SESSION["user_id"];
+// }
+// else{
+// 	$error = "server";
+// }
 
 if ($error = "none") {
 	if (isset($_FILES["file"])){
@@ -29,7 +29,7 @@ if ($error = "none") {
 			|| ($filetype == "image/x-png"))){
 				$url = '../upload/picture/' . $user_id . "." . $extension;
 	    		move_uploaded_file($filetmp,  $url);
-
+	    		$url = str_replace("..", ".", $url);
 	    	}
 			else{
 				$error = "data";
