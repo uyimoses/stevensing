@@ -112,36 +112,7 @@ include "header_course.php";
 	<section id="status_list">
 		<h1>Recent statuses</h1>
 		<ul>
-			<li class="friend_status_list">
-				<img src="./images/profile_image.jpg" alt="" title="">
-				<div>
-					<span>Ruo</span>&nbsp;<span>Jia</span>
-				</div>
-				<section>
-					<div class="star_rating_mini"></div>
-					<p>
-						Have a great day!
-					</p>
-					<div class="replyline">
-						<span >2013-11-13 14:56</span>
-					</div>
-					<div class="OthersReply">
-						<a href="">Xiao Han</a>
-						<p>It's a nice day.</p>
-						<span> 2013-11-13 14:56 </span>
-						<div>
-						<a href="">reply</a>
-						<a href="">delete</a>
-						</div>
-					</div>
-					
-					<div class="replyBox">
-				  		<img src="./images/profile_image.jpg" alt="" title="">
-						<textarea name="reply" contenteditable="true"></textarea>
-						<div><a href="#">Reply</a></div>
-					</div>
-				</section>
-			</li>
+			
 		</ul>
 	</section>
 </section>

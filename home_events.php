@@ -86,12 +86,7 @@ include "leftside_home.php"
 	<div class="block-top"></div>
 	<div id="event_list">
 		<ul>
-			<li><span>Id</span><span id="event_title">Pizza Night</span><br>
-			Event Start: <span id="event_start">2013/12/09 12:12</span><br>
-			Event End: <span id="event_end">2013/12/09 20:12</span><br>
-			Max attendance: <span id="num">20</span><br>
-			Details:<span>Have fun!</span><br>
-			<div id="button"><a href="javascript:;" onclick="addEventList">Attend</a></div></li>
+			
 		</ul>
 	</div>
 	<div class="block-bottom"></div>
