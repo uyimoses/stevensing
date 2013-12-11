@@ -58,15 +58,15 @@ echo "'year': '" . addslashes($year) . "',\n";
 echo "'semester': '" . addslashes($semester) . "',\n";
 
 
-echo "'firstname_error': '" . $firstname_error . "',\n";
-echo "'middlename_error': '" . $middlename_error . "',\n";
-echo "'lastname_error': '" . $lastname_error . "',\n";
-echo "'gender_error': '" . $gender_error . "',\n";
-echo "'dob_error': '" . $dob_error . "',\n";
-echo "'major_error': '" . $major_error . "',\n";
-echo "'degree_error': '" . $degree_error . "',\n";
-echo "'year_error': '" . $year_error . "',\n";
-echo "'semester_error': '" . $semester_error . "'\n";
+echo "'firstname_error': '" . addslashes($firstname_error) . "',\n";
+echo "'middlename_error': '" . addslashes($middlename_error) . "',\n";
+echo "'lastname_error': '" . addslashes($lastname_error) . "',\n";
+echo "'gender_error': '" . addslashes($gender_error) . "',\n";
+echo "'dob_error': '" . addslashes($dob_error) . "',\n";
+echo "'major_error': '" . addslashes($major_error) . "',\n";
+echo "'degree_error': '" . addslashes($degree_error) . "',\n";
+echo "'year_error': '" . addslashes($year_error) . "',\n";
+echo "'semester_error': '" . addslashes($semester_error) . "'\n";
 echo "}";
 
 include "footer_action.php";
