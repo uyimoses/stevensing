@@ -13,7 +13,6 @@ include "leftside_friends.php";
 	var blog_list = new Array();
 	var count = 0;
 	
-
 	function refreshBlogList(){
 		$("#status_list>ul").html("");
 		for(var time in blog_list){
@@ -61,7 +60,6 @@ include "leftside_friends.php";
 				"POST", 
 				{
 					"user_id": friend_list[i].user_id,
-					// "type": 1
 				}
 			);
 		}
@@ -77,7 +75,7 @@ include "leftside_friends.php";
 </script>
 <section class="span-14 main_view">
 	<section id="status_list">
-		<h1>Recent statuses</h1>
+		<h1>Recent blogs</h1>
 		<ul>
 			<li class="friend_status_list">
 				<img src="./images/profile_image.jpg" alt="" title="">

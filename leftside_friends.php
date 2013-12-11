@@ -15,6 +15,12 @@
 			catch(e){
 				//do nothing
 			}
+			try{
+				refreshBlogs();
+			}
+			catch(e){
+				//do nothing
+			}
 		}
 		function getFriendList(){
 			action(
