@@ -31,7 +31,7 @@ include "leftside_friends.php";
 				+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='javascript:' onclick='addComment("
 				+ status.status_id
-				+ ", 1)'>Send</a></div></li></section></li>";
+				+ ", 1)'>Reply</a></div></li></section></li>";
 			$(html).prependTo('#status_list>ul');
 		}
 	}
