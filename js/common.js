@@ -234,6 +234,7 @@ function clearError(e){
 }
 
 function errorStatus(obj){
+	$("#title_error").text(obj.title_error);
 	$("#content_error").text(obj.content_error);
 }
 

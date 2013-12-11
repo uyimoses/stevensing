@@ -13,11 +13,11 @@ include "leftside_home.php"
 		action(
 			"addBlogAction", 
 			refreshBlogs, 
-			defaultErrorHandler, 
+			errorStatus, 
 			"POST", 
 			{
 				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
-				"title":$("#title_content").val(),
+				"title":$("#blog_title").val(),
 				"content": $("#blog_content").val()
 			}
 		);
@@ -84,12 +84,12 @@ include "leftside_home.php"
 	  <div id="contact-content">
 		<span id="contact-text">Create a blog:</span><br>
 		<label>Title:</label>
-		<input type="text" id= "title_content"name="title"><br>
+		<input type="text" id= "blog_title" name="title"  onfocus="clearError(this);"><br>
 		<div class="check_message" id="title_error"></div>
 		<label>Content:</label>
 		<form id="statuseForm" action="friends_statuses.php" method="post" name="statuseForm">
 		  <div id="form_box">
-			  <textarea class="fieldclass" id="blog_content" name="message" contenteditable="true" placeholder="Write something about yourself..."></textarea>
+			  <textarea class="fieldclass" id="blog_content" name="message" contenteditable="true" placeholder="Write something about yourself..." onfocus="clearError(this);"></textarea>
 			  <div class="check_message" id="content_error"></div>
 			<div id="button"><a href="javascript:" onclick="addBlog()"> send</a></div>
 		  </div>
