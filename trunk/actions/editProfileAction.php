@@ -42,7 +42,21 @@ if ($error == "none"){
 //output json text
 echo "{\n";
 echo "'error': '" . $error . "',\n";
-echo "'id': '" . addslashes($user_id) . "',\n";
+echo "'user_id': '" . addslashes($user_id) . "',\n";
+
+
+echo "'firstname': '" . addslashes($firstname) . "',\n";
+echo "'middlename': '" . addslashes($middlename) . "',\n";
+echo "'lastname': '" . addslashes($lastname) . "',\n";
+echo "'gender': '" . addslashes($gender) . "',\n";
+echo "'dob': '" . addslashes($dob) . "',\n";
+echo "'major': '" . addslashes($major) . "',\n";
+echo "'degreee': '" . addslashes($degree) . "',\n";
+echo "'year': '" . addslashes($year) . "',\n";
+echo "'semester': '" . addslashes($semester) . "',\n";
+echo "'picture_id': '" . addslashes($picture_id) . "',\n";
+
+
 echo "'firstname_error': '" . $firstname_error . "',\n";
 echo "'middlename_error': '" . $middlename_error . "',\n";
 echo "'lastname_error': '" . $lastname_error . "',\n";

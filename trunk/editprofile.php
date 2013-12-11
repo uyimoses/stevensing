@@ -12,24 +12,57 @@ include "leftside_home.php"
 
 	function setProfileDisplay(){
 
-		 $("firstname").val(user_profile.firstname);
-		 $("lasttname").val(user_profile.lasttname);
-		 $("middlename").val(user_profile.middlename);
-		 $("lasttname").val(user_profile.laststname);
-		 $("datepicker").val(user_profile.dob);
-		 $("year").val(user_profile.entry_year);
-		 var $major_set  =user_profile.major;
-		 var $degree_set  =user_profile.dgree;
-		 var $semester_set =user_profile.semester;
+		 $("#firstname").val(user_profile.firstname);
+		 $("#lastname").val(user_profile.lastname);
+		 $("#middlename").val(user_profile.middlename);
+		 $("#datepicker").val(user_profile.dob);
+		 $("#year").val(user_profile.year);
+		 $("#major>option[value="+user_profile.major+"]").attr("selected", "selected");
+		 $("#degree>option[value="+user_profile.degree+"]").attr("selected", "selected");
+		 $("#semester>option[value="+user_profile.semester+"]").attr("selected", "selected");
 		 
 	}
+	function setProfileErrorDisplay(obj){
+
+
+			 $("#firstname_error").text(obj.firstname_error);
+			 $("#lastname_error").text(obj.lastname_error);
+			 $("#middlename_error").text(obj.middlename_error);
+			 $("#dob_error").text(obj.dob_error);
+			 $("#major_error").text(obj.major_error);
+			 $("#degree_error").text(obj.degree_error);
+			 $("#semester_error").text(obj.semester_error);
+			 $("#year_error").text(obj.year_error);
+	}
+	function updateProfile(){
+			action(
+				"editProfileAction", 
+				setLeftside, 
+				setProfileErrorDisplay, 
+				"POST", 
+				{
+					"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+					"firstname": $("#firstname").val(),
+					"middlename":$("#middlename").val(),
+					"lastname":$("#lastname").val(),
+					"gender":user_profile.gender,
+					"dob": $("#datepicker").val(),
+					"major": $("#major>option:selected").val(),
+					"degree":$("#degree>option:selected").val(),
+					"year":$("#year").val(),
+					"semester":$("#semester>option:selected").val(),
+
+
+				}
+			);
+		}
 
 	
 </script>
 <section class="span-14 main_view">
 	<div id="editprofile">
 		<h1>Edit Profile</h1>
-		<form action="./profile.php" method="post">
+		<form >
 			<!-- Creating an Account -->
 			<!--
 			<div id="uploadpic">
@@ -40,44 +73,73 @@ include "leftside_home.php"
 				</form><br>
 			</div>
 			-->
+			<div>
 			<label for="firstname" required>First Name</label>
 			<input type="text" id="firstname" placeholder="First Name" ><br>
+			<span class="check_icon"></span>
+			<div class="check_message" id="firstname_error"></div>
+			</div>
+			<div>
 			<label for="middlename">Middle Name</label>
 			<input type="text" id="middlename" placeholder="Middle Name" ><br>
+			<span class="check_icon"></span>
+			<div class="check_message" id="middle_error"></div>
+			</div>
+			<div>
 			<label for="lastname">Last Name</label>
 			<input type="text" id="lastname" placeholder="Last Name" ><br>
+			<span class="check_icon"></span>
+			<div class="check_message" id="lastname_error"></div>
+			</div>
+			<div>
 			<label for="dob">Date of Birth</label>
 			<input type="text" id="datepicker" /><br>
+			<span class="check_icon"></span>
+			<div class="check_message" id="dob_error"></div>
+			</div>
+			<div>
 			<label for="major">Major</label>
 			<select id="major"  size="1">
 			<?php
 					foreach ($majors as $key => $value) {
-						if($value==$major_set)
 							echo "<option value='$key'>$value</option>";
 					}
 			?>
 			</select>
+			<span class="check_icon"></span>
+			<div class="check_message" id="major_error"></div>
+			</div>
+			<div>
 			<label for="degree">Degree</label>
 			<select id="degree"  size="1">
 			<?php
 					foreach ($degrees as $value) {
-						if($value==$degree_set)
 						echo "<option value='$value'>$value</option>";
 					}
 			?>
 			</select>
+			<span class="check_icon"></span>
+			<div class="check_message" id="degree_error"></div>
+			</div>
+			<div>
 			<label for="year">Entry Year</label>
 			<input type="text" id="year" placeholder="Year"  >
+			<span class="check_icon"></span>
+				<div class="check_message" id="year_error"></div>
+			</div>
+			<div>
 			<label for="entry_semester">Entry Semester</label>
 			<select id="semester"  size="1">
 			<?php
 			foreach ($semesters as $key => $value) {
-				if($value==$sememster_set)
 				echo "<option value='$key'>$value</option>";
 			}
 			?>
 			</select>
-			<input type="submit" name="submit" value="Submit">
+			<span class="check_icon"></span>
+			<div class="check_message" id="semester_error"></div>
+			</div>
+			<input type="submit" name="submit" value="Submit" onclick=updateProfile()>
 		</form>
 	</div>
 </section>
