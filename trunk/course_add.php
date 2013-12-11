@@ -7,7 +7,9 @@ include "leftside.php";
 //include leftside of courses
 include "leftside_courses.php";
 ?>
-
+<script>
+	
+</script>
 <section class="span-14 main_view">
 	<div id="editprofile">
 	<h1>Add New Course</h1>
