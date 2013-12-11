@@ -345,7 +345,8 @@ include "header_login.php"
 		</section>
 		<!-- Policy Confirmation -->
 		<section class="register_steps" id="register_step_3">
-
+			<p>This website is for Stevens Insititute of Technology students and professors only.</p>
+			<p>All Rights Reserved.</p>
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(2);">Back</a>
 				<a href="javascript:" onclick="window.location.href='welcome';">Deny</a>
