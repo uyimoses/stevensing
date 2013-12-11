@@ -103,6 +103,7 @@ include "leftside.php";
 				</li>
 			</li>
 		</ul>
+		<a id="course_add" href="course_add.php">Create a new course</a>
 	</section>
 </section>
 <?php
