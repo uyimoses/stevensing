@@ -12,7 +12,7 @@ include "leftside_home.php"
 	var news_list = new Array();
 	var get_status = false;
 	var get_blog = false;
-	var get_event = false;
+	// var get_event = false;
 
 	function deleteBlog(id, timestamp){
 		action(
@@ -29,7 +29,7 @@ include "leftside_home.php"
 
 	function setNewsList(){
 		$("#status_list>ul").html("");
-		if (get_status && get_blog && get_event){
+		if (get_status && get_blog){ //get_event
 			for(var time in news_list){
 				var news = news_list[time];
 				var html = "";
@@ -73,24 +73,24 @@ include "leftside_home.php"
 						+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
 						+ "</section></li>";
 				}
-				else if (news.event_id != undefined){
-					var events = news;
-					html =  "<li><span>"
-						+ events.event_id
-						+ "<span id='event_title'>"
-						+ events.title
-						+ "</span><br>Event Start: <span id='event_start'>"
-						+ events.starttime
-						+ "</span><br>Event End: <span id='event_end'>"
-						+ events.endtime
-						+ "</span><br>Max attendance: <span id='num'>"
-						+ events.number
-						+ "</span><br>Details:<span>"
-						+ events.content
-						+ "</span><br><div id='button'><a href='javascript:;' onclick='("
-						+ events.events_id
-						+ ")'>Attend</a></div></li>";
-				}
+				// else if (news.event_id != undefined){
+				// 	var events = news;
+				// 	html =  "<li><span>"
+				// 		+ events.event_id
+				// 		+ "<span id='event_title'>"
+				// 		+ events.title
+				// 		+ "</span><br>Event Start: <span id='event_start'>"
+				// 		+ events.starttime
+				// 		+ "</span><br>Event End: <span id='event_end'>"
+				// 		+ events.endtime
+				// 		+ "</span><br>Max attendance: <span id='num'>"
+				// 		+ events.number
+				// 		+ "</span><br>Details:<span>"
+				// 		+ events.content
+				// 		+ "</span><br><div id='button'><a href='javascript:;' onclick='("
+				// 		+ events.events_id
+				// 		+ ")'>Attend</a></div></li>";
+				// }
 				$(html).prependTo('#status_list>ul');
 			}
 		}
@@ -122,23 +122,23 @@ include "leftside_home.php"
 		setNewsList();
 	}
 
-	function addEventsToNews(obj){
-		for (var i = 0; i < obj.event_list.length; i++){
-			var key = Date.parse(obj.event_list[i].timestamp);
-			//console.log(key);
-			var value = obj.event_list[i];
-			while(news_list[key] != undefined)
-				key++;
-			news_list[key] = value;
-		}
-		get_event = true;
-		setNewsList();
-	}
+	// function addEventsToNews(obj){
+	// 	for (var i = 0; i < obj.event_list.length; i++){
+	// 		var key = Date.parse(obj.event_list[i].timestamp);
+	// 		//console.log(key);
+	// 		var value = obj.event_list[i];
+	// 		while(news_list[key] != undefined)
+	// 			key++;
+	// 		news_list[key] = value;
+	// 	}
+	// 	get_event = true;
+	// 	setNewsList();
+	// }
 
 	function refreshNews(){
 		get_status = false;
 		get_blog = false;
-		get_event = false;
+		// get_event = false;
 		news_list = new Array();
 		action(
 			"getStatusByEntityAction", 
@@ -160,16 +160,16 @@ include "leftside_home.php"
 				
 			}
 		);
-		action(
-			"getEventByEntityAction", 
-			addEventsToNews, 
-			defaultErrorHandler, 
-			"POST", 
-			{
-				"id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
-				"type": 1
-			}
-		);
+		// action(
+		// 	"getEventByEntityAction", 
+		// 	addEventsToNews, 
+		// 	defaultErrorHandler, 
+		// 	"POST", 
+		// 	{
+		// 		"id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+		// 		"type": 1
+		// 	}
+		// );
 	}
 
 	$("#status_list").ready(
