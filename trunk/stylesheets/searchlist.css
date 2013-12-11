@@ -116,7 +116,7 @@ font-size:16px;
 	font-size: 13px;
 	font-weight: bold;
 }
-.button a{
+.buttonCourse a{
 
 	font-size: 16px;
 	float: right;
@@ -132,7 +132,7 @@ font-size:16px;
 	
 	 
 }
-.button a:hover{
+.buttonCourse a:hover{
 color:#FFF;
 background-color: #a9002f;
 
