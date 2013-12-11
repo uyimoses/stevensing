@@ -10,4 +10,3 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] != ""){
 
 echo "<script>window.location.href='welcome';</script>";
 
-include "footer_action.php";

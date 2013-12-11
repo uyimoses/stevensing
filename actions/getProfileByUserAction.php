@@ -69,3 +69,4 @@ echo "'year': '" . addslashes($year) . "',\n";
 echo "'semester': '" . addslashes($semester) . "',\n";
 echo "'picture_id': '" . addslashes($picture_id) . "',\n";
 echo "}";
+include "footer_action.php";

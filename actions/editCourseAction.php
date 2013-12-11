@@ -108,3 +108,5 @@ echo "'professor': '" . addslashes($professor) . "',\n";
 echo "'department': '" . addslashes($department) . "',\n";
 echo "'number': '" . addslashes($number) . "',\n";
 echo "}";
+
+include "footer_action.php";

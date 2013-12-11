@@ -38,3 +38,5 @@ echo "'error': '" . $error . "',\n";
 echo "'status_id': '" . addslashes($status_id) . "',\n";
 echo "'entity_id': '" . addslashes($entity_id) . "',\n";
 echo "}";
+
+include "footer_action.php";

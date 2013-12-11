@@ -38,3 +38,4 @@ echo "'error': '" . $error . "',\n";
 echo "'blog_id': '" . addslashes($blog_id) . "',\n";
 echo "'timestamp': '" . addslashes($timestamp) . "',\n";
 echo "}";
+include "footer_action.php";

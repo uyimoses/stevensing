@@ -80,3 +80,5 @@ foreach ($statuses as $index => $status) {
 }
 echo "]\n";
 echo "}";
+
+include "footer_action.php";

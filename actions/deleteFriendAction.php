@@ -46,3 +46,5 @@ echo "'error': '" . $error . "',\n";
 echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'friend_id': '" . addslashes($friend_id) . "',\n";
 echo "}";
+
+include "footer_action.php";

@@ -37,3 +37,5 @@ echo "'course_id': '" . addslashes($course_id) . "',\n";
 echo "'user_id': '" . addslashes($user_id) . "',\n";
 echo "'role': '1'\n";
 echo "}";
+
+include "footer_action.php";

@@ -46,3 +46,5 @@ foreach ($resources as $index => $resource) {
 }
 echo "]\n";
 echo "}";
+
+include "footer_action.php";
