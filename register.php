@@ -338,17 +338,6 @@ include "header_login.php"
 				<span class="check_icon"></span>
 				<div class="check_message" id="semester_error"></div>
 			</div>
-			<!-- upload picture -->
-			<div>
-				<label for="file">Profile Picture</label>
-				<form id="uploadForm" enctype="multipart/form-data">
-					<input type="file" name="file" id="file">
-					<button onclick="upload();">Upload</button>
-				</form>
-				<div id="preview"></div>
-				<span class="check_icon"></span>
-				<div class="check_message" id="picture_error"></div>
-			</div>
 			<div class="next_register_step">
 				<a href="javascript:" onclick="registerStep(1);">Back</a>
 				<a href="javascript:" onclick="registerStep(3);">Next</a>
