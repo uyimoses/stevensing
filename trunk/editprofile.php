@@ -33,10 +33,15 @@ include "leftside_home.php"
 			 $("#semester_error").text(obj.semester_error);
 			 $("#year_error").text(obj.year_error);
 	}
+
+	function editSucceed(){
+		window.location.href = "home";
+	}
+
 	function updateProfile(){
 			action(
 				"editProfileAction", 
-				setLeftside, 
+				editSucceed, 
 				setProfileErrorDisplay, 
 				"POST", 
 				{
