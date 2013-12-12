@@ -52,7 +52,7 @@ include "leftside_friends.php";
 								+ status.timestamp
 								+ "</span></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
 								+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
-								+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+								+ "<li class='replyBox'><img class='mini_picture' src='<?php echo (isset($_SESSION['picture_id']))?$_SESSION['picture_id']:'./upload/picture/0.jpg' ?>' alt='mini_picture' title='mini_picture'><textarea name='reply' contenteditable='true'></textarea>"
 								+ "<div><a href='javascript:' onclick='addComment("
 								+ status.status_id
 								+ ", 1)'>Reply</a></div></li></section></li>";
@@ -73,7 +73,7 @@ include "leftside_friends.php";
 							+ blog.timestamp
 							+ "</span></div><div class='OthersReply'><a href='javascript:'><span>First</span><span>Last</span></a><p>It's a nice day.</p>"
 							+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
-							+ "<li class='replyBox'><img src='./images/profile_image.jpg' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+							+ "<li class='replyBox'><img class='mini_picture' src='<?php echo (isset($_SESSION['picture_id']))?$_SESSION['picture_id']:'./upload/picture/0.jpg' ?>' alt='mini_picture' title='mini_picture'><textarea name='reply' contenteditable='true'></textarea>"
 							+ "<div><a href='javascript:' onclick='addComment("
 							+ blog.blog_id
 							+ ", 1)'>Reply</a></div></li></section></li>";

@@ -58,9 +58,7 @@ include "header_course.php";
 				+ "</p><div class='replyline'><span >2013-11-13 14:56</span></div><div class='OthersReply'>"
 				+ "<a href=''><span>First</span>&nbsp;<span>Last</span></a><p>It's a nice day.</p>"
 				+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
-				+ "<div class='replyBox'><img class='mini_picture' src='"
-				+ review.picture_id
-				+ "' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+				+ "<div class='replyBox'><img class='mini_picture' src='<?php echo (isset($_SESSION['picture_id']))?$_SESSION['picture_id']:'./upload/picture/0.jpg' ?>' alt='mini_picture' title='mini_picture'><textarea name='reply' contenteditable='true'></textarea>"
 				+ "<div><a href='#'>Reply</a></div></div></section></li>";
 			$(html).prependTo('#status_list>ul');
 		}

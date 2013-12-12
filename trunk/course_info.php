@@ -55,9 +55,7 @@ include "header_course.php";
 						+ "</p><div class='replyline'><span>"
 						+ status.timestamp
 						+ "</span></div><div class='OthersReply'></div>"
-						+ "<li class='replyBox'><img class='mini_picture' src='"
-						+ status.picture_id
-						+ "' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+						+ "<li class='replyBox'><img class='mini_picture' src='<?php echo (isset($_SESSION['picture_id']))?$_SESSION['picture_id']:'./upload/picture/0.jpg' ?>' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
 						+ "<div><a href='javascript:' onclick='addComment("
 						+ status.status_id
 						+ ", 1)'>Send</a></div></li></section></li>";
@@ -77,9 +75,7 @@ include "header_course.php";
 						+ "</p><div class='replyline'><span >2013-11-13 14:56</span></div><div class='OthersReply'>"
 						+ "<a href=''><span>First</span>&nbsp;<span>Last</span></a><p>It's a nice day.</p>"
 						+ "<span> 2013-11-13 14:56 </span><div><a href=''>Reply</a><a href=''>Delete</a></div></div>"
-						+ "<div class='replyBox'><img class='mini_picture' src='"
-						+ review.picture_id
-						+ "' alt='' title=''><textarea name='reply' contenteditable='true'></textarea>"
+						+ "<div class='replyBox'><img class='mini_picture' src='<?php echo (isset($_SESSION['picture_id']))?$_SESSION['picture_id']:'./upload/picture/0.jpg' ?>' alt='mini_picture' title='mini_picture'><textarea name='reply' contenteditable='true'></textarea>"
 						+ "<div><a href='#'>Reply</a></div></div></section></li>";
 				}
 				// else if (news.event_id != undefined){
