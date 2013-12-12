@@ -173,6 +173,7 @@ include "header_login.php"
 	}
 	function setId(obj){
 		user_id = obj.user_id;
+		registerStep(4);
 	}
 	function register(){
 		if (valication(3)==0){
@@ -383,7 +384,9 @@ include "header_login.php"
 						+ course.name
 						+ "</td><td>"
 						+ course.professor
-						+ "</td><td><input type='button' value='Add'></td>";
+						+ "</td><td><input type='button' value='Add' onclick='joinCourse("
+						+ course.course_id
+						+ ");'></td>";
 					$(html).appendTo('#course_list>tbody');
 				}
 			}
