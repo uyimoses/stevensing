@@ -355,6 +355,22 @@ include "header_login.php"
 		<!-- Adding courses -->
 		<script type="text/javascript">
 
+			function added(obj){
+				alert("Added!");
+			}
+
+			function joinCourse(course_id){
+				action(
+					"joinCourseAction",
+					added, 
+					errorStatus, 
+					"POST", 
+					{
+						"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+						"course_id": course_id
+					}
+				);
+			}
 			function setCourseList(obj){
 				$("#course_list>tbody").html("");
 				for(var i = 0; i < obj.course_list.length; i++){
@@ -367,7 +383,7 @@ include "header_login.php"
 						+ course.name
 						+ "</td><td>"
 						+ course.professor
-						+ "</td><td><input type='button' value='Add'><input type='button' value='Delete'></td>";
+						+ "</td><td><input type='button' value='Add'></td>";
 					$(html).appendTo('#course_list>tbody');
 				}
 			}

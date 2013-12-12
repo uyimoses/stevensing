@@ -69,7 +69,7 @@
 			<li>
 				<img src="./images/profile_image.jpg" alt="" title="">
 				<div>
-					<span>Ruo</span>&nbsp;<span>Jia</span>
+					<span>Zhi</span>&nbsp;<span>Qian</span>
 				</div>
 				<section>
 					<p>

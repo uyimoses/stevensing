@@ -50,7 +50,7 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 		$error = "data";
 	}
 	else{
-		$title = str_replace("\n", "", $title)
+		$content = str_replace("\n", "", $content);
 	}
 }
 else{

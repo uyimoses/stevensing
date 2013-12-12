@@ -30,7 +30,7 @@ if (isset($_POST["title"]) && $_POST["title"] !== ""){
 		$error = "data";
 	}
 	else{
-		$title = str_replace("\n", "", $title)
+		$title = str_replace("\n", "", $title);
 	}
 }
 else{
@@ -49,7 +49,7 @@ if (isset($_POST["content"]) && $_POST["content"] !== ""){
 		$error = "data";
 	}
 	else{
-		$title = str_replace("\n", "", $title)
+		$content = str_replace("\n", "", $content);
 	}
 }
 else{

@@ -33,13 +33,13 @@ $_SESSION["user_id"] = 6;
 		}
 		$("#display").ready(function(){
 			action(
-				"addEventListAction", 
+				"changePictureAction", 
 				successFunction, 
 				errorFunction, 
 				"POST", 
 				{
 					"user_id": 1,
-					"event_id": 1
+					"picture_name": "azure.jpg"
 				}
 			);
 				
