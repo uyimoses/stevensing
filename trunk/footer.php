@@ -28,6 +28,3 @@
 </section><!-- end of content -->
 </body>
 </html>
-<?php
-$mysqli->
-close();

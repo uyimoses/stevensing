@@ -26,7 +26,7 @@
 		$("#friend_request>ul").html("");
 		for(var i = 0; i < obj.friend_list.length; i++){
 			var friend = obj.friend_list[i];
-			var html = "<li><img status.picture_id src='"
+			var html = "<li><img class='mini_picture' status.picture_id src='"
 				+ friend.picture_id
 				+ "' alt='profile_picture' title=''><div><span>"
 			 	+ friend.firstname

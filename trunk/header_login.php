@@ -1,6 +1,4 @@
 <?php
-//include mysqli connection
-include "mysqli_connection.php";
 
 //some datas
 include "datas.php";
