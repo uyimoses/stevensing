@@ -9,6 +9,18 @@ include "datas.php";
 $error = "none";
 $user_id = -1;
 
+
+$firstname = "";
+$middlename = "";
+$lastname = "";
+$gender = "";
+$dob = "";
+$major = "";
+$degree = "";
+$year = "";
+$semester = "";
+
+
 $action = "edit";
 require "checkProfile.php";
 

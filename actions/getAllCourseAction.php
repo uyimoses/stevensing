@@ -27,6 +27,7 @@ foreach ($courses as $index => $course) {
 	if ($index!=0)
 		echo ",\n";
 	echo "{\n";
+	echo "'course_id': '" . addslashes($course["course_id"]) . "',\n";
 	echo "'department': '" . addslashes($course["department"]) . "',\n";
 	echo "'number': '" . addslashes($course["number"]) . "',\n";
 	echo "'name': '" . addslashes($course["name"]) . "',\n";
