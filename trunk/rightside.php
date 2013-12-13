@@ -22,6 +22,19 @@
 		);
 	}
 
+	function denyFriendRequest(friend_id){
+		action(
+			"denyFriendAction", 
+			refreshFriends, 
+			defaultErrorHandler, 
+			"POST", 
+			{
+				"user_id": <?php echo (isset($_SESSION["user_id"]))?$_SESSION["user_id"]:0; ?>,
+				"friend_id": friend_id
+			}
+		);
+	}
+
 	function setFriendRequest(obj){
 		$("#friend_request>ul").html("");
 		for(var i = 0; i < obj.friend_list.length; i++){
