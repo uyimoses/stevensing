@@ -1,23 +1,17 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.0.8
 -- http://www.phpmyadmin.net
 --
--- 主机: localhost
--- 生成日期: 2013-12-12 19:29:34
--- 服务器版本: 5.5.34
--- PHP 版本: 5.4.19
+-- Host: localhost
+-- Generation Time: Dec 12, 2013 at 07:36 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
--- 数据库: `stevensing`
+-- Database: `stevensing`
 --
 CREATE DATABASE IF NOT EXISTS `stevensing` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `stevensing`;
@@ -25,7 +19,7 @@ USE `stevensing`;
 -- --------------------------------------------------------
 
 --
--- 表的结构 `blogs`
+-- Table structure for table `blogs`
 --
 
 DROP TABLE IF EXISTS `blogs`;
@@ -40,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- 转存表中的数据 `blogs`
+-- Dumping data for table `blogs`
 --
 
 INSERT INTO `blogs` (`blog_id`, `user_id`, `title`, `content`, `timestamp`) VALUES
@@ -53,7 +47,7 @@ INSERT INTO `blogs` (`blog_id`, `user_id`, `title`, `content`, `timestamp`) VALU
 -- --------------------------------------------------------
 
 --
--- 表的结构 `comments`
+-- Table structure for table `comments`
 --
 
 DROP TABLE IF EXISTS `comments`;
@@ -70,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `courses`
+-- Table structure for table `courses`
 --
 
 DROP TABLE IF EXISTS `courses`;
@@ -85,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- 转存表中的数据 `courses`
+-- Dumping data for table `courses`
 --
 
 INSERT INTO `courses` (`course_id`, `department`, `number`, `name`, `description`, `professor`) VALUES
@@ -96,7 +90,7 @@ INSERT INTO `courses` (`course_id`, `department`, `number`, `name`, `description
 -- --------------------------------------------------------
 
 --
--- 表的结构 `course_list`
+-- Table structure for table `course_list`
 --
 
 DROP TABLE IF EXISTS `course_list`;
@@ -109,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `course_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `course_list`
+-- Dumping data for table `course_list`
 --
 
 INSERT INTO `course_list` (`course_id`, `user_id`, `role`) VALUES
@@ -127,7 +121,7 @@ INSERT INTO `course_list` (`course_id`, `user_id`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `events`
+-- Table structure for table `events`
 --
 
 DROP TABLE IF EXISTS `events`;
@@ -145,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `events` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- 转存表中的数据 `events`
+-- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`event_id`, `entity_id`, `entity_type`, `title`, `content`, `starttime`, `endtime`, `number`, `timestamp`) VALUES
@@ -159,7 +153,7 @@ INSERT INTO `events` (`event_id`, `entity_id`, `entity_type`, `title`, `content`
 -- --------------------------------------------------------
 
 --
--- 表的结构 `event_list`
+-- Table structure for table `event_list`
 --
 
 DROP TABLE IF EXISTS `event_list`;
@@ -173,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `event_list` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `friend_list`
+-- Table structure for table `friend_list`
 --
 
 DROP TABLE IF EXISTS `friend_list`;
@@ -187,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `friend_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `friend_list`
+-- Dumping data for table `friend_list`
 --
 
 INSERT INTO `friend_list` (`user_id`, `friend_id`, `timestamp`, `status`) VALUES
@@ -205,7 +199,7 @@ INSERT INTO `friend_list` (`user_id`, `friend_id`, `timestamp`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `pictures`
+-- Table structure for table `pictures`
 --
 
 DROP TABLE IF EXISTS `pictures`;
@@ -219,7 +213,7 @@ CREATE TABLE IF NOT EXISTS `pictures` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `profiles`
+-- Table structure for table `profiles`
 --
 
 DROP TABLE IF EXISTS `profiles`;
@@ -239,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `profiles`
+-- Dumping data for table `profiles`
 --
 
 INSERT INTO `profiles` (`user_id`, `firstname`, `middlename`, `lastname`, `gender`, `dob`, `major`, `degree`, `entry_year`, `entry_semester`, `picture_id`) VALUES
@@ -257,7 +251,7 @@ INSERT INTO `profiles` (`user_id`, `firstname`, `middlename`, `lastname`, `gende
 -- --------------------------------------------------------
 
 --
--- 表的结构 `resources`
+-- Table structure for table `resources`
 --
 
 DROP TABLE IF EXISTS `resources`;
@@ -276,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `resources` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `reviews`
+-- Table structure for table `reviews`
 --
 
 DROP TABLE IF EXISTS `reviews`;
@@ -292,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `reviews` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- 转存表中的数据 `reviews`
+-- Dumping data for table `reviews`
 --
 
 INSERT INTO `reviews` (`review_id`, `course_id`, `user_id`, `score`, `content`, `timestamp`) VALUES
@@ -309,7 +303,7 @@ INSERT INTO `reviews` (`review_id`, `course_id`, `user_id`, `score`, `content`, 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `statuses`
+-- Table structure for table `statuses`
 --
 
 DROP TABLE IF EXISTS `statuses`;
@@ -323,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `statuses` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
--- 转存表中的数据 `statuses`
+-- Dumping data for table `statuses`
 --
 
 INSERT INTO `statuses` (`status_id`, `entity_id`, `entity_type`, `content`, `timestamp`) VALUES
@@ -349,7 +343,7 @@ INSERT INTO `statuses` (`status_id`, `entity_id`, `entity_type`, `content`, `tim
 -- --------------------------------------------------------
 
 --
--- 表的结构 `users`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -364,7 +358,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
--- 转存表中的数据 `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `security_question`, `security_answer`, `status`) VALUES
@@ -380,54 +374,50 @@ INSERT INTO `users` (`user_id`, `username`, `password`, `security_question`, `se
 (29, 'qwer4@stevens.edu', '19485e369c691fa8ece1fabc8a6ceabfb5666b79', '12341234qwe', 'b9f2cd271d13f7efc74b6f1ae52e8c4589a45c89', 0);
 
 --
--- 限制导出的表
+-- Constraints for dumped tables
 --
 
 --
--- 限制表 `blogs`
+-- Constraints for table `blogs`
 --
 ALTER TABLE `blogs`
   ADD CONSTRAINT `blogs_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `course_list`
+-- Constraints for table `course_list`
 --
 ALTER TABLE `course_list`
   ADD CONSTRAINT `course_list_ibfk_7` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `course_list_ibfk_8` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `event_list`
+-- Constraints for table `event_list`
 --
 ALTER TABLE `event_list`
   ADD CONSTRAINT `event_id` FOREIGN KEY (`event_id`) REFERENCES `events` (`event_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `user_id5` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `friend_list`
+-- Constraints for table `friend_list`
 --
 ALTER TABLE `friend_list`
   ADD CONSTRAINT `friend_id` FOREIGN KEY (`friend_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `user_id2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `profiles`
+-- Constraints for table `profiles`
 --
 ALTER TABLE `profiles`
   ADD CONSTRAINT `user_id4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `resources`
+-- Constraints for table `resources`
 --
 ALTER TABLE `resources`
   ADD CONSTRAINT `resources_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE;
 
 --
--- 限制表 `reviews`
+-- Constraints for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `course_id` FOREIGN KEY (`course_id`) REFERENCES `courses` (`course_id`) ON DELETE CASCADE;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
