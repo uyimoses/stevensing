@@ -33,9 +33,12 @@ if ($error == "none"){
 		}
 	}
 	//search courses
-	$sql = "SELECT * FROM courses WHERE name = '"
-		. addslashes($keyword) . "' OR number = "
-		. addslashes($keyword) . ";";
+	$keyword = str_replace("%", "", $keyword);
+	$namefilter = "";
+	if ($keyword != "")
+		$namefilter = "name LIKE '%" . addslashes($keyword) . "%' OR ";
+	$sql = "SELECT * FROM courses WHERE " . $namefilter . "number = '"
+		. addslashes($keyword) . "';";
 	//echo $sql;
 	$result = $mysqli->query($sql);
 	if ($result){
