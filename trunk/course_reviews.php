@@ -101,7 +101,7 @@ include "header_course.php";
 			<div>
 				<span id="contact-text">Input your comment:</span>
 				<div id="form_box">
-					<textarea class="fieldcourse"  id="review_content" contenteditable="true" placeholder="Write something about the course..." onclick="clearError(this);"></textarea>
+					<textarea class="fieldcourse"  id="review_content" contenteditable="true" placeholder="Write something about the course..." onfocus="clearError(this);"></textarea>
 					<div class="check_message" id="content_error"></div>
 					<div id="button"><a href="javascript:" onclick="addReview();">Send</a>
 				</div>
