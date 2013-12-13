@@ -4,7 +4,7 @@ include "header_action.php";
 
 $error = "none";
 $keyword = "";
-
+$keyword_error = "";
 $users = array();
 $courses = array();
 
@@ -50,6 +50,7 @@ if ($error == "none"){
 
 echo "{\n";
 echo "'error': '" . $error . "',\n";
+echo "'keyword_error': '" . addslashes($keyword_error) . "',\n";
 echo "'keyword': '" . addslashes($keyword) . "',\n";
 echo "'user_list': [\n";
 foreach ($users as $index => $user) {

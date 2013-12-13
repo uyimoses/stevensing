@@ -102,8 +102,8 @@ include "leftside.php";
 		<fieldset>
 			<legend> Search </legend>
 			<label for="KeyWordinput">Key Word:</label>
-			<input type="text" id="keyword" name="textarea" placeholder="Name,Course Name,Course Number..." value="<?php echo isset($_GET["keyword"])?strip_tags($_GET["keyword"]):""; ?>"/> <br />
-		
+			<input type="text" id="keyword" onclick="clearError(this);" name="textarea" placeholder="Name,Course Name,Course Number..." value="<?php echo isset($_GET["keyword"])?strip_tags($_GET["keyword"]):""; ?>"/> <br />
+			<div class="check_message" id="keyword_error"></div>
 			<input type="button" value="Search" class="button" onclick="search();"/>
 	
 </fieldset>
